@@ -69,6 +69,7 @@ NOTE: Connector 与 Google Cloud Storage 之间的通信仅用于对象存储设
 
 --
 支持的 ONTAP 版本:: ONTAP 9.6 或更高版本
+所需的应用程序访问参数:: 集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["有关详细信息、请参见"security login"命令"]。
 集群网络连接要求::
 +
 --
@@ -90,7 +91,7 @@ ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会�
 
 
 --
-支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。有关信息，请参见 ONTAP 文档 link:https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
+支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。有关信息，请参见 ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
 
 
 
@@ -111,7 +112,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 要将数据分层到云，需要使用 Connector 。将数据分层到 Google Cloud Storage 时，必须在 Google Cloud Platform VPC 中提供 Connector 。您需要创建一个新的连接器，或者确保当前选定的连接器位于 GCP 中。
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["了解连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html["在 GCP 中创建连接器"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html["在GCP中部署连接器"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在连接器之间切换"^]
 
 
@@ -176,7 +177,9 @@ NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类�
 +
 image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，屏幕右侧会显示一个屏幕截图，其中显示启用选项。"]
 
-. 完成 * 分层设置 * 页面上的步骤：
+. *定义对象存储名称*：输入此对象存储的名称。它必须与此集群上的聚合可能使用的任何其他对象存储唯一。
+. *选择提供商*：选择* Google Cloud*并单击*继续*。
+. 完成*创建对象存储*页面上的步骤：
 +
 .. * 分段 * ：添加新的 Google Cloud Storage 分段或选择现有分段。
 .. * 存储类生命周期 * ： Cloud Tiering 可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建规则，以便在一定天数后将数据移动到其他类。
@@ -206,7 +209,7 @@ image:screenshot_tiering_lifecycle_selection_gcp.png["一个屏幕截图，显�
 ** 要选择多个卷，请选中每个卷对应的框（image:button_backup_1_volume.png[""]），然后单击 * 配置卷 * 。
 ** 要选择单个卷，请单击行（或 image:screenshot_edit_icon.gif["编辑铅笔图标"] 图标）。
 +
-image:screenshot_tiering_modify_volumes.gif["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
+image:screenshot_tiering_tier_volumes.png["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
 
 
 
@@ -223,4 +226,6 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]。
 
-您还可以添加其他集群或查看有关集群上活动和非活动数据的信息。有关详细信息，请参见 link:task-managing-tiering.html["从集群管理数据分层"]。
+您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。
+
+如果您可能希望将集群上的特定聚合中的数据分层到不同的对象存储、也可以创建额外的对象存储。或者、如果您计划使用FabricPool 镜像来复制分层数据、则也可以使用其他对象存储。 link:task-managing-object-storage.html["了解有关管理对象存储的更多信息"]。

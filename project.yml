@@ -7,11 +7,10 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: false
+  rss_page: whats-new.html
   langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr
 sidebar:
   entries:
-  - title: 所有 Cloud Manager 文档
-    url: https://docs.netapp.com/us-en/cloud-manager-family
   - title: Cloud Tiering 文档
     url: "/index.html"
   - title: 发行说明
@@ -38,20 +37,22 @@ sidebar:
       url: "/faq-cloud-tiering.html"
   - title: 使用 Cloud Tiering
     entries:
-    - title: 测试云性能
-      url: "/task-tiering-test.html"
     - title: 管理数据分层
       url: "/task-managing-tiering.html"
+    - title: 管理对象存储
+      url: "/task-managing-object-storage.html"
+    - title: 测试云性能
+      url: "/task-tiering-test.html"
     - title: 查看所有集群的分层概述
       url: "/task-tiering-onprem-overview.html"
-    - title: 参考
-      entries:
-      - title: 支持的 Amazon S3 存储类和区域
-        url: "/reference-aws-support.html"
-      - title: 支持的 Azure 访问层和区域
-        url: "/reference-azure-support.html"
-      - title: 支持的 Google Cloud 存储类和区域
-        url: "/reference-google-support.html"
+  - title: 参考
+    entries:
+    - title: 支持的 Amazon S3 存储类和区域
+      url: "/reference-aws-support.html"
+    - title: 支持的 Azure 访问层和区域
+      url: "/reference-azure-support.html"
+    - title: 支持的 Google Cloud 存储类和区域
+      url: "/reference-google-support.html"
   - title: 知识和支持
     entries:
     - title: 注册以获得支持
@@ -94,6 +95,16 @@ homepage:
       url: task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier
     - title: 管理聚合上的分层设置
       url: task-managing-tiering.html#managing-tiering-settings-on-aggregates
+  - title: 管理对象存储
+    links:
+    - title: 为集群添加新对象存储
+      url: task-managing-object-storage.html#adding-a-new-object-store
+    - title: 向聚合添加另一个对象存储以进行镜像
+      url: task-managing-object-storage.html#attaching-a-second-object-store-to-an-aggregate-for-mirroring
+    - title: 交换主对象存储和镜像对象存储
+      url: task-managing-object-storage.html#swapping-the-primary-and-mirror-object-store
+    - title: 删除镜像对象存储
+      url: task-managing-object-storage.html#removing-a-mirror-object-store-from-an-aggregate
   - title: 博客社区
     links:
     - title: NetApp 社区
@@ -109,3 +120,4 @@ homepage:
 product-family:
   name: Cloud Manager
   repo: cloud-manager-family
+  sidebar_label: All Cloud Manager documentation

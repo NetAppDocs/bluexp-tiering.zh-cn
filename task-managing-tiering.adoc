@@ -27,7 +27,7 @@ TIP: 您无需配置对象存储，因为在最初为集群设置分层时已对
 
 .步骤
 . 在 Cloud Manager 顶部，单击 * 分层 * 。
-. 在 * 集群信息板 * 中，单击集群的 * 分层卷 * 。
+. 在*集群信息板*中、单击集群的*基本分层设置*。
 +
 image:screenshot_tiering_tier_volumes_button.png["显示如何为集群选择 \" 层卷 \" 按钮的屏幕截图。"]
 
@@ -37,7 +37,7 @@ image:screenshot_tiering_tier_volumes_button.png["显示如何为集群选择 \"
 ** 要选择多个卷，请选中每个卷对应的框（image:button_backup_1_volume.png[""]），然后单击 * 配置卷 * 。
 ** 要选择单个卷，请单击行（或 image:screenshot_edit_icon.gif["编辑铅笔图标"] 图标）。
 +
-image:screenshot_tiering_modify_volumes.gif["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
+image:screenshot_tiering_tier_volumes.png["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
 
 
 
@@ -60,7 +60,7 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 .步骤
 . 在 Cloud Manager 顶部，单击 * 分层 * 。
-. 在 * 集群信息板 * 中，单击集群的 * 分层卷 * 。
+. 在*集群信息板*中、单击集群的*分层卷*。
 . 单击卷对应的行，选择分层策略，也可以调整散热天数，然后单击 * 应用 * 。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["了解有关卷分层策略和散热天数的更多信息"]。
@@ -100,7 +100,7 @@ NOTE: 云提供商可能会根据从云端传输的数据量向您收取费用�
 确保性能层中有足够的空间用于从云中移动的所有数据。
 
 . 在 Cloud Manager 顶部，单击 * 分层 * 。
-. 在 * 集群信息板 * 中，单击集群的 * 分层卷 * 。
+. 在*集群信息板*中、单击集群的*分层卷*。
 . 单击 image:screenshot_edit_icon.gif["表中卷分层的每行末尾显示的编辑图标的屏幕截图"] 图标，选择要使用的检索选项，然后单击 * 应用 * 。
 +
 image:screenshot_tiering_policy_settings_with_retrieve.png["显示可配置分层策略设置的屏幕截图。"]
@@ -131,15 +131,17 @@ TIP: 最好保持 IDR 处于启用状态，因为它有助于识别非活动数�
 
 
 .步骤
-. 在 Cloud Manager 顶部，单击 * 分层 * 。
-. 从 * 云分层 * 页面中，单击集群的菜单图标并选择 * 管理聚合 * 。
+. 在*集群信息板*中、单击选定集群的*高级设置*。
 +
-image:screenshot_tiering_manage_aggr_button.png["集群信息板的屏幕截图，其中显示了一个集群，并且操作菜单已展开。"]
+image:screenshot_tiering_advanced_setup_button.png["显示集群的\"高级设置\"按钮的屏幕截图。"]
 
-. 在 * 管理聚合 * 页面上，单击 image:screenshot_edit_icon.gif["此编辑图标的屏幕截图显示在表中每行末尾，用于管理聚合"] 表中聚合的图标。
-. 修改填充度阈值，然后选择是启用还是禁用非活动数据报告。
+. 在高级设置页面中、单击聚合的菜单图标、然后选择*修改聚合*。
 +
-image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_edit_aggregate.gif["屏幕截图显示了一个用于修改分层填充度阈值的滑块以及一个用于启用或禁用非活动数据报告的按钮。"]
+image:screenshot_tiering_modify_aggr.png["显示聚合的修改聚合选项的屏幕截图。"]
+
+. 在显示的对话框中、修改填充度阈值并选择是启用还是禁用非活动数据报告。
++
+image:screenshot_tiering_modify_aggregate.png["屏幕截图显示了一个用于修改分层填充度阈值的滑块以及一个用于启用或禁用非活动数据报告的按钮。"]
 
 . 单击 * 应用 * 。
 
@@ -152,7 +154,7 @@ image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_edit_aggregat
 
 .步骤
 . 在 Cloud Manager 顶部，单击 * 分层 * 。
-. 从 * 集群信息板 * 中，单击集群的菜单图标并选择 * 集群信息 * 。
+. 从*集群信息板*中、单击集群的菜单图标并选择*集群信息*。
 . 查看有关集群的详细信息。
 +
 以下是一个示例：
@@ -195,7 +197,7 @@ image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_tiering_healt
 请注意， Tiering _on-Prem Overview_ 页面上也会显示一些按钮，用于发现其他集群。
 
 .步骤
-. 在 Cloud Tiering 中，单击 * 集群信息板 * 选项卡。
+. 在Cloud Tiering中、单击*集群信息板*选项卡。
 . 要查看任何未发现的集群，请单击 * 显示未发现的集群 * 。
 +
 image:screenshot_tiering_show_undiscovered_cluster.png["显示分层信息板上显示未发现的集群按钮的屏幕截图。"]

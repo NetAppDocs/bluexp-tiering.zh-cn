@@ -18,6 +18,22 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 
 
+== 2022年8月3日
+
+
+
+=== 可以为集群中的其他聚合配置其他对象存储
+
+Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加新的对象存储、将多个对象存储连接到聚合以进行FabricPool 镜像、交换主对象存储和镜像对象存储、删除与聚合的对象存储连接等。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-object-storage.html["详细了解新的对象存储功能。"]
+
+
+
+=== 为MetroCluster 配置提供云分层许可证支持
+
+现在、可以与MetroCluster 配置中的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
+
+
+
 == 2022年5月3日
 
 
