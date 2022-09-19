@@ -18,6 +18,24 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 
 
+== 2022年9月19日
+
+
+
+=== 分层向导允许使用AWS PrivateLink安全连接到S3存储
+
+在先前版本中、通过VPC端点将集群连接到S3存储分段的安全方式非常耗时。现在、您可以按照前提步骤进行操作 https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface["使用VPC端点接口为系统配置专用连接"]、然后、您可以在"网络连接"页面的分层设置向导期间选择PrivateLink。
+
+https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html["查看将非活动数据分层到Amazon S3的要求和步骤"]。
+
+
+
+=== 拖放以启用Amazon S3的Cloud Tiering
+
+如果Amazon S3分层目标作为工作环境存在于Canvas上、您可以将内部ONTAP 工作环境拖动到目标上以启动分层设置向导。
+
+
+
 == 2022年8月3日
 
 

@@ -70,7 +70,7 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 
 
-* 注： * 如果您看到用于 " 检索分层数据 " 的选项，请参见 <<Migrating data from the cloud tier back to the performance tier,将数据从云层迁移回性能层>> 了解详细信息。
+* 注： * 如果您看到用于 " 检索分层数据 " 的选项，请参见  data from the cloud tier back to the performance tier,将数据从云层迁移回性能层 了解详细信息。
 
 分层策略将发生更改，数据将开始根据新策略进行分层。
 

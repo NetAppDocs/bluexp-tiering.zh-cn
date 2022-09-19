@@ -20,19 +20,37 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
 
 == 快速入门
 
-按照以下步骤快速入门，或者向下滚动到其余部分以了解完整详细信息。
+按照以下步骤快速入门。本主题的以下各节提供了每个步骤的详细信息。
 
 [role="quick-margin-para"]
-您需要满足以下要求：
-
-* 运行 ONTAP 9.2 或更高版本并与 Amazon S3 建立 HTTPS 连接的内部 ONTAP 集群。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
-* 具有访问密钥和的 AWS 帐户 <<Preparing Amazon S3,所需权限>> 因此， ONTAP 集群可以对 S3 中的非活动数据进行分层。
-* 安装在 AWS VPC 或内部环境中的连接器。
-* 用于 Connector 的网络连接，用于启用与 ONTAP 集群， S3 存储和 Cloud Tiering 服务的出站 HTTPS 连接。
-
+选择是通过公有 Internet将内部ONTAP 集群直接连接到AWS S3、还是使用VPN或AWS Direct Connect并通过专用VPC端点接口将流量路由到AWS S3。
 
 [role="quick-margin-para"]
-在 Cloud Manager 中，选择一个内部工作环境，单击分层服务的 * 启用 * ，然后按照提示将数据分层到 Amazon S3 。
+ diagrams for connection options,请参见可用的连接方法。
+
+[role="quick-margin-para"]
+如果您已在AWS VPC或内部部署了Connector、则可以随时完成所有操作。如果没有、则需要创建一个连接器、将ONTAP 数据分层到AWS S3存储。您还需要自定义 Connector 的网络设置，以便它可以连接到 AWS S3 。
+
+[role="quick-margin-para"]
+ your Connector,请参见如何创建 Connector 以及如何定义所需的网络设置。
+
+[role="quick-margin-para"]
+在 Cloud Manager 中发现您的 ONTAP 集群，验证集群是否满足最低要求，并自定义网络设置，以便集群可以连接到 AWS S3 。
+
+[role="quick-margin-para"]
+ your ONTAP cluster,了解如何使内部 ONTAP 集群做好准备。
+
+[role="quick-margin-para"]
+为Connector设置创建和管理S3存储分段的权限。您还需要为内部ONTAP 集群设置权限、以便其可以向S3存储分段读取和写入数据。
+
+[role="quick-margin-para"]
+ up S3 permissions,请参见如何为Connector和内部集群设置权限。
+
+[role="quick-margin-para"]
+选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到Amazon S3。
+
+[role="quick-margin-para"]
+ inactive data from your first cluster to Amazon S3,请参见如何为卷启用分层。
 
 [role="quick-margin-para"]
 免费试用结束后，通过按需购买订阅， ONTAP 云分层 BYOL 许可证或两者的组合为云分层付费：
@@ -43,22 +61,67 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
 
 
 
-== 要求
+== 连接选项的网络图
 
-验证是否支持 ONTAP 集群，设置网络以及准备对象存储。
+在配置从内部ONTAP 系统到AWS S3的分层时、您可以使用两种连接方法。
 
-下图显示了每个组件以及需要在它们之间准备的连接：
-
-image:diagram_cloud_tiering_aws.png["一个架构图，其中显示了云分层服务，该服务连接到云提供商中的连接器，连接到 ONTAP 集群的连接器以及云提供商中的 ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。"]
-
-
-NOTE: Connector 和 S3 之间的通信仅用于对象存储设置。连接器可以位于您的内部，而不是云中。
+* 公有 连接—使用公有 S3 端点将 ONTAP 系统直接连接到 AWS S3 。
+* 专用连接—使用 VPN 或 AWS Direct Connect ，并通过使用专用 IP 地址的 VPC 端点接口路由流量。
 
 
+下图显示了*公有 connection*方法以及组件之间需要准备的连接。您可以使用内部安装的Connector或AWS VPC中部署的Connector。
 
-=== 准备 ONTAP 集群
+image:diagram_cloud_tiering_aws_public.png["显示Cloud Tiering如何通过公有 连接与集群上的卷以及非活动数据所在的AWS S3存储进行通信的图表。"]
+
+下图显示了*专用连接*方法以及组件之间需要准备的连接。您可以使用内部安装的Connector或AWS VPC中部署的Connector。
+
+image:diagram_cloud_tiering_aws_private.png["显示Cloud Tiering如何通过专用连接与集群上的卷以及非活动数据所在的AWS S3存储进行通信的图表。"]
+
+
+NOTE: Connector 和 S3 之间的通信仅用于对象存储设置。
+
+
+
+== 准备您的连接器
+
+Cloud Manager Connector 是 Cloud Manager 功能的主要软件。需要使用连接器对非活动ONTAP 数据进行分层。
+
+
+
+=== 创建或切换连接器
+
+如果您已在AWS VPC或内部部署了Connector、则可以随时完成所有操作。如果没有、则需要在其中任一位置创建一个连接器、以便将ONTAP 数据分层到AWS S3存储。您不能使用部署在其他云提供商中的Connector。
+
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["了解连接器"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["连接器入门"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["在AWS中安装连接器"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在内部安装Connector"^]
+
+
+
+
+=== 连接器网络连接要求
+
+* 确保安装 Connector 的网络启用以下连接：
++
+** 通过端口443 (HTTPS)到Cloud Tiering服务的出站Internet连接
+** 通过端口 443 与 S3 对象存储建立 HTTPS 连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["请参见端点列表"^]）
+** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
+
+
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html#cloud-tiering["确保Connector具有管理S3存储分段的权限"^]
+* 如果从ONTAP 集群到VPC具有直接连接或VPN连接、并且您希望连接器和S3之间的通信保持在AWS内部网络中(*专用*连接)、则需要启用连接到S3的VPC端点接口。  your system for a private connection using a VPC endpoint interface,请参见如何设置 VPC 端点接口。
+
+
+
+
+== 准备 ONTAP 集群
 
 将数据分层到 Amazon S3 时， ONTAP 集群必须满足以下要求。
+
+
+
+=== ONTAP 要求
 
 支持的 ONTAP 平台::
 +
@@ -68,26 +131,11 @@ NOTE: Connector 和 S3 之间的通信仅用于对象存储设置。连接器可
 
 
 --
-支持的 ONTAP 版本:: ONTAP 9.2 或更高版本
-所需的应用程序访问参数:: 集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["有关详细信息、请参见"security login"命令"]。
-集群网络连接要求::
+支持的 ONTAP 版本::
 +
 --
-* ONTAP 集群通过端口 443 启动与 Amazon S3 的 HTTPS 连接。
-+
-ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会启动，而只是响应。
-
-+
-虽然 AWS Direct Connect 可提供更好的性能并降低数据传输费用，但 ONTAP 集群和 S3 之间并不需要使用它。但这样做是建议的最佳实践。
-
-* 需要从 Connector 建立入站连接，该连接可以驻留在 AWS VPC 中或您的内部环境中。
-+
-集群与 Cloud Tiering 服务之间不需要建立连接。
-
-* 托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。
-+
-设置数据分层时， Cloud Tiering 会提示您输入要使用的 IP 空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
-
+* ONTAP 9.2 或更高版本
+* 如果您计划使用AWS PrivateLink连接到对象存储、则需要ONTAP 9.7或更高版本
 
 
 --
@@ -97,49 +145,46 @@ ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会�
 
 NOTE: 从 ONTAP 9.5 开始，云分层支持 FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
 
+所需的应用程序访问参数:: 集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["有关详细信息、请参见"security login"命令"]。
 
 
-=== 发现 ONTAP 集群
 
-您需要先在 Cloud Manager 中创建内部 ONTAP 工作环境，然后才能开始对冷数据进行分层。
+
+=== 集群网络连接要求
+
+* 集群需要从 Connector 到集群管理 LIF 的入站 HTTPS 连接。
++
+集群与 Cloud Tiering 服务之间不需要建立连接。
+
+* 托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。这些集群间 LIF 必须能够访问对象存储。
++
+集群通过端口443从集群间LIF启动出站HTTPS连接到Amazon S3存储、以执行分层操作。ONTAP 在对象存储中读取和写入数据—对象存储从不启动，它只是响应。
+
+* 集群间 LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有关 IP 空间的更多信息"^]。
++
+设置Cloud Tiering时、系统会提示您使用IP空间。您应选择与这些 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。
+
++
+如果您使用的 IP 空间与 " 默认 " 不同，则可能需要创建静态路由才能访问对象存储。
+
++
+IP空间中的所有集群间LIF都必须能够访问对象存储。如果无法为当前IP空间配置此空间、则需要创建一个专用IP空间、其中所有集群间LIF都可以访问对象存储。
+
+* 如果在AWS中使用专用VPC接口端点进行S3连接、则要使用HTTPS/443、您需要将S3端点证书加载到ONTAP 集群中。  your system for a private connection using a VPC endpoint interface,请参见如何设置 VPC 端点接口并加载 S3 证书。
+*  up S3 permissions,确保ONTAP 集群具有访问S3存储分段的权限。
+
+
+
+
+=== 在 Cloud Manager 中发现您的 ONTAP 集群
+
+您需要先在Cloud Manager中发现内部ONTAP 集群、然后才能开始将冷数据分层到对象存储。要添加集群，您需要知道集群管理 IP 地址和管理员用户帐户的密码。
 
 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 
 
 
-=== 创建或切换连接器
-
-要将数据分层到云，需要使用 Connector 。将数据分层到 AWS S3 时，您可以使用 AWS VPC 或内部部署中的 Connector 。您需要创建一个新的连接器，或者确保当前选定的连接器位于 AWS 或内部。
-
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["了解连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["在AWS中部署连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在Linux主机上部署Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在连接器之间切换"^]
-
-
-
-
-=== 为连接器准备网络连接
-
-确保此连接器具有所需的网络连接。连接器可以安装在内部或 AWS 中。
-
-.步骤
-. 确保安装 Connector 的网络启用以下连接：
-+
-** 通过端口 443 （ HTTPS ）与 Cloud Tiering 服务的出站 Internet 连接
-** 通过端口 443 与 S3 建立 HTTPS 连接
-** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
-
-
-. 如果需要，请为 S3 启用 VPC 端点。
-+
-如果您从 ONTAP 集群到 VPC 具有直接连接或 VPN 连接，并且希望连接器和 S3 之间的通信保持在 AWS 内部网络中，则建议使用 VPC 端点连接到 S3 。
-
-
-
-
-
-=== 正在准备 Amazon S3
+== 准备 AWS 环境
 
 在为新集群设置数据分层时，系统会提示您在设置了 Connector 的 AWS 帐户中创建 S3 存储分段或选择现有 S3 存储分段。AWS 帐户必须具有可在 Cloud Tiering 中输入的权限和访问密钥。ONTAP 集群使用访问密钥对 S3 中的数据进行分层。
 
@@ -148,8 +193,19 @@ S3 存储分段必须位于中 link:reference-aws-support.html#supported-aws-reg
 
 NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类，以便分层数据在一定天数后过渡到，则在 AWS 帐户中设置存储分段时，不能选择任何生命周期规则。Cloud Tiering 可管理生命周期过渡。
 
+
+
+=== 设置 S3 权限
+
+您需要配置两组权限：
+
+* Connector创建和管理S3存储分段的权限。
+* 内部 ONTAP 集群的权限，以便可以将数据读写到 S3 存储分段。
+
+
 .步骤
-. 为 IAM 用户提供以下权限：
+. 确认 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html#cloud-tiering["这些S3权限"^] 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果不是、则需要添加缺少的权限。请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 文档：编辑 IAM 策略"^]。
+. 激活此服务时、分层向导将提示您输入访问密钥和机密密钥。这些凭据将传递到ONTAP 集群、以便ONTAP 可以将数据分层到S3存储分段。为此，您需要创建具有以下权限的 IAM 用户：
 +
 [source, json]
 ----
@@ -161,7 +217,7 @@ NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类�
 "s3:DeleteObject"
 ----
 +
-https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS 文档：创建角色以向 IAM 用户委派权限"^]
+请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS 文档：创建角色以向 IAM 用户委派权限"^] 了解详细信息。
 
 . 创建或找到访问密钥。
 +
@@ -174,7 +230,59 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 
 
 
-== 将第一个集群中的非活动数据分层到 Amazon S3
+=== 使用VPC端点接口为系统配置专用连接
+
+如果您计划使用标准公有 Internet连接、则所有权限均由Connector设置、您无需执行任何其他操作。此类型的连接如中所示  diagrams for connection options,上图。
+
+如果您希望通过Internet从内部数据中心到VPC建立更安全的连接、可以在分层激活向导中选择AWS PrivateLink连接。如果您计划使用VPN或AWS Direct Connect通过使用专用IP地址的VPC端点接口连接内部系统、则必须使用此功能。此类型的连接如中所示  diagrams for connection options,上述第二张图。
+
+. 使用 Amazon VPC 控制台或命令行创建接口端点配置。 https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["请参见有关使用适用于 Amazon S3 的 AWS PrivateLink 的详细信息"^]。
+. 修改与 Cloud Manager Connector 关联的安全组配置。您必须将此策略更改为 "Custom" （自定义）（从 "Full Access" ），并且必须将其更改为 "Custom" （自定义）  up S3 permissions,添加所需的S3 Connector权限 如前面所示。
++
+image:screenshot_tiering_aws_sec_group.png["与 Connector 关联的 AWS 安全组的屏幕截图。"]
+
++
+如果您使用端口80 (HTTP)与专用端点进行通信、则已设置完毕。您现在可以在集群上启用Cloud Tiering。
+
++
+如果您使用端口443 (HTTPS)与专用端点进行通信、则必须从VPC S3端点复制证书并将其添加到ONTAP 集群中、如接下来的4个步骤所示。
+
+. 从 AWS 控制台获取端点的 DNS 名称。
++
+image:screenshot_endpoint_dns_aws_console.png["AWS 控制台中 VPC 端点的 DNS 名称的屏幕截图。"]
+
+. 从 VPC S3 端点获取证书。您可以通过执行此操作 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登录到托管 Cloud Manager Connector 的 VM"^] 并运行以下命令。输入端点的 DNS 名称时，在开头添加 " 分段 " ，替换 "* " ：
++
+[source, text]
+----
+[ec2-user@ip-10-160-4-68 ~]$ openssl s_client -connect bucket.vpce-0ff5c15df7e00fbab-yxs7lt8v.s3.us-west-2.vpce.amazonaws.com:443 -showcerts
+----
+. 从此命令的输出中，复制 S3 证书的数据（包括开始 / 结束证书标记之间的所有数据）：
++
+[source, text]
+----
+Certificate chain
+0 s:/CN=s3.us-west-2.amazonaws.com`
+   i:/C=US/O=Amazon/OU=Server CA 1B/CN=Amazon
+-----BEGIN CERTIFICATE-----
+MIIM6zCCC9OgAwIBAgIQA7MGJ4FaDBR8uL0KR3oltTANBgkqhkiG9w0BAQsFADBG
+…
+…
+GqvbOz/oO2NWLLFCqI+xmkLcMiPrZy+/6Af+HH2mLCM4EsI2b+IpBmPkriWnnxo=
+-----END CERTIFICATE-----
+----
+. 登录到 ONTAP 集群命令行界面并使用以下命令应用您复制的证书（替换您自己的 Storage VM 名称）：
++
+[source, text]
+----
+cluster1::> security certificate install -vserver <svm_name> -type server-ca
+Please enter Certificate: Press <Enter> when done
+----
+
+
+
+
+== 将第一个集群中的非活动数据分层到Amazon S3
 
 准备好 AWS 环境后，开始对第一个集群中的非活动数据进行分层。
 
@@ -187,11 +295,17 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 . 选择一个内部集群。
 . 单击分层服务的 * 启用 * 。
 +
+如果Amazon S3分层目标作为工作环境存在于Canvas上、则可以将集群拖动到工作环境中以启动设置向导。
+
++
 image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，屏幕右侧会显示一个屏幕截图，其中显示启用选项。"]
 
 . *定义对象存储名称*：输入此对象存储的名称。它必须与此集群上的聚合可能使用的任何其他对象存储唯一。
 . *选择提供商*：选择* Amazon Web Services*并单击*继续*。
-. 完成*创建对象存储*页面上的步骤：
++
+image:screenshot_tiering_aws_s3_bucket.png["屏幕截图显示了设置S3存储分层时必须提供的数据。"]
+
+. 完成*创建对象存储*页面上的部分：
 +
 .. * S3 Bucket*：添加新的S3存储分段或选择以前缀_fabric-pool_开头的现有S3存储分段、选择存储分段区域、然后单击*继续*。
 +
@@ -200,7 +314,7 @@ image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，
 +
 需要使用 _fabric-pool_ 前缀，因为 Connector 的 IAM 策略允许实例对使用该前缀命名的分段执行 S3 操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。
 
-.. * 存储类生命周期 * ： Cloud Tiering 可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。
+.. *存储类*：Cloud Tiering可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。
 +
 选择要将分层数据过渡到的 S3 存储类以及要移动数据的天数，然后单击 * 继续 * 。例如，下面的屏幕截图显示，在对象存储中使用 45 天后，分层数据将从 _Standard_ 类移动到 _Standard-IA_ 类。
 
@@ -217,9 +331,15 @@ image:screenshot_tiering_lifecycle_selection_aws.png["一个屏幕截图，显�
 +
 IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段位于同一 AWS 帐户中。
 
-.. * 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间，然后单击 * 继续 * 。
+.. *网络连接*：输入网络连接详细信息、然后单击*继续*。
 +
-选择正确的 IP 空间可确保云分层可以设置从 ONTAP 到云提供商对象存储的连接。
+在ONTAP 集群中选择要分层的卷所在的IP空间。此IP空间的集群间LIF必须具有出站Internet访问权限、才能连接到云提供商的对象存储。
+
++
+或者，选择是否使用先前配置的 AWS PrivateLink 。  your system for a private connection using a VPC endpoint interface,请参见上述设置信息。
+
++
+此时将显示一个对话框、帮助您完成端点配置。
 
 
 
@@ -248,4 +368,4 @@ link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]�
 
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。
 
-如果您可能希望将集群上的特定聚合中的数据分层到不同的对象存储、也可以创建额外的对象存储。或者、如果您计划使用FabricPool 镜像来复制分层数据、则也可以使用其他对象存储。 link:task-managing-object-storage.html["了解有关管理对象存储的更多信息"]。
+如果您可能希望将集群上的某些聚合中的数据分层到不同的对象存储、也可以创建额外的对象存储。或者、如果您计划使用FabricPool 镜像将分层数据复制到其他对象存储。 link:task-managing-object-storage.html["了解有关管理对象存储的更多信息"]。

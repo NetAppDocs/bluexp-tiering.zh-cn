@@ -202,7 +202,7 @@ image:screenshot_tiering_lifecycle_selection_azure.png["一个屏幕截图，显
 请注意，生命周期规则将应用于选定存储帐户中的所有 Blob 容器。
 
 +
-<<Verify that you have the necessary Connector permissions,验证您是否具有所需的 Connector 权限>> 用于生命周期管理功能。
+ that you have the necessary Connector permissions,验证您是否具有所需的 Connector 权限 用于生命周期管理功能。
 
 .. * 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间，然后单击 * 继续 * 。
 +
@@ -235,4 +235,4 @@ link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]�
 
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。
 
-如果您可能希望将集群上的特定聚合中的数据分层到不同的对象存储、也可以创建额外的对象存储。或者、如果您计划使用FabricPool 镜像来复制分层数据、则也可以使用其他对象存储。 link:task-managing-object-storage.html["了解有关管理对象存储的更多信息"]。
+如果您可能希望将集群上的某些聚合中的数据分层到不同的对象存储、也可以创建额外的对象存储。或者、如果您计划使用FabricPool 镜像将分层数据复制到其他对象存储。 link:task-managing-object-storage.html["了解有关管理对象存储的更多信息"]。

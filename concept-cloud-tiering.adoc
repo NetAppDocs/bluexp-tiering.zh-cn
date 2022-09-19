@@ -20,7 +20,7 @@ FabricPool 分层服务利用了 _Cloud Tier_ 的功能。FabricPool 是一种 N
 
 最初在采用纯SSD聚合的AFF 、FAS 和ONTAP Select 系统上受支持、从ONTAP 9.8开始、除了高性能SSD之外、您还可以对包含HDD的聚合中的数据进行分层。请参见 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["使用 FabricPool 的注意事项和要求"^] 了解详细信息。
 
-此外、还可以与MetroCluster 和FabricPool 镜像配置中的集群共享云分层许可证。必须使用System Manager或ONTAP 命令行界面设置FabricPool 配置、但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["此类集群的许可可通过Cloud Tiering完成。"]
+可以使用FabricPool 镜像为单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置配置配置云分层。Cloud Tiering许可证在所有集群之间共享。
 
 
 
@@ -81,7 +81,7 @@ NOTE: 您无法为分层到 StorageGRID 或 S3 兼容存储的数据选择生命
 
 == 定价和许可证
 
-通过按需购买订阅，自带云分层许可证或两者的组合为 Cloud Tiering 付费。如果您没有许可证，则可以为第一个集群免费试用 30 天。
+通过按需购买订阅、年度订阅、自带云分层许可证或两者的组合为Cloud Tiering付费。如果您没有许可证，则可以为第一个集群免费试用 30 天。
 
 将数据分层到 StorageGRID 时不收取任何费用。无需 BYOL 许可证或 PAYGO 注册。
 
@@ -91,7 +91,7 @@ https://cloud.netapp.com/cloud-tiering["查看定价详细信息"^]。
 
 === 30 天免费试用
 
-如果您没有 Cloud Tiering 许可证，则在为第一个集群设置分层时，将开始免费试用 Cloud Tiering 30 天。30 天免费试用结束后，您需要通过按需购买订阅， BYOL 许可证或两者的组合为 Cloud Tiering 付费。
+如果您没有 Cloud Tiering 许可证，则在为第一个集群设置分层时，将开始免费试用 Cloud Tiering 30 天。30天免费试用结束后、您需要通过按需购买订阅、年度订阅、BYOL许可证或两者的组合为Cloud Tiering付费。
 
 如果免费试用结束，并且您尚未订阅或添加许可证，则 ONTAP 将不再将冷数据分层到对象存储，但现有数据仍可供访问。
 
@@ -119,9 +119,17 @@ link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-paygo-subscription["�
 
 
 
+=== 年度合同
+
+在将非活动数据分层到AWS时、Cloud Tiering会提供一份年度合同。此计划的有效期为1年、2年或3年。
+
+目前、分层到Azure或GCP时不支持年度合同。
+
+
+
 === 自带许可证
 
-通过从 NetApp 购买 * Cloud Tiere* 许可证来获取您自己的许可证。您可以购买 2 个月， 12 个月， 24 个月或 36 个月期限的许可证，并指定任意分层容量。BYOL 云分层许可证是一个 _float_ 许可证，您可以跨多个内部 ONTAP 集群使用。您在 Cloud Tiering 许可证中定义的总分层容量可供所有内部集群使用。
+通过从 NetApp 购买 * Cloud Tiere* 许可证来获取您自己的许可证。您可以购买1年、2年或3年期限许可证、并指定任意分层容量。BYOL 云分层许可证是一个 _float_ 许可证，您可以跨多个内部 ONTAP 集群使用。您在 Cloud Tiering 许可证中定义的总分层容量可供所有内部集群使用。
 
 购买 Cloud Tiering 许可证后，您需要使用 Cloud Manager 中的数字电子钱包页面添加许可证。 link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["了解如何使用 Cloud Tiering BYOL 许可证"]。
 
@@ -146,7 +154,7 @@ image:diagram_cloud_tiering.png["一个架构图，其中显示了云分层服�
 . 您可以通过提供有关对象存储的详细信息来设置分层，包括分段 / 容器，存储类或访问层以及分层数据的生命周期规则。
 . Cloud Manager 将 ONTAP 配置为使用对象存储提供程序，并发现集群上的活动和非活动数据量。
 . 您可以选择要分层的卷以及要应用于这些卷的分层策略。
-. 一旦数据达到可视为非活动的阈值（请参见）， ONTAP 就会开始将非活动数据分层到对象存储 <<Volume tiering policies>>）。
+. 一旦数据达到可视为非活动的阈值（请参见）， ONTAP 就会开始将非活动数据分层到对象存储  tiering policies）。
 . 如果已对分层数据应用了生命周期规则（仅适用于某些提供商），则较早的分层数据将在一定天数后移至更经济高效的层。
 
 

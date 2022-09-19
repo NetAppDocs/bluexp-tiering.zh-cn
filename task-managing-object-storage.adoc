@@ -91,6 +91,8 @@ IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段�
 
 您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像以复制对象存储。您必须已将一个对象存储附加到聚合。
 
+使用MetroCluster 配置时、 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["请访问此处、查看ONTAP 文档中的更多详细信息和要求"]。
+
 .步骤
 . 在*集群信息板*中、单击选定集群的*高级设置*。
 +
@@ -105,6 +107,8 @@ image:screenshot_tiering_mirror_config.png["显示如何将第二个对象存储
 image:screenshot_tiering_mirror_config_complete.png["显示附加到聚合的第二个对象存储的屏幕截图。"]
 
 
+
+当2个对象存储正在同步时、镜像状态将显示为"正在同步"、同步完成后、镜像状态将更改为"已同步"。
 
 
 
@@ -142,6 +146,9 @@ image:screenshot_tiering_mirror_delete.png["显示聚合的取消镜像对象存
 
 
 此时将从聚合中删除镜像对象存储、并且不再复制分层数据。
+
+
+NOTE: 从MetroCluster 配置中删除镜像对象存储时、系统将提示您是否也要删除主对象存储。您可以选择保持主对象存储附加到聚合、也可以选择将其删除。
 
 
 

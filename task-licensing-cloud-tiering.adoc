@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-licensing-cloud-tiering.html 
-keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, tiering, cloud tiering 
-summary: 从第一个集群设置分层时，即可免费试用 30 天的 Cloud Tiering 。免费试用结束后，您需要通过云提供商市场上的按需购买 Cloud Manager 订阅， NetApp 的 BYOL 许可证或两者的组合为 Cloud Tiering 付费。 
+keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, annual, tiering, cloud tiering 
+summary: 从第一个集群设置分层时，即可免费试用 30 天的 Cloud Tiering 。免费试用结束后、您需要通过云提供商市场上的按需购买或年度Cloud Manager订阅、NetApp的BYOL许可证或两者的组合为Cloud Tiering付费。 
 ---
 = 为 Cloud Tiering 设置许可
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 从第一个集群设置分层时，即可免费试用 30 天的 Cloud 
 
 
 [role="lead"]
-从第一个集群设置分层时，即可免费试用 30 天的 Cloud Tiering 。免费试用结束后，您需要通过云提供商市场上的按需购买 Cloud Manager 订阅， NetApp 的 BYOL 许可证或两者的组合为 Cloud Tiering 付费。
+从第一个集群设置分层时，即可免费试用 30 天的 Cloud Tiering 。免费试用结束后、您需要通过云提供商市场上的按需购买或年度Cloud Manager订阅、NetApp的BYOL许可证或两者的组合为Cloud Tiering付费。
 
 在阅读其他内容之前，请先阅读一些注释：
 
@@ -87,9 +87,21 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 
 
+== 使用年度合同
+
+通过购买年度合同为Cloud Tiering支付年度费用。
+
+将非活动数据分层到AWS时、您可以订阅可从获取的年度合同 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS Marketplace 页面"^]。此计划的有效期为1年、2年或3年。
+
+如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["将订阅与您的 AWS 凭据关联"^]。
+
+目前、分层到Azure或GCP时不支持年度合同。
+
+
+
 == 使用 Cloud Tiering BYOL 许可证
 
-NetApp 自带许可证的期限为 2 个月， 12 个月， 24 个月或 36 个月。BYOL * 云分层 * 许可证是一个 _float_ 许可证，您可以在 Cloud Manager 帐户中的多个内部 ONTAP 集群之间使用。Cloud Tiering 许可证中定义的总分层容量将在所有 * 内部集群之间共享，从而使初始许可和续订变得轻松。
+NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * 云分层 * 许可证是一个 _float_ 许可证，您可以在 Cloud Manager 帐户中的多个内部 ONTAP 集群之间使用。Cloud Tiering 许可证中定义的总分层容量将在所有 * 内部集群之间共享，从而使初始许可和续订变得轻松。
 
 如果您没有 Cloud Tiering 许可证，请联系我们购买一个：
 
@@ -105,9 +117,9 @@ NetApp 自带许可证的期限为 2 个月， 12 个月， 24 个月或 36 个�
 
 === 自 2021 年 8 月 21 日起推出全新 Cloud Tiering BYOL 许可
 
-全新的 * 云分层 * 许可证于 2021 年 8 月推出，适用于使用 Cloud Tiering 服务的 Cloud Manager 中支持的分层配置。Cloud Manager目前支持分层到以下云存储：Amazon S3、Azure Blob存储、Google云存储、S3兼容对象存储、IBM云对象存储和StorageGRID。
+全新的 * 云分层 * 许可证于 2021 年 8 月推出，适用于使用 Cloud Tiering 服务的 Cloud Manager 中支持的分层配置。Cloud Manager 目前支持分层到以下云存储： Amazon S3 ， Azure Blob 存储， Google 云存储， S3 兼容对象存储和 StorageGRID 。
 
-您过去用于将内部 ONTAP 数据分层到云的 * FabricPool 许可证仅保留用于无法访问 Internet 的站点（也称为 " 非公开站点 " ）中的 ONTAP 部署。如果您使用的是此类配置、则可以使用System Manager或ONTAP 命令行界面在每个集群上安装FabricPool 许可证。
+您过去可能用于将内部ONTAP 数据分层到云的* FabricPool *许可证仅保留用于无法访问Internet的站点(也称为"非公开站点")中的ONTAP 部署以及将配置分层到对象存储。如果您使用的是此类配置、则可以使用System Manager或ONTAP 命令行界面在每个集群上安装FabricPool 许可证。
 
 
 TIP: 请注意，分层到 StorageGRID 不需要 FabricPool 或云分层许可证。
@@ -204,7 +216,7 @@ image:screenshot_services_license_expire1.png["在 \" 数字电子钱包 \" 页�
 
 . 如果 Cloud Manager 无法自动更新许可证，则需要手动上传许可证文件。
 +
-.. 您可以 <<Obtain your Cloud Tiering license file,从 NetApp 支持站点获取许可证文件>>。
+.. 您可以  your Cloud Tiering license file,从 NetApp 支持站点获取许可证文件。
 .. 在数字电子邮件页面的 _Data Services Licenses_ 选项卡中，单击 image:screenshot_horizontal_more_button.gif["更多图标"] 对于要更新的服务序列号，请单击 * 更新许可证 * 。
 +
 image:screenshot_services_license_update.png["选择特定服务的更新许可证按钮的屏幕截图。"]
@@ -220,11 +232,10 @@ Cloud Manager 会更新许可证，以便 Cloud Tiering 服务继续处于活动
 
 == 将Cloud Tiering许可证应用于特殊配置中的集群
 
-以下配置中的ONTAP 集群可以使用云分层许可证、但应用此许可证的方式必须与典型的单节点和HA配置的ONTAP 集群不同：
+以下配置中的ONTAP 集群可以使用云分层许可证、但应用此许可证的方式必须与使用FabricPool 镜像的单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置不同：
 
-* 分层镜像配置中的集群(连接到两个对象存储的集群)
-* 使用FabricPool 镜像的MetroCluster 配置
 * 分层到IBM Cloud Object Storage的集群
+* 安装在"非公开站点"中的集群
 
 
 
@@ -246,7 +257,7 @@ Cloud Manager 会更新许可证，以便 Cloud Tiering 服务继续处于活动
 
 NOTE: System Manager或ONTAP 命令行界面中显示的"子"许可证的许可容量和到期日期不是真实信息、因此、如果信息不相同、请勿担心。这些值由Cloud Tiering软件在内部进行管理。真实信息会在"数字电子钱包"中进行跟踪。
 
-对于上述三种配置、您需要使用System Manager或ONTAP 命令行界面(而不是使用云分层界面)配置分层。因此、在这些情况下、您需要从Cloud Tiering界面手动将"子"许可证推送到这些集群。
+对于上述两种配置、您需要使用System Manager或ONTAP 命令行界面(而不是使用云分层界面)配置分层。因此、在这些情况下、您需要从Cloud Tiering界面手动将"子"许可证推送到这些集群。
 
 请注意、由于在分层镜像配置中、数据会分层到两个不同的对象存储位置、因此您需要购买一个具有足够容量的许可证、以便将数据分层到这两个位置。
 

@@ -6,12 +6,6 @@
   <block id="91e06e9a9ef97681b798e2e5e007ba97" category="paragraph">按照以下步骤快速入门，或者向下滚动到其余部分以了解完整详细信息。</block>
   <block id="4c6a9048ac276eb9391ebe2abd8e0c0d" category="paragraph">您需要满足以下要求：</block>
   <block id="b020365bc471630c977d9fcc2c5ea1d1" category="inline-link">了解如何发现集群</block>
-  <block id="79c16600fe47edf1582a025fa48d5eaf" category="list-text">运行 ONTAP 9.2 或更高版本并与 Amazon S3 建立 HTTPS 连接的内部 ONTAP 集群。<block ref="afd80128eeaacb8238d3ffdcf8ecd8a8" category="inline-link-rx"></block>。</block>
-  <block id="a6100ac4fa5cb7bbb1c49e95165b96b2" category="inline-xref">所需权限</block>
-  <block id="88874fce87dd9edf63db978923d2d604" category="list-text">具有访问密钥和的 AWS 帐户 <block ref="c2b6a8c656d0c1ec20241b37b67a788f" category="inline-xref-macro-rx"></block> 因此， ONTAP 集群可以对 S3 中的非活动数据进行分层。</block>
-  <block id="8a906cdd797b7e3c6078a36f69907caa" category="list-text">安装在 AWS VPC 或内部环境中的连接器。</block>
-  <block id="76dad9926f73f6ff81e2335148643a23" category="list-text">用于 Connector 的网络连接，用于启用与 ONTAP 集群， S3 存储和 Cloud Tiering 服务的出站 HTTPS 连接。</block>
-  <block id="6474511561046279175e36da2b8fe0ea" category="paragraph">在 Cloud Manager 中，选择一个内部工作环境，单击分层服务的 * 启用 * ，然后按照提示将数据分层到 Amazon S3 。</block>
   <block id="81290f6c22665f0b935cb3e892c415c5" category="paragraph">免费试用结束后，通过按需购买订阅， ONTAP 云分层 BYOL 许可证或两者的组合为云分层付费：</block>
   <block id="f7f406d0800366ccfe60e6f109daeba3" category="inline-link">转到 Cloud Manager Marketplace 产品</block>
   <block id="e446d884fae3be910f7101a63469fe29" category="list-text">要从 AWS Marketplace 订阅，<block ref="107966ebb28a9da8e41c66a680ce7c07" category="inline-link-rx"></block>，单击 * 订阅 * ，然后按照提示进行操作。</block>
@@ -21,8 +15,6 @@
   <block id="7751e2f58b56568c8a5106199a1e7857" category="paragraph">验证是否支持 ONTAP 集群，设置网络以及准备对象存储。</block>
   <block id="455299fd2e4b438ff8661df0bfd1cace" category="paragraph">下图显示了每个组件以及需要在它们之间准备的连接：</block>
   <block id="ea948bee686d48a6c63b5b43e33502bc" category="inline-image-macro">一个架构图，其中显示了云分层服务，该服务连接到云提供商中的连接器，连接到 ONTAP 集群的连接器以及云提供商中的 ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。</block>
-  <block id="5a5e43a6ab40da96e209db5d0a0a6cc9" category="paragraph"><block ref="5a5e43a6ab40da96e209db5d0a0a6cc9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ab10001bd9d4b9c5aa83c97809cecc6c" category="admonition">Connector 和 S3 之间的通信仅用于对象存储设置。连接器可以位于您的内部，而不是云中。</block>
   <block id="5c611511bb6c7851d2e8d2dda1c92506" category="section-title">准备 ONTAP 集群</block>
   <block id="b71bc52875803efa47292572a9b3e73c" category="paragraph">将数据分层到 Amazon S3 时， ONTAP 集群必须满足以下要求。</block>
   <block id="ba361000e8e6e9e8b476ad1c83de5845" category="list-text">支持的 ONTAP 平台</block>
@@ -31,10 +23,7 @@
   <block id="52a13bb563bdd9efe50a0c0b73573c77" category="list-text">支持的 ONTAP 版本</block>
   <block id="62d57609b951b67fd78ae3ec184b62ce" category="list-text">ONTAP 9.2 或更高版本</block>
   <block id="5e4594155e3b93fdaf535482e0177054" category="list-text">集群网络连接要求</block>
-  <block id="184ebc3038c33d997bf16b79dab591c1" category="list-text">ONTAP 集群通过端口 443 启动与 Amazon S3 的 HTTPS 连接。</block>
   <block id="92cc6f012ccda72f0aac6364e38469e9" category="paragraph">ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会启动，而只是响应。</block>
-  <block id="0e37953ccc0b1e5802ae5b24ae86279e" category="paragraph">虽然 AWS Direct Connect 可提供更好的性能并降低数据传输费用，但 ONTAP 集群和 S3 之间并不需要使用它。但这样做是建议的最佳实践。</block>
-  <block id="a509f21e8ebc951e8eeaec85da6ea4d6" category="list-text">需要从 Connector 建立入站连接，该连接可以驻留在 AWS VPC 中或您的内部环境中。</block>
   <block id="b38a0774c812ca088fc02e75d5a257b6" category="paragraph">集群与 Cloud Tiering 服务之间不需要建立连接。</block>
   <block id="6f8cf694d04b60dbac7f5bd1f70ffe2d" category="list-text">托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。</block>
   <block id="bfa10f7c5e846fdab9228aa316c04549" category="inline-link">LIF</block>
@@ -47,33 +36,23 @@
   <block id="3d9108b42583e778e301c7eb55fcb6df" category="paragraph">您需要先在 Cloud Manager 中创建内部 ONTAP 工作环境，然后才能开始对冷数据进行分层。</block>
   <block id="6ff483ff43e1d1341ed8bca213a5d6c2" category="paragraph"><block ref="781159370dedb574e61a716048070385" category="inline-link-rx"></block>。</block>
   <block id="d32e4305e9f04e1cbc37d3e892619ee7" category="section-title">创建或切换连接器</block>
-  <block id="5ad4258277127a9462d68a41564a449f" category="paragraph">要将数据分层到云，需要使用 Connector 。将数据分层到 AWS S3 时，您可以使用 AWS VPC 或内部部署中的 Connector 。您需要创建一个新的连接器，或者确保当前选定的连接器位于 AWS 或内部。</block>
   <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">了解连接器</block>
   <block id="da1264a616f156bd6836a85f7dfdea5a" category="list-text"><block ref="da1264a616f156bd6836a85f7dfdea5a" category="inline-link-rx"></block></block>
   <block id="c870531773e82c374eb4125c8029e25e" category="inline-link">在连接器之间切换</block>
   <block id="74d39f4b6fe0e32c5cfa2ed86891bf44" category="list-text"><block ref="74d39f4b6fe0e32c5cfa2ed86891bf44" category="inline-link-rx"></block></block>
   <block id="a8e8e48001e032c3b5939047d15db5a2" category="section-title">为连接器准备网络连接</block>
-  <block id="d63806c38042436c32c78dfe5d08383e" category="paragraph">确保此连接器具有所需的网络连接。连接器可以安装在内部或 AWS 中。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
   <block id="aadbd6cd1f8b4e9deafea8f1d6c8333c" category="list-text">确保安装 Connector 的网络启用以下连接：</block>
   <block id="841f7e7eb4c540f0ef284f9a0806448c" category="list-text">通过端口 443 （ HTTPS ）与 Cloud Tiering 服务的出站 Internet 连接</block>
-  <block id="ea0cf30053080ee47fa2d127bb43a9ed" category="list-text">通过端口 443 与 S3 建立 HTTPS 连接</block>
   <block id="699a71169310a3553bddb7e36ecb8a5c" category="list-text">通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接</block>
-  <block id="c91fd7c65ef19fe4b6366209dda36c9b" category="list-text">如果需要，请为 S3 启用 VPC 端点。</block>
-  <block id="7b54817f031908aef164fafe480b4f1e" category="paragraph">如果您从 ONTAP 集群到 VPC 具有直接连接或 VPN 连接，并且希望连接器和 S3 之间的通信保持在 AWS 内部网络中，则建议使用 VPC 端点连接到 S3 。</block>
-  <block id="188a55edd3c64bb96098b7f41a24407d" category="section-title">正在准备 Amazon S3</block>
   <block id="1fa74ff5a0547c12a6e2f2b89c3c8d6e" category="paragraph">在为新集群设置数据分层时，系统会提示您在设置了 Connector 的 AWS 帐户中创建 S3 存储分段或选择现有 S3 存储分段。AWS 帐户必须具有可在 Cloud Tiering 中输入的权限和访问密钥。ONTAP 集群使用访问密钥对 S3 中的数据进行分层。</block>
   <block id="41e85822b15d5899d14062cd9df9aded" category="inline-link-macro">支持 Cloud Tiering 的区域</block>
   <block id="dda202721bf4274a3ddebb3880800e63" category="paragraph">S3 存储分段必须位于中 <block ref="c4438d9fddf1c0280ed87cc144cb2e75" category="inline-link-macro-rx"></block>。</block>
   <block id="0c838aa2699493723ba332b70d493cd4" category="admonition">如果您计划将 Cloud Tiering 配置为使用成本较低的存储类，以便分层数据在一定天数后过渡到，则在 AWS 帐户中设置存储分段时，不能选择任何生命周期规则。Cloud Tiering 可管理生命周期过渡。</block>
-  <block id="b587b1d00f73de17c5c338dccd019428" category="list-text">为 IAM 用户提供以下权限：</block>
   <block id="b539613501183cf10b8570ed60939fea" category="inline-link">AWS 文档：创建角色以向 IAM 用户委派权限</block>
-  <block id="05b1c5dc9ac71820df6378f78da0bbe6" category="paragraph"><block ref="05b1c5dc9ac71820df6378f78da0bbe6" category="inline-link-rx"></block></block>
-  <block id="6deb8545f29caee7c286cf981453dc62" category="list-text">创建或找到访问密钥。</block>
   <block id="8063fb8557d8e8394f41767a090ed5f2" category="paragraph">云分层会将访问密钥传递到 ONTAP 集群。凭据不会存储在 Cloud Tiering 服务中。</block>
   <block id="383aab378d15aa426a28f88b0b8d7d71" category="inline-link">AWS 文档：管理 IAM 用户的访问密钥</block>
   <block id="18a5ea96fd1a711fe5cc2e22701fb42c" category="paragraph"><block ref="18a5ea96fd1a711fe5cc2e22701fb42c" category="inline-link-rx"></block></block>
-  <block id="ee24650bf18ebf5454cdee66a4c5eecc" category="section-title">将第一个集群中的非活动数据分层到 Amazon S3</block>
   <block id="fd0b15799911e1006e252a82c698b372" category="paragraph">准备好 AWS 环境后，开始对第一个集群中的非活动数据进行分层。</block>
   <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">您需要什么？ #8217 ；将需要什么</block>
   <block id="04e0208908b4c6086bf83c95b22aff8b" category="inline-link">内部工作环境</block>
@@ -364,12 +343,10 @@
   <block id="952ecf98141368e99f3a215ef7b80187" category="paragraph">Cloud Tiering 会对非活动数据使用云提供商的默认存储类 / 访问层。但是，您可以应用生命周期规则，以便数据在一定天数后自动从默认存储类过渡到另一个存储类。这样可以将非常冷的数据迁移到成本较低的存储中，从而有助于降低成本。</block>
   <block id="54a34d1053931389233aa9b6c8fc588b" category="admonition">您无法为分层到 StorageGRID 或 S3 兼容存储的数据选择生命周期规则。</block>
   <block id="8c3c2e38ab977ab43a9ebd00e29973df" category="section-title">定价和许可证</block>
-  <block id="e325f7f8461c9006fec9e79b2c693097" category="paragraph">通过按需购买订阅，自带云分层许可证或两者的组合为 Cloud Tiering 付费。如果您没有许可证，则可以为第一个集群免费试用 30 天。</block>
   <block id="591a2cff7f748b04420333fcacaf56fd" category="paragraph">将数据分层到 StorageGRID 时不收取任何费用。无需 BYOL 许可证或 PAYGO 注册。</block>
   <block id="8f66314cc87864910e23571f159f6180" category="inline-link">查看定价详细信息</block>
   <block id="0f1483db85bf5d5cb61afc8d9099891d" category="paragraph"><block ref="b2c33e6266f2643bcac42ae686b2ca83" category="inline-link-rx"></block>。</block>
   <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">30 天免费试用</block>
-  <block id="a2d3330c29d566fa12249d29bb336248" category="paragraph">如果您没有 Cloud Tiering 许可证，则在为第一个集群设置分层时，将开始免费试用 Cloud Tiering 30 天。30 天免费试用结束后，您需要通过按需购买订阅， BYOL 许可证或两者的组合为 Cloud Tiering 付费。</block>
   <block id="66415c946116518cc6899512da0314ea" category="paragraph">如果免费试用结束，并且您尚未订阅或添加许可证，则 ONTAP 将不再将冷数据分层到对象存储，但现有数据仍可供访问。</block>
   <block id="d1517db071086971f3453ded8278c7a1" category="section-title">按需购买订阅</block>
   <block id="574f68397c4fbd685f9ffd6c26ebedfc" category="paragraph">Cloud Tiering 以按需购买模式提供基于消费的许可。通过云提供商的市场订阅后，您可以按 GB 为分层数据付费，无需预先支付费用。您的云提供商会通过每月账单向您开具账单。</block>
@@ -381,7 +358,6 @@
   <block id="ad05b2f231e5f48f63b30a2913fa7fef" category="paragraph">在免费试用期间，或者如果您未超过 Cloud Tiering BYOL 许可证，则不会从按需购买订阅中收取任何费用。</block>
   <block id="09c7ee4be0db4e9240de27e931212553" category="inline-link-macro">了解如何设置按需购买订阅</block>
   <block id="fce5aebaf837d23e27b8a9d6a54a6467" category="section-title">自带许可证</block>
-  <block id="df3841822547641e1f0490414fb8f19e" category="paragraph">通过从 NetApp 购买 * Cloud Tiere* 许可证来获取您自己的许可证。您可以购买 2 个月， 12 个月， 24 个月或 36 个月期限的许可证，并指定任意分层容量。BYOL 云分层许可证是一个 _float_ 许可证，您可以跨多个内部 ONTAP 集群使用。您在 Cloud Tiering 许可证中定义的总分层容量可供所有内部集群使用。</block>
   <block id="7b31eba1fa6d2aa1d3bf4ddb10d4b302" category="inline-link-macro">了解如何使用 Cloud Tiering BYOL 许可证</block>
   <block id="02a6408f36d264f039b618304a9a4c10" category="paragraph">购买 Cloud Tiering 许可证后，您需要使用 Cloud Manager 中的数字电子钱包页面添加许可证。 <block ref="14bb9fa35d1b0028e213cd470536d52e" category="inline-link-macro-rx"></block>。</block>
   <block id="36d4c89fb6384ec2ea8ec2f77986b9e1" category="paragraph">如上所述，我们建议您设置按需购买的订阅，即使您购买了 BYOL 许可证也是如此。</block>
@@ -570,7 +546,6 @@
   <block id="e74523dfd57d69116c6dc03759fe0a7b" category="list-text">位于美国西部</block>
   <block id="aab422acb3d2334a6deca0e1495745c2" category="section-title">南美洲</block>
   <block id="47b9af39407829080e9cfeee3607c39c" category="list-text">巴西南部</block>
-  <block id="53fb2e16821826b6c5ca2caabc6fc3fd" category="summary">从第一个集群设置分层时，即可免费试用 30 天的 Cloud Tiering 。免费试用结束后，您需要通过云提供商市场上的按需购买 Cloud Manager 订阅， NetApp 的 BYOL 许可证或两者的组合为 Cloud Tiering 付费。</block>
   <block id="4b75686c0a14158ec6b99e93fbf1828b" category="doc">为 Cloud Tiering 设置许可</block>
   <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">在阅读其他内容之前，请先阅读一些注释：</block>
   <block id="0727235314b2d6886610369d278fbe42" category="list-text">如果您已在云提供商的市场上订阅 Cloud Manager 订阅（ PAYGO ），则您也会自动从内部 ONTAP 系统订阅 Cloud Tiering 。您将在 Cloud Tiering * 许可 * 选项卡中看到活动订阅。您无需重新订阅。</block>
@@ -595,7 +570,6 @@
   <block id="c86cd292411d2b20ff6afbb02e35888f" category="list-text">单击 GCP Marketplace 下的 * 订阅 * ，然后单击 * 继续 * 。</block>
   <block id="be8850b30610a85a191ec0d192bcea70" category="list-text">从订阅<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block>，然后重新登录到 Cloud Central 以完成注册。</block>
   <block id="8b09b5b1748988787957d62eb22076ff" category="section-title">使用 Cloud Tiering BYOL 许可证</block>
-  <block id="c46f586bed1681956a268212f9feea43" category="paragraph">NetApp 自带许可证的期限为 2 个月， 12 个月， 24 个月或 36 个月。BYOL * 云分层 * 许可证是一个 _float_ 许可证，您可以在 Cloud Manager 帐户中的多个内部 ONTAP 集群之间使用。Cloud Tiering 许可证中定义的总分层容量将在所有 * 内部集群之间共享，从而使初始许可和续订变得轻松。</block>
   <block id="32d21336f5ff01b8e920d65646fad172" category="paragraph">如果您没有 Cloud Tiering 许可证，请联系我们购买一个：</block>
   <block id="7bd914491d17c534e3612cd97579060e" category="list-text">mailto ： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 发送电子邮件以购买许可证 ] 。</block>
   <block id="666323488d4fa691054a8d6bff137cc3" category="list-text">单击 Cloud Manager 右下角的聊天图标以请求许可证。</block>
@@ -835,12 +809,8 @@
   <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto ： ng-cloudmanager-feedback@netapp.com （反馈电子邮件）</block>
   <block id="bff60abbc46aceed0f73a3a4f6cfb123" category="paragraph">我们非常重视您的反馈意见。提交反馈以帮助我们改进 Cloud Manager 。</block>
   <block id="0659d428df833a806e29e65e632d380a" category="section-title">NetApp 支持</block>
-  <block id="c91b5a63849b8d2db01014ed33192735" category="paragraph">除了上述自助支持选项之外，您还可以在激活支持后与 NetApp 支持工程师合作解决任何问题。</block>
   <block id="6c08c57e382a25a778455184cd9b1a4a" category="list-text">在 Cloud Manager 中，单击 * 帮助 &gt; 支持 * 。</block>
   <block id="f5052c65917d7341726235d4d4941461" category="list-text">在 "Technical Support" 下选择一个可用选项：</block>
-  <block id="bece28b158ab337d9ed24b00d7d02cc7" category="list-text">单击 * 致电我们 * 可查找 NetApp 技术支持的电话号码。</block>
-  <block id="efe81cff8e6f47ec59ef94167b76bf5a" category="list-text">单击 * 打开问题描述 * ，选择一个选项，然后单击 * 发送 * 。</block>
-  <block id="cbb1040836732e478409dacf7e45171a" category="paragraph">NetApp 代表将审核您的案例，并尽快与您联系。</block>
   <block id="fd01295dbf857b2bc6bcef4166b23207" category="paragraph">最初在采用纯SSD聚合的AFF 、FAS 和ONTAP Select 系统上受支持、从ONTAP 9.8开始、除了高性能SSD之外、您还可以对包含HDD的聚合中的数据进行分层。请参见<block ref="6b92341e29e5578d52c0690ebbf4bdb7" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="dfbee056730af589714f6061683bf3c8" category="paragraph">Cloud Tiering支持以下对象存储提供程序：</block>
   <block id="d3e8cd2e370974f27de1b310b4aa8cb3" category="section-title">2022年5月3日</block>
@@ -849,9 +819,7 @@
   <block id="4675a948ea93098e22976c0848737e1a" category="paragraph">现在、可以与分层镜像配置(不包括MetroCluster 配置)中的集群以及分层到IBM云对象存储的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。<block ref="4e8c6c7f1b8cf8bbca1bc62528b46ae2" category="inline-link-rx"></block></block>
   <block id="75ad6cd4979a906c67e27abc9ee1c14e" category="inline-link">请参见支持的S3存储类。</block>
   <block id="d3028cb26dae3dbde1ec068c17d15383" category="paragraph">设置 Cloud Tiering 时，现在您可以配置生命周期规则，以便在一定天数后将非活动数据从 _Standard_ 存储类过渡到 _Glacier 即时检索 _ 。这将有助于降低 AWS 基础架构成本。<block ref="99f36cc81f33df65a0349e719000fada" category="inline-link-rx"></block></block>
-  <block id="c37d8d783a15bb3dc29d360fd96058fa" category="paragraph">全新的 * 云分层 * 许可证于 2021 年 8 月推出，适用于使用 Cloud Tiering 服务的 Cloud Manager 中支持的分层配置。Cloud Manager目前支持分层到以下云存储：Amazon S3、Azure Blob存储、Google云存储、S3兼容对象存储、IBM云对象存储和StorageGRID。</block>
   <block id="d99641589694e93765fada1790db2a0e" category="section-title">将Cloud Tiering许可证应用于特殊配置中的集群</block>
-  <block id="ec4ebd20c319e970c3f59b1f47802c0b" category="list-text">分层镜像配置中的集群(连接到两个对象存储的集群)</block>
   <block id="c8fe0ffee9071759c56b9a7d98bae676" category="section-title">具有FabricPool 许可证的现有集群的进程</block>
   <block id="1451b23352470f925dac87a3da139fca" category="inline-link-macro">在Cloud Tiering中发现任何这些特殊集群类型</block>
   <block id="f9e397eb4495d4b3c8a7097b4ea8b610" category="paragraph">当您 <block ref="20b85fbda0982633cbcc10be992f4ea5" category="inline-link-macro-rx"></block>、Cloud Tiering可识别FabricPool 许可证、并将该许可证添加到数字市场。这些集群将继续照常对数据进行分层。FabricPool 许可证过期后、您需要购买Cloud Tiering许可证。</block>
@@ -931,7 +899,6 @@
   <block id="a0b89ab6b5eac539fb7e734c5325f52e" category="paragraph">要获得估计值、只需将ONTAP 集群添加到Cloud Manager中、然后通过"分层集群信息板"进行检查即可、该信息板位于"分层"选项卡中。如果禁用了非活动数据报告(IDR)或在足够长的时间内尚未激活、Cloud Tiering将使用70%的行业常数来计算预计节省量。获得IDR数据后、Cloud Tiering会将节省的空间更新为准确的数据。</block>
   <block id="360f208f0200dcfe1f02d2beac7d1a99" category="section-title">Cloud Tiering支持哪些ONTAP 版本？</block>
   <block id="d221b871da22439c86adc694691b8ac6" category="paragraph">Cloud Tiering支持ONTAP 9.2及更高版本。</block>
-  <block id="83c5a7ec07bde90cd5d13c81363f989e" category="paragraph">单节点和高可用性AFF 、FAS 和ONTAP Select 集群支持云分层。</block>
   <block id="a876ec112f46ac7e9d03cc5e9d61ab8f" category="section-title">是否可以仅对使用HDD的FAS 系统中的数据进行分层？</block>
   <block id="6af3c671d9ae3cfdf4e5db8e741c4949" category="paragraph">可以、从ONTAP 9.8开始、您可以对HDD聚合上托管的卷中的数据进行分层。</block>
   <block id="5f2bd910e80c6ecc503341b164c23796" category="section-title">是否可以对加入到FAS 节点使用HDD的集群中的AFF 中的数据进行分层？</block>
@@ -980,7 +947,6 @@
   <block id="297e2ac2ec0bd88ad598062f4c07ee45" category="section-title">分层策略</block>
   <block id="a98ae6e10c680f6fd9a1e3e043029254" category="section-title">有哪些可用分层策略？</block>
   <block id="da09df112eb180303169daa41b71c993" category="paragraph">分层策略有四种：</block>
-  <block id="ab41562ecd1ee6cdeb73670552480518" category="paragraph">●None：将所有数据分类为始终处于热状态；防止将卷中的任何数据移动到对象存储。●冷快照(仅限Snapshot)：仅将冷快照块移至对象存储。●冷用户数据和快照(自动)：冷快照块和冷用户数据块都移动到对象存储。●所有用户数据(所有)：将所有数据分类为冷数据；立即将整个卷移动到对象存储。</block>
   <block id="2719cad5460eb9108696993a4c233dc2" category="inline-link-macro">详细了解分层策略</block>
   <block id="5ef61948a073dbcdfdb7d93caa1067ac" category="paragraph"><block ref="b9368c1c43c24f87d7a3626332a607af" category="inline-link-macro-rx"></block>。</block>
   <block id="d0252572656bbedd8e24eed72a5822ea" category="section-title">我的数据在哪一点被视为冷数据？</block>
@@ -1024,7 +990,6 @@
   <block id="db5702fcf8c9d887ce36ddb56a8e8e04" category="paragraph">是的。必须在以太网端口上配置集群间LIF、该端口位于HA对中的每个节点上、该HA对托管包含您计划分层到云的数据的卷。有关详细信息、请参见计划对数据进行分层的云提供商的要求部分。</block>
   <block id="1d1150417245464a6bc4030ff12d98ba" category="section-title">需要哪些权限？</block>
   <block id="6d7e8531e0360d0263e2ca053e0a6984" category="inline-link-macro">对于Amazon、需要具有管理S3存储分段的权限</block>
-  <block id="b5e9a7479354c252182b9aed30eceb39" category="list-text"><block ref="4473d2f13ecb5bcf1020f029ee281cf8" category="inline-link-macro-rx"></block>。</block>
   <block id="7b051265cea15bef56b2013258a3a024" category="list-text">对于Azure、除了您需要为Cloud Manager提供的权限之外、不需要任何额外的权限。</block>
   <block id="ba49bda4c6c598703b1a9de3bd715d7f" category="inline-link-macro">对于Google Cloud、具有存储访问密钥的服务帐户需要具有存储管理员权限</block>
   <block id="b416160ef653d48172d39e018c5edc09" category="list-text"><block ref="6da5859ea88129ba1f8030c6efa043ea" category="inline-link-macro-rx"></block>。</block>
@@ -1032,7 +997,6 @@
   <block id="bb0fe2f5bdb8e22816e9fa5b1026a7f4" category="list-text"><block ref="e1a02e457fa8607cad7bf299625a3fdd" category="inline-link-macro-rx"></block>。</block>
   <block id="049da913e478d360bf3fba0732f3ffe7" category="inline-link-macro">对于与S3兼容的对象存储、需要S3权限</block>
   <block id="de865f0ebc8f66fc8e1331d7e2a7f1d4" category="list-text"><block ref="2efc8cc4b2027ed3eb0bfad94737c839" category="inline-link-macro-rx"></block>。</block>
-  <block id="5904ecfefb0147d2c35e92234f70dbd9" category="paragraph">以下配置中的ONTAP 集群可以使用云分层许可证、但应用此许可证的方式必须与典型的单节点和HA配置的ONTAP 集群不同：</block>
   <block id="6ace93b12d62dd3912b132e79298337d" category="section-title">Cloud Tiering如何影响卷容量？</block>
   <block id="9edbed19ba22406e2515654036d6d7af" category="paragraph">Cloud Tiering不会影响卷的容量、而是影响聚合的性能层使用情况。</block>
   <block id="bd661fa541ade4c845ce21fee80a6364" category="section-title">Cloud Tiering是否支持使用生命周期管理策略？</block>
@@ -1101,8 +1065,6 @@
   <block id="5a5be55d6d19108a5a53e94d4b8bca13" category="inline-link">有关详细信息、请参见"security login"命令</block>
   <block id="fcccb04322797151b1c63a24fdbe8596" category="list-text">集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。<block ref="c49e76a401ad77700c5ead0ea46ac66a" category="inline-link-rx"></block>。</block>
   <block id="73d1fc3974be551e4fd6613740db6cba" category="list-text">云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。有关信息，请参见 ONTAP 文档<block ref="bc16a784cd65f4901578ebb3b70f2118" category="inline-link-rx"></block>。</block>
-  <block id="fcb56b02923ad8fee5725ea3ab197730" category="inline-link">在AWS中部署连接器</block>
-  <block id="80e22bce9427f83a8589594ea0adf6f3" category="list-text"><block ref="80e22bce9427f83a8589594ea0adf6f3" category="inline-link-rx"></block></block>
   <block id="8bde27dc2a4816433b259374095d8da3" category="inline-link">在Linux主机上部署Connector</block>
   <block id="72e0bcbd663626f0d086598014dfbeb0" category="list-text"><block ref="72e0bcbd663626f0d086598014dfbeb0" category="inline-link-rx"></block></block>
   <block id="303b6b375dcceef17b9d24c15d95c29b" category="list-text">*选择提供商*：选择* Amazon Web Services*并单击*继续*。</block>
@@ -1111,11 +1073,7 @@
   <block id="b1617e3bbddaa657a4ec6bf1adaa009f" category="inline-link-macro">了解有关管理分层设置的更多信息</block>
   <block id="2acc64ddb56d741fd3a55722992443a4" category="paragraph">您可以查看有关集群上的活动和非活动数据的信息。 <block ref="f94cc3968691fc7fbe7d897f27b0d426" category="inline-link-macro-rx"></block>。</block>
   <block id="ce705516a4901250bfdcebd148523fa5" category="inline-link-macro">了解有关管理对象存储的更多信息</block>
-  <block id="ba336912268dde60b644691ec914e25f" category="paragraph">如果您可能希望将集群上的特定聚合中的数据分层到不同的对象存储、也可以创建额外的对象存储。或者、如果您计划使用FabricPool 镜像来复制分层数据、则也可以使用其他对象存储。 <block ref="f977424bbc57cc401e0fdede18cc12da" category="inline-link-macro-rx"></block>。</block>
-  <block id="fe96c2addc6f8a74215b0cdcda591072" category="paragraph">您过去用于将内部 ONTAP 数据分层到云的 * FabricPool 许可证仅保留用于无法访问 Internet 的站点（也称为 " 非公开站点 " ）中的 ONTAP 部署。如果您使用的是此类配置、则可以使用System Manager或ONTAP 命令行界面在每个集群上安装FabricPool 许可证。</block>
-  <block id="9854ebf50e340e2f7d7ba806fe3befcb" category="list-text">使用FabricPool 镜像的MetroCluster 配置</block>
   <block id="04b39654e6e5a443553195d1e2779190" category="list-text">分层到IBM Cloud Object Storage的集群</block>
-  <block id="de3d9617f4da6d02e4c5e76bf641d602" category="paragraph">对于上述三种配置、您需要使用System Manager或ONTAP 命令行界面(而不是使用云分层界面)配置分层。因此、在这些情况下、您需要从Cloud Tiering界面手动将"子"许可证推送到这些集群。</block>
   <block id="b197b4bf8520425c8c0b02a971bb8d16" category="paragraph"><block ref="b197b4bf8520425c8c0b02a971bb8d16" category="inline-link-rx"></block></block>
   <block id="d01fd2b5b65b8c38cd7db8dbebfd0ac6" category="inline-link">FabricPool MetroCluster 配置信息</block>
   <block id="6dfc91892c8d766a3db42ec08d3c133e" category="paragraph"><block ref="6dfc91892c8d766a3db42ec08d3c133e" category="inline-link-rx"></block></block>
@@ -1125,8 +1083,6 @@
   <block id="a42fb1ba03bcfed59842ef0ade58297a" category="list-text">*选择提供商*：选择* Google Cloud*并单击*继续*。</block>
   <block id="207355fa06161fe61fe18f75db4c59d5" category="paragraph"><block ref="207355fa06161fe61fe18f75db4c59d5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="af35d8c52cd337b400dfea1bfe174a1d" category="list-text">*选择提供程序*：选择* StorageGRID *并单击*继续*。</block>
-  <block id="2b335d7f7d2ebd4c9695003c5bda0b3e" category="inline-link">此类集群的许可可通过Cloud Tiering完成。</block>
-  <block id="b882d4bfcd6ca2f1492dc4bdfb2410da" category="paragraph">此外、还可以与MetroCluster 和FabricPool 镜像配置中的集群共享云分层许可证。必须使用System Manager或ONTAP 命令行界面设置FabricPool 配置、但是<block ref="f2e8861a11602aa8783d4a7027bf2dab" category="inline-link-rx"></block></block>
   <block id="22a86e7ec906abc9fb7a4f1fedc859c1" category="list-text">您可以创建与其他对象存储的连接、这些对象存储可用于集群中的其他聚合</block>
   <block id="b92da8bcd266d3bfde2105ffc6280970" category="list-text">您可以使用UI将对象存储拖动到聚合中以进行分层和FabricPool 镜像</block>
   <block id="8d2a23c3bb3453bcfb2eb9da839497da" category="inline-link">此类配置的许可可使用Cloud Tiering完成。</block>
@@ -1148,8 +1104,6 @@
   <block id="1dacca07d9ba20ab896874ca3c68ea8d" category="list-text"><block ref="1dacca07d9ba20ab896874ca3c68ea8d" category="inline-link-rx"></block></block>
   <block id="462a06b2a85bbbf735ba8fa3fc4dd871" category="list-text">*选择提供程序*：选择* Microsoft Azure*并单击*继续*。</block>
   <block id="98ee30ccabc19b3e5b735d4b22bfe4e3" category="paragraph">如果达到BYOL容量限制、则新冷数据分层将停止、而以前分层的所有数据仍可访问。如果您订阅了_Cloud Manager - Deploy &amp; Manage Cloud Data Services_的PAYGO Marketplace、则新的冷数据将继续分层到对象存储、您将按使用情况支付这些费用。</block>
-  <block id="c71af3dcb18fb2edc19f9067190e9c6d" category="paragraph">此外、还支持FabricPool 镜像配置和MetroCluster 配置中的集群、但分层配置必须使用System Manager或ONTAP 命令行界面完成。</block>
-  <block id="eefeb369d27589982e7273d6835938c8" category="paragraph">在典型配置中、整个集群有一个对象存储。从2022年8月开始、您可以使用*高级设置*页面为集群添加其他对象存储、然后将不同的对象存储附加到不同的聚合。</block>
   <block id="ba34121e3527a1918b936c79899e68fa" category="paragraph">为了进行镜像、每个聚合最多可以附加两个分段、其中冷数据会同步分层到两个分段。这些存储分段可以来自不同的提供程序和不同的位置。从2022年8月开始、您可以使用*高级设置*页面将两个对象存储附加到一个聚合。</block>
   <block id="6c66decef59a00987dd2d537b80e9092" category="paragraph">是的。一般最佳实践是将一个存储分段附加到多个聚合。但是、在使用公有 云时、对象存储服务的IOPS上限为、因此必须考虑多个存储分段。</block>
   <block id="1f6fd3301ab6ce127efad422dec03d61" category="section-title">2022年8月3日</block>
@@ -1163,4 +1117,171 @@
   <block id="f479e40bc5b0a3dc9ce1b1c43ebdec89" category="sidebar">向聚合添加另一个对象存储以进行镜像</block>
   <block id="07ed437d90cdfd3243fc6c8fa8ddacff" category="sidebar">交换主对象存储和镜像对象存储</block>
   <block id="500c3424a2151541a2d7783c7e308bb5" category="sidebar">删除镜像对象存储</block>
+  <block id="5c37edf1ec718afd1ab9a5a51043e0ce" category="paragraph">按照以下步骤快速入门。本主题的以下各节提供了每个步骤的详细信息。</block>
+  <block id="e41af01898aa01f20e528d19fdda2ec8" category="paragraph">选择是通过公有 Internet将内部ONTAP 集群直接连接到AWS S3、还是使用VPN或AWS Direct Connect并通过专用VPC端点接口将流量路由到AWS S3。</block>
+  <block id="2095d7a797c25bb28e0630e6f0234176" category="inline-xref">请参见可用的连接方法。</block>
+  <block id="6faac2bde2c603b5020744e34c3b1561" category="paragraph"><block ref="d9d72c889e6f6edab2e44fef9632d7d0" category="inline-xref-macro-rx"></block></block>
+  <block id="9cf094682408ca5d57128e006a54b2f0" category="paragraph">如果您已在AWS VPC或内部部署了Connector、则可以随时完成所有操作。如果没有、则需要创建一个连接器、将ONTAP 数据分层到AWS S3存储。您还需要自定义 Connector 的网络设置，以便它可以连接到 AWS S3 。</block>
+  <block id="e4f1f56a3ef3efdb69f573c54e373407" category="inline-xref">请参见如何创建 Connector 以及如何定义所需的网络设置。</block>
+  <block id="547ff9b6a5e6f25a471ff36aabad9172" category="paragraph"><block ref="955ce6b96fd48d62c162b65277148f6a" category="inline-xref-macro-rx"></block></block>
+  <block id="aba3af0142718cdcd318e58a13cac0e0" category="paragraph">在 Cloud Manager 中发现您的 ONTAP 集群，验证集群是否满足最低要求，并自定义网络设置，以便集群可以连接到 AWS S3 。</block>
+  <block id="6ac7a4162c2e3c973c8dcb8ad3493ff7" category="inline-xref">了解如何使内部 ONTAP 集群做好准备。</block>
+  <block id="499fc037a59ef7c075fdde4e7b0311d1" category="paragraph"><block ref="0293805a32fb419ae9403f81b2c4ce54" category="inline-xref-macro-rx"></block></block>
+  <block id="381ea68c9177a4bf66e46b23e8b00041" category="paragraph">为Connector设置创建和管理S3存储分段的权限。您还需要为内部ONTAP 集群设置权限、以便其可以向S3存储分段读取和写入数据。</block>
+  <block id="cd728dd9f8dcd51be03736bc8cfae904" category="inline-xref">请参见如何为Connector和内部集群设置权限。</block>
+  <block id="0716c7c1bd553dcd8e61be329fed07cb" category="paragraph"><block ref="32df1baf5a910543dcec2e8d29bf2306" category="inline-xref-macro-rx"></block></block>
+  <block id="ca8ba6ff4c847f56391197d8470c7416" category="paragraph">选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到Amazon S3。</block>
+  <block id="f5f2481968c80db783f4f7ee6e8b7824" category="inline-xref">请参见如何为卷启用分层。</block>
+  <block id="2f6e84ba814f6b805e6d25f185e1a227" category="paragraph"><block ref="56875c85ab772701ec006d6bbbd47c15" category="inline-xref-macro-rx"></block></block>
+  <block id="75cd84ee546dcf1d1f4a18d8b35fef23" category="section-title">连接选项的网络图</block>
+  <block id="d01e794dc2a0fbbe0b45a2be721b3f37" category="paragraph">在配置从内部ONTAP 系统到AWS S3的分层时、您可以使用两种连接方法。</block>
+  <block id="e0e3556797f60e28e9764edb1e90829b" category="list-text">公有 连接—使用公有 S3 端点将 ONTAP 系统直接连接到 AWS S3 。</block>
+  <block id="c00f71153c1c02168311396c4ac129f0" category="list-text">专用连接—使用 VPN 或 AWS Direct Connect ，并通过使用专用 IP 地址的 VPC 端点接口路由流量。</block>
+  <block id="376da794bc45a0b27e3c757018f00f1c" category="paragraph">下图显示了*公有 connection*方法以及组件之间需要准备的连接。您可以使用内部安装的Connector或AWS VPC中部署的Connector。</block>
+  <block id="841708d765174f21a8c528e74c311ae4" category="inline-image-macro">显示Cloud Tiering如何通过公有 连接与集群上的卷以及非活动数据所在的AWS S3存储进行通信的图表。</block>
+  <block id="60f428ceeb78fe1894b235393dcb28dc" category="paragraph"><block ref="60f428ceeb78fe1894b235393dcb28dc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ea7f03756f7c008946dd9175a5fb9557" category="paragraph">下图显示了*专用连接*方法以及组件之间需要准备的连接。您可以使用内部安装的Connector或AWS VPC中部署的Connector。</block>
+  <block id="988a1c7b87ee97f4ed8d21b6da7d5d25" category="inline-image-macro">显示Cloud Tiering如何通过专用连接与集群上的卷以及非活动数据所在的AWS S3存储进行通信的图表。</block>
+  <block id="7d683aa0f26840c84294373f234a2a0d" category="paragraph"><block ref="7d683aa0f26840c84294373f234a2a0d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="460820727f3b7117c5da2a76a02f36bc" category="admonition">Connector 和 S3 之间的通信仅用于对象存储设置。</block>
+  <block id="ea97cc2428a460eae122a94c68a8b16a" category="section-title">准备您的连接器</block>
+  <block id="1abdc3d16a215df3ca7d958a5768b2f4" category="paragraph">Cloud Manager Connector 是 Cloud Manager 功能的主要软件。需要使用连接器对非活动ONTAP 数据进行分层。</block>
+  <block id="cc8fa83637def0ab4b26b2c73eaf58b1" category="paragraph">如果您已在AWS VPC或内部部署了Connector、则可以随时完成所有操作。如果没有、则需要在其中任一位置创建一个连接器、以便将ONTAP 数据分层到AWS S3存储。您不能使用部署在其他云提供商中的Connector。</block>
+  <block id="d41b031ef25fff764808749edcc2cd28" category="inline-link">连接器入门</block>
+  <block id="b37ed402641ff6f2d1b0b55061547f2d" category="list-text"><block ref="b37ed402641ff6f2d1b0b55061547f2d" category="inline-link-rx"></block></block>
+  <block id="cd10ae990b1a676dcb9da574833197dc" category="inline-link">在AWS中安装连接器</block>
+  <block id="fe96b3be0fd11571a6c8ea6ac43f23fe" category="list-text"><block ref="fe96b3be0fd11571a6c8ea6ac43f23fe" category="inline-link-rx"></block></block>
+  <block id="c434332bb7ea2d6636a3d41a262f1e7e" category="inline-link">在内部安装Connector</block>
+  <block id="408e970a6e2ac7b03356ff4f61689ed3" category="list-text"><block ref="408e970a6e2ac7b03356ff4f61689ed3" category="inline-link-rx"></block></block>
+  <block id="929d25665bc92d22cf4a79265248dd36" category="section-title">连接器网络连接要求</block>
+  <block id="572373ae1e78fa8826ac1a5468d0b8c1" category="list-text">通过端口443 (HTTPS)到Cloud Tiering服务的出站Internet连接</block>
+  <block id="2e379f93711508ab69eec06837dd271c" category="inline-link">请参见端点列表</block>
+  <block id="070ae2b938526f98049114b311cf4a90" category="list-text">通过端口 443 与 S3 对象存储建立 HTTPS 连接 <block ref="2b717f51e9f0e108fc936d861142f7b4" category="inline-link-rx"></block>）</block>
+  <block id="76e709935c290dea4c7b1c0de4918211" category="inline-link">确保Connector具有管理S3存储分段的权限</block>
+  <block id="4e96d68b20a8c2caa7ac1a77b15169c3" category="list-text"><block ref="4e96d68b20a8c2caa7ac1a77b15169c3" category="inline-link-rx"></block></block>
+  <block id="db41e7a8de9567fec002e93320c428ad" category="inline-xref">请参见如何设置 VPC 端点接口。</block>
+  <block id="b81793c592727efa905fe3e8a74bbb9d" category="list-text">如果从ONTAP 集群到VPC具有直接连接或VPN连接、并且您希望连接器和S3之间的通信保持在AWS内部网络中(*专用*连接)、则需要启用连接到S3的VPC端点接口。 <block ref="038eee040120b4244a9c2b9d19ca5787" category="inline-xref-macro-rx"></block></block>
+  <block id="aa8387a4bff8defdb2d4c5777a1bf540" category="section-title">准备 ONTAP 集群</block>
+  <block id="1b6bc3125f482fcbcf029c833aea1290" category="section-title">ONTAP 要求</block>
+  <block id="f0ea7e0f9c0096b762345cb79f78278f" category="list-text">如果您计划使用AWS PrivateLink连接到对象存储、则需要ONTAP 9.7或更高版本</block>
+  <block id="66aa360897a3e9eeca6d5cd1ad876df5" category="list-text">集群需要从 Connector 到集群管理 LIF 的入站 HTTPS 连接。</block>
+  <block id="9892fc321242d321a82e0d5b395f1707" category="list-text">托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。这些集群间 LIF 必须能够访问对象存储。</block>
+  <block id="2937cb5b93a7f81b2aff229a281dbc4b" category="paragraph">集群通过端口443从集群间LIF启动出站HTTPS连接到Amazon S3存储、以执行分层操作。ONTAP 在对象存储中读取和写入数据—对象存储从不启动，它只是响应。</block>
+  <block id="15791d531460b4c275e03017399fcd1a" category="inline-link">了解有关 IP 空间的更多信息</block>
+  <block id="c96f0b5929f61d63c7ae3512d00fb22b" category="list-text">集群间 LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。<block ref="0edb32ced43734581c082142ee8a87a9" category="inline-link-rx"></block>。</block>
+  <block id="eb3a28968aad966a4790d534386a8302" category="paragraph">设置Cloud Tiering时、系统会提示您使用IP空间。您应选择与这些 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。</block>
+  <block id="f2d23bc0f0e4ec1066fdf58d41ab19ab" category="paragraph">如果您使用的 IP 空间与 " 默认 " 不同，则可能需要创建静态路由才能访问对象存储。</block>
+  <block id="187b50ee8f2351a69b8fa6b8b42687d5" category="paragraph">IP空间中的所有集群间LIF都必须能够访问对象存储。如果无法为当前IP空间配置此空间、则需要创建一个专用IP空间、其中所有集群间LIF都可以访问对象存储。</block>
+  <block id="3389249695ca8c10d31bf35b73b0c94e" category="inline-xref">请参见如何设置 VPC 端点接口并加载 S3 证书。</block>
+  <block id="e3cb89ec96389280988a5bc1aab122d8" category="list-text">如果在AWS中使用专用VPC接口端点进行S3连接、则要使用HTTPS/443、您需要将S3端点证书加载到ONTAP 集群中。 <block ref="1dbd4fd842a70fbdf055f03b19c52e23" category="inline-xref-macro-rx"></block></block>
+  <block id="7f04f32c4656d50b5019019cf54c568c" category="inline-xref">确保ONTAP 集群具有访问S3存储分段的权限。</block>
+  <block id="6a860c670eba971ed1e208c2792da896" category="list-text"><block ref="0a3b1eb507b43212a236c7019d9d78bf" category="inline-xref-macro-rx"></block></block>
+  <block id="c5fe798394fdf9d90bcf14b0e01b5dda" category="section-title">在 Cloud Manager 中发现您的 ONTAP 集群</block>
+  <block id="9398b4bdb55b447165274ab7edd67756" category="paragraph">您需要先在Cloud Manager中发现内部ONTAP 集群、然后才能开始将冷数据分层到对象存储。要添加集群，您需要知道集群管理 IP 地址和管理员用户帐户的密码。</block>
+  <block id="aa82b0633ff8ba724f265336515caa95" category="section-title">准备 AWS 环境</block>
+  <block id="95be42e50b8072b622c23cf84099c7b8" category="section-title">设置 S3 权限</block>
+  <block id="0d0602824136f714807f54069c6d5a89" category="paragraph">您需要配置两组权限：</block>
+  <block id="0d021f94d8bd70d2a5185935d6efa23e" category="list-text">Connector创建和管理S3存储分段的权限。</block>
+  <block id="e1e27de3274b6be648bacdf85d89a282" category="list-text">内部 ONTAP 集群的权限，以便可以将数据读写到 S3 存储分段。</block>
+  <block id="b99f1169cc9c4dc4d04df2e1240f99b1" category="inline-link">这些S3权限</block>
+  <block id="a6e42fec71384a3a5d77eba684fba2c9" category="inline-link">AWS 文档：编辑 IAM 策略</block>
+  <block id="46c2f3b9e7da21f892e750d164cb2d57" category="list-text">确认<block ref="91113a09caa216208c5e3ed063870cfa" category="inline-link-rx"></block> 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果不是、则需要添加缺少的权限。请参见<block ref="6d4dc5f0c95117ac550b72968db62911" category="inline-link-rx"></block>。</block>
+  <block id="5eb4ef1304848f6f34b1acbfed60cc32" category="list-text">激活此服务时、分层向导将提示您输入访问密钥和机密密钥。这些凭据将传递到ONTAP 集群、以便ONTAP 可以将数据分层到S3存储分段。为此，您需要创建具有以下权限的 IAM 用户：</block>
+  <block id="5d6d3c39001c5518d516e9053e5363e3" category="paragraph">请参见<block ref="eb8d2636cc0b0f2875b50c1561ec0060" category="inline-link-rx"></block> 了解详细信息。</block>
+  <block id="876b9c7ce7ebb4d81c240550c2c0e1e9" category="list-text">创建或找到访问密钥。</block>
+  <block id="486567bdd60f21beefa59174661f6d52" category="section-title">使用VPC端点接口为系统配置专用连接</block>
+  <block id="d9ab6200319a7f7964b32febe53d34e4" category="inline-xref">上图</block>
+  <block id="28f0ceaa23bc63c7f760aa666423ac06" category="paragraph">如果您计划使用标准公有 Internet连接、则所有权限均由Connector设置、您无需执行任何其他操作。此类型的连接如中所示 <block ref="7970de2b270f0e5a1b7c779a4e2ac1c0" category="inline-xref-macro-rx"></block>。</block>
+  <block id="db9fa5d440cca85d11286b971e03baa8" category="inline-xref">上述第二张图</block>
+  <block id="40ac49227e9f49db8587683b250e99e0" category="paragraph">如果您希望通过Internet从内部数据中心到VPC建立更安全的连接、可以在分层激活向导中选择AWS PrivateLink连接。如果您计划使用VPN或AWS Direct Connect通过使用专用IP地址的VPC端点接口连接内部系统、则必须使用此功能。此类型的连接如中所示 <block ref="2050915bab4f6759cf373f4985750764" category="inline-xref-macro-rx"></block>。</block>
+  <block id="a08b285fd78cf03936887841fbc87805" category="inline-link">请参见有关使用适用于 Amazon S3 的 AWS PrivateLink 的详细信息</block>
+  <block id="c2217bd93d297ddc08ba3a9c93fb29aa" category="list-text">使用 Amazon VPC 控制台或命令行创建接口端点配置。<block ref="4b288ecb11624923e7ee69f96a59c546" category="inline-link-rx"></block>。</block>
+  <block id="8c7e8492b349031290e65cb7dd034b88" category="inline-xref">添加所需的S3 Connector权限</block>
+  <block id="e063a584bd16a136805e452428bda5e1" category="list-text">修改与 Cloud Manager Connector 关联的安全组配置。您必须将此策略更改为 "Custom" （自定义）（从 "Full Access" ），并且必须将其更改为 "Custom" （自定义） <block ref="2e3aa01a102d96f1118abd47a89529bc" category="inline-xref-macro-rx"></block> 如前面所示。</block>
+  <block id="54979ba354582c6f2824abc12558cf5a" category="inline-image-macro">与 Connector 关联的 AWS 安全组的屏幕截图。</block>
+  <block id="ba9ccb641f252cf5f2df3c92824ecfb5" category="paragraph"><block ref="ba9ccb641f252cf5f2df3c92824ecfb5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="01069141c04702b64a86089c7157b442" category="paragraph">如果您使用端口80 (HTTP)与专用端点进行通信、则已设置完毕。您现在可以在集群上启用Cloud Tiering。</block>
+  <block id="41e9463232a3a509ddf5815706788caa" category="paragraph">如果您使用端口443 (HTTPS)与专用端点进行通信、则必须从VPC S3端点复制证书并将其添加到ONTAP 集群中、如接下来的4个步骤所示。</block>
+  <block id="39bab378d876d4ae9f917360ff7b633a" category="list-text">从 AWS 控制台获取端点的 DNS 名称。</block>
+  <block id="51cca00855dd27ddbb729c64d6988680" category="inline-image-macro">AWS 控制台中 VPC 端点的 DNS 名称的屏幕截图。</block>
+  <block id="63c7ff1056127bdaee465b05c7c83d3c" category="paragraph"><block ref="63c7ff1056127bdaee465b05c7c83d3c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="31b738479d7d16ff849ac312f5649e77" category="inline-link">登录到托管 Cloud Manager Connector 的 VM</block>
+  <block id="9494561b819165d9f1e8e339562e316d" category="list-text">从 VPC S3 端点获取证书。您可以通过执行此操作<block ref="0617c2fce5134dbc852516af04fe18ee" category="inline-link-rx"></block> 并运行以下命令。输入端点的 DNS 名称时，在开头添加 " 分段 " ，替换 "* " ：</block>
+  <block id="b11703e578eba56af91d25ee75ec1594" category="list-text">从此命令的输出中，复制 S3 证书的数据（包括开始 / 结束证书标记之间的所有数据）：</block>
+  <block id="042284b067b431d7d21168a5ada6e448" category="list-text">登录到 ONTAP 集群命令行界面并使用以下命令应用您复制的证书（替换您自己的 Storage VM 名称）：</block>
+  <block id="b5cc03c234fd0b33ad38196195be66b1" category="section-title">将第一个集群中的非活动数据分层到Amazon S3</block>
+  <block id="1659c31a8be417d2795f4edfad6d0d82" category="paragraph">如果Amazon S3分层目标作为工作环境存在于Canvas上、则可以将集群拖动到工作环境中以启动设置向导。</block>
+  <block id="69e36636dd54081f0a28f113ee3307a1" category="inline-image-macro">屏幕截图显示了设置S3存储分层时必须提供的数据。</block>
+  <block id="dfe479360e7546636cca896bd1b3eaab" category="paragraph"><block ref="dfe479360e7546636cca896bd1b3eaab" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f4859595c052226dbccca0f9481f92ad" category="list-text">完成*创建对象存储*页面上的部分：</block>
+  <block id="17fa808b96787ade97c9425a4f978efa" category="list-text">*存储类*：Cloud Tiering可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。</block>
+  <block id="50c80bcbf2fb8548984696b2507f657e" category="list-text">*网络连接*：输入网络连接详细信息、然后单击*继续*。</block>
+  <block id="7e25e27ce64507b1906c7dca54791a97" category="paragraph">在ONTAP 集群中选择要分层的卷所在的IP空间。此IP空间的集群间LIF必须具有出站Internet访问权限、才能连接到云提供商的对象存储。</block>
+  <block id="e7edd59a2da92012c1be81b1de31d27f" category="inline-xref">请参见上述设置信息。</block>
+  <block id="7b39b0e487b44a339910223511ac5932" category="paragraph">或者，选择是否使用先前配置的 AWS PrivateLink 。 <block ref="e6b15c4e63006b05802c430924113019" category="inline-xref-macro-rx"></block></block>
+  <block id="ef2b048eb0f31f088c41f8317126f2c2" category="paragraph">此时将显示一个对话框、帮助您完成端点配置。</block>
+  <block id="4d4499464e1749775c821bea4d3050f7" category="paragraph">如果您可能希望将集群上的某些聚合中的数据分层到不同的对象存储、也可以创建额外的对象存储。或者、如果您计划使用FabricPool 镜像将分层数据复制到其他对象存储。 <block ref="f977424bbc57cc401e0fdede18cc12da" category="inline-link-macro-rx"></block>。</block>
+  <block id="beadf5cee99a14a3247e8fe8e6ecba97" category="summary">从第一个集群设置分层时，即可免费试用 30 天的 Cloud Tiering 。免费试用结束后、您需要通过云提供商市场上的按需购买或年度Cloud Manager订阅、NetApp的BYOL许可证或两者的组合为Cloud Tiering付费。</block>
+  <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">使用年度合同</block>
+  <block id="f13eb2181d08fc7abed9205d37d0c184" category="paragraph">通过购买年度合同为Cloud Tiering支付年度费用。</block>
+  <block id="2351127acb653fd60dafc73c8efcb79d" category="inline-link">AWS Marketplace 页面</block>
+  <block id="66930a908819d6fce6483de6c770d313" category="paragraph">将非活动数据分层到AWS时、您可以订阅可从获取的年度合同<block ref="7e9391e5068ba3345180f0de3723960c" category="inline-link-rx"></block>。此计划的有效期为1年、2年或3年。</block>
+  <block id="54b98a81c2ba2da3e9c721b03a4585b5" category="inline-link">将订阅与您的 AWS 凭据关联</block>
+  <block id="29b2b8613d3a7ed690246613f8654828" category="paragraph">如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行<block ref="f1f7c973fce685b876017d26d677c721" category="inline-link-rx"></block>。</block>
+  <block id="29f6791775c21cd38fbdcb5b18589d37" category="paragraph">目前、分层到Azure或GCP时不支持年度合同。</block>
+  <block id="07c165be091a386388a58ec51c7b0482" category="paragraph">NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * 云分层 * 许可证是一个 _float_ 许可证，您可以在 Cloud Manager 帐户中的多个内部 ONTAP 集群之间使用。Cloud Tiering 许可证中定义的总分层容量将在所有 * 内部集群之间共享，从而使初始许可和续订变得轻松。</block>
+  <block id="85ae9bef317bd3c11475e84eb54944db" category="paragraph">全新的 * 云分层 * 许可证于 2021 年 8 月推出，适用于使用 Cloud Tiering 服务的 Cloud Manager 中支持的分层配置。Cloud Manager 目前支持分层到以下云存储： Amazon S3 ， Azure Blob 存储， Google 云存储， S3 兼容对象存储和 StorageGRID 。</block>
+  <block id="beecf2fd8c511928c5d65a11860f7c21" category="paragraph">您过去可能用于将内部ONTAP 数据分层到云的* FabricPool *许可证仅保留用于无法访问Internet的站点(也称为"非公开站点")中的ONTAP 部署以及将配置分层到对象存储。如果您使用的是此类配置、则可以使用System Manager或ONTAP 命令行界面在每个集群上安装FabricPool 许可证。</block>
+  <block id="6b96b48c014b5645274b443e9b351af2" category="paragraph">以下配置中的ONTAP 集群可以使用云分层许可证、但应用此许可证的方式必须与使用FabricPool 镜像的单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置不同：</block>
+  <block id="0b5da3f47f30c986be576c900e39dc5e" category="list-text">安装在"非公开站点"中的集群</block>
+  <block id="5c47f5b94c062cb59e1084e7104a35ad" category="paragraph">对于上述两种配置、您需要使用System Manager或ONTAP 命令行界面(而不是使用云分层界面)配置分层。因此、在这些情况下、您需要从Cloud Tiering界面手动将"子"许可证推送到这些集群。</block>
+  <block id="254aa7ed02406858dd3570d57e0c4131" category="paragraph">单节点和高可用性AFF 、FAS 和ONTAP Select 集群支持云分层。此外、还支持FabricPool 镜像配置和MetroCluster 配置中的集群。</block>
+  <block id="1f0f4e4d1bc0286ff3e0b848a00fe06b" category="paragraph">在典型配置中、整个集群有一个对象存储。从2022年8月开始、您可以使用*高级设置*页面为集群添加其他对象存储、然后将不同的对象存储附加到不同的聚合、或者将2个对象存储附加到聚合以进行镜像。</block>
+  <block id="c51354053e48bdd26e7dd1bcbe8db297" category="list-text">无：将所有数据分类为始终处于热状态；防止将卷中的任何数据移动到对象存储。</block>
+  <block id="ebbc81ecc0c245b37c3c8da4d2d3fe29" category="list-text">冷快照(仅限Snapshot)：仅将冷快照块移至对象存储。</block>
+  <block id="d20505887b84fc9c54fd586bc862138a" category="list-text">冷用户数据和快照(自动)：冷快照块和冷用户数据块都移动到对象存储。</block>
+  <block id="08070357c74547d6c374634190ef592e" category="list-text">所有用户数据(全部)：将所有数据分类为冷数据；立即将整个卷移动到对象存储。</block>
+  <block id="718ab8536a948516f06462c22a0f8852" category="list-text"><block ref="cb1be15d6f93cbd0769a2f1805d3c3a2" category="inline-link-macro-rx"></block>。</block>
+  <block id="ab288ae4b4c50ebb9a997e0f0debbd15" category="section-title">2022年9月19日</block>
+  <block id="d6076da95b416ff0d08e3269c4addf0d" category="section-title">分层向导允许使用AWS PrivateLink安全连接到S3存储</block>
+  <block id="905ecf204d0cf0b2ed497e63ae9324d0" category="inline-link">使用VPC端点接口为系统配置专用连接</block>
+  <block id="33e030edd0380c3b2d743ec2f989598c" category="paragraph">在先前版本中、通过VPC端点将集群连接到S3存储分段的安全方式非常耗时。现在、您可以按照前提步骤进行操作<block ref="fb4b1250ed3d38b3a9447c7c732436c8" category="inline-link-rx"></block>、然后、您可以在"网络连接"页面的分层设置向导期间选择PrivateLink。</block>
+  <block id="883959b6b7ad90936b33d524655bc282" category="inline-link">查看将非活动数据分层到Amazon S3的要求和步骤</block>
+  <block id="93d0679385afbe8961d65715ec42ad95" category="paragraph"><block ref="eae517fc6cf18ab5b51a15743d8fba49" category="inline-link-rx"></block>。</block>
+  <block id="6a22836d972c44908e791a2300d9312a" category="section-title">拖放以启用Amazon S3的Cloud Tiering</block>
+  <block id="84b50dc471c57455cf0359ad021a8c58" category="paragraph">如果Amazon S3分层目标作为工作环境存在于Canvas上、您可以将内部ONTAP 工作环境拖动到目标上以启动分层设置向导。</block>
+  <block id="7c7cbcd98ab4ba89255f7b1be8725b81" category="inline-link">请访问此处、查看ONTAP 文档中的更多详细信息和要求</block>
+  <block id="3cb1cda385e4184fc09dbec5c2aec109" category="paragraph">使用MetroCluster 配置时、<block ref="9abcb785e0ef8b918a18e0f5dbad9882" category="inline-link-rx"></block>。</block>
+  <block id="9c71902c4f1a611c5b631cc69cbd2ada" category="paragraph">当2个对象存储正在同步时、镜像状态将显示为"正在同步"、同步完成后、镜像状态将更改为"已同步"。</block>
+  <block id="b57c0deab1a5287b0457bf7ca26a95f4" category="admonition">从MetroCluster 配置中删除镜像对象存储时、系统将提示您是否也要删除主对象存储。您可以选择保持主对象存储附加到聚合、也可以选择将其删除。</block>
+  <block id="6eecabc0d7fe334dd9e87b08c1b64c93" category="paragraph">可以使用FabricPool 镜像为单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置配置配置云分层。Cloud Tiering许可证在所有集群之间共享。</block>
+  <block id="6341d59e78dc892e44e4255d34dff624" category="paragraph">通过按需购买订阅、年度订阅、自带云分层许可证或两者的组合为Cloud Tiering付费。如果您没有许可证，则可以为第一个集群免费试用 30 天。</block>
+  <block id="85e6332aa0d0ad8f46ae520da6d1c0c7" category="paragraph">如果您没有 Cloud Tiering 许可证，则在为第一个集群设置分层时，将开始免费试用 Cloud Tiering 30 天。30天免费试用结束后、您需要通过按需购买订阅、年度订阅、BYOL许可证或两者的组合为Cloud Tiering付费。</block>
+  <block id="421539f25601331f9f5f1e59cdb43e21" category="section-title">年度合同</block>
+  <block id="46e0b6a495f87cf4920ab347582f415e" category="paragraph">在将非活动数据分层到AWS时、Cloud Tiering会提供一份年度合同。此计划的有效期为1年、2年或3年。</block>
+  <block id="1ca6869c60d4b26c9ebd2bc63dd19e71" category="paragraph">通过从 NetApp 购买 * Cloud Tiere* 许可证来获取您自己的许可证。您可以购买1年、2年或3年期限许可证、并指定任意分层容量。BYOL 云分层许可证是一个 _float_ 许可证，您可以跨多个内部 ONTAP 集群使用。您在 Cloud Tiering 许可证中定义的总分层容量可供所有内部集群使用。</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述自助支持选项之外、您还可以在激活支持后与NetApp支持专家合作解决任何问题。</block>
+  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">了解如何注册获取支持</block>
+  <block id="09651e14b46d7e8697d32de90d0deacb" category="paragraph">要使用*创建案例*功能、您必须先一次性注册Cloud Manager帐户ID序列号(即960xxxx)。 <block ref="3349e4b3d05f646f2f1421bee7c2ad26" category="inline-link-macro-rx"></block>。</block>
+  <block id="383133cb6f7207b1c65c3ace94aa5e95" category="list-text">如果您要通过电话与某人通话、请单击*致电我们*。系统会将您定向到netapp.com上的一个页面、其中列出了您可以拨打的电话号码。</block>
+  <block id="bf5bc6ab0f95f17f4e98c9d766b8c11d" category="list-text">单击*创建案例*、向NetApp支持专家开一个服务单：</block>
+  <block id="b53e0a259f4a0c8e7da80d6c94e26c84" category="list-text">* NetApp 支持站点 Account*：选择与创建支持案例的人员关联的适用帐户。除下面提供的其他电子邮件外、此人还将是NetApp的主要联系人。</block>
+  <block id="ec65cc87efda54741062da1fce99ff76" category="paragraph">如果未看到您的NSS帐户、您可以导航到Cloud Manager支持部分中的* NSS管理*选项卡将其添加到该选项卡中。</block>
+  <block id="b3144caf7d928b7954447c757b3ed77b" category="list-text">*服务*：选择与问题描述 关联的服务。例如、Cloud Manager适用于具有服务中工作流或功能的技术支持问题描述。</block>
+  <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">*工作环境*：如果适用于存储、请选择* Cloud Volumes ONTAP *或* on-Prem*、然后选择关联的工作环境。</block>
+  <block id="1e38219c106fb9d07d173c027b8911c7" category="paragraph">工作环境列表属于您在服务顶部横幅中选择的Cloud Manager帐户、工作空间和连接器的范围。</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*案例优先级*：选择案例的优先级、可以是"低"、"中"、"高"或"严重"。</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">要了解有关这些优先级的更多详细信息、请将鼠标悬停在字段名称旁边的信息图标上。</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*问题描述 *：提供问题的详细问题描述 、包括任何适用的错误消息或您执行的故障排除步骤。</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*其他电子邮件地址*：如果您希望其他人了解此问题描述 、请输入其他电子邮件地址。</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">创建案例表的屏幕截图、可用于向NetApp支持部门创建案例。</block>
+  <block id="a2ff30886e1baf1e7d5045b5fc24f5b9" category="paragraph"><block ref="a2ff30886e1baf1e7d5045b5fc24f5b9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">此时将显示一个弹出窗口、其中包含您的支持案例编号。NetApp支持专家将审核您的案例、并尽快与您联系。</block>
+  <block id="04e15da1deae9568b4dcda64fbb0c8d5" category="paragraph">有关支持案例的历史记录、您可以单击*设置&gt;时间线*并查找名为"创建支持案例"的操作。 最右侧的按钮可用于展开操作以查看详细信息。</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">尝试创建案例时、您可能会遇到以下错误消息：</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"您无权针对选定服务创建案例"</block>
+  <block id="148f13242c3e296dc276821cdc574921" category="paragraph">此错误可能意味着NSS帐户及其关联的记录公司与Cloud Manager帐户序列号(即960xxxx)或工作环境序列号。您可以查看*创建案例*表顶部的NSS帐户列表以找到正确的匹配项、也可以使用以下选项之一寻求帮助：</block>
+  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">使用产品内聊天功能</block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">通过提交非技术案例<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
 </blocks>
