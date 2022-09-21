@@ -89,9 +89,11 @@ IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段�
 
 == 将另一个对象存储附加到聚合以进行镜像
 
-您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像以复制对象存储。您必须已将一个对象存储附加到聚合。
+您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。
 
-使用MetroCluster 配置时、 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["请访问此处、查看ONTAP 文档中的更多详细信息和要求"]。
+使用MetroCluster 配置时、最佳做法是使用位于不同可用性区域中的对象存储、或者配置为在多个可用性区域中保留对象副本的对象存储。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["在ONTAP 文档中了解有关MetroCluster 要求的更多信息"^]。
+
+请注意、在MetroCluster 配置中使用StorageGRID 作为对象存储时、两个ONTAP 系统都可以对一个StorageGRID 系统执行FabricPool 分层。
 
 .步骤
 . 在*集群信息板*中、单击选定集群的*高级设置*。

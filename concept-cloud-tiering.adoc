@@ -121,7 +121,7 @@ link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-paygo-subscription["�
 
 === 年度合同
 
-在将非活动数据分层到AWS时、Cloud Tiering会提供一份年度合同。此计划的有效期为1年、2年或3年。
+在将非活动数据分层到Amazon S3时、Cloud Tiering会提供一份年度合同。此计划的有效期为1年、2年或3年。
 
 目前、分层到Azure或GCP时不支持年度合同。
 

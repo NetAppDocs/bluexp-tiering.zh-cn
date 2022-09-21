@@ -135,21 +135,6 @@
   <block id="2817937e51c403b4b9929eaa298b82dd" category="paragraph">对于使用 Cloud Tiering 服务的 Cloud Manager 中支持的分层配置，现在提供了一个新的 * 云分层 * 许可证。这是一个浮动许可证，您可以跨多个内部 ONTAP 集群使用。您过去可能使用的 * FabricPool * 许可证仅适用于 不支持的配置。</block>
   <block id="54b8200ba1ce85a7ad931e091de0ed98" category="inline-link-macro">了解有关全新 Cloud Tiering 许可证的更多信息</block>
   <block id="59e10c49329cd1a0a55e4a0d27f6a584" category="inline-link-macro">请参见如何将数据分层到与 S3 兼容的对象存储</block>
-  <block id="916678dfdf53de83f6afdf8fca563fb3" category="section-title">2021 年 7 月 7 日</block>
-  <block id="def40345e2d3c9101a49141b1956c58d" category="paragraph">您不再需要使用 Azure vNet 中安装的 Connector 。将数据分层到 Azure Blob 存储时，您的 Connector 可以在内部的主机上运行。</block>
-  <block id="945fb8f32f58d1cc36cb9f1e9e4c6fe5" category="section-title">2021 年 6 月 7 日</block>
-  <block id="277a1d3dc69ddcb600b5564bbfee2f99" category="paragraph">在早期版本中，使用 Amazon S3 或 Google Cloud 对象存储时，您可以在 30 天后将分层数据从标准存储类过渡到另一存储类。此版本增加了一些新功能：</block>
-  <block id="92a8cc3e0000b5a588f5e5a545d580b8" category="list-text">您可以选择将分层数据移至更经济高效的层的天数。这称为数据 " 生命周期管理 " 。</block>
-  <block id="e7e39728235a606f9321e32048703018" category="list-text">Azure Blob 现在支持 _cool_ 访问层。</block>
-  <block id="b2c1efe1106d7a3c0771b064bea9957c" category="list-text">Google Cloud Storage 支持随着时间的推移将分层数据移动到多个存储层。例如，您可以在 45 天后将分层数据从 _Standard_ 类移动到 _Nearline_ 类，然后在 75 天后移动到 _Coldline_ 类，再在 270 天后移动到 _Archive_ 类。</block>
-  <block id="c2c0bee6af3a5a60056d41dcc371d786" category="paragraph">如果您要停止对卷使用分层，或者决定将所有用户数据保留在性能层上，而将 Snapshot 副本保留在云层上，则此功能非常有用。使用 ONTAP 9.8 及更高版本时，可以使用此功能。</block>
-  <block id="296729a9ae6cd989b611bbaa8f279cba" category="inline-link-macro">将数据迁移回性能层</block>
-  <block id="ef010ff21ef40a36a12794034bd76e1b" category="paragraph">请参见操作说明 <block ref="81dc96fdd3bce727e4737236967f1536" category="inline-link-macro-rx"></block>。</block>
-  <block id="824b76af9549cb14fd2443aa485afb15" category="section-title">2021 年 5 月 2 日</block>
-  <block id="bf6525c86100838072a02751028c3547" category="inline-link-macro">请参见如何选择集群中的所有卷</block>
-  <block id="36ce0e84f37feb90fb719b27375ae5e7" category="paragraph">在选择要从 ONTAP 系统分层的卷时， " 分层卷 " 页面中现在会显示一个复选框，用于选择 * 所有 * 卷，以便更轻松地将同一策略应用于所有卷。 <block ref="fe9c671df76431123a5e8d8776c7cef2" category="inline-link-macro-rx"></block>。</block>
-  <block id="2296f192167be3972e69fc3d386a3e66" category="paragraph">如果您需要更改 " 冷却天数 " ，以确定卷中的数据在移至对象存储之前必须保持非活动状态多长时间，现在，在使用 ONTAP 9.8 或更高版本时，您可以指定最长 183 天（最多 63 天）。</block>
-  <block id="b4baef0a3a494382cb3865753733f031" category="paragraph">分层到 Google Cloud Storage 时，您可以应用生命周期规则，以便分层数据在 30 天后从标准存储类过渡到低成本的近线存储，冷线存储或归档存储。</block>
   <block id="56e7e76078700fc13565626e04d55715" category="summary">通过将非活动数据分层到使用简单存储服务（ Simple Storage Service ， S3 ）协议的任何对象存储服务，在内部 ONTAP 集群上提供可用空间。</block>
   <block id="6fcd419d9b16c5368ab2877625e80567" category="doc">将数据从内部 ONTAP 集群分层到 S3 对象存储</block>
   <block id="0a4e30d54ad79cb4d323fcc522b4c463" category="paragraph">通过将非活动数据分层到使用简单存储服务（ Simple Storage Service ， S3 ）协议的任何对象存储服务，在内部 ONTAP 集群上提供可用空间。</block>
@@ -743,7 +728,6 @@
   <block id="ad806d4b803a5aa7358400786d14dec0" category="section-title">2022 年 4 月 4 日</block>
   <block id="34a4923a0f84a1bc223389cfed6e2b62" category="paragraph"><block ref="3054f156a0693c67de0611c0445f676e" category="inline-link-rx"></block>。</block>
   <block id="df94b79ab63138be1c03382ae20c338d" category="paragraph">现在，您可以将非活动数据分层到使用简单存储服务（ Simple Storage Service ， S3 ）协议的任何对象存储服务。<block ref="26932bf166134e05b1ade0d7ecb1b6d8" category="inline-link-rx"></block>。</block>
-  <block id="dbbd746e2d2c019dcb0c3c40b74f4f75" category="section-title">2021 年 3 月 8 日</block>
   <block id="5599b78f1c4021d635a48942fd659db7" category="paragraph">Cloud Tiering 支持将数据分层到 _Standard_ ， _Standard-Infrequent Access_ ， _One Zone-Infrequent Access_ ， _Intelligent Tierage_ 和 _Glacier 即时检索 _ 存储类。请参见 <block ref="f693663c1e0f361f1f4405a9653a3c4b" category="inline-link-macro-rx"></block> 有关详细信息：</block>
   <block id="72899f4178ab51a60b88e578be4f92f1" category="paragraph">或者，如果您有一个未分配的基于节点的 Cloud Volumes ONTAP 许可证，而您不会使用该许可证，则可以将其转换为具有相同美元等价性和相同到期日期的 Cloud Tiering 许可证。<block ref="c110e5a4a66d7429a8ced7dc2264a8f5" category="inline-link-rx"></block>。</block>
   <block id="e2b0c2a0a664cef2184b3d17808db4ce" category="list-text">一个 ZONE 不常访问</block>
@@ -755,12 +739,6 @@
   <block id="a74220a8acc78d1041352afb305af18f" category="paragraph">除了对 AFF 和 FAS 系统中的数据进行分层之外，现在您还可以将 ONTAP Select 系统中的非活动数据分层到云存储。</block>
   <block id="99c3c55ceb085b94e53d8b7984863037" category="section-title">Cloud Tiering BYOL 许可证取代了 FabricPool 许可证</block>
   <block id="24263383a842093a8c2b6b9b8a88989d" category="section-title">将内部 ONTAP 集群中的非活动数据分层到与 S3 兼容的对象存储</block>
-  <block id="154176674c0672732a91f2bd7ca5d8e0" category="section-title">将数据分层到 Azure Blob 存储时， Connector 可以在内部运行</block>
-  <block id="c4f829b7ae242ef2fe076d1c69689d01" category="section-title">现在，某些云提供商存储可以使用新的分层类</block>
-  <block id="84cada6f6939410de8fc42b2cea10895" category="section-title">现在，您可以主动将数据从云层移回性能层</block>
-  <block id="011ff5422aa046bd5cf08306e8b04fde" category="section-title">现在，您可以在应用分层策略时选择所有卷</block>
-  <block id="f268cb0b89ceae31cbeb9f1cf4669fd0" category="section-title">" 冷却 " 天数现在可设置为最多 183 天</block>
-  <block id="5a294035d7c08dc10d36a9f693e9bdb7" category="section-title">现在，分层到 Google Cloud Storage 时可以使用生命周期规则</block>
   <block id="7beb276ec918c2d8eb132df5ed6fe576" category="section-title">支持哪些类型的 ONTAP 系统？</block>
   <block id="ec0515a8a06c1c0cf10efc6cbb1bfab9" category="inline-link">使用 FabricPool 的注意事项和要求</block>
   <block id="403df42df80267a7b2bc0be8c3e6685d" category="paragraph">您可以将内部 ONTAP 系统中的非活动数据分层到以下对象存储提供程序：</block>
@@ -1033,7 +1011,6 @@
   <block id="e79b2c28f4130226c9f1d6cb9f0ffd0c" category="paragraph">此时将创建对象存储。</block>
   <block id="e8ae815adf3f63d474c9e166a024d614" category="paragraph">现在、您可以将对象存储附加到集群中的聚合。</block>
   <block id="070570d4e2b0f26858aa948de0ba63dd" category="section-title">将另一个对象存储附加到聚合以进行镜像</block>
-  <block id="d475f8c2ad721c50e2f3c32777bab8ec" category="paragraph">您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像以复制对象存储。您必须已将一个对象存储附加到聚合。</block>
   <block id="9db0a2a7df2f469f7377ef9995abad54" category="list-text">在*集群信息板*中、单击选定集群的*高级设置*。</block>
   <block id="7f68d3e217be20821af2e99c59a95cae" category="inline-image-macro">显示集群的"高级设置"按钮的屏幕截图。</block>
   <block id="e098fabd5ac5fda426e3f4e5268635d7" category="paragraph"><block ref="e098fabd5ac5fda426e3f4e5268635d7" category="inline-image-macro-rx" type="image"></block></block>
@@ -1250,15 +1227,12 @@
   <block id="93d0679385afbe8961d65715ec42ad95" category="paragraph"><block ref="eae517fc6cf18ab5b51a15743d8fba49" category="inline-link-rx"></block>。</block>
   <block id="6a22836d972c44908e791a2300d9312a" category="section-title">拖放以启用Amazon S3的Cloud Tiering</block>
   <block id="84b50dc471c57455cf0359ad021a8c58" category="paragraph">如果Amazon S3分层目标作为工作环境存在于Canvas上、您可以将内部ONTAP 工作环境拖动到目标上以启动分层设置向导。</block>
-  <block id="7c7cbcd98ab4ba89255f7b1be8725b81" category="inline-link">请访问此处、查看ONTAP 文档中的更多详细信息和要求</block>
-  <block id="3cb1cda385e4184fc09dbec5c2aec109" category="paragraph">使用MetroCluster 配置时、<block ref="9abcb785e0ef8b918a18e0f5dbad9882" category="inline-link-rx"></block>。</block>
   <block id="9c71902c4f1a611c5b631cc69cbd2ada" category="paragraph">当2个对象存储正在同步时、镜像状态将显示为"正在同步"、同步完成后、镜像状态将更改为"已同步"。</block>
   <block id="b57c0deab1a5287b0457bf7ca26a95f4" category="admonition">从MetroCluster 配置中删除镜像对象存储时、系统将提示您是否也要删除主对象存储。您可以选择保持主对象存储附加到聚合、也可以选择将其删除。</block>
   <block id="6eecabc0d7fe334dd9e87b08c1b64c93" category="paragraph">可以使用FabricPool 镜像为单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置配置配置云分层。Cloud Tiering许可证在所有集群之间共享。</block>
   <block id="6341d59e78dc892e44e4255d34dff624" category="paragraph">通过按需购买订阅、年度订阅、自带云分层许可证或两者的组合为Cloud Tiering付费。如果您没有许可证，则可以为第一个集群免费试用 30 天。</block>
   <block id="85e6332aa0d0ad8f46ae520da6d1c0c7" category="paragraph">如果您没有 Cloud Tiering 许可证，则在为第一个集群设置分层时，将开始免费试用 Cloud Tiering 30 天。30天免费试用结束后、您需要通过按需购买订阅、年度订阅、BYOL许可证或两者的组合为Cloud Tiering付费。</block>
   <block id="421539f25601331f9f5f1e59cdb43e21" category="section-title">年度合同</block>
-  <block id="46e0b6a495f87cf4920ab347582f415e" category="paragraph">在将非活动数据分层到AWS时、Cloud Tiering会提供一份年度合同。此计划的有效期为1年、2年或3年。</block>
   <block id="1ca6869c60d4b26c9ebd2bc63dd19e71" category="paragraph">通过从 NetApp 购买 * Cloud Tiere* 许可证来获取您自己的许可证。您可以购买1年、2年或3年期限许可证、并指定任意分层容量。BYOL 云分层许可证是一个 _float_ 许可证，您可以跨多个内部 ONTAP 集群使用。您在 Cloud Tiering 许可证中定义的总分层容量可供所有内部集群使用。</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述自助支持选项之外、您还可以在激活支持后与NetApp支持专家合作解决任何问题。</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">了解如何注册获取支持</block>
@@ -1284,4 +1258,9 @@
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">使用产品内聊天功能</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">通过提交非技术案例<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
+  <block id="b5d536503b2db5208a418d0aad5a4c6b" category="paragraph">您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。</block>
+  <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">在ONTAP 文档中了解有关MetroCluster 要求的更多信息</block>
+  <block id="6a6c83d33eeffc5742e2d15ff9f1e88d" category="paragraph">使用MetroCluster 配置时、最佳做法是使用位于不同可用性区域中的对象存储、或者配置为在多个可用性区域中保留对象副本的对象存储。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
+  <block id="4368a1773cee54401cffba9d96b3ee45" category="paragraph">请注意、在MetroCluster 配置中使用StorageGRID 作为对象存储时、两个ONTAP 系统都可以对一个StorageGRID 系统执行FabricPool 分层。</block>
+  <block id="a9435afbc015cc1ee7d59ebcb4c910fd" category="paragraph">在将非活动数据分层到Amazon S3时、Cloud Tiering会提供一份年度合同。此计划的有效期为1年、2年或3年。</block>
 </blocks>
