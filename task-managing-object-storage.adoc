@@ -89,11 +89,11 @@ IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段�
 
 == 将另一个对象存储附加到聚合以进行镜像
 
-您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。
+您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。 https://docs.netapp.com/us-en/ontap/fabricpool/create-mirror-task.html["了解有关FabricPool 镜像的更多信息"^]。
 
-使用MetroCluster 配置时、最佳做法是使用位于不同可用性区域中的对象存储、或者配置为在多个可用性区域中保留对象副本的对象存储。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["在ONTAP 文档中了解有关MetroCluster 要求的更多信息"^]。
+使用MetroCluster 配置时、最佳做法是在公有 云中使用位于不同可用性区域的对象存储。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["在ONTAP 文档中了解有关MetroCluster 要求的更多信息"^]。
 
-请注意、在MetroCluster 配置中使用StorageGRID 作为对象存储时、两个ONTAP 系统都可以对一个StorageGRID 系统执行FabricPool 分层。
+请注意、在MetroCluster 配置中使用StorageGRID 作为对象存储时、两个ONTAP 系统都可以对一个StorageGRID 系统执行FabricPool 分层。每个ONTAP 系统都必须将数据分层到不同的存储分段。
 
 .步骤
 . 在*集群信息板*中、单击选定集群的*高级设置*。
@@ -110,7 +110,7 @@ image:screenshot_tiering_mirror_config_complete.png["显示附加到聚合的第
 
 
 
-当2个对象存储正在同步时、镜像状态将显示为"正在同步"、同步完成后、镜像状态将更改为"已同步"。
+当2个对象存储正在同步时、镜像状态将显示为"正在同步"。同步完成后、状态将更改为"已同步"。
 
 
 

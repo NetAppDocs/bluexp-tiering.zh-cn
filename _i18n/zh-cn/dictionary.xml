@@ -441,8 +441,6 @@
   <block id="5a7b146826969db8fcec8237bb37ca9e" category="list-text">Connector 需要通过端口 443 与 ONTAP 集群，对象存储和云分层服务建立出站 HTTPS 连接。</block>
   <block id="2f3ccf86e44d85ac02e49b28a63a02ba" category="paragraph">有关详细信息，请参见：</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
-  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">有关 Cloud Manager 3.9 的注意事项</block>
-  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
   <block id="a5e8ac089fe7eb702f683ce020dc2a2a" category="inline-link-macro">有关 Cloud Tiering 的注意事项</block>
   <block id="3754b5e44654d3dc7bfaa36f213a8795" category="list-text"><block ref="3754b5e44654d3dc7bfaa36f213a8795" category="inline-link-macro-rx"></block></block>
   <block id="636acfcaa9d346397b4061f29f7518bd" category="summary">通过将非活动数据分层到 Google 云存储，在内部 ONTAP 集群上释放空间。</block>
@@ -1220,14 +1218,12 @@
   <block id="08070357c74547d6c374634190ef592e" category="list-text">所有用户数据(全部)：将所有数据分类为冷数据；立即将整个卷移动到对象存储。</block>
   <block id="718ab8536a948516f06462c22a0f8852" category="list-text"><block ref="cb1be15d6f93cbd0769a2f1805d3c3a2" category="inline-link-macro-rx"></block>。</block>
   <block id="ab288ae4b4c50ebb9a997e0f0debbd15" category="section-title">2022年9月19日</block>
-  <block id="d6076da95b416ff0d08e3269c4addf0d" category="section-title">分层向导允许使用AWS PrivateLink安全连接到S3存储</block>
   <block id="905ecf204d0cf0b2ed497e63ae9324d0" category="inline-link">使用VPC端点接口为系统配置专用连接</block>
   <block id="33e030edd0380c3b2d743ec2f989598c" category="paragraph">在先前版本中、通过VPC端点将集群连接到S3存储分段的安全方式非常耗时。现在、您可以按照前提步骤进行操作<block ref="fb4b1250ed3d38b3a9447c7c732436c8" category="inline-link-rx"></block>、然后、您可以在"网络连接"页面的分层设置向导期间选择PrivateLink。</block>
   <block id="883959b6b7ad90936b33d524655bc282" category="inline-link">查看将非活动数据分层到Amazon S3的要求和步骤</block>
   <block id="93d0679385afbe8961d65715ec42ad95" category="paragraph"><block ref="eae517fc6cf18ab5b51a15743d8fba49" category="inline-link-rx"></block>。</block>
   <block id="6a22836d972c44908e791a2300d9312a" category="section-title">拖放以启用Amazon S3的Cloud Tiering</block>
   <block id="84b50dc471c57455cf0359ad021a8c58" category="paragraph">如果Amazon S3分层目标作为工作环境存在于Canvas上、您可以将内部ONTAP 工作环境拖动到目标上以启动分层设置向导。</block>
-  <block id="9c71902c4f1a611c5b631cc69cbd2ada" category="paragraph">当2个对象存储正在同步时、镜像状态将显示为"正在同步"、同步完成后、镜像状态将更改为"已同步"。</block>
   <block id="b57c0deab1a5287b0457bf7ca26a95f4" category="admonition">从MetroCluster 配置中删除镜像对象存储时、系统将提示您是否也要删除主对象存储。您可以选择保持主对象存储附加到聚合、也可以选择将其删除。</block>
   <block id="6eecabc0d7fe334dd9e87b08c1b64c93" category="paragraph">可以使用FabricPool 镜像为单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置配置配置云分层。Cloud Tiering许可证在所有集群之间共享。</block>
   <block id="6341d59e78dc892e44e4255d34dff624" category="paragraph">通过按需购买订阅、年度订阅、自带云分层许可证或两者的组合为Cloud Tiering付费。如果您没有许可证，则可以为第一个集群免费试用 30 天。</block>
@@ -1258,9 +1254,16 @@
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">使用产品内聊天功能</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">通过提交非技术案例<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
-  <block id="b5d536503b2db5208a418d0aad5a4c6b" category="paragraph">您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。</block>
   <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">在ONTAP 文档中了解有关MetroCluster 要求的更多信息</block>
-  <block id="6a6c83d33eeffc5742e2d15ff9f1e88d" category="paragraph">使用MetroCluster 配置时、最佳做法是使用位于不同可用性区域中的对象存储、或者配置为在多个可用性区域中保留对象副本的对象存储。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
-  <block id="4368a1773cee54401cffba9d96b3ee45" category="paragraph">请注意、在MetroCluster 配置中使用StorageGRID 作为对象存储时、两个ONTAP 系统都可以对一个StorageGRID 系统执行FabricPool 分层。</block>
   <block id="a9435afbc015cc1ee7d59ebcb4c910fd" category="paragraph">在将非活动数据分层到Amazon S3时、Cloud Tiering会提供一份年度合同。此计划的有效期为1年、2年或3年。</block>
+  <block id="c3d7ada1f42d9b916dd8624c5b5661c1" category="section-title">通过分层向导、您可以在分层到S3存储时配置AWS PrivateLink</block>
+  <block id="bf482155aab691ba59a0313f5628cbba" category="section-title">选择删除MetroCluster 配置中的镜像对象存储时的分层行为</block>
+  <block id="cd71992689f7bdbde4a7c9f0653f44f3" category="paragraph">从MetroCluster 配置中删除镜像对象存储时、系统会提示您是否也要删除主对象存储。您可以选择保持主对象存储附加到聚合、也可以选择将其删除。</block>
+  <block id="c80805cd1b291fd4590a3c0b82caa095" category="inline-link">了解有关FabricPool 镜像的更多信息</block>
+  <block id="4a6b2da2ae625dffc7d1a103b7579d57" category="paragraph">您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。<block ref="8af213a751b87119e23e85f52fbc72d6" category="inline-link-rx"></block>。</block>
+  <block id="2dc183e0073f3c1e0402cafe50273750" category="paragraph">使用MetroCluster 配置时、最佳做法是在公有 云中使用位于不同可用性区域的对象存储。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
+  <block id="6b483bd3d7c70c49e8ad823d9d4bbf64" category="paragraph">请注意、在MetroCluster 配置中使用StorageGRID 作为对象存储时、两个ONTAP 系统都可以对一个StorageGRID 系统执行FabricPool 分层。每个ONTAP 系统都必须将数据分层到不同的存储分段。</block>
+  <block id="64430472f9b760efd0fff8a56c3dfe2d" category="paragraph">当2个对象存储正在同步时、镜像状态将显示为"正在同步"。同步完成后、状态将更改为"已同步"。</block>
+  <block id="d14a27b37d19411318313c75f11baf13" category="inline-link">Cloud Manager注意事项</block>
+  <block id="8f4eecef1c8abf547a153a1486d48ab2" category="list-text"><block ref="8f4eecef1c8abf547a153a1486d48ab2" category="inline-link-rx"></block></block>
 </blocks>

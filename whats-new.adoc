@@ -22,7 +22,7 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 
 
-=== 分层向导允许使用AWS PrivateLink安全连接到S3存储
+=== 通过分层向导、您可以在分层到S3存储时配置AWS PrivateLink
 
 在先前版本中、通过VPC端点将集群连接到S3存储分段的安全方式非常耗时。现在、您可以按照前提步骤进行操作 https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface["使用VPC端点接口为系统配置专用连接"]、然后、您可以在"网络连接"页面的分层设置向导期间选择PrivateLink。
 
@@ -33,6 +33,12 @@ https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html
 === 拖放以启用Amazon S3的Cloud Tiering
 
 如果Amazon S3分层目标作为工作环境存在于Canvas上、您可以将内部ONTAP 工作环境拖动到目标上以启动分层设置向导。
+
+
+
+=== 选择删除MetroCluster 配置中的镜像对象存储时的分层行为
+
+从MetroCluster 配置中删除镜像对象存储时、系统会提示您是否也要删除主对象存储。您可以选择保持主对象存储附加到聚合、也可以选择将其删除。
 
 
 
