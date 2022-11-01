@@ -35,7 +35,7 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
  your Connector,请参见如何创建 Connector 以及如何定义所需的网络设置。
 
 [role="quick-margin-para"]
-在 Cloud Manager 中发现您的 ONTAP 集群，验证集群是否满足最低要求，并自定义网络设置，以便集群可以连接到 AWS S3 。
+在BlueXP中发现您的ONTAP 集群、验证集群是否满足最低要求、并自定义网络设置、以便集群可以连接到AWS S3。
 
 [role="quick-margin-para"]
  your ONTAP cluster,了解如何使内部 ONTAP 集群做好准备。
@@ -56,7 +56,7 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
 免费试用结束后，通过按需购买订阅， ONTAP 云分层 BYOL 许可证或两者的组合为云分层付费：
 
 * 要从 AWS Marketplace 订阅， https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["转到 Cloud Manager Marketplace 产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
-* 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从 Cloud Manager Digital Wallet 将其添加到您的帐户中"]。
+* 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
 
 
 
@@ -84,7 +84,7 @@ NOTE: Connector 和 S3 之间的通信仅用于对象存储设置。
 
 == 准备您的连接器
 
-Cloud Manager Connector 是 Cloud Manager 功能的主要软件。需要使用连接器对非活动ONTAP 数据进行分层。
+BlueXP Connector是BlueXP功能的主要软件。需要使用连接器对非活动ONTAP 数据进行分层。
 
 
 
@@ -139,7 +139,7 @@ Cloud Manager Connector 是 Cloud Manager 功能的主要软件。需要使用�
 
 
 --
-支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。有关信息，请参见 ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
+支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
 
 
 
@@ -176,9 +176,9 @@ IP空间中的所有集群间LIF都必须能够访问对象存储。如果无法
 
 
 
-=== 在 Cloud Manager 中发现您的 ONTAP 集群
+=== 在BlueXP中发现您的ONTAP 集群
 
-您需要先在Cloud Manager中发现内部ONTAP 集群、然后才能开始将冷数据分层到对象存储。要添加集群，您需要知道集群管理 IP 地址和管理员用户帐户的密码。
+您需要先在BlueXP中发现内部ONTAP 集群、然后才能开始将冷数据分层到对象存储。要添加集群，您需要知道集群管理 IP 地址和管理员用户帐户的密码。
 
 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 
@@ -237,7 +237,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 如果您希望通过Internet从内部数据中心到VPC建立更安全的连接、可以在分层激活向导中选择AWS PrivateLink连接。如果您计划使用VPN或AWS Direct Connect通过使用专用IP地址的VPC端点接口连接内部系统、则必须使用此功能。此类型的连接如中所示  diagrams for connection options,上述第二张图。
 
 . 使用 Amazon VPC 控制台或命令行创建接口端点配置。 https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["请参见有关使用适用于 Amazon S3 的 AWS PrivateLink 的详细信息"^]。
-. 修改与 Cloud Manager Connector 关联的安全组配置。您必须将此策略更改为 "Custom" （自定义）（从 "Full Access" ），并且必须将其更改为 "Custom" （自定义）  up S3 permissions,添加所需的S3 Connector权限 如前面所示。
+. 修改与BlueXP Connector关联的安全组配置。您必须将此策略更改为 "Custom" （自定义）（从 "Full Access" ），并且必须将其更改为 "Custom" （自定义）  up S3 permissions,添加所需的S3 Connector权限 如前面所示。
 +
 image:screenshot_tiering_aws_sec_group.png["与 Connector 关联的 AWS 安全组的屏幕截图。"]
 
@@ -251,7 +251,7 @@ image:screenshot_tiering_aws_sec_group.png["与 Connector 关联的 AWS 安全�
 +
 image:screenshot_endpoint_dns_aws_console.png["AWS 控制台中 VPC 端点的 DNS 名称的屏幕截图。"]
 
-. 从 VPC S3 端点获取证书。您可以通过执行此操作 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登录到托管 Cloud Manager Connector 的 VM"^] 并运行以下命令。输入端点的 DNS 名称时，在开头添加 " 分段 " ，替换 "* " ：
+. 从 VPC S3 端点获取证书。您可以通过执行此操作 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登录到托管BlueXP Connector的虚拟机"^] 并运行以下命令。输入端点的 DNS 名称时，在开头添加 " 分段 " ，替换 "* " ：
 +
 [source, text]
 ----

@@ -32,7 +32,7 @@ summary: 通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集
 
 
 [role="quick-margin-para"]
-在 Cloud Manager 中，选择一个内部工作环境，单击分层服务的 * 启用 * ，然后按照提示将数据分层到 StorageGRID 。
+在BlueXP中、选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到StorageGRID。
 
 
 
@@ -63,7 +63,7 @@ NOTE: Connector 和 StorageGRID 之间的通信仅用于对象存储设置。
 --
 支持的 ONTAP 版本:: ONTAP 9.4 或更高版本
 所需的应用程序访问参数:: 集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["有关详细信息、请参见"security login"命令"]。
-许可:: 在将数据分层到 StorageGRID 时， Cloud Manager 帐户不需要 Cloud Tiering 许可证， ONTAP 集群也不需要 FabricPool 许可证。
+许可:: 在将数据分层到StorageGRID 时、您的BlueXP帐户不需要Cloud Tiering许可证、ONTAP 集群也不需要FabricPool 许可证。
 集群网络连接要求::
 +
 --
@@ -82,7 +82,7 @@ ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会�
 
 
 --
-支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。有关信息，请参见 ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
+支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
 
 
 
@@ -92,7 +92,7 @@ NOTE: 从 ONTAP 9.5 开始，云分层支持 FlexGroup 卷。安装程序的工�
 
 === 发现 ONTAP 集群
 
-您需要先在 Cloud Manager 画布中创建内部 ONTAP 工作环境，然后才能开始分层冷数据。
+您需要先在BlueXP画布中创建内部ONTAP 工作环境、然后才能开始分层冷数据。
 
 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 
