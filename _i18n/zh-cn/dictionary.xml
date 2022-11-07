@@ -1312,4 +1312,10 @@
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP博客</block>
   <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP用例</block>
   <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文档</block>
+  <block id="39cff02cd4c2bfac12f446d78e59e3ca" category="paragraph">如果Azure Blob分层目标作为工作环境存在于Canvas上、则可以将集群拖动到Azure Blob工作环境中以启动设置向导。</block>
+  <block id="0e8a08e502abe437efca593eced30efb" category="paragraph">如果Google Cloud Storage分层目标作为工作环境存在于Canvas上、则可以将集群拖动到Google Cloud Storage工作环境中以启动设置向导。</block>
+  <block id="bb9a67152dc7c7f6ad99d55da23a9b5c" category="paragraph">如果StorageGRID 分层目标作为工作环境存在于Canvas上、则可以将集群拖动到StorageGRID 工作环境中以启动设置向导。</block>
+  <block id="5a4346a01828d72104a6540080377b25" category="section-title">2022年11月6日</block>
+  <block id="8f4621192fd1fe94f1b365ae34c1e0ed" category="section-title">拖放以启用对Azure Blob、Google Cloud Storage和StorageGRID 的云分层</block>
+  <block id="6586247c64ea3f20421ae518b26fc973" category="paragraph">如果Azure Blob、Google Cloud Storage或StorageGRID 分层目标作为工作环境存在于Canvas上、则可以将本地ONTAP 工作环境拖动到目标上以启动分层设置向导。</block>
 </blocks>

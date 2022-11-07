@@ -18,6 +18,16 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 
 
+== 2022年11月6日
+
+
+
+=== 拖放以启用对Azure Blob、Google Cloud Storage和StorageGRID 的云分层
+
+如果Azure Blob、Google Cloud Storage或StorageGRID 分层目标作为工作环境存在于Canvas上、则可以将本地ONTAP 工作环境拖动到目标上以启动分层设置向导。
+
+
+
 == 2022年9月19日
 
 
