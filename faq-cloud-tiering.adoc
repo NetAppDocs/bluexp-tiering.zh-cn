@@ -130,7 +130,7 @@ Cloud Tiering不会影响卷的容量、而是影响聚合的性能层使用情�
 
 === 如果我已达到BYOL容量限制、会发生什么情况？
 
-如果达到BYOL容量限制、则新冷数据分层将停止、而以前分层的所有数据仍可访问。如果您订阅了_Cloud Manager - Deploy & Manage Cloud Data Services_的PAYGO Marketplace、则新的冷数据将继续分层到对象存储、您将按使用情况支付这些费用。
+如果达到BYOL容量限制、则新冷数据分层将停止、而以前分层的所有数据仍可访问。如果您订阅了_BlueXP -部署和管理云数据服务_的PAYGO Marketplace、则新的冷数据将继续分层到对象存储、您将按使用情况支付这些费用。
 
 
 
@@ -204,7 +204,7 @@ Cloud Tiering支持ONTAP 9.2及更高版本。
 
 这取决于冷数据分层的位置。有关更多详细信息、请参见以下链接：
 
-* link:task-tiering-onprem-aws.html#preparing-your-ontap-clusters["将数据分层到Amazon S3"]
+* link:task-tiering-onprem-aws.html#prepare-your-ontap-cluster["将数据分层到Amazon S3"]
 * link:task-tiering-onprem-azure.html#preparing-your-ontap-clusters["将数据分层到Azure Blob存储"]
 * link:task-tiering-onprem-gcp.html#preparing-your-ontap-clusters["将数据分层到Google Cloud Storage"]
 * link:task-tiering-onprem-storagegrid.html#preparing-your-ontap-clusters["将数据分层到StorageGRID"]

@@ -85,7 +85,7 @@ NOTE: 您无法为分层到 StorageGRID 或 S3 兼容存储的数据选择生命
 
 将数据分层到 StorageGRID 时不收取任何费用。无需 BYOL 许可证或 PAYGO 注册。
 
-https://cloud.netapp.com/cloud-tiering["查看定价详细信息"^]。
+https://bluexp.netapp.com/pricing#tiering["查看定价详细信息"^]。
 
 
 

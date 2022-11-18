@@ -36,7 +36,7 @@ summary: 通过将非活动数据分层到 Azure Blob 存储，在内部 ONTAP �
 [role="quick-margin-para"]
 免费试用结束后，通过按需购买订阅， ONTAP 云分层 BYOL 许可证或两者的组合为云分层付费：
 
-* 要从 Azure Marketplace 订阅， https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["转到 Cloud Manager Marketplace 产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
+* 要从 Azure Marketplace 订阅， https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["转到BlueXP Marketplace产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
 * 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
 
 

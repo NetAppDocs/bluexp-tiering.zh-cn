@@ -164,9 +164,9 @@ image:screenshot_tiering_cluster_info.png["显示集群报告的屏幕截图，�
 
 
 
-您也可以 https://docs.netapp.com/us-en/active-iq/task_monitor_and_tier_inactive_data_with_FabricPool_Advisor.html["从 Active IQ 数字顾问查看集群的分层信息"^] 如果您熟悉此 NetApp 产品，只需从左侧导航窗格中选择 * FabricPool Advisor* 即可。
+您也可以 https://docs.netapp.com/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html#tiering["从Digital Advisor查看集群的分层信息"^] 如果您熟悉此 NetApp 产品，只需从左侧导航窗格中选择*云建议*即可。
 
-image:screenshot_tiering_aiq_fabricpool_info.png["屏幕截图显示了使用 Active IQ 数字顾问中的 FabricPool Advisor 的集群的 FabricPool 信息。"]
+image:screenshot_tiering_aiq_fabricpool_info.png["一个屏幕截图、用于显示使用FabricPool Advisor从Digital Advisor获取的集群的FabricPool 信息。"]
 
 
 
@@ -177,9 +177,9 @@ image:screenshot_tiering_aiq_fabricpool_info.png["屏幕截图显示了使用 Ac
 .步骤
 . 确定运行状况为 "Failed" 的任何集群。
 +
-image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_tiering_health.gif["显示集群的分层运行状况失败的屏幕截图。"]
+image:screenshot_tiering_health.gif["显示集群的分层运行状况失败的屏幕截图。"]
 
-. 将鼠标悬停在上 image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_info_icon.gif["显示失败原因的 I 图标的屏幕截图"] 图标以查看失败原因。
+. 将鼠标悬停在上 image:screenshot_info_icon.gif["显示失败原因的 I 图标的屏幕截图"] 图标以查看失败原因。
 . 更正问题描述：
 +
 .. 验证 ONTAP 集群是否正常运行，以及它是否与对象存储提供程序建立了入站和出站连接。

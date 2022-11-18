@@ -100,7 +100,7 @@ Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加�
 
 === Cloud Tiering BYOL 许可证取代了 FabricPool 许可证
 
-对于使用 Cloud Tiering 服务的 Cloud Manager 中支持的分层配置，现在提供了一个新的 * 云分层 * 许可证。这是一个浮动许可证，您可以跨多个内部 ONTAP 集群使用。您过去可能使用的 * FabricPool * 许可证仅适用于 不支持的配置。
+对于使用Cloud Tiering服务的BlueXP中支持的分层配置、现在提供了一个新的*云分层*许可证。这是一个浮动许可证，您可以跨多个内部 ONTAP 集群使用。您过去可能使用的* FabricPool *许可证仅适用于不支持的配置。
 
 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["了解有关全新 Cloud Tiering 许可证的更多信息"]。
 
