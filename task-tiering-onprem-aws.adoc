@@ -22,39 +22,46 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
 
 按照以下步骤快速入门。本主题的以下各节提供了每个步骤的详细信息。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 确定要使用的配置方法
 [role="quick-margin-para"]
 选择是通过公有 Internet将内部ONTAP 集群直接连接到AWS S3、还是使用VPN或AWS Direct Connect并通过专用VPC端点接口将流量路由到AWS S3。
 
 [role="quick-margin-para"]
- diagrams for connection options,请参见可用的连接方法。
+<<连接选项的网络图,请参见可用的连接方法。>>
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 准备您的BlueXP Connector
 [role="quick-margin-para"]
 如果您已在AWS VPC或内部部署了Connector、则可以随时完成所有操作。如果没有、则需要创建一个连接器、将ONTAP 数据分层到AWS S3存储。您还需要自定义 Connector 的网络设置，以便它可以连接到 AWS S3 。
 
 [role="quick-margin-para"]
- your Connector,请参见如何创建 Connector 以及如何定义所需的网络设置。
+<<准备您的连接器,请参见如何创建 Connector 以及如何定义所需的网络设置。>>
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 准备内部ONTAP 集群
 [role="quick-margin-para"]
 在BlueXP中发现您的ONTAP 集群、验证集群是否满足最低要求、并自定义网络设置、以便集群可以连接到AWS S3。
 
 [role="quick-margin-para"]
- your ONTAP cluster,了解如何使内部 ONTAP 集群做好准备。
+<<准备 ONTAP 集群,了解如何使内部 ONTAP 集群做好准备。>>
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"] 准备将Amazon S3作为分层目标
 [role="quick-margin-para"]
 为Connector设置创建和管理S3存储分段的权限。您还需要为内部ONTAP 集群设置权限、以便其可以向S3存储分段读取和写入数据。
 
 [role="quick-margin-para"]
- up S3 permissions,请参见如何为Connector和内部集群设置权限。
+<<设置 S3 权限,请参见如何为Connector和内部集群设置权限。>>
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"] 在系统上启用Cloud Tiering
 [role="quick-margin-para"]
 选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到Amazon S3。
 
 [role="quick-margin-para"]
- inactive data from your first cluster to Amazon S3,请参见如何为卷启用分层。
+<<将第一个集群中的非活动数据分层到Amazon S3,请参见如何为卷启用分层。>>
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"] 设置许可
 [role="quick-margin-para"]
 免费试用结束后，通过按需购买订阅， ONTAP 云分层 BYOL 许可证或两者的组合为云分层付费：
 
+[role="quick-margin-list"]
 * 要从 AWS Marketplace 订阅， https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["转到BlueXP Marketplace产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
 * 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
 
@@ -110,7 +117,7 @@ BlueXP Connector是BlueXP功能的主要软件。需要使用连接器对非活�
 
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html#cloud-tiering["确保Connector具有管理S3存储分段的权限"^]
-* 如果从ONTAP 集群到VPC具有直接连接或VPN连接、并且您希望连接器和S3之间的通信保持在AWS内部网络中(*专用*连接)、则需要启用连接到S3的VPC端点接口。  your system for a private connection using a VPC endpoint interface,请参见如何设置 VPC 端点接口。
+* 如果从ONTAP 集群到VPC具有直接连接或VPN连接、并且您希望连接器和S3之间的通信保持在AWS内部网络中(*专用*连接)、则需要启用连接到S3的VPC端点接口。 <<使用VPC端点接口为系统配置专用连接,请参见如何设置 VPC 端点接口。>>
 
 
 
@@ -170,8 +177,8 @@ NOTE: 从 ONTAP 9.5 开始，云分层支持 FlexGroup 卷。安装程序的工�
 +
 IP空间中的所有集群间LIF都必须能够访问对象存储。如果无法为当前IP空间配置此空间、则需要创建一个专用IP空间、其中所有集群间LIF都可以访问对象存储。
 
-* 如果在AWS中使用专用VPC接口端点进行S3连接、则要使用HTTPS/443、您需要将S3端点证书加载到ONTAP 集群中。  your system for a private connection using a VPC endpoint interface,请参见如何设置 VPC 端点接口并加载 S3 证书。
-*  up S3 permissions,确保ONTAP 集群具有访问S3存储分段的权限。
+* 如果在AWS中使用专用VPC接口端点进行S3连接、则要使用HTTPS/443、您需要将S3端点证书加载到ONTAP 集群中。 <<使用VPC端点接口为系统配置专用连接,请参见如何设置 VPC 端点接口并加载 S3 证书。>>
+* <<设置 S3 权限,确保ONTAP 集群具有访问S3存储分段的权限。>>
 
 
 
@@ -232,12 +239,12 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 
 === 使用VPC端点接口为系统配置专用连接
 
-如果您计划使用标准公有 Internet连接、则所有权限均由Connector设置、您无需执行任何其他操作。此类型的连接如中所示  diagrams for connection options,上图。
+如果您计划使用标准公有 Internet连接、则所有权限均由Connector设置、您无需执行任何其他操作。此类型的连接如中所示 <<连接选项的网络图,上图>>。
 
-如果您希望通过Internet从内部数据中心到VPC建立更安全的连接、可以在分层激活向导中选择AWS PrivateLink连接。如果您计划使用VPN或AWS Direct Connect通过使用专用IP地址的VPC端点接口连接内部系统、则必须使用此功能。此类型的连接如中所示  diagrams for connection options,上述第二张图。
+如果您希望通过Internet从内部数据中心到VPC建立更安全的连接、可以在分层激活向导中选择AWS PrivateLink连接。如果您计划使用VPN或AWS Direct Connect通过使用专用IP地址的VPC端点接口连接内部系统、则必须使用此功能。此类型的连接如中所示 <<连接选项的网络图,上述第二张图>>。
 
 . 使用 Amazon VPC 控制台或命令行创建接口端点配置。 https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["请参见有关使用适用于 Amazon S3 的 AWS PrivateLink 的详细信息"^]。
-. 修改与BlueXP Connector关联的安全组配置。您必须将此策略更改为 "Custom" （自定义）（从 "Full Access" ），并且必须将其更改为 "Custom" （自定义）  up S3 permissions,添加所需的S3 Connector权限 如前面所示。
+. 修改与BlueXP Connector关联的安全组配置。您必须将此策略更改为 "Custom" （自定义）（从 "Full Access" ），并且必须将其更改为 "Custom" （自定义） <<设置 S3 权限,添加所需的S3 Connector权限>> 如前面所示。
 +
 image:screenshot_tiering_aws_sec_group.png["与 Connector 关联的 AWS 安全组的屏幕截图。"]
 
@@ -286,7 +293,7 @@ Please enter Certificate: Press <Enter> when done
 
 准备好 AWS 环境后，开始对第一个集群中的非活动数据进行分层。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
 * IAM 用户的 AWS 访问密钥，该用户具有所需的 S3 权限。
 
@@ -336,7 +343,7 @@ IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段�
 在ONTAP 集群中选择要分层的卷所在的IP空间。此IP空间的集群间LIF必须具有出站Internet访问权限、才能连接到云提供商的对象存储。
 
 +
-或者，选择是否使用先前配置的 AWS PrivateLink 。  your system for a private connection using a VPC endpoint interface,请参见上述设置信息。
+或者，选择是否使用先前配置的 AWS PrivateLink 。 <<使用VPC端点接口为系统配置专用连接,请参见上述设置信息。>>
 
 +
 此时将显示一个对话框、帮助您完成端点配置。
@@ -362,8 +369,10 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 
 
+.结果
 您已成功设置从集群上的卷到 S3 对象存储的数据分层。
 
+.下一步是什么？
 link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]。
 
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。

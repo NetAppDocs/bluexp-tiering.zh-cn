@@ -20,6 +20,7 @@ summary: 在设置数据分层前后运行云性能测试，以测量从 ONTAP �
 
 image:screenshot_cloud_performance_test.gif["Cloud Performance Test 的集群性能结果屏幕截图。"]
 
+.开始之前
 最好在集群的 CPU 利用率低于 50% 时运行此检查。
 
 .尚未设置分层的集群的步骤

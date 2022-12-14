@@ -50,6 +50,7 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 
 
+.结果
 选定卷开始将其数据分层到云。
 
 
@@ -70,8 +71,9 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 
 
-* 注： * 如果您看到用于 " 检索分层数据 " 的选项，请参见  data from the cloud tier back to the performance tier,将数据从云层迁移回性能层 了解详细信息。
+* 注： * 如果您看到用于 " 检索分层数据 " 的选项，请参见 <<将数据从云层迁移回性能层,将数据从云层迁移回性能层>> 了解详细信息。
 
+.结果
 分层策略将发生更改，数据将开始根据新策略进行分层。
 
 
@@ -97,6 +99,7 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 NOTE: 云提供商可能会根据从云端传输的数据量向您收取费用。
 
+.步骤
 确保性能层中有足够的空间用于从云中移动的所有数据。
 
 . 从左侧导航菜单中、选择*移动性>分层*。
@@ -107,6 +110,7 @@ image:screenshot_tiering_policy_settings_with_retrieve.png["显示可配置分�
 
 
 
+.结果
 分层策略将更改，分层数据将开始迁移回性能层。根据云中的数据量，传输过程可能需要一些时间。
 
 
@@ -221,6 +225,7 @@ image:screenshot_tiering_discover_cluster.png["显示如何发现要添加到Blu
 . 在 _Details & Credentials_ 页面上，集群名称已添加为工作环境名称，因此只需单击 * 执行 * 即可。
 
 
+.结果
 BlueXP会发现集群、并使用集群名称作为工作环境名称将其添加到Canvas中的工作环境中。
 
 您可以在右侧面板中为此集群启用分层服务或其他服务。

@@ -193,6 +193,7 @@ image:screenshot_services_license_add.png["显示用于添加 Cloud Tiering BYOL
 
 
 
+.结果
 BlueXP会添加许可证、以便Cloud Tiering服务处于活动状态。
 
 
@@ -216,7 +217,7 @@ image:screenshot_services_license_expire1.png["在 \" 数字电子钱包 \" 页�
 
 . 如果BlueXP无法自动更新许可证、则需要手动上传许可证文件。
 +
-.. 您可以  your Cloud Tiering license file,从 NetApp 支持站点获取许可证文件。
+.. 您可以 <<获取 Cloud Tiering 许可证文件,从 NetApp 支持站点获取许可证文件>>。
 .. 在数字电子邮件页面的 _Data Services Licenses_ 选项卡中，单击 image:screenshot_horizontal_more_button.gif["更多图标"] 对于要更新的服务序列号，请单击 * 更新许可证 * 。
 +
 image:screenshot_services_license_update.png["选择特定服务的更新许可证按钮的屏幕截图。"]
@@ -226,6 +227,7 @@ image:screenshot_services_license_update.png["选择特定服务的更新许可�
 
 
 
+.结果
 BlueXP会更新许可证、以使您的Cloud Tiering服务继续处于活动状态。
 
 

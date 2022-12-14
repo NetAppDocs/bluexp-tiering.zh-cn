@@ -22,15 +22,18 @@ summary: 通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集
 
 按照以下步骤快速入门，或者向下滚动到其余部分以了解完整详细信息。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 准备将数据分层到 StorageGRID
 [role="quick-margin-para"]
 您需要满足以下要求：
 
+[role="quick-margin-list"]
 * 运行 ONTAP 9.4 或更高版本的内部 ONTAP 集群，并通过用户指定的端口连接到 StorageGRID 。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 具有 S3 权限的 AWS 访问密钥的 StorageGRID 10.3 或更高版本。
 * 内部安装的连接器。
 * 用于连接器的网络连接，可通过 HTTPS 出站连接到 ONTAP 集群， StorageGRID 和云分层服务。
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
 [role="quick-margin-para"]
 在BlueXP中、选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到StorageGRID。
 
@@ -154,7 +157,7 @@ S3 凭据:: 在设置 StorageGRID 分层时，您需要为云分层提供 S3 访
 
 准备好环境后，开始对第一个集群中的非活动数据进行分层。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
 * StorageGRID 网关节点的FQDN以及用于HTTPS通信的端口。
 * 具有所需 S3 权限的 AWS 访问密钥。
@@ -203,8 +206,10 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 
 
+.结果
 您已成功设置从集群上的卷到 StorageGRID 的数据分层。
 
+.下一步是什么？
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。
 
 如果您可能希望将集群上的某些聚合中的数据分层到不同的对象存储、也可以创建额外的对象存储。或者、如果您计划使用FabricPool 镜像将分层数据复制到其他对象存储。 link:task-managing-object-storage.html["了解有关管理对象存储的更多信息"]。

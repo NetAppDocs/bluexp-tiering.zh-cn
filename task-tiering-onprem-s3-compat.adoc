@@ -29,21 +29,26 @@ summary: 通过将非活动数据分层到使用简单存储服务（ Simple Sto
 
 按照以下步骤快速入门，或者向下滚动到其余部分以了解完整详细信息。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 准备将数据分层到与 S3 兼容的对象存储
 [role="quick-margin-para"]
 您需要满足以下要求：
 
+[role="quick-margin-list"]
 * 运行 ONTAP 9.8 或更高版本的内部 ONTAP 集群，并通过用户指定的端口连接到与 S3 兼容的对象存储。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 对象存储服务器的 FQDN ，访问密钥和机密密钥，以便 ONTAP 集群可以访问存储分段。
 * 内部安装的连接器。
 * Connector 的网络连接，用于启用与 ONTAP 集群，与 S3 兼容的对象存储和云分层服务的出站 HTTPS 连接。
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
 [role="quick-margin-para"]
 在BlueXP中、选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到与S3兼容的对象存储。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 设置许可
 [role="quick-margin-para"]
 通过云提供商的按需购买订阅， NetApp Cloud Tiering 自带许可证或两者的组合为 Cloud Tiering 付费：
 
+[role="quick-margin-list"]
 * 从订阅BlueXP PAYGO产品 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]， https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]或 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市场"^]下，单击 * 订阅 * 并按照提示进行操作。
 * 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
 
@@ -158,7 +163,7 @@ S3 凭据:: 在设置与 S3 兼容的对象存储分层时，系统会提示您�
 
 准备好环境后，开始对第一个集群中的非活动数据进行分层。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
 * 与 S3 兼容的对象存储服务器的 FQDN 以及用于 HTTPS 通信的端口。
 * 具有所需 S3 权限的访问密钥和机密密钥。
@@ -202,8 +207,10 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 
 
+.结果
 您已成功设置从集群上的卷到与 S3 兼容的对象存储的数据分层。
 
+.下一步是什么？
 link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]。
 
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。

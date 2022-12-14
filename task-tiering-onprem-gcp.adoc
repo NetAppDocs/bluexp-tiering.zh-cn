@@ -22,21 +22,26 @@ summary: 通过将非活动数据分层到 Google 云存储，在内部 ONTAP �
 
 按照以下步骤快速入门，或者向下滚动到其余部分以了解完整详细信息。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 准备将数据分层到 Google Cloud Storage
 [role="quick-margin-para"]
 您需要满足以下要求：
 
+[role="quick-margin-list"]
 * 运行 ONTAP 9.6 或更高版本且与 Google 云存储具有 HTTPS 连接的内部 ONTAP 集群。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 具有预定义的存储管理员角色和存储访问密钥的服务帐户。
 * 安装在 Google Cloud Platform VPC 中的连接器。
 * Connector 的网络连接，可通过 HTTPS 出站连接到数据中心中的 ONTAP 集群， Google 云存储和云分层服务。
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
 [role="quick-margin-para"]
 在BlueXP中、选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到Google Cloud Storage。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 设置许可
 [role="quick-margin-para"]
 免费试用结束后，通过按需购买订阅， ONTAP 云分层 BYOL 许可证或两者的组合为云分层付费：
 
+[role="quick-margin-list"]
 * 要从 GCP Marketplace 订阅， https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["转到BlueXP Marketplace产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
 * 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
 
@@ -166,7 +171,7 @@ NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类�
 
 准备好 Google Cloud 环境后，开始对第一个集群中的非活动数据进行分层。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
 * 具有存储管理员角色的服务帐户的存储访问密钥。
 
@@ -225,8 +230,10 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 
 
+.结果
 您已成功设置从集群上的卷到 Google Cloud 对象存储的数据分层。
 
+.下一步是什么？
 link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]。
 
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。
