@@ -18,6 +18,28 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 
 
+== 2022年12月6日
+
+
+
+=== 所需的Connector出站Internet访问端点更改
+
+由于Cloud Tiering发生了变化、您需要更改以下连接器端点才能成功执行Cloud Tiering操作：
+
+[cols="50,50"]
+|===
+| 旧端点 | 新端点 
+
+
+| https://cloudmanager.cloud.netapp.com | https://api.bluexp.netapp.com 
+
+
+| https://*.cloudmanager.cloud.netapp.com | https://*.api.bluexp.netapp.com 
+|===
+请查看的完整端点列表 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html#outbound-internet-access["AWS"^]， https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html#outbound-internet-access["Google Cloud"^]或 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html#outbound-internet-access["Azure 酒店"^] 云环境。
+
+
+
 == 2022年11月6日
 
 
@@ -91,21 +113,3 @@ Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加�
 === Cloud Tiering 已完全符合 ONTAP Select 系统的要求
 
 除了对 AFF 和 FAS 系统中的数据进行分层之外，现在您还可以将 ONTAP Select 系统中的非活动数据分层到云存储。
-
-
-
-== 2021 年 9 月 2 日
-
-
-
-=== Cloud Tiering BYOL 许可证取代了 FabricPool 许可证
-
-对于使用Cloud Tiering服务的BlueXP中支持的分层配置、现在提供了一个新的*云分层*许可证。这是一个浮动许可证，您可以跨多个内部 ONTAP 集群使用。您过去可能使用的* FabricPool *许可证仅适用于不支持的配置。
-
-https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["了解有关全新 Cloud Tiering 许可证的更多信息"]。
-
-
-
-=== 将内部 ONTAP 集群中的非活动数据分层到与 S3 兼容的对象存储
-
-现在，您可以将非活动数据分层到使用简单存储服务（ Simple Storage Service ， S3 ）协议的任何对象存储服务。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-s3-compat.html["请参见如何将数据分层到与 S3 兼容的对象存储"]。
