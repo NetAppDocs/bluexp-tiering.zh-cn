@@ -52,8 +52,8 @@ TIP: Cloud Volumes ONTAP 系统是从云分层进行的只读系统。 https://d
 * Amazon S3
 * Microsoft Azure Blob
 * Google Cloud 存储
-* 与 S3 兼容的对象存储
 * NetApp StorageGRID
+* 与 S3 兼容的对象存储
 
 
 也可以与要将数据分层到IBM Cloud Object Storage的集群共享Cloud Tiering许可证。必须使用System Manager或ONTAP 命令行界面设置FabricPool 配置、但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["此类配置的许可可使用Cloud Tiering完成。"]

@@ -20,7 +20,7 @@ summary: 通过将非活动数据分层到使用简单存储服务（ Simple Sto
 ====
 如果客户希望使用的对象存储不是正式支持的云层，则可以按照以下说明进行操作。客户必须测试并确认对象存储满足其要求。
 
-对于任何第三方对象存储服务引起的任何问题， NetApp 不提供支持，也不承担任何责任，特别是在与产品来源的第三方没有商定支持安排的情况下。我们承认并同意， NetApp 对任何相关损坏不承担任何责任，也不会被要求为该第三方产品提供支持。
+对于任何第三方对象存储服务引起的任何问题、NetApp不提供支持、也不承担任何责任、特别是在与产品所属的第三方没有达成支持协议的情况下。我们承认并同意， NetApp 对任何相关损坏不承担任何责任，也不会被要求为该第三方产品提供支持。
 
 ====
 
@@ -34,10 +34,10 @@ summary: 通过将非活动数据分层到使用简单存储服务（ Simple Sto
 您需要满足以下要求：
 
 [role="quick-margin-list"]
-* 运行 ONTAP 9.8 或更高版本的内部 ONTAP 集群，并通过用户指定的端口连接到与 S3 兼容的对象存储。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
+* 运行ONTAP 9.8或更高版本的源内部ONTAP 集群、并通过用户指定的端口连接到目标S3兼容对象存储。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 对象存储服务器的 FQDN ，访问密钥和机密密钥，以便 ONTAP 集群可以访问存储分段。
 * 内部安装的连接器。
-* Connector 的网络连接，用于启用与 ONTAP 集群，与 S3 兼容的对象存储和云分层服务的出站 HTTPS 连接。
+* Connector的网络连接、用于启用与源ONTAP 集群、与S3兼容的对象存储和云分层服务的出站HTTPS连接。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
@@ -70,7 +70,7 @@ NOTE: Connector 与 S3 兼容对象存储服务器之间的通信仅用于对象
 
 === 准备 ONTAP 集群
 
-将数据分层到与 S3 兼容的对象存储时， ONTAP 集群必须满足以下要求。
+将数据分层到与S3兼容的对象存储时、源ONTAP 集群必须满足以下要求。
 
 支持的 ONTAP 平台:: 您可以对 AFF 系统或具有纯 SSD 聚合或纯 HDD 聚合的 FAS 系统中的数据进行分层。
 支持的 ONTAP 版本:: ONTAP 9.8 或更高版本
@@ -80,7 +80,7 @@ NOTE: Connector 与 S3 兼容对象存储服务器之间的通信仅用于对象
 --
 * ONTAP 集群通过用户指定的端口启动与 S3 兼容对象存储的 HTTPS 连接（此端口可在分层设置期间进行配置）。
 +
-ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会启动，而只是响应。
+源ONTAP 系统可在对象存储中读取和写入数据。对象存储永远不会启动，而只是响应。
 
 * 需要从连接器建立入站连接，该连接器必须位于您的内部。
 +
@@ -113,7 +113,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 与 S3 兼容的对象存储必须满足以下要求。
 
-S3 凭据:: 在设置与 S3 兼容的对象存储分层时，系统会提示您创建 S3 存储分段或选择现有的 S3 存储分段。您需要为 Cloud Tiering 提供 S3 访问密钥和机密密钥。Cloud Tiering 使用密钥访问您的存储分段。
+S3 凭据:: 在设置与S3兼容的对象存储分层时、系统会提示您创建S3存储分段或选择现有的S3存储分段。您需要为 Cloud Tiering 提供 S3 访问密钥和机密密钥。Cloud Tiering 使用密钥访问您的存储分段。
 +
 --
 这些访问密钥必须与具有以下权限的用户相关联：
