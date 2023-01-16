@@ -160,9 +160,9 @@ Microsoft.Storage/storageAccounts/managementPolicies/write
 
 设置分层时，您需要确定要使用的资源组以及属于该资源组的存储帐户和 Azure 容器。通过存储帐户， Cloud Tiering 可以对用于数据分层的 Blob 容器进行身份验证和访问。
 
-Cloud Tiering 仅支持通用 v2 和高级块 Blob 类型的存储帐户。
+Cloud Tiering支持分层到任何区域中可通过Connector访问的任何存储帐户。
 
-Blob 容器必须位于中 link:reference-azure-support.html#supported-azure-regions["支持 Cloud Tiering 的区域"]。
+Cloud Tiering 仅支持通用 v2 和高级块 Blob 类型的存储帐户。
 
 
 NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的访问层，以便分层数据在一定天数后过渡到，则在 Azure 帐户中设置容器时，不能选择任何生命周期规则。Cloud Tiering 可管理生命周期过渡。

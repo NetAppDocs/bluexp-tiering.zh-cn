@@ -104,7 +104,7 @@ NOTE: 云提供商可能会根据从云端传输的数据量向您收取费用�
 
 . 从左侧导航菜单中、选择*移动性>分层*。
 . 在*集群信息板*中、单击集群的*分层卷*。
-. 单击 image:screenshot_edit_icon.gif["表中卷分层的每行末尾显示的编辑图标的屏幕截图"] 图标，选择要使用的检索选项，然后单击 * 应用 * 。
+. 单击 image:screenshot_edit_icon.gif["编辑图标、显示在表中每行末尾、用于分层卷"] 图标，选择要使用的检索选项，然后单击 * 应用 * 。
 +
 image:screenshot_tiering_policy_settings_with_retrieve.png["显示可配置分层策略设置的屏幕截图。"]
 
@@ -180,10 +180,7 @@ image:screenshot_tiering_aiq_fabricpool_info.png["一个屏幕截图、用于显
 
 .步骤
 . 确定运行状况为 "Failed" 的任何集群。
-+
-image:screenshot_tiering_health.gif["显示集群的分层运行状况失败的屏幕截图。"]
-
-. 将鼠标悬停在上 image:screenshot_info_icon.gif["显示失败原因的 I 图标的屏幕截图"] 图标以查看失败原因。
+. 将鼠标悬停在信息"i"图标上可查看故障原因。
 . 更正问题描述：
 +
 .. 验证 ONTAP 集群是否正常运行，以及它是否与对象存储提供程序建立了入站和出站连接。

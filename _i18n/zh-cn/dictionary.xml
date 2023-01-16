@@ -174,7 +174,6 @@
   <block id="256fb1d2776e7f3b364ce4414a65b2cd" category="section-title">正在准备 Azure Blob 存储</block>
   <block id="e353341b9f86b1c5a8255f3f47459da4" category="paragraph">设置分层时，您需要确定要使用的资源组以及属于该资源组的存储帐户和 Azure 容器。通过存储帐户， Cloud Tiering 可以对用于数据分层的 Blob 容器进行身份验证和访问。</block>
   <block id="0cab1d18e33888aa4f85218003d9de5a" category="paragraph">Cloud Tiering 仅支持通用 v2 和高级块 Blob 类型的存储帐户。</block>
-  <block id="3b59962ea13402bb6ea753b627310e7c" category="paragraph">Blob 容器必须位于中 <block ref="a290baa3c16e15d9514a65f3a654d403" category="inline-link-macro-rx"></block>。</block>
   <block id="30c0faff624015e8c8016427ebe986eb" category="admonition">如果您计划将 Cloud Tiering 配置为使用成本较低的访问层，以便分层数据在一定天数后过渡到，则在 Azure 帐户中设置容器时，不能选择任何生命周期规则。Cloud Tiering 可管理生命周期过渡。</block>
   <block id="0cff75f8a1ea859d852b43f30a5a65c5" category="section-title">将第一个集群中的非活动数据分层到 Azure Blob 存储</block>
   <block id="eeee7c2206f30d34992557feb0d7900f" category="paragraph">准备好 Azure 环境后，开始对第一个集群中的非活动数据进行分层。</block>
@@ -217,8 +216,6 @@
   <block id="b45317b449074be01eb535dc51134b25" category="cell">分层策略更改为 " 冷快照 " 。</block>
   <block id="4462bf0f5ca8a6a2218e38c86b45446e" category="admonition">云提供商可能会根据从云端传输的数据量向您收取费用。</block>
   <block id="518c45bb71686bd34cfd0dd7adfb3ce0" category="paragraph">确保性能层中有足够的空间用于从云中移动的所有数据。</block>
-  <block id="621f6f17b31c046c0e769d995604f944" category="inline-image-macro">表中卷分层的每行末尾显示的编辑图标的屏幕截图</block>
-  <block id="d20bf3b0bd8d1cd785f6590b7b461afe" category="list-text">单击 <block ref="8a7b4d9eeceba80332a45bd9abdd9ed5" category="inline-image-macro-rx" type="image"></block> 图标，选择要使用的检索选项，然后单击 * 应用 * 。</block>
   <block id="39ccd40812695aaa7bc077a0fc353a0e" category="paragraph"><block ref="39ccd40812695aaa7bc077a0fc353a0e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="56687950ee1692c1c4b88c4fd8cd206f" category="paragraph">分层策略将更改，分层数据将开始迁移回性能层。根据云中的数据量，传输过程可能需要一些时间。</block>
   <block id="176eb530d68328d73cd752bcf53ad2be" category="section-title">管理聚合上的分层设置</block>
@@ -239,8 +236,6 @@
   <block id="5afc7ef8d3c3feeb50817eff11cca91d" category="paragraph"><block ref="5afc7ef8d3c3feeb50817eff11cca91d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="27df5f5776d4bab5bcdcfbdeafb746ca" category="section-title">修复运行状况</block>
   <block id="f13e147df4e74e1146734748e3dd0663" category="list-text">确定运行状况为 "Failed" 的任何集群。</block>
-  <block id="9e83f9c3a288548ca874b7474ad20ae7" category="inline-image-macro">显示集群的分层运行状况失败的屏幕截图。</block>
-  <block id="039ac5249f10b659e32e0dcebb1526da" category="inline-image-macro">显示失败原因的 I 图标的屏幕截图</block>
   <block id="97052eb243c56bbc0d990eff54f746c9" category="list-text">更正问题描述：</block>
   <block id="073279dcfecd605313d456f15c7a1b78" category="list-text">验证 ONTAP 集群是否正常运行，以及它是否与对象存储提供程序建立了入站和出站连接。</block>
   <block id="66009842ccd3b5b27255c54219dcb209" category="section-title">从 Cloud Tiering 发现其他集群</block>
@@ -439,39 +434,11 @@
   <block id="dee2bc58a49a84e9b7244f93fdc4a53a" category="paragraph">在配置 Cloud Tiering 生命周期规则时，在 Azure 帐户中设置容器时不得配置任何生命周期规则。</block>
   <block id="07e61ccfcb604b4d08fc03603677751d" category="inline-link">了解 Azure Blob 访问层</block>
   <block id="e298f51ca48eff0d92cee75ca43aaa3a" category="paragraph"><block ref="ac0a406faf148be2b386c73b962697e7" category="inline-link-rx"></block>。</block>
-  <block id="52850ea5b0c4063c74ca8ab0c4533d28" category="paragraph">Cloud Tiering 支持以下 Azure 区域。</block>
-  <block id="f5cd262901883dff68d06b215fb0f28e" category="section-title">非洲</block>
-  <block id="d5daca31a462e138266141f6d01ca814" category="list-text">南非北部</block>
   <block id="2ebc1f6a39f03ec89f2b4bfdaf802f4c" category="section-title">亚太地区</block>
-  <block id="cee3f0213dd8b7eb15d7b31824e01754" category="list-text">澳大利亚东部</block>
-  <block id="c2701212de431ec66277aeb9ec636184" category="list-text">澳大利亚东南部</block>
-  <block id="f74e1c0c8ee8410fa5bfe03676347257" category="list-text">东亚</block>
-  <block id="12fd3aa0a9f080663613364badb43e93" category="list-text">日本东部</block>
-  <block id="33e5ad3a780212ee47f127965a2dda72" category="list-text">日本西部</block>
-  <block id="6da3164e9884fb44e54fda035450cfaa" category="list-text">韩国中部</block>
-  <block id="cbbf2ae44538816cc573fa3ad561a434" category="list-text">韩国</block>
-  <block id="ef005ab2b7187e0e4953a0abfdacad42" category="list-text">东南亚</block>
   <block id="912d59cdf1d3f551fae21f6f0062258f" category="section-title">欧洲</block>
-  <block id="bea1bd3d23555c539dab5f3f5426184c" category="list-text">法国中部</block>
-  <block id="1dab3491cdeeb2a6d567b21ee3063ae4" category="list-text">德国中西部</block>
-  <block id="85c1bd2190b5e1105a9c4e7e6a224a96" category="list-text">德国北部</block>
-  <block id="d0fe0e3b6520479f718b98f0d471b7d0" category="list-text">北欧</block>
-  <block id="390a1a81c9b43f7d364b54144161673d" category="list-text">英国南部</block>
-  <block id="23d58738c27b56ae980ce7b45716f6a5" category="list-text">英国西部</block>
-  <block id="8fb2033d01e3efa2825282a13f86c14e" category="list-text">西欧</block>
   <block id="5ffec2d87ab548202f8b549af380913a" category="section-title">北美</block>
   <block id="1d0f99876d748759fce5e852f79fca96" category="list-text">加拿大中部</block>
-  <block id="ea7c65fe418bef9cfe86be4944b30bcb" category="list-text">加拿大东部</block>
-  <block id="2e168141b8f719cbd37e6beec663b599" category="list-text">位于美国中部</block>
-  <block id="3c110de67497eb3f8d4c100e43101c81" category="list-text">美国东部</block>
-  <block id="7c61981f0be77fb7e4061ba5395ff02b" category="list-text">美国东部 2.</block>
-  <block id="e306e59ae933d5705ad58b576840cfb7" category="list-text">位于美国中部北部</block>
-  <block id="00a0c4ce62672ec36639c314d0d8e114" category="list-text">位于美国中部南部</block>
-  <block id="f3397c566fedcaa2f63145169ba345fc" category="list-text">美国西部</block>
-  <block id="c349d3a26cf4231660785a0c5b4cb007" category="list-text">美国西部 2.</block>
-  <block id="e74523dfd57d69116c6dc03759fe0a7b" category="list-text">位于美国西部</block>
   <block id="aab422acb3d2334a6deca0e1495745c2" category="section-title">南美洲</block>
-  <block id="47b9af39407829080e9cfeee3607c39c" category="list-text">巴西南部</block>
   <block id="4b75686c0a14158ec6b99e93fbf1828b" category="doc">为 Cloud Tiering 设置许可</block>
   <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">在阅读其他内容之前，请先阅读一些注释：</block>
   <block id="e206957e9be19dce9acce268f36b6b4d" category="list-text">将数据分层到 StorageGRID 不收取任何费用，因此无需 BYOL 许可证或 PAYGO 注册。此分层数据不计入许可证中购买的容量。</block>
@@ -1282,8 +1249,6 @@
   <block id="4beb855fa991422619d33c99b74d1365" category="paragraph">您也可以<block ref="ba21940cc7b1756c6b93b4daf8cfd4fb" category="inline-link-rx"></block> 如果您熟悉此 NetApp 产品，只需从左侧导航窗格中选择*云建议*即可。</block>
   <block id="d80d78ee61a9d0887caddafbd12776c6" category="inline-image-macro">一个屏幕截图、用于显示使用FabricPool Advisor从Digital Advisor获取的集群的FabricPool 信息。</block>
   <block id="dc0605b8b2de4441cff5b013be511267" category="paragraph"><block ref="dc0605b8b2de4441cff5b013be511267" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="58b4dc3ce866601f6466363f42d61123" category="paragraph"><block ref="58b4dc3ce866601f6466363f42d61123" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3c35b41a16deb03425c723cee8f03be8" category="list-text">将鼠标悬停在上 <block ref="edf8c533ab635c618137908ca0fbe456" category="inline-image-macro-rx" type="image"></block> 图标以查看失败原因。</block>
   <block id="154756f3451aa7d3c9c0ff18e7159503" category="inline-link">转到BlueXP Marketplace产品</block>
   <block id="8888d46d611948a30ba2c08d3adb6945" category="list-text">要从 Azure Marketplace 订阅，<block ref="c7c84f194b790bd1614b3007104e1172" category="inline-link-rx"></block>，单击 * 订阅 * ，然后按照提示进行操作。</block>
   <block id="a857c8adb9c1cde4acd264143a3e3ad1" category="paragraph">如果达到BYOL容量限制、则新冷数据分层将停止、而以前分层的所有数据仍可访问。如果您订阅了_BlueXP -部署和管理云数据服务_的PAYGO Marketplace、则新的冷数据将继续分层到对象存储、您将按使用情况支付这些费用。</block>
@@ -1343,4 +1308,10 @@
   <block id="4f2ba178f02065cd43bc7615b226c05d" category="paragraph">将数据分层到与S3兼容的对象存储时、源ONTAP 集群必须满足以下要求。</block>
   <block id="9378df978e3f22322e7d49bdc1ff98b9" category="paragraph">源ONTAP 系统可在对象存储中读取和写入数据。对象存储永远不会启动，而只是响应。</block>
   <block id="1cf86146f536cd28b2772a235c4b89f2" category="list-text">在设置与S3兼容的对象存储分层时、系统会提示您创建S3存储分段或选择现有的S3存储分段。您需要为 Cloud Tiering 提供 S3 访问密钥和机密密钥。Cloud Tiering 使用密钥访问您的存储分段。</block>
+  <block id="b8639afb3f4840600c6c36fd2685cc07" category="paragraph">Cloud Tiering支持分层到任何区域中可通过Connector访问的任何存储帐户。</block>
+  <block id="77cf2aec599c4e8df2dcafbc11506767" category="list-text">要选择所有卷，请选中标题行（<block ref="48e674c3b35bfe3d3a9cb29d2c6ff5c1" category="inline-image-macro-rx" type="image"></block>），然后单击 * 配置卷 * 。</block>
+  <block id="7db1d7841fc321b177d854a04ffc5eba" category="list-text">要选择多个卷，请选中每个卷对应的框（<block ref="27922440534843fc73bbce66b8385327" category="inline-image-macro-rx" type="image"></block>），然后单击 * 配置卷 * 。</block>
+  <block id="79385e330c7175cb5887cc8f4befaed8" category="inline-image-macro">编辑图标、显示在表中每行末尾、用于分层卷</block>
+  <block id="58d8ea9b13cad2e6453367ec5718e38a" category="list-text">单击 <block ref="53af160daf8754f7e9dcd6d07cc514b7" category="inline-image-macro-rx" type="image"></block> 图标，选择要使用的检索选项，然后单击 * 应用 * 。</block>
+  <block id="b151844c81732b344718260aa69943af" category="list-text">将鼠标悬停在信息"i"图标上可查看故障原因。</block>
 </blocks>
