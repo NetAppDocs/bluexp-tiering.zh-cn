@@ -22,7 +22,7 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 
 
-=== 所需的Connector出站Internet访问端点更改
+=== 连接器出站Internet访问端点更改
 
 由于Cloud Tiering发生了变化、您需要更改以下连接器端点才能成功执行Cloud Tiering操作：
 

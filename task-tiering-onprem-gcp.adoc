@@ -156,7 +156,7 @@ NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类�
 . https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["创建具有预定义的存储管理员角色的服务帐户"^]。
 . 转至 https://console.cloud.google.com/storage/settings["GCP 存储设置"^] 并为服务帐户创建访问密钥：
 +
-.. 选择一个项目，然后单击 * 互操作性 * 。如果尚未执行此操作，请单击 * 启用互操作性访问 * 。
+.. 选择一个项目，然后单击 * 互操作性 * 。如果尚未启用互操作性访问，请单击 * 启用互操作性访问 * 。
 .. 在 * 服务帐户的访问密钥 * 下，单击 * 为服务帐户创建密钥 * ，选择刚刚创建的服务帐户，然后单击 * 创建密钥 * 。
 +
 稍后在设置 Cloud Tiering 时，您需要输入密钥。
@@ -177,8 +177,8 @@ NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类�
 
 
 .步骤
-. 选择一个内部集群。
-. 单击分层服务的 * 启用 * 。
+. 选择内部ONTAP 工作环境。
+. 从右侧面板中单击分层服务的*启用*。
 +
 如果Google Cloud Storage分层目标作为工作环境存在于Canvas上、则可以将集群拖动到Google Cloud Storage工作环境中以启动设置向导。
 

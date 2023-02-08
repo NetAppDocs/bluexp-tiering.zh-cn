@@ -14,6 +14,17 @@ summary: 在向NetApp技术支持部门创建支持案例之前、您需要向Bl
 
 
 
+== 支持云提供商解决方案
+
+有关已集成到BlueXP中的以下云提供商解决方案的技术支持、请参阅该产品的BlueXP文档中的"获得帮助"。
+
+* link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/concept-fsx-aws.html#getting-help["适用于 ONTAP 的 Amazon FSX"^]
+* link:https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/concept-azure-netapp-files.html#getting-help["Azure NetApp Files"^]
+* link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-service-gcp/concept-cvs-gcp.html#getting-help["适用于 Google Cloud 的 Cloud Volumes Service"^]
+
+
+
+
 == 支持注册概述
 
 激活支持授权有两种形式的注册：

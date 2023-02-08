@@ -8,7 +8,7 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   rss_page: whats-new.html
-  langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr,fr-fr,de-de
+  langs: zh-cn,us-en,ja-jp,ko-kr,zh-tw,de-de,fr-fr
 sidebar:
   entries:
   - title: Cloud Tiering 文档
@@ -108,15 +108,15 @@ homepage:
   - title: 博客社区
     links:
     - title: NetApp 社区
-      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
-    - title: BlueXP博客
-      url: https://cloud.netapp.com/blog
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: Cloud Tiering博客
+      url: https://bluexp.netapp.com/blog/topic/cloud-tiering
     - title: 云网络研讨会
-      url: https://cloud.netapp.com/events
+      url: https://bluexp.netapp.com/events
   - title: 其他资源
     links:
     - title: BlueXP用例
-      url: https://cloud.netapp.com/cloud-tiering
+      url: https://bluexp.netapp.com/cloud-tiering
 product-family:
   name: BlueXP
   repo: cloud-manager-family
