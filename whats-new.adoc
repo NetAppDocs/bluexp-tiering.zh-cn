@@ -18,6 +18,16 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 
 
+== 2023年3月5日
+
+
+
+=== 现在、您可以为卷生成分层报告
+
+您可以从"层卷"页面下载报告、以便查看所管理集群上所有卷的分层状态。Cloud Tiering会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给公司中的其他人员。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["请参见如何下载分层报告"]。
+
+
+
 == 2022年12月6日
 
 

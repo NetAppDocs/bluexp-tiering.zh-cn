@@ -625,7 +625,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
-  <block id="07d41912a6ab6b97216f8cf89e93205c" category="section-title">自助支持</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">这些选项每周 7 天，每天 24 小时免费提供：</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知识库</block>
   <block id="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="list-text"><block ref="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="inline-link-rx"></block></block>
@@ -633,8 +632,6 @@
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文档。</block>
   <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto ： ng-cloudmanager-feedback@netapp.com （反馈电子邮件）</block>
-  <block id="0659d428df833a806e29e65e632d380a" category="section-title">NetApp 支持</block>
-  <block id="f5052c65917d7341726235d4d4941461" category="list-text">在 "Technical Support" 下选择一个可用选项：</block>
   <block id="fd01295dbf857b2bc6bcef4166b23207" category="paragraph">最初在采用纯SSD聚合的AFF 、FAS 和ONTAP Select 系统上受支持、从ONTAP 9.8开始、除了高性能SSD之外、您还可以对包含HDD的聚合中的数据进行分层。请参见<block ref="6b92341e29e5578d52c0690ebbf4bdb7" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="dfbee056730af589714f6061683bf3c8" category="paragraph">Cloud Tiering支持以下对象存储提供程序：</block>
   <block id="d3e8cd2e370974f27de1b310b4aa8cb3" category="section-title">2022年5月3日</block>
@@ -1053,7 +1050,6 @@
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述自助支持选项之外、您还可以在激活支持后与NetApp支持专家合作解决任何问题。</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">了解如何注册获取支持</block>
   <block id="383133cb6f7207b1c65c3ace94aa5e95" category="list-text">如果您要通过电话与某人通话、请单击*致电我们*。系统会将您定向到netapp.com上的一个页面、其中列出了您可以拨打的电话号码。</block>
-  <block id="bf5bc6ab0f95f17f4e98c9d766b8c11d" category="list-text">单击*创建案例*、向NetApp支持专家开一个服务单：</block>
   <block id="b53e0a259f4a0c8e7da80d6c94e26c84" category="list-text">* NetApp 支持站点 Account*：选择与创建支持案例的人员关联的适用帐户。除下面提供的其他电子邮件外、此人还将是NetApp的主要联系人。</block>
   <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">*工作环境*：如果适用于存储、请选择* Cloud Volumes ONTAP *或* on-Prem*、然后选择关联的工作环境。</block>
   <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*案例优先级*：选择案例的优先级、可以是"低"、"中"、"高"或"严重"。</block>
@@ -1321,4 +1317,17 @@
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新增功能</block>
   <block id="4f5b5f1d13dfc896b9f5faa0807d8a6c" category="sidebar">更改卷的分层策略</block>
   <block id="e7719a97642051ee358e5d15cf1ab284" category="sidebar">Cloud Tiering博客</block>
+  <block id="1c573cd95f6407add05436f6ac05d6ec" category="section-title">下载卷的分层报告</block>
+  <block id="801ab24683a4a8c433c6eb40c48bcd9d" category="inline-image-macro">下载</block>
+  <block id="1133c5d4d5ce8a369839f12ca5a07313" category="paragraph">您可以下载"层卷"页面的报告、以便查看所管理集群上所有卷的分层状态。只需单击 <block ref="d2e5c9ca6fcd7f605e1d5f7b4f6a6a99" category="inline-image-macro-rx" type="image"></block> 按钮。Cloud Tiering会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给其他组。CSV文件最多包含10、000行数据。</block>
+  <block id="fe8e7e0f08b18c3c012d94d74e8386ce" category="inline-image-macro">显示如何生成CSV文件的屏幕截图、其中列出了所有卷的分层状态。</block>
+  <block id="da2d758c47ecb3eaa92541c9f800dcb9" category="paragraph"><block ref="da2d758c47ecb3eaa92541c9f800dcb9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">使用自助支持选项</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">向NetApp支持部门创建案例</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">在*资源*页面上、在技术支持下选择一个可用选项：</block>
+  <block id="5be2e1dfe4bf215289731df45ec8157b" category="list-text">单击*创建案例*、向NetApp支持专家开一个服务单：</block>
+  <block id="d0693e7bf28b7bbc94287cee0e4b0768" category="section-title">2023年3月5日</block>
+  <block id="b92f2131d3d225c3c3327daaa8862624" category="section-title">现在、您可以为卷生成分层报告</block>
+  <block id="f86857f0a51fde5819da3a17258b5448" category="inline-link">请参见如何下载分层报告</block>
+  <block id="10607665fc9de51ae2bf29927d3673b9" category="paragraph">您可以从"层卷"页面下载报告、以便查看所管理集群上所有卷的分层状态。Cloud Tiering会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给公司中的其他人员。<block ref="b6be70acd3f28aaa18a7e212c9bc7736" category="inline-link-rx"></block>。</block>
 </blocks>

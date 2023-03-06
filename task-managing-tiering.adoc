@@ -78,6 +78,14 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 
 
+== 下载卷的分层报告
+
+您可以下载"层卷"页面的报告、以便查看所管理集群上所有卷的分层状态。只需单击 image:button_download.png["下载"] 按钮。Cloud Tiering会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给其他组。CSV文件最多包含10、000行数据。
+
+image:screenshot_tiering_report_download.png["显示如何生成CSV文件的屏幕截图、其中列出了所有卷的分层状态。"]
+
+
+
 == 将数据从云层迁移回性能层
 
 从云访问的分层数据可能会 " 重新加热 " 并移回性能层。但是，如果要主动将数据从云层提升到性能层，可以在 _Tiering Policy_ 对话框中执行此操作。使用 ONTAP 9.8 及更高版本时，可以使用此功能。
