@@ -87,9 +87,22 @@ NetApp 使用 Microsoft Azure Active Directory 作为身份提供程序来提供
 请注意以下事项：
 
 +
-** 此帐户必须是客户级别的帐户（而不是来宾或临时帐户）。
-** 成功登录后、NetApp将存储NSS用户名。这是系统生成的ID、映射到您的电子邮件。在* NSS Management*页面上、您可以从显示电子邮件 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-nss-menu.png["由三个水平点组成的图标"] 菜单。
-** 如果您需要刷新登录凭据令牌、则中还会提供一个*更新凭据*选项 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-nss-menu.png["由三个水平点组成的图标"] 菜单。使用此选项将提示您重新登录。
+** NSS帐户必须是客户级别的帐户(而不是来宾或临时帐户)。您可以拥有多个客户级别的NSS帐户。
+** 如果此帐户是合作伙伴级别的帐户、则只能有一个NSS帐户。如果您尝试添加客户级别的NSS帐户、并且存在合作伙伴级别的帐户、则会收到以下错误消息：
++
+"此帐户不允许使用NSS客户类型、因为已存在不同类型的NSS用户。"
+
++
+如果您已有客户级别的NSS帐户、并尝试添加合作伙伴级别的帐户、则也是如此。
+
+** 成功登录后、NetApp将存储NSS用户名。
++
+这是系统生成的ID、映射到您的电子邮件。在* NSS Management*页面上、您可以从显示电子邮件 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-nss-menu.png["由三个水平点组成的图标"] 菜单。
+
+** 如果您需要刷新登录凭据令牌、则中还会提供一个*更新凭据*选项 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-nss-menu.png["由三个水平点组成的图标"] 菜单。
++
+使用此选项将提示您重新登录。请注意、这些帐户的令牌将在90天后过期。系统将发布通知、提醒您注意这一点。
+
 
 
 

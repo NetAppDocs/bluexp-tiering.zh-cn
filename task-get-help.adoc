@@ -90,3 +90,64 @@ image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/med
 * 使用产品内聊天功能
 * 通过提交非技术案例 https://mysupport.netapp.com/site/help[]
 
+
+
+
+== 管理支持案例(预览)
+
+您可以直接从BlueXP查看和管理活动的和已解决的支持案例。您可以管理与您的NSS帐户和公司关联的案例。
+
+案例管理以预览形式提供。我们计划改进此体验、并在即将发布的版本中添加增强功能。请通过产品内聊天向我们发送反馈。
+
+请注意以下事项：
+
+* 页面顶部的案例管理信息板提供了两个视图：
++
+** 左侧视图显示了您提供的用户NSS帐户在过去3个月内打开的案例总数。
+** 右侧视图显示了过去3个月内根据用户NSS帐户在公司级别开立的案例总数。
+
+
++
+此表中的结果反映了与选定视图相关的案例。
+
+* 您可以添加或删除感兴趣的列、也可以筛选优先级和状态等列的内容。其他列仅提供排序功能。
++
+有关更多详细信息、请查看以下步骤。
+
+* 在每个案例级别、我们可以更新案例备注或关闭尚未处于"已关闭"或"待关闭"状态的案例。
+
+
+.步骤
+. 在BlueXP中、单击*帮助>支持*。
+. 单击*案例管理*、如果出现提示、请将您的NSS帐户添加到BlueXP。
++
+"*案例管理*"页面显示了与您的BlueXP用户帐户关联的NSS帐户相关的已打开案例。此NSS帐户与* NSS管理*页面顶部显示的NSS帐户相同。
+
+. 也可以修改表中显示的信息：
++
+** 在*组织的案例*下、单击*查看*以查看与您的公司关联的所有案例。
+** 通过选择确切的日期范围或选择其他时间范围来修改日期范围。
++
+image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-case-management-date-range.png["案例管理页面上表上方选项的屏幕截图、可用于选择确切的日期范围或过去7天、30天或3个月。"]
+
+** 筛选列的内容。
++
+image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-case-management-filter.png["\"状态\"列中筛选选项的屏幕截图、可用于筛选与特定状态(如\"活动\"或\"已关闭\")匹配的案例。"]
+
+** 通过单击更改表中显示的列 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-table-columns.png["表中显示的加号图标"] 然后选择要显示的列。
++
+image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-case-management-columns.png["显示可在表中显示的列的屏幕截图。"]
+
+
+
+. 单击以管理现有案例 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-table-action.png["包含三个点的图标、显示在表的最后一列中"] 并选择一个可用选项：
++
+** *查看案例*：查看有关特定案例的完整详细信息。
+** *更新案例注释*：提供有关您的问题的更多详细信息。
+** *关闭案例*：提供关闭案例的详细信息、然后单击*关闭案例*。
+
+
++
+image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-case-management-actions.png["屏幕截图、显示在表的最后一列中选择菜单后可以执行的操作。"]
+
+

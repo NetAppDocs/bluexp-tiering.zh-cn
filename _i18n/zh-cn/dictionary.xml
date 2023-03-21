@@ -253,7 +253,6 @@
   <block id="270fcb785810d0206945029bb05f4e97" category="list-text">Amazon S3</block>
   <block id="6a51ed7bcacdfb13f78abc1e0f69c201" category="list-text">Microsoft Azure Blob</block>
   <block id="833c2c211a541e50ad94433664e4b5c1" category="list-text">Google Cloud 存储</block>
-  <block id="29fc78ad7b30ceab82a6fad5327f5e05" category="list-text">与 S3 兼容的对象存储</block>
   <block id="55cf1a0f0fce69fd543500e5761dd26d" category="list-text">NetApp StorageGRID</block>
   <block id="996d831ac7a2265a8b052be35e48ec58" category="admonition">您可以将数据从 NAS 卷分层到公有云或私有云，例如 StorageGRID 。在对 SAN 协议访问的数据进行分层时，由于连接方面的考虑， NetApp 建议使用私有云。</block>
   <block id="a20f952fc829b6aeea951e2b9f940dd3" category="section-title">对象存储层</block>
@@ -733,7 +732,6 @@
   <block id="eeb240bdbe8975d674a61e517f39633f" category="list-text">IBM云对象存储(FabricPool 配置必须使用System Manager或ONTAP 命令行界面完成)</block>
   <block id="2c08a1d27d6545c0ad01ad140562498b" category="section-title">为什么Cloud Tiering不支持Amazon S3 Glacier Flexible和S3 Glacier Deep Archive？</block>
   <block id="f69e1396e6ee64547d56719752b81f87" category="paragraph">不支持Amazon S3 Glacier Flexible和S3 Glacier Deep Archive的主要原因是、云分层设计为高性能分层解决方案 、因此数据必须持续可用且可快速访问以供检索。借助S3 Glacier Flexible和S3 Glacier Deep Archive、数据检索可以在几分钟到48小时之间的任意位置进行。</block>
-  <block id="af7dafa9f010fa91db93c80604be8582" category="section-title">我是否可以将其他与S3兼容的对象存储服务(例如Wasabi)与Cloud Tiering结合使用？</block>
   <block id="84a20b13e3ea8fe117cd487b10cafd14" category="inline-link-macro">请参见此处的详细信息</block>
   <block id="de6d6c00be7f38cc0fb58e604e31efe9" category="paragraph">可以、使用ONTAP 9.8及更高版本的集群支持通过分层UI配置与S3兼容的对象存储。 <block ref="dfc215f15d0188a75116c167a2fbbc9d" category="inline-link-macro-rx"></block>。</block>
   <block id="94fe0352e28f43c2dee13351ec781840" category="section-title">是否可以将多个存储分段附加到同一聚合？</block>
@@ -1097,10 +1095,7 @@
   <block id="1afe19576f77bb0073c93359ed2cbb18" category="list-text">在BlueXP控制台的右上角、单击帮助图标、然后选择*支持*。</block>
   <block id="cbc6cc3bb022583403171b447b2a962c" category="paragraph">通过这些操作、BlueXP可以使用您的NSS帐户执行许可证下载、软件升级验证和未来支持注册等操作。</block>
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">请注意以下事项：</block>
-  <block id="0f0a0d646a020cf3a65ce82ada4cfb01" category="list-text">此帐户必须是客户级别的帐户（而不是来宾或临时帐户）。</block>
   <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">由三个水平点组成的图标</block>
-  <block id="ff67299785d475e87002751aa6ab5eb8" category="list-text">成功登录后、NetApp将存储NSS用户名。这是系统生成的ID、映射到您的电子邮件。在* NSS Management*页面上、您可以从显示电子邮件 <block ref="0d0843f26c0819e5369f690fefbf68b7" category="inline-image-macro-rx" type="image"></block> 菜单。</block>
-  <block id="505da61efe6bebebbaf092da18f64613" category="list-text">如果您需要刷新登录凭据令牌、则中还会提供一个*更新凭据*选项 <block ref="0d0843f26c0819e5369f690fefbf68b7" category="inline-image-macro-rx" type="image"></block> 菜单。使用此选项将提示您重新登录。</block>
   <block id="ad56c7289bc13dcf4f78c285f7f03878" category="section-title">向NetApp注册</block>
   <block id="f1bac79c2c71fbd93863b9fbd718094c" category="paragraph">如何注册NetApp支持取决于您是否已拥有NetApp 支持站点 (NSS)帐户。</block>
   <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">具有NSS帐户的现有客户</block>
@@ -1330,4 +1325,47 @@
   <block id="b92f2131d3d225c3c3327daaa8862624" category="section-title">现在、您可以为卷生成分层报告</block>
   <block id="f86857f0a51fde5819da3a17258b5448" category="inline-link">请参见如何下载分层报告</block>
   <block id="10607665fc9de51ae2bf29927d3673b9" category="paragraph">您可以从"层卷"页面下载报告、以便查看所管理集群上所有卷的分层状态。Cloud Tiering会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给公司中的其他人员。<block ref="b6be70acd3f28aaa18a7e212c9bc7736" category="inline-link-rx"></block>。</block>
+  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">管理支持案例(预览)</block>
+  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">您可以直接从BlueXP查看和管理活动的和已解决的支持案例。您可以管理与您的NSS帐户和公司关联的案例。</block>
+  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">案例管理以预览形式提供。我们计划改进此体验、并在即将发布的版本中添加增强功能。请通过产品内聊天向我们发送反馈。</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">页面顶部的案例管理信息板提供了两个视图：</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">左侧视图显示了您提供的用户NSS帐户在过去3个月内打开的案例总数。</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">右侧视图显示了过去3个月内根据用户NSS帐户在公司级别开立的案例总数。</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">此表中的结果反映了与选定视图相关的案例。</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">您可以添加或删除感兴趣的列、也可以筛选优先级和状态等列的内容。其他列仅提供排序功能。</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">有关更多详细信息、请查看以下步骤。</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">在每个案例级别、我们可以更新案例备注或关闭尚未处于"已关闭"或"待关闭"状态的案例。</block>
+  <block id="34b1296d31cefa72dae9b3a364b1f444" category="list-text">单击*案例管理*、如果出现提示、请将您的NSS帐户添加到BlueXP。</block>
+  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">"*案例管理*"页面显示了与您的BlueXP用户帐户关联的NSS帐户相关的已打开案例。此NSS帐户与* NSS管理*页面顶部显示的NSS帐户相同。</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">也可以修改表中显示的信息：</block>
+  <block id="27635a52fe4c34c39ffc6430f4244ec6" category="list-text">在*组织的案例*下、单击*查看*以查看与您的公司关联的所有案例。</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">通过选择确切的日期范围或选择其他时间范围来修改日期范围。</block>
+  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">案例管理页面上表上方选项的屏幕截图、可用于选择确切的日期范围或过去7天、30天或3个月。</block>
+  <block id="7fcba8aeefa9960d3fc3fa08b360ba2e" category="paragraph"><block ref="7fcba8aeefa9960d3fc3fa08b360ba2e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">筛选列的内容。</block>
+  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">"状态"列中筛选选项的屏幕截图、可用于筛选与特定状态(如"活动"或"已关闭")匹配的案例。</block>
+  <block id="37709be3a43df07d5975287545d0ba12" category="paragraph"><block ref="37709be3a43df07d5975287545d0ba12" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">表中显示的加号图标</block>
+  <block id="1614dc8e47c0492434152c990d6c1040" category="list-text">通过单击更改表中显示的列 <block ref="effeab06130cddc8360822b2b706805b" category="inline-image-macro-rx" type="image"></block> 然后选择要显示的列。</block>
+  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">显示可在表中显示的列的屏幕截图。</block>
+  <block id="5de408d7cbad49634fb25f9047498132" category="paragraph"><block ref="5de408d7cbad49634fb25f9047498132" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">包含三个点的图标、显示在表的最后一列中</block>
+  <block id="98efef1c8a47ed5791b41944e8ff4ec2" category="list-text">单击以管理现有案例 <block ref="a0b152b50a56901a75affebabc26ed61" category="inline-image-macro-rx" type="image"></block> 并选择一个可用选项：</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*查看案例*：查看有关特定案例的完整详细信息。</block>
+  <block id="482429810c2b00a4fa04f9900c560232" category="list-text">*更新案例注释*：提供有关您的问题的更多详细信息。</block>
+  <block id="f791bc685c526af8296381acff10f6a0" category="list-text">*关闭案例*：提供关闭案例的详细信息、然后单击*关闭案例*。</block>
+  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">屏幕截图、显示在表的最后一列中选择菜单后可以执行的操作。</block>
+  <block id="e9a5c374fb47ed2ae5cc6108fb36d829" category="paragraph"><block ref="e9a5c374fb47ed2ae5cc6108fb36d829" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ec084bb25ed5b934c09b361069c246b2" category="list-text">NSS帐户必须是客户级别的帐户(而不是来宾或临时帐户)。您可以拥有多个客户级别的NSS帐户。</block>
+  <block id="27387009488fe78dcc7cb7e3e432792f" category="list-text">如果此帐户是合作伙伴级别的帐户、则只能有一个NSS帐户。如果您尝试添加客户级别的NSS帐户、并且存在合作伙伴级别的帐户、则会收到以下错误消息：</block>
+  <block id="d926847e4634e19a1aa7358becc0fa27" category="paragraph">"此帐户不允许使用NSS客户类型、因为已存在不同类型的NSS用户。"</block>
+  <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">如果您已有客户级别的NSS帐户、并尝试添加合作伙伴级别的帐户、则也是如此。</block>
+  <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">成功登录后、NetApp将存储NSS用户名。</block>
+  <block id="452cd4df7b0d5eb1156519a2f3b0206b" category="paragraph">这是系统生成的ID、映射到您的电子邮件。在* NSS Management*页面上、您可以从显示电子邮件 <block ref="0d0843f26c0819e5369f690fefbf68b7" category="inline-image-macro-rx" type="image"></block> 菜单。</block>
+  <block id="fd02e84624a2fdfd58787131aa2820b5" category="list-text">如果您需要刷新登录凭据令牌、则中还会提供一个*更新凭据*选项 <block ref="0d0843f26c0819e5369f690fefbf68b7" category="inline-image-macro-rx" type="image"></block> 菜单。</block>
+  <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">使用此选项将提示您重新登录。请注意、这些帐户的令牌将在90天后过期。系统将发布通知、提醒您注意这一点。</block>
+  <block id="ad8e06edf5256a509aa4b626821aded3" category="list-text">与S3兼容的对象存储(例如MinIO)</block>
+  <block id="0748730b16e2af0499abfb4f8fbcd91a" category="section-title">是否可以将其他与S3兼容的对象存储服务(例如MinIO)与Cloud Tiering结合使用？</block>
+  <block id="5f25ca5749124089f38921fb40d73668" category="paragraph">由于云分层可保留源卷的存储效率、因此您需要为ONTAP 效率之后的分层数据(即应用重复数据删除和数据压缩之后的少量数据)支付云提供商对象存储成本。</block>
+  <block id="ad54fbabce5f384433a02d947362a539" category="paragraph">此时、已对MinIO对象存储进行了资格认定。</block>
 </blocks>

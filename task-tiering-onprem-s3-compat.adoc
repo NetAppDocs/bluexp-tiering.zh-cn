@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-tiering-onprem-s3-compat.html 
-keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, s3, tier to s3, fabricpool s3 
+keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, s3, tier to s3, minio 
 summary: 通过将非活动数据分层到使用简单存储服务（ Simple Storage Service ， S3 ）协议的任何对象存储服务，在内部 ONTAP 集群上提供可用空间。 
 ---
 = 将数据从内部 ONTAP 集群分层到 S3 对象存储
@@ -15,6 +15,8 @@ summary: 通过将非活动数据分层到使用简单存储服务（ Simple Sto
 
 [role="lead"]
 通过将非活动数据分层到使用简单存储服务（ Simple Storage Service ， S3 ）协议的任何对象存储服务，在内部 ONTAP 集群上提供可用空间。
+
+此时、已对MinIO对象存储进行了资格认定。
 
 [CAUTION]
 ====

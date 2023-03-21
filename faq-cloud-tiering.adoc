@@ -227,7 +227,7 @@ Cloud Tiering支持以下对象存储提供程序：
 * Microsoft Azure Blob
 * Google Cloud 存储
 * NetApp StorageGRID
-* 与 S3 兼容的对象存储
+* 与S3兼容的对象存储(例如MinIO)
 * IBM云对象存储(FabricPool 配置必须使用System Manager或ONTAP 命令行界面完成)
 
 
@@ -260,7 +260,7 @@ Cloud Tiering 支持将数据分层到 _Standard_ ， _Standard-Infrequent Acces
 
 
 
-=== 我是否可以将其他与S3兼容的对象存储服务(例如Wasabi)与Cloud Tiering结合使用？
+=== 是否可以将其他与S3兼容的对象存储服务(例如MinIO)与Cloud Tiering结合使用？
 
 可以、使用ONTAP 9.8及更高版本的集群支持通过分层UI配置与S3兼容的对象存储。 link:task-tiering-onprem-s3-compat.html["请参见此处的详细信息"]。
 
