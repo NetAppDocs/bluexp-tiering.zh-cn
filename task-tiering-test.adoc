@@ -18,14 +18,14 @@ summary: 在设置数据分层前后运行云性能测试，以测量从 ONTAP �
 
 以下是性能结果示例：
 
-image:screenshot_cloud_performance_test.gif["Cloud Performance Test 的集群性能结果屏幕截图。"]
+image:screenshot_cloud_performance_test.png["Cloud Performance Test 的集群性能结果屏幕截图。"]
 
 .开始之前
 最好在集群的 CPU 利用率低于 50% 时运行此检查。
 
 .尚未设置分层的集群的步骤
 . 从左侧导航菜单中、选择*移动性>分层*。
-. 从 * 集群信息板 * 中，单击集群的菜单图标并选择 * 云性能测试 * 。
+. 从*集群*页面中、单击集群的菜单图标、然后选择*云性能测试*。
 . 查看详细信息并单击 * 继续 * 。
 . 按照提示提供所需信息。
 +
@@ -36,7 +36,7 @@ image:screenshot_cloud_performance_test.gif["Cloud Performance Test 的集群性
 
 .已设置分层的集群的步骤
 . 从左侧导航菜单中、选择*移动性>分层*。
-. 从 * 集群信息板 * 中，单击集群的菜单图标并选择 * 云性能测试 * 。
+. 从*集群*页面中、单击集群的菜单图标、然后选择*云性能测试*。
 . 从下拉列表中选择一个节点。
 . 查看结果或重新检查性能。
 

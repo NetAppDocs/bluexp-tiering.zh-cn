@@ -23,7 +23,7 @@ summary: 将内部ONTAP 集群配置为将数据分层到特定对象存储之�
 您可能希望查看为集群配置的所有对象存储以及它们所连接的聚合。Cloud Tiering 可为每个集群提供此信息。
 
 .步骤
-. 从*集群信息板*中、单击集群的菜单图标并选择*对象存储信息*。
+. 从*集群*页面中、单击集群的菜单图标、然后选择*对象存储信息*。
 . 查看有关对象存储的详细信息。
 +
 此示例显示了连接到集群上不同聚合的Amazon S3和Azure Blob对象存储。
@@ -40,7 +40,7 @@ image:screenshot_tiering_object_store_view.png["显示对象存储信息的屏�
 您可以添加可用于集群中聚合的新对象存储。创建后、您可以将其附加到聚合。
 
 .步骤
-. 从*集群信息板*中、单击集群的菜单图标并选择*对象存储信息*。
+. 从*集群*页面中、单击集群的菜单图标、然后选择*对象存储信息*。
 . 在对象存储信息页面中、单击*创建新对象存储*。
 +
 image:screenshot_tiering_object_store_create_button.png["显示用于创建新对象存储的创建新对象存储按钮的屏幕截图。"]
@@ -96,7 +96,7 @@ IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段�
 请注意、在MetroCluster 配置中使用StorageGRID 作为对象存储时、两个ONTAP 系统都可以对一个StorageGRID 系统执行FabricPool 分层。每个ONTAP 系统都必须将数据分层到不同的存储分段。
 
 .步骤
-. 在*集群信息板*中、单击选定集群的*高级设置*。
+. 在*集群*页面中、单击选定集群的*高级设置*。
 +
 image:screenshot_tiering_advanced_setup_button.png["显示集群的\"高级设置\"按钮的屏幕截图。"]
 
@@ -119,7 +119,7 @@ image:screenshot_tiering_mirror_config_complete.png["显示附加到聚合的第
 您可以交换聚合的主对象存储和镜像对象存储。对象存储镜像将成为主镜像、而原始主镜像将成为镜像。
 
 .步骤
-. 在*集群信息板*中、单击选定集群的*高级设置*。
+. 在*集群*页面中、单击选定集群的*高级设置*。
 +
 image:screenshot_tiering_advanced_setup_button.png["显示集群的\"高级设置\"按钮的屏幕截图。"]
 
@@ -137,7 +137,7 @@ image:screenshot_tiering_mirror_swap.png["显示聚合的交换目标选项的�
 如果您不再需要复制到其他对象存储、则可以删除FabricPool 镜像。
 
 .步骤
-. 在*集群信息板*中、单击选定集群的*高级设置*。
+. 在*集群*页面中、单击选定集群的*高级设置*。
 +
 image:screenshot_tiering_advanced_setup_button.png["显示集群的\"高级设置\"按钮的屏幕截图。"]
 

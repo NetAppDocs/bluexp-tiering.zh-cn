@@ -229,15 +229,9 @@
   <block id="97052eb243c56bbc0d990eff54f746c9" category="list-text">更正问题描述：</block>
   <block id="073279dcfecd605313d456f15c7a1b78" category="list-text">验证 ONTAP 集群是否正常运行，以及它是否与对象存储提供程序建立了入站和出站连接。</block>
   <block id="66009842ccd3b5b27255c54219dcb209" category="section-title">从 Cloud Tiering 发现其他集群</block>
-  <block id="247d31f04619e7f1f03d685e8e2b2816" category="paragraph">请注意， Tiering _on-Prem Overview_ 页面上也会显示一些按钮，用于发现其他集群。</block>
-  <block id="b57da0b2e8132c4d5a84d9f088fe75f2" category="list-text">要查看任何未发现的集群，请单击 * 显示未发现的集群 * 。</block>
   <block id="68344976fe86b89a3fba62990a12e25a" category="inline-image-macro">显示分层信息板上显示未发现的集群按钮的屏幕截图。</block>
   <block id="ba7ed4fd521be5b57e051242d4d614a3" category="paragraph"><block ref="ba7ed4fd521be5b57e051242d4d614a3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ead41bd8c5b56fc59ca4fb2fef9d0b5b" category="list-text">向下滚动页面以查找集群。</block>
-  <block id="13b9e6e3af52ca38ce11c3fd268b0306" category="list-text">在 _Choose a Location_ 页面上，已预先选择内部部署 ONTAP * ，因此只需单击 * 继续 * 。</block>
-  <block id="663909252cbf804332d40198bd07c3e1" category="list-text">在 _Cluster ONTAP 详细信息 _ 页面上，输入管理员用户帐户的密码，然后单击 * 添加 * 。</block>
   <block id="062f0087b4466a679466c422dc664f93" category="paragraph">请注意，集群管理 IP 地址会根据您的 NSS 帐户中的信息进行填充。</block>
-  <block id="dd7d25d7e52a6b920a44c09b9d6001c2" category="list-text">在 _Details &amp; Credentials_ 页面上，集群名称已添加为工作环境名称，因此只需单击 * 执行 * 即可。</block>
   <block id="65f5911f922c92104ab33c2cd05d4a45" category="paragraph">您可以在右侧面板中为此集群启用分层服务或其他服务。</block>
   <block id="6b5920220b135ba1ff95cfb5b149f138" category="summary">NetApp 的云分层服务可将内部 ONTAP 集群中的非活动数据自动分层到对象存储，从而将您的数据中心扩展到云。这样可以在集群上腾出宝贵的空间来处理更多工作负载，而无需更改应用程序层。云分层可以降低数据中心的成本，并使您能够从资本支出模式切换到运营支出模式。</block>
   <block id="36afa058c74d288178950c27927bdb38" category="doc">了解 Cloud Tiering</block>
@@ -321,9 +315,7 @@
   <block id="37d501cda5d294291fc5d75cd244ac7c" category="paragraph">在设置数据分层前后运行云性能测试，以测量从 ONTAP 集群到对象存储的网络延迟和吞吐量性能。此测试还可确定发生的任何故障。</block>
   <block id="05550ef95410219ee8109be8d00e9f62" category="paragraph">以下是性能结果示例：</block>
   <block id="f171b53c2ca59613ced7d9a5a942a255" category="inline-image-macro">Cloud Performance Test 的集群性能结果屏幕截图。</block>
-  <block id="0076173f0ac8d073b8ab32c9a088997b" category="paragraph"><block ref="0076173f0ac8d073b8ab32c9a088997b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8d7c169a466dfccc11fd70e4d5d9307c" category="paragraph">最好在集群的 CPU 利用率低于 50% 时运行此检查。</block>
-  <block id="c1d7cf1a6e1782b986990f5c14c566d8" category="list-text">从 * 集群信息板 * 中，单击集群的菜单图标并选择 * 云性能测试 * 。</block>
   <block id="07ae28f7f79fff3c0b0b0cf1056fc2c1" category="list-text">查看详细信息并单击 * 继续 * 。</block>
   <block id="bfdee4fb60271a04ea7de7300cf2719f" category="list-text">按照提示提供所需信息。</block>
   <block id="82377b23824c7bd3e4d61004b79007e2" category="paragraph">您需要提供的信息与您在集群上设置分层时的信息相同。</block>
@@ -435,14 +427,11 @@
   <block id="bf842c9a2352dda7ee452c6389dda8b8" category="paragraph">您可以从云提供商的市场订阅按需购买，从而获得使用 Cloud Volumes ONTAP 系统和云分层等多种云数据服务的许可。</block>
   <block id="a70c9916d691b1eb3e72bf59caa27ce2" category="section-title">从 AWS Marketplace 订阅</block>
   <block id="df5f272e4f3bf41f36db01caae48f251" category="paragraph">从 AWS Marketplace 订阅 Cloud Tiering ，设置按需购买的订阅，以便将数据从 ONTAP 集群分层到 AWS S3 。</block>
-  <block id="22ebad5f828c1874ce79ac764661bead" category="list-text">单击 AWS Marketplace 下的 * 订阅 * ，然后单击 * 继续 * 。</block>
   <block id="03909f0465e674709c33e446a2657166" category="paragraph">以下视频显示了该过程：</block>
   <block id="8feab303f9a851219461fc3a5bccb103" category="section-title">从 Azure Marketplace 订阅</block>
   <block id="852bc4eb9abdefdd230a032e3bb1c3f3" category="paragraph">从 Azure Marketplace 订阅云分层以设置按需购买的订阅，以便将数据从 ONTAP 集群分层到 Azure Blob 存储。</block>
-  <block id="3a1616493ce57887d77b3b14ad9e2110" category="list-text">单击 Azure Marketplace 下的 * 订阅 * ，然后单击 * 继续 * 。</block>
   <block id="d96cb6abed792dbbfc1aebbc934cb55d" category="section-title">从 GCP Marketplace 订阅</block>
   <block id="0d51ae895f10dab0e96402b5dca83cae" category="paragraph">从 GCP Marketplace 订阅 Cloud Tiering ，设置按需购买订阅，以便将数据从 ONTAP 集群分层到 Google Cloud 存储。</block>
-  <block id="c86cd292411d2b20ff6afbb02e35888f" category="list-text">单击 GCP Marketplace 下的 * 订阅 * ，然后单击 * 继续 * 。</block>
   <block id="8b09b5b1748988787957d62eb22076ff" category="section-title">使用 Cloud Tiering BYOL 许可证</block>
   <block id="32d21336f5ff01b8e920d65646fad172" category="paragraph">如果您没有 Cloud Tiering 许可证，请联系我们购买一个：</block>
   <block id="7bd914491d17c534e3612cd97579060e" category="list-text">mailto ： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 发送电子邮件以购买许可证 ] 。</block>
@@ -470,7 +459,6 @@
   <block id="56273f3344c87fabbf5196fba9816fff" category="inline-image-macro">屏幕截图显示了获取许可证对话框，您可以在其中输入租户 ID ，然后单击提交下载许可证文件。</block>
   <block id="212f5a95c637538f9375d966345ca9f7" category="paragraph"><block ref="212f5a95c637538f9375d966345ca9f7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="39578a52b476e59b429794b57bcf40bf" category="section-title">将 Cloud Tiering BYOL 许可证添加到您的帐户</block>
-  <block id="14e73879f741aacd67e792f34954460d" category="list-text">单击 * 所有服务 &gt; 数字电子钱包 &gt; 数据服务许可证 * 。</block>
   <block id="ea9a2b9ac34c9aab133f21aa5b67976e" category="list-text">单击 * 添加许可证 * 。</block>
   <block id="c1b2dc0798d3960e25b8a12c751f53ec" category="list-text">在 _Add License_ 对话框中，输入许可证信息并单击 * 添加许可证 * ：</block>
   <block id="80b8da08efcb9500667b0fc290bbe1f6" category="list-text">如果您拥有分层许可证序列号并知道您的 NSS 帐户，请选择 * 输入序列号 * 选项并输入该信息。</block>
@@ -494,17 +482,10 @@
   <block id="41e921305ae1b027e5d364af4a2a9df2" category="list-text">在 _Update License_ 页面中，上传许可证文件并单击 * 更新许可证 * 。</block>
   <block id="373efc67a3356a3a76e08792361de915" category="summary">Cloud Tiering 可提供每个内部集群的数据分层的聚合视图。此概述可清晰地描述您的环境并使您能够采取适当的措施。</block>
   <block id="8fa2690e71ce0c54acb839630146cadd" category="doc">简要了解集群中的数据分层</block>
-  <block id="09410de8c94e9f68daa9372cf505d92c" category="inline-image-macro">"On-Prem Overview" 页面的屏幕截图。</block>
-  <block id="1acad320817dead1b4a28a1e3c74348e" category="paragraph"><block ref="1acad320817dead1b4a28a1e3c74348e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9e5814d733d11a3760eeb41c5a83a80f" category="list-text">活动集群</block>
   <block id="ca7efa87a2dfa1e448ef01cfdaa54489" category="list-text">当前将数据分层到云的集群数量，未将数据分层到云的集群数量以及不支持数据分层的集群数量。</block>
-  <block id="b70528883a2d1dce278c3b16e0f8c608" category="list-text">数据概述</block>
   <block id="5198ebed4bb19dd4a54ec09aefa9b18a" category="list-text">分层到云的数据量，以及集群上的冷热数据量。</block>
-  <block id="e62d375b65b0b0b9302910add5b2a6a8" category="list-text">总节省量</block>
-  <block id="d52c7ea8dc8cdf88c124364840a3cc8e" category="list-text">通过将数据分层到云节省的资金量，以及通过将更多数据分层到云节省的资金量。</block>
   <block id="9e476387322a5c250893cf9c5c4ce78c" category="list-text">策略</block>
   <block id="4be1b347cffb3177e749a7dea6f54978" category="list-text">每个分层策略应用于卷的次数。</block>
-  <block id="ccc1516741f5a9218383ec432abb8237" category="list-text">Marketplace 订阅</block>
   <block id="28c123c8cd56ba4e4b9a732aa779fbc1" category="list-text">与每种类型的 Marketplace 订阅关联的集群数量以及有关您的订阅状态的指示。</block>
   <block id="b13cf55f0ce2b751f69001054e37fd7b" category="summary">Cloud Tiering 支持多个 S3 存储类和大多数地区。</block>
   <block id="ddc0d211eedc82ce253724f39188a145" category="doc">支持的 S3 存储类和区域</block>
@@ -652,7 +633,6 @@
   <block id="cd545dee97443a0461021080f3101dc7" category="inline-link-macro">将许可证添加到Digital Wallet中</block>
   <block id="2ef78cf4a1d7bf5f762483337e16bb3b" category="inline-link-macro">发现新集群</block>
   <block id="8ba93d5fbdf24a09ecf1780c63d1122d" category="list-text">在Cloud Tiering中、 <block ref="7e9f01463f0c1bdc0791002bcf190788" category="inline-link-macro-rx"></block>。</block>
-  <block id="2577e5e77f7a58d0996e4f2dd6bcb05e" category="list-text">在集群信息板中、单击 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 并选择*部署许可证*。</block>
   <block id="b84ead730259e42d0aaa3247f1351b36" category="inline-image-macro">显示如何将分层许可证部署到ONTAP 集群的屏幕截图。</block>
   <block id="54cfdff2d2e56824adbc46c622ea54b0" category="paragraph"><block ref="54cfdff2d2e56824adbc46c622ea54b0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d6cde62acc90805ee457b7dc44915c98" category="list-text">在_Deploy License_对话框中、单击*部署*。</block>
@@ -818,7 +798,6 @@
   <block id="f726aa46a58bd5c9a7004e61db828305" category="doc">管理用于数据分层的对象存储</block>
   <block id="a9e06a6a9bb74f973d60c123bdaee97e" category="section-title">查看为集群配置的对象存储</block>
   <block id="673a98b059fd9fc3e7f4f5593eead74f" category="paragraph">您可能希望查看为集群配置的所有对象存储以及它们所连接的聚合。Cloud Tiering 可为每个集群提供此信息。</block>
-  <block id="244f511b6aa78e3769d757df179046e9" category="list-text">从*集群信息板*中、单击集群的菜单图标并选择*对象存储信息*。</block>
   <block id="bd15f32248e0ea21c4361f1a3e4f0f52" category="list-text">查看有关对象存储的详细信息。</block>
   <block id="4f4c4da15333fa3fcf08d1af94c834e9" category="paragraph">此示例显示了连接到集群上不同聚合的Amazon S3和Azure Blob对象存储。</block>
   <block id="6e806ac83f13dbac246cf70ff9474376" category="inline-image-macro">显示对象存储信息的屏幕截图、其中详细介绍了已用总容量、附加到对象存储的聚合、对象存储的名称以及更多信息。</block>
@@ -837,10 +816,8 @@
   <block id="e79b2c28f4130226c9f1d6cb9f0ffd0c" category="paragraph">此时将创建对象存储。</block>
   <block id="e8ae815adf3f63d474c9e166a024d614" category="paragraph">现在、您可以将对象存储附加到集群中的聚合。</block>
   <block id="070570d4e2b0f26858aa948de0ba63dd" category="section-title">将另一个对象存储附加到聚合以进行镜像</block>
-  <block id="9db0a2a7df2f469f7377ef9995abad54" category="list-text">在*集群信息板*中、单击选定集群的*高级设置*。</block>
   <block id="7f68d3e217be20821af2e99c59a95cae" category="inline-image-macro">显示集群的"高级设置"按钮的屏幕截图。</block>
   <block id="e098fabd5ac5fda426e3f4e5268635d7" category="paragraph"><block ref="e098fabd5ac5fda426e3f4e5268635d7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="23382689bb5023b2975968f57d098105" category="list-text">从高级设置页面中、将要使用的对象存储拖动到镜像对象存储的位置。</block>
   <block id="cfdb62329a930b2b3b98eb375e5d6d67" category="inline-image-macro">显示如何将第二个对象存储拖动到聚合以创建分层镜像的屏幕截图。</block>
   <block id="f8c6499529de613e9e81f51b940a3b19" category="paragraph"><block ref="f8c6499529de613e9e81f51b940a3b19" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1b038258ee1bc3da9cd34060708650eb" category="list-text">在附加对象存储对话框中、单击*附加*、第二个对象存储将附加到聚合。</block>
@@ -848,13 +825,11 @@
   <block id="2aea151d90073296398b532c9c993bd2" category="paragraph"><block ref="2aea151d90073296398b532c9c993bd2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fd0703c96fc59c2fc9e81a8bb3b80f95" category="section-title">交换主对象存储和镜像对象存储</block>
   <block id="184c9c9e72046fd5626f2bafc662975d" category="paragraph">您可以交换聚合的主对象存储和镜像对象存储。对象存储镜像将成为主镜像、而原始主镜像将成为镜像。</block>
-  <block id="ebfa7c7e62c629e534a590d9c5bd48ac" category="list-text">在高级设置页面中、单击聚合的菜单图标、然后选择*交换目标*。</block>
   <block id="d457321a8411fb5d95c9c393eefbf2d4" category="inline-image-macro">显示聚合的交换目标选项的屏幕截图。</block>
   <block id="10c5a319854025c7e7ac42dff3b41fe6" category="paragraph"><block ref="10c5a319854025c7e7ac42dff3b41fe6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="361fe7b307c10539051d5b3dd457ac55" category="list-text">批准对话框中的操作、并交换主对象存储和镜像对象存储。</block>
   <block id="03853b071c5a398f92f626b681bde928" category="section-title">从聚合中删除镜像对象存储</block>
   <block id="b80dfa8635588311c7e70ae0593a8de5" category="paragraph">如果您不再需要复制到其他对象存储、则可以删除FabricPool 镜像。</block>
-  <block id="85c797dc141e0eb32826e3caf502008c" category="list-text">在高级设置页面中、单击聚合的菜单图标、然后选择*取消镜像对象存储*。</block>
   <block id="cbf2fbc65a5867c683bd7467af7632ee" category="inline-image-macro">显示聚合的取消镜像对象存储选项的屏幕截图。</block>
   <block id="f5865f631fc268c7116eb4f0ac0c2a87" category="paragraph"><block ref="f5865f631fc268c7116eb4f0ac0c2a87" category="inline-image-macro-rx" type="image"></block></block>
   <block id="90a0f73c4b59ec2f9c0c4f90da8df3cc" category="paragraph">此时将从聚合中删除镜像对象存储、并且不再复制分层数据。</block>
@@ -890,18 +865,12 @@
   <block id="8d2a23c3bb3453bcfb2eb9da839497da" category="inline-link">此类配置的许可可使用Cloud Tiering完成。</block>
   <block id="e00f45236ca3126b5f0413b24c74bafe" category="paragraph">也可以与要将数据分层到IBM Cloud Object Storage的集群共享Cloud Tiering许可证。必须使用System Manager或ONTAP 命令行界面设置FabricPool 配置、但是<block ref="59b899f44b0eb5c2c23c146be071655a" category="inline-link-rx"></block></block>
   <block id="98652169e15d6be3f041f6831e813ed4" category="paragraph">ONTAP 集群可以将非活动数据分层到一个对象存储或多个对象存储。设置数据分层时，您可以选择添加新的分段 / 容器或选择现有分段 / 容器以及存储类或访问层。</block>
-  <block id="4d529b2a518859d54f6f21833197c05d" category="paragraph">只需单击*分层&gt;内部概述*即可。Cloud Tiering提供了有关您的环境的以下详细信息。</block>
   <block id="9ff3a02daa8f937f9e2ca9eeb3bd0560" category="list-text">*选择提供程序*：选择* S3 compatible *并单击*继续*。</block>
-  <block id="53b6ec02126a4029ea743a4f2910bafa" category="list-text">在*集群信息板*中、单击集群的*基本分层设置*。</block>
   <block id="a737e977d6d99228eb4f4979ab856291" category="paragraph"><block ref="a737e977d6d99228eb4f4979ab856291" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f6cfe20592aaee333eb4effea00a83b6" category="list-text">在*集群信息板*中、单击集群的*分层卷*。</block>
-  <block id="9bfca8fb5771e5278530e3aec5c99564" category="list-text">在高级设置页面中、单击聚合的菜单图标、然后选择*修改聚合*。</block>
   <block id="d6a719a9a003494c0346adab9809d5f2" category="inline-image-macro">显示聚合的修改聚合选项的屏幕截图。</block>
   <block id="a0cb518c6e52bb73ee65ce79d6912e32" category="paragraph"><block ref="a0cb518c6e52bb73ee65ce79d6912e32" category="inline-image-macro-rx" type="image"></block></block>
   <block id="37d627356844b359763aa1dbb8695283" category="list-text">在显示的对话框中、修改填充度阈值并选择是启用还是禁用非活动数据报告。</block>
   <block id="b2531ab74e4b89a1d4fe9224355475de" category="paragraph"><block ref="b2531ab74e4b89a1d4fe9224355475de" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="af1942cfab65b0eda25631cd4c8329bf" category="list-text">从*集群信息板*中、单击集群的菜单图标并选择*集群信息*。</block>
-  <block id="9f4ac40c5be04fc728d437f7b6d0e536" category="list-text">在Cloud Tiering中、单击*集群信息板*选项卡。</block>
   <block id="bda2a863882afc8f61b71a756b1ea690" category="inline-link">在Azure中部署连接器</block>
   <block id="1dacca07d9ba20ab896874ca3c68ea8d" category="list-text"><block ref="1dacca07d9ba20ab896874ca3c68ea8d" category="inline-link-rx"></block></block>
   <block id="462a06b2a85bbbf735ba8fa3fc4dd871" category="list-text">*选择提供程序*：选择* Microsoft Azure*并单击*继续*。</block>
@@ -1137,12 +1106,10 @@
   <block id="d7945c5e359d6ac7ea9f91926a2538da" category="list-text">从左侧导航菜单中、选择*移动性&gt;分层*。</block>
   <block id="ad8c34b90b1b627d896428db9d76abbf" category="paragraph">可能会发生故障。否则， Cloud Tiering 会在集群信息板上显示 " 失败 " 运行状况。运行状况反映了ONTAP 系统和BlueXP的状态。</block>
   <block id="dbb60a2477e4a79b7b61c01b39a67a22" category="list-text">验证BlueXP是否已与云分层服务、对象存储以及它发现的ONTAP 集群建立出站连接。</block>
-  <block id="f1ee4da4d06b79566714d877d17746a6" category="paragraph">您可以从分层_Cluster Dashboard_将未发现的内部ONTAP 集群添加到BlueXP中、以便为集群启用分层。</block>
   <block id="77c2f2a395526537d532a604d4148171" category="paragraph">如果您的NSS凭据保存在BlueXP中、则您帐户中的集群将显示在列表中。</block>
   <block id="05d09a490352dd1a62f556737b4e126c" category="paragraph">如果您的NSS凭据未保存在BlueXP中、则系统会首先提示您添加凭据、然后才能看到未发现的集群。</block>
   <block id="8a29c3a17e5abf29dce483e1e0e0c869" category="inline-image-macro">显示如何发现要添加到BlueXP和分层信息板中的现有集群的屏幕截图。</block>
   <block id="5382926e2e616f4c5f70b30bbc0a12d3" category="paragraph"><block ref="5382926e2e616f4c5f70b30bbc0a12d3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d5c1e697c8b22502370d8a4d89241230" category="list-text">对于要通过BlueXP管理并实施数据分层的集群、请单击*发现集群*。</block>
   <block id="46922e6b0c07daba7c3d3a262105baa4" category="paragraph">BlueXP会发现集群、并使用集群名称作为工作环境名称将其添加到Canvas中的工作环境中。</block>
   <block id="985b7d4c5c97b3b1b7b1d93298dbfbe8" category="paragraph">在BlueXP中、选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到与S3兼容的对象存储。</block>
   <block id="aa8039f331e46144ebc93c818d6c073d" category="list-text">从订阅BlueXP PAYGO产品<block ref="d668c832ccb70eb717d6736e1082df78" category="inline-link-rx"></block>，<block ref="41a6e7dc73b2f1e43bd8c26c6ce83782" category="inline-link-rx"></block>或<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block>下，单击 * 订阅 * 并按照提示进行操作。</block>
@@ -1157,16 +1124,12 @@
   <block id="f92115ef83b34980e3bba84c1a861bac" category="paragraph">以下问题与BlueXP Connector相关。</block>
   <block id="367329787d30f75b30521f88dfa0d7c1" category="paragraph">Connector是在您的云帐户或内部环境中的计算实例上运行的软件、可使BlueXP安全地管理云资源。要使用Cloud Tiering服务、您必须部署Connector。</block>
   <block id="b3ac7359e28ad36cfcfef7d4cff76670" category="list-text">对于Azure、除了您需要为BlueXP提供的权限之外、不需要任何额外的权限。</block>
-  <block id="c729029c71a16ede9005a43bf89a6174" category="summary">从第一个集群设置分层时，即可免费试用 30 天的 Cloud Tiering 。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为Cloud Tiering付费。</block>
-  <block id="1612cb846aef0cf7c32d67e2e37dac9f" category="list-text">BYOL云分层许可证是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为 FabricPool 每个集群购买 _cluster_ 许可证的情况不同。</block>
-  <block id="01af7160175380d80805730009c1a541" category="list-text">在BlueXP中、单击*移动性&gt;分层&gt;许可*。</block>
   <block id="f1b10f6f612755bd0b4bd43376cb6834" category="list-text">从订阅<block ref="d668c832ccb70eb717d6736e1082df78" category="inline-link-rx"></block>、然后重新登录到BlueXP网站以完成注册。</block>
   <block id="0c664d98088fac0e3d869a21cac0c6c4" category="list-text">从订阅<block ref="41a6e7dc73b2f1e43bd8c26c6ce83782" category="inline-link-rx"></block>、然后重新登录到BlueXP网站以完成注册。</block>
   <block id="e4db414e6112e54da73cbeaaacf47826" category="list-text">从订阅<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block>、然后重新登录到BlueXP网站以完成注册。</block>
   <block id="e8f7f5b880c6195dc3e51b413120ca98" category="paragraph">NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL *云分层*许可证是一个_float_许可证、您可以在BlueXP帐户中的多个内部ONTAP 集群之间使用。Cloud Tiering 许可证中定义的总分层容量将在所有 * 内部集群之间共享，从而使初始许可和续订变得轻松。</block>
   <block id="6193e62acb4a86204633b2d093e49546" category="list-text">单击BlueXP右下角的聊天图标以申请许可证。</block>
   <block id="67723246c92a96be8e4186d119291c28" category="paragraph">您可以使用BlueXP中的"数字电子钱包"页面管理Cloud Tiering BYOL许可证。您可以添加新许可证并更新现有许可证。</block>
-  <block id="d6bdd6528f876c8f9fd69af8dc6bc0a7" category="paragraph">2021年8月推出了新的*云分层*许可证、用于分层使用Cloud Tiering服务的BlueXP中支持的配置。BlueXP目前支持分层到以下云存储：Amazon S3、Azure Blob存储、Google云存储、S3兼容对象存储和StorageGRID。</block>
   <block id="d1d50097366a11a94bfed0659512b727" category="list-text">如果您使用的配置在BlueXP中受支持、则FabricPool 许可证将转换为云分层许可证、并显示在数字电子钱包中。当这些初始许可证到期时，您需要更新 Cloud Tiering 许可证。</block>
   <block id="e031d1891af14066db39ea9bc5a67edb" category="list-text">如果您使用的配置在BlueXP中不受支持、则可以继续使用FabricPool 许可证。<block ref="f4b8492105dcaca906c2ce90b9ccab9e" category="inline-link-rx"></block>。</block>
   <block id="6cfdec23b6ef5dae92d4fd2e80a8b71b" category="cell">它已在BlueXP的数字市场中注册。</block>
@@ -1306,7 +1269,6 @@
   <block id="05278fe4264fa7714f2deb1dc83a1f0f" category="paragraph">否构建并分层到云的对象不包含单个文件、而是包含来自多个文件的多达1、024个4 KB块。卷的元数据始终保留在本地层上。</block>
   <block id="d8de974cae25c190e1656a12aae05ac0" category="paragraph">由于数据分层是在块级别完成的、因此在某个数据块在一段时间内未被访问后、该数据块将被视为冷数据、该时间段由分层策略的minimum-cooling-days属性定义。对于ONTAP 9.7及更早版本、适用范围为2-63天、或者从ONTAP 9.8开始、适用范围为2-183天。</block>
   <block id="997ad1f279c3ec4615df50788475bd1b" category="paragraph">从第一个集群设置分层时，即可免费试用 30 天的 Cloud Tiering 。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为Cloud Tiering付费。</block>
-  <block id="c50ed19c37a3a0b4ff682e979d40e06a" category="list-text">如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动从内部ONTAP 系统订阅云分层。您将在 Cloud Tiering * 许可 * 选项卡中看到活动订阅。您无需再次订阅。</block>
   <block id="538632f98286e11da7898a8dd8c5940a" category="list-text">将数据分层到 StorageGRID 不收取任何费用，因此无需 BYOL 许可证或 PAYGO 注册。此分层数据不计入许可证中购买的容量。</block>
   <block id="822f69d2e49d7da6f8c764e0680f2f75" category="list-text">如果BlueXP无法自动更新许可证、则需要手动上传许可证文件。</block>
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新增功能</block>
@@ -1352,7 +1314,6 @@
   <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">包含三个点的图标、显示在表的最后一列中</block>
   <block id="98efef1c8a47ed5791b41944e8ff4ec2" category="list-text">单击以管理现有案例 <block ref="a0b152b50a56901a75affebabc26ed61" category="inline-image-macro-rx" type="image"></block> 并选择一个可用选项：</block>
   <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*查看案例*：查看有关特定案例的完整详细信息。</block>
-  <block id="482429810c2b00a4fa04f9900c560232" category="list-text">*更新案例注释*：提供有关您的问题的更多详细信息。</block>
   <block id="f791bc685c526af8296381acff10f6a0" category="list-text">*关闭案例*：提供关闭案例的详细信息、然后单击*关闭案例*。</block>
   <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">屏幕截图、显示在表的最后一列中选择菜单后可以执行的操作。</block>
   <block id="e9a5c374fb47ed2ae5cc6108fb36d829" category="paragraph"><block ref="e9a5c374fb47ed2ae5cc6108fb36d829" category="inline-image-macro-rx" type="image"></block></block>
@@ -1368,4 +1329,46 @@
   <block id="0748730b16e2af0499abfb4f8fbcd91a" category="section-title">是否可以将其他与S3兼容的对象存储服务(例如MinIO)与Cloud Tiering结合使用？</block>
   <block id="5f25ca5749124089f38921fb40d73668" category="paragraph">由于云分层可保留源卷的存储效率、因此您需要为ONTAP 效率之后的分层数据(即应用重复数据删除和数据压缩之后的少量数据)支付云提供商对象存储成本。</block>
   <block id="ad54fbabce5f384433a02d947362a539" category="paragraph">此时、已对MinIO对象存储进行了资格认定。</block>
+  <block id="5f1025b90c4f0c635572eda715d87a10" category="paragraph">只需单击*分层&gt;内部信息板*即可。Cloud Tiering提供了有关您的环境的以下详细信息。</block>
+  <block id="75ae3190ee97d211e630e0c0f1b5ddeb" category="inline-image-macro">"内部信息板"页面的屏幕截图。</block>
+  <block id="59b117edc0d3d63aaf2729e082c38261" category="paragraph"><block ref="59b117edc0d3d63aaf2729e082c38261" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7a7553c4b7ed244f088a49d323385c57" category="list-text">发现的集群</block>
+  <block id="82de8cfbf4bbb2c6acea13e93599b85d" category="list-text">数据概述</block>
+  <block id="8ee0131ead01994f7bd95933f4e9a923" category="list-text">分层概述</block>
+  <block id="4e03a2d38322e40af6a6e79c953fef0e" category="list-text">当前正在分层的数据量以及可能分层的数据量。</block>
+  <block id="f9600e20b044515122327f9895faca66" category="list-text">市场订阅</block>
+  <block id="36c8c017c31e43cab58a5f2513c46696" category="list-text">在*集群*页面中、单击集群的*基本分层设置*。</block>
+  <block id="310e5a0853c673dc4faabacaee25d4fc" category="list-text">在*集群*页面中、单击选定集群的*高级设置*。</block>
+  <block id="4b25601db98fc4ec4887d38db18f833e" category="list-text">在高级设置页面中、单击聚合的菜单图标、然后选择*修改聚合*。</block>
+  <block id="14cbdefab43f51a65021d80ce80980c0" category="list-text">从*集群*页面中、单击集群的菜单图标并选择*集群信息*。</block>
+  <block id="bff5f986b8f0d22acffc0010e8d56dde" category="paragraph">您可以从Tiering _Cluster_页面将未发现的内部ONTAP 集群添加到BlueXP、以便为集群启用分层。</block>
+  <block id="36b6d559a801013af8e2d0cd8f190efe" category="paragraph">请注意、Tiering _on-Prem dashboard_页面上也会显示一些按钮、用于发现其他集群。</block>
+  <block id="9b1a75be486d93c4df9e13eef4128dc2" category="list-text">在Cloud Tiering中、单击*集群*选项卡。</block>
+  <block id="f202e1cf2a8a770d553e2f87c2b11801" category="list-text">要查看任何未发现的集群、请单击*显示未发现的集群*。</block>
+  <block id="e643ccb2870b9bbfdbc24bc87d300f4d" category="list-text">对于要通过BlueXP管理并实施数据分层的集群、请单击*添加集群*。</block>
+  <block id="25a16ca1880cc1d4f1ff63f91034c468" category="list-text">在_Cluster Details_页面中、输入管理员用户帐户的密码、然后单击*发现*。</block>
+  <block id="78663d9137e3cc2c3049532938b4c70f" category="list-text">在_Details &amp; Credentials_页面中、集群名称将添加为工作环境名称、因此只需单击*执行*即可。</block>
+  <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">2023年4月3日</block>
+  <block id="2e79231a13ecf62585403e20da2dea4a" category="section-title">已删除许可选项卡</block>
+  <block id="d4a0c23b533adffe42d63c23035edd5c" category="paragraph">已从Cloud Tiering界面中删除"Licensing"选项卡。现在、您可以从Cloud Tiering内部信息板访问所有按需购买(PAYGO)订阅的许可。此外、该页面还提供了一个指向数字电子钱包的链接、您可以查看和管理任何Cloud Tiering自带许可证(BYOL)。</block>
+  <block id="66a0b4752150538292b81c073ca0b83b" category="section-title">分层选项卡已重命名并更新了内容</block>
+  <block id="10d9a166ad36cdda1e0585914ac18d5f" category="paragraph">"集群信息板"选项卡已重命名为"集群"、"内部概述"选项卡已重命名为"内部信息板"。这些页面添加了一些信息、可帮助您评估是否可以通过其他分层配置优化存储空间。</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*附件(可选)*：一次最多上传五个附件。</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">每个文件的附件数限制为25 MB。支持以下文件扩展名：txt、log、pdf、jp6/jpeu、rtf、 doc/docx、xls/xlsx和csv。</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*更新案例注释*：提供有关您的问题的更多详细信息、或者选择*上传文件*最多附加五个文件。</block>
+  <block id="f8011f6560ae9c67fe47dfaf64d311be" category="paragraph"><block ref="f8011f6560ae9c67fe47dfaf64d311be" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3e35b4d71fa62eacb0a5bb388fcaaefc" category="list-text">从*集群*页面中、单击集群的菜单图标、然后选择*云性能测试*。</block>
+  <block id="7bd2b7eee5b0e3ccc0cee448e5f16af6" category="list-text">从*集群*页面中、单击集群的菜单图标、然后选择*对象存储信息*。</block>
+  <block id="d6bf3a1568674e80c2c2ee91b89321aa" category="list-text">从高级设置页面中、将要使用的对象存储拖动到镜像对象存储的位置。</block>
+  <block id="cd11e47501303547dfe86752a503190f" category="list-text">在高级设置页面中、单击聚合的菜单图标、然后选择*交换目标*。</block>
+  <block id="3147fedbcc0be3024be497b0c4a9a86e" category="list-text">在高级设置页面中、单击聚合的菜单图标、然后选择*取消镜像对象存储*。</block>
+  <block id="512d20b1222e443735ce4d4233102c8b" category="list-text">如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的Cloud Tiering。您将在Cloud Tiering *内部信息板*选项卡中看到活动订阅。您无需再次订阅。</block>
+  <block id="199835e9739f64711df8c553667c0873" category="list-text">BYOL云分层许可证是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。</block>
+  <block id="c6cfe277ff95e8b00e4a3526eb00d9de" category="list-text">在BlueXP中、单击*移动性&gt;分层&gt;内部信息板*。</block>
+  <block id="b1fac0d88d99bf87572b3a3dbde5021c" category="list-text">在_Marketplace subscripts_部分中、单击Amazon Web Services下的*订阅*、然后单击*继续*。</block>
+  <block id="25fa54aa1e74279c5dd0574c255c9395" category="list-text">在_Marketplace subscripts_部分中、单击Microsoft Azure下的*订阅*、然后单击*继续*。</block>
+  <block id="1aeaa2e92434fc1c27cf37cfd23e8592" category="list-text">在_Marketplace subscripts_部分中、单击Google Cloud下的*订阅*、然后单击*继续*。</block>
+  <block id="35bfd546b4a554afcc648a0c8807406b" category="paragraph">2021年8月推出了新的*云分层*许可证、用于分层使用Cloud Tiering服务的BlueXP中支持的配置。BlueXP目前支持分层到以下云存储：Amazon S3、Azure Blob存储、Google云存储、NetApp StorageGRID 和S3兼容对象存储。</block>
+  <block id="5ed5be6c0303be48aaede9dd17a25f11" category="list-text">单击*监管&gt;数字电子钱包&gt;数据服务许可证*。</block>
+  <block id="f16cf9a738fef68b5c516203192da03b" category="list-text">在集群页面中、单击 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 并选择*部署许可证*。</block>
 </blocks>

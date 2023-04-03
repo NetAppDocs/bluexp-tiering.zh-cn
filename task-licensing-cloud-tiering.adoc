@@ -18,8 +18,8 @@ summary: 从第一个集群设置分层时，即可免费试用 30 天的 Cloud 
 
 在阅读其他内容之前，请先阅读一些注释：
 
-* 如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动从内部ONTAP 系统订阅云分层。您将在 Cloud Tiering * 许可 * 选项卡中看到活动订阅。您无需再次订阅。
-* BYOL云分层许可证是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为 FabricPool 每个集群购买 _cluster_ 许可证的情况不同。
+* 如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的Cloud Tiering。您将在Cloud Tiering *内部信息板*选项卡中看到活动订阅。您无需再次订阅。
+* BYOL云分层许可证是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。
 * 将数据分层到 StorageGRID 不收取任何费用，因此无需 BYOL 许可证或 PAYGO 注册。此分层数据不计入许可证中购买的容量。
 
 
@@ -39,8 +39,8 @@ link:concept-cloud-tiering.html#pricing-and-licenses["详细了解云分层的�
 
 [[subscribe-aws]]
 .步骤
-. 在BlueXP中、单击*移动性>分层>许可*。
-. 单击 AWS Marketplace 下的 * 订阅 * ，然后单击 * 继续 * 。
+. 在BlueXP中、单击*移动性>分层>内部信息板*。
+. 在_Marketplace subscripts_部分中、单击Amazon Web Services下的*订阅*、然后单击*继续*。
 . 从订阅 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]、然后重新登录到BlueXP网站以完成注册。
 +
 以下视频显示了该过程：
@@ -57,8 +57,8 @@ video::video_subscribing_aws_tiering.mp4[width=848,height=480]
 
 [[subscribe-azure]]
 .步骤
-. 在BlueXP中、单击*移动性>分层>许可*。
-. 单击 Azure Marketplace 下的 * 订阅 * ，然后单击 * 继续 * 。
+. 在BlueXP中、单击*移动性>分层>内部信息板*。
+. 在_Marketplace subscripts_部分中、单击Microsoft Azure下的*订阅*、然后单击*继续*。
 . 从订阅 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]、然后重新登录到BlueXP网站以完成注册。
 +
 以下视频显示了该过程：
@@ -75,8 +75,8 @@ video::video_subscribing_azure_tiering.mp4[width=848,height=480]
 
 [[subscribe-gcp]]
 .步骤
-. 在BlueXP中、单击*移动性>分层>许可*。
-. 单击 GCP Marketplace 下的 * 订阅 * ，然后单击 * 继续 * 。
+. 在BlueXP中、单击*移动性>分层>内部信息板*。
+. 在_Marketplace subscripts_部分中、单击Google Cloud下的*订阅*、然后单击*继续*。
 . 从订阅 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市场"^]、然后重新登录到BlueXP网站以完成注册。
 +
 以下视频显示了该过程：
@@ -117,7 +117,7 @@ NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL *云分层*许
 
 === 自 2021 年 8 月 21 日起推出全新 Cloud Tiering BYOL 许可
 
-2021年8月推出了新的*云分层*许可证、用于分层使用Cloud Tiering服务的BlueXP中支持的配置。BlueXP目前支持分层到以下云存储：Amazon S3、Azure Blob存储、Google云存储、S3兼容对象存储和StorageGRID。
+2021年8月推出了新的*云分层*许可证、用于分层使用Cloud Tiering服务的BlueXP中支持的配置。BlueXP目前支持分层到以下云存储：Amazon S3、Azure Blob存储、Google云存储、NetApp StorageGRID 和S3兼容对象存储。
 
 您过去可能用于将内部ONTAP 数据分层到云的* FabricPool *许可证仅保留用于无法访问Internet的站点(也称为"非公开站点")中的ONTAP 部署以及将配置分层到对象存储。如果您使用的是此类配置、则可以使用System Manager或ONTAP 命令行界面在每个集群上安装FabricPool 许可证。
 
@@ -177,7 +177,7 @@ image:screenshot_cloud_tiering_license_step2.gif["屏幕截图显示了获取许
 在为您的BlueXP帐户购买Cloud Tiering许可证后、您需要将此许可证添加到BlueXP才能使用Cloud Tiering服务。
 
 .步骤
-. 单击 * 所有服务 > 数字电子钱包 > 数据服务许可证 * 。
+. 单击*监管>数字电子钱包>数据服务许可证*。
 . 单击 * 添加许可证 * 。
 . 在 _Add License_ 对话框中，输入许可证信息并单击 * 添加许可证 * ：
 +
@@ -271,7 +271,7 @@ NOTE: System Manager或ONTAP 命令行界面中显示的"子"许可证的许可�
 . link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["购买Cloud Tiering许可证"] 新集群所需的容量。
 . 在BlueXP中、 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["将许可证添加到Digital Wallet中"]。
 . 在Cloud Tiering中、 link:task-managing-tiering.html#discovering-additional-clusters-from-cloud-tiering["发现新集群"]。
-. 在集群信息板中、单击 image:screenshot_horizontal_more_button.gif["更多图标"] 并选择*部署许可证*。
+. 在集群页面中、单击 image:screenshot_horizontal_more_button.gif["更多图标"] 并选择*部署许可证*。
 +
 image:screenshot_tiering_deploy_license.png["显示如何将分层许可证部署到ONTAP 集群的屏幕截图。"]
 

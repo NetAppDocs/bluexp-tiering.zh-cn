@@ -67,6 +67,10 @@ NetApp通过多种方式为BlueXP及其云服务提供支持。全天候提供�
 
 *** *问题描述 *：提供问题的详细问题描述 、包括任何适用的错误消息或您执行的故障排除步骤。
 *** *其他电子邮件地址*：如果您希望其他人了解此问题描述 、请输入其他电子邮件地址。
+*** *附件(可选)*：一次最多上传五个附件。
++
+每个文件的附件数限制为25 MB。支持以下文件扩展名：txt、log、pdf、jp6/jpeu、rtf、 doc/docx、xls/xlsx和csv。
+
 
 
 
@@ -143,7 +147,10 @@ image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/med
 . 单击以管理现有案例 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-table-action.png["包含三个点的图标、显示在表的最后一列中"] 并选择一个可用选项：
 +
 ** *查看案例*：查看有关特定案例的完整详细信息。
-** *更新案例注释*：提供有关您的问题的更多详细信息。
+** *更新案例注释*：提供有关您的问题的更多详细信息、或者选择*上传文件*最多附加五个文件。
++
+每个文件的附件数限制为25 MB。支持以下文件扩展名：txt、log、pdf、jp6/jpeu、rtf、 doc/docx、xls/xlsx和csv。
+
 ** *关闭案例*：提供关闭案例的详细信息、然后单击*关闭案例*。
 
 
