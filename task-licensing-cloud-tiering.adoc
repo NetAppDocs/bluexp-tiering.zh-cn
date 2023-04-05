@@ -18,7 +18,7 @@ summary: 从第一个集群设置分层时，即可免费试用 30 天的 Cloud 
 
 在阅读其他内容之前，请先阅读一些注释：
 
-* 如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的Cloud Tiering。您将在Cloud Tiering *内部信息板*选项卡中看到活动订阅。您无需再次订阅。
+* 如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的Cloud Tiering。您将在Cloud Tiering *内部信息板*选项卡中看到活动订阅。您无需再次订阅。您将在数字电子钱包中看到有效订阅。
 * BYOL云分层许可证是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。
 * 将数据分层到 StorageGRID 不收取任何费用，因此无需 BYOL 许可证或 PAYGO 注册。此分层数据不计入许可证中购买的容量。
 

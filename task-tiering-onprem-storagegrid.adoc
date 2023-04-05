@@ -131,7 +131,7 @@ S3 凭据:: 在设置 StorageGRID 分层时，您需要为云分层提供 S3 访
 要将数据分层到云，需要使用 Connector 。将数据分层到 StorageGRID 时，您的内部必须具有一个 Connector 。您需要安装新的 Connector 或确保当前选定的 Connector 位于内部。
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["了解连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在Linux主机上部署Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在Linux主机上安装Connector"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在连接器之间切换"^]
 
 

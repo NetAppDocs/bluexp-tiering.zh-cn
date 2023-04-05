@@ -100,9 +100,8 @@ BlueXP Connector是BlueXP功能的主要软件。需要使用连接器对非活�
 如果您已在AWS VPC或内部部署了Connector、则可以随时完成所有操作。如果没有、则需要在其中任一位置创建一个连接器、以便将ONTAP 数据分层到AWS S3存储。您不能使用部署在其他云提供商中的Connector。
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["了解连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["连接器入门"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["在AWS中安装连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在内部安装Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["在AWS中部署连接器"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在Linux主机上安装Connector"^]
 
 
 
