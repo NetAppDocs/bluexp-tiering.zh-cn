@@ -110,8 +110,7 @@ BlueXP Connector是BlueXP功能的主要软件。需要使用连接器对非活�
 
 * 确保安装 Connector 的网络启用以下连接：
 +
-** 通过端口443 (HTTPS)到Cloud Tiering服务的出站Internet连接
-** 通过端口 443 与 S3 对象存储建立 HTTPS 连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["请参见端点列表"^]）
+** 通过端口443与Cloud Tiering服务和S3对象存储建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
 

@@ -38,7 +38,6 @@
   <block id="a8e8e48001e032c3b5939047d15db5a2" category="section-title">为连接器准备网络连接</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
   <block id="aadbd6cd1f8b4e9deafea8f1d6c8333c" category="list-text">确保安装 Connector 的网络启用以下连接：</block>
-  <block id="841f7e7eb4c540f0ef284f9a0806448c" category="list-text">通过端口 443 （ HTTPS ）与 Cloud Tiering 服务的出站 Internet 连接</block>
   <block id="699a71169310a3553bddb7e36ecb8a5c" category="list-text">通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接</block>
   <block id="1fa74ff5a0547c12a6e2f2b89c3c8d6e" category="paragraph">在为新集群设置数据分层时，系统会提示您在设置了 Connector 的 AWS 帐户中创建 S3 存储分段或选择现有 S3 存储分段。AWS 帐户必须具有可在 Cloud Tiering 中输入的权限和访问密钥。ONTAP 集群使用访问密钥对 S3 中的数据进行分层。</block>
   <block id="41e85822b15d5899d14062cd9df9aded" category="inline-link-macro">支持 Cloud Tiering 的区域</block>
@@ -105,7 +104,6 @@
   <block id="aa4788e27cdbd61e4d722970587d99c5" category="list-text">不能在对象存储分段上启用 StorageGRID 对象版本控制。</block>
   <block id="1c3c05f52f226acac800b43e5ce83b67" category="paragraph">要将数据分层到云，需要使用 Connector 。将数据分层到 StorageGRID 时，您的内部必须具有一个 Connector 。您需要安装新的 Connector 或确保当前选定的 Connector 位于内部。</block>
   <block id="7b16b8b258668ab05a1e5d83e084b477" category="paragraph">确保此连接器具有所需的网络连接。</block>
-  <block id="a3049b761ff526799f3b1881932b1c8c" category="list-text">通过端口 443 与 StorageGRID 建立 HTTPS 连接</block>
   <block id="de9570886e9849852133b61caefd03b2" category="section-title">将第一个集群中的非活动数据分层到 StorageGRID</block>
   <block id="a71f0f53c9824602e78a79bc5fa52d43" category="paragraph">准备好环境后，开始对第一个集群中的非活动数据进行分层。</block>
   <block id="1b8a3756b590cb811f9726f247097028" category="list-text">具有所需 S3 权限的 AWS 访问密钥。</block>
@@ -162,7 +160,6 @@
   <block id="1530d1823861aa989d35b92ad0b2fd9e" category="list-text">需要从 Connector 建立入站连接，该连接器可以位于 Azure vNet 中或您的内部环境中。</block>
   <block id="b1e389999fc3500ff74c433071c6f3d0" category="section-title">验证您是否具有所需的 Connector 权限</block>
   <block id="8d553e78e79ca1abdf2ffdd1714a7698" category="paragraph">确保此连接器具有所需的网络连接。连接器可以安装在内部或 Azure 中。</block>
-  <block id="bb1241e3a37748e608dbbde25c75ea25" category="list-text">通过端口 443 与 Azure Blob 存储建立 HTTPS 连接</block>
   <block id="400985d5d8ad47af48b13e9fe604a6fe" category="list-text">如果需要，请为 Azure 存储启用 vNet 服务端点。</block>
   <block id="0eb60239b46482f7f72a4986fa40c73a" category="paragraph">如果您已从 ONTAP 集群到 vNet 建立 ExpressRoute 或 VPN 连接，并且希望 Connector 和 Blob 存储之间的通信保持在虚拟专用网络中，则建议使用 vNet 服务端点连接到 Azure 存储。</block>
   <block id="256fb1d2776e7f3b364ce4414a65b2cd" category="section-title">正在准备 Azure Blob 存储</block>
@@ -378,7 +375,6 @@
   <block id="c3fb869301bdf0050425864a1c816fd8" category="admonition">云分层支持 FlexGroup 卷。安装程序的工作方式与任何其他卷相同。</block>
   <block id="6f8de70a130cd2e986950accf1528a82" category="paragraph">要将数据分层到云，需要使用 Connector 。将数据分层到 Google Cloud Storage 时，必须在 Google Cloud Platform VPC 中提供 Connector 。您需要创建一个新的连接器，或者确保当前选定的连接器位于 GCP 中。</block>
   <block id="499449d439c0676b8921b5ff6e0ca806" category="list-text">确保安装了连接器的 VPC 启用以下连接：</block>
-  <block id="d83f012d1d2a88fdb1e7cb28d94b081d" category="list-text">通过端口 443 与 Google Cloud Storage 建立 HTTPS 连接</block>
   <block id="bad85e9654b782928f6763c3008e8dd4" category="list-text">可选：在计划部署 Connector 的子网上启用私有 Google 访问。</block>
   <block id="b092138563f7b68473c3bf2a6a23a434" category="inline-link">私有 Google 访问</block>
   <block id="f4daaef45bd7d11ebf3a4c8dc607eaa4" category="paragraph"><block ref="d1ea0c6b3f95b3376607c57ca3a4265e" category="inline-link-rx"></block> 如果您从 ONTAP 集群直接连接到 VPC ，并且希望连接器和 Google 云存储之间的通信保持在虚拟专用网络中，则建议使用此选项。请注意，私有 Google 访问适用于仅具有内部（私有） IP 地址（无外部 IP 地址）的 VM 实例。</block>
@@ -605,7 +601,6 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">这些选项每周 7 天，每天 24 小时免费提供：</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知识库</block>
-  <block id="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="list-text"><block ref="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="inline-link-rx"></block></block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社区</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文档。</block>
@@ -911,9 +906,7 @@
   <block id="ea97cc2428a460eae122a94c68a8b16a" category="section-title">准备您的连接器</block>
   <block id="cc8fa83637def0ab4b26b2c73eaf58b1" category="paragraph">如果您已在AWS VPC或内部部署了Connector、则可以随时完成所有操作。如果没有、则需要在其中任一位置创建一个连接器、以便将ONTAP 数据分层到AWS S3存储。您不能使用部署在其他云提供商中的Connector。</block>
   <block id="929d25665bc92d22cf4a79265248dd36" category="section-title">连接器网络连接要求</block>
-  <block id="572373ae1e78fa8826ac1a5468d0b8c1" category="list-text">通过端口443 (HTTPS)到Cloud Tiering服务的出站Internet连接</block>
   <block id="2e379f93711508ab69eec06837dd271c" category="inline-link">请参见端点列表</block>
-  <block id="070ae2b938526f98049114b311cf4a90" category="list-text">通过端口 443 与 S3 对象存储建立 HTTPS 连接 <block ref="2b717f51e9f0e108fc936d861142f7b4" category="inline-link-rx"></block>）</block>
   <block id="76e709935c290dea4c7b1c0de4918211" category="inline-link">确保Connector具有管理S3存储分段的权限</block>
   <block id="4e96d68b20a8c2caa7ac1a77b15169c3" category="list-text"><block ref="4e96d68b20a8c2caa7ac1a77b15169c3" category="inline-link-rx"></block></block>
   <block id="db41e7a8de9567fec002e93320c428ad" category="inline-xref">请参见如何设置 VPC 端点接口。</block>
@@ -1370,4 +1363,10 @@
   <block id="2b36f8b3b2cccdc6807233a79e1b8d1d" category="paragraph">如果达到BYOL容量限制、则会停止对新冷数据进行分层。以前分层的所有数据仍可访问；这意味着您可以检索和使用此数据。检索后、此数据将从云移回性能层。</block>
   <block id="91c0c3f0911cf0aa7791e2815ecf2507" category="paragraph">但是、如果您订阅了_BlueXP -部署和管理云数据服务_的PAYGO Marketplace、则新的冷数据将继续分层到对象存储、您将按使用情况支付这些费用。</block>
   <block id="9c7d287d0ce7d0d1654a49d75c7314f0" category="paragraph">如果您使用的是Cloud Volumes ONTAP 系统、则可以在"云分层集群"页面中找到这些系统、以便您全面了解混合云基础架构中的数据分层。但是、Cloud Volumes ONTAP 系统是从云分层进行的只读系统。您无法通过云分层在 Cloud Volumes ONTAP 上设置数据分层。<block ref="7477c38194261f0954175f853359735c" category="inline-link-rx"></block>。</block>
+  <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
+  <block id="827819483dd4d9a78711b6afa4da92ab" category="list-text">通过端口443与Cloud Tiering服务和Google Cloud Storage建立HTTPS连接 <block ref="d9defc1077847b67f008853c06990134" category="inline-link-rx"></block>）</block>
+  <block id="7ec3e00e427ce2f28dc1338f2397328b" category="list-text">通过端口443与Cloud Tiering服务建立HTTPS连接 <block ref="4a7a4f89081133703af86b4e7832dbdb" category="inline-link-rx"></block>）</block>
+  <block id="5bfe7676a3f4e4197bf9f895c6b2fcb4" category="list-text">通过端口443与StorageGRID 系统建立HTTPS连接</block>
+  <block id="0d2084a4e3ff91eb61a6e20f85d92399" category="list-text">通过端口443与Cloud Tiering服务和S3对象存储建立HTTPS连接 <block ref="e55fc914b3d027a7a2463283008a8fbf" category="inline-link-rx"></block>）</block>
+  <block id="bd0e0977c46457979423f05da93b43de" category="list-text">通过端口443与Cloud Tiering服务和Azure Blob对象存储建立HTTPS连接 <block ref="5bf1914e1013b2901a1aed42fbd7a1ac" category="inline-link-rx"></block>）</block>
 </blocks>

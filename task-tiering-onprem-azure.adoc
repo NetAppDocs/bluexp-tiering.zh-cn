@@ -137,8 +137,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 .步骤
 . 确保安装 Connector 的网络启用以下连接：
 +
-** 通过端口 443 （ HTTPS ）与 Cloud Tiering 服务的出站 Internet 连接
-** 通过端口 443 与 Azure Blob 存储建立 HTTPS 连接
+** 通过端口443与Cloud Tiering服务和Azure Blob对象存储建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
 
