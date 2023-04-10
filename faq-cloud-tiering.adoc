@@ -362,7 +362,7 @@ Connector是在您的云帐户或内部环境中的计算实例上运行的软�
 
 === 是否可以在内部部署此连接器？
 
-是的。您可以下载Connector软件并将其手动安装在网络中的Linux主机上。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["请参见如何在内部安装Connector"]。
+是的。您可以下载Connector软件并将其手动安装在网络中的Linux主机上。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-on-prem.html["请参见如何在内部安装Connector"]。
 
 
 

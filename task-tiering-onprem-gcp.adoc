@@ -117,7 +117,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 要将数据分层到云，需要使用 Connector 。将数据分层到 Google Cloud Storage 时，必须在 Google Cloud Platform VPC 中提供 Connector 。您需要创建一个新的连接器，或者确保当前选定的连接器位于 GCP 中。
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["了解连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html["在GCP中部署连接器"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["在GCP中部署连接器"^]
 
 
 

@@ -719,7 +719,6 @@
   <block id="c6dbaaf1bef168a38de37623edb997f7" category="section-title">什么是连接器？</block>
   <block id="d2eea5ad2ae07890452da2aec5cffc98" category="section-title">是否可以在内部部署此连接器？</block>
   <block id="b0ccf0f3fa1a27a2fbab1c35ebf8e0f5" category="inline-link">请参见如何在内部安装Connector</block>
-  <block id="de7433c1562faa5f9b2ee55c74f16fa2" category="paragraph">是的。您可以下载Connector软件并将其手动安装在网络中的Linux主机上。<block ref="5cffbbed8cdfbd25b645e94434fee757" category="inline-link-rx"></block>。</block>
   <block id="eef7b8a2b79a5ecae955422af0ab3b72" category="section-title">在使用Cloud Tiering之前、是否需要云服务提供商的帐户？</block>
   <block id="71b5e4019a71131db2052326884d8bbe" category="paragraph">是的。您必须先拥有帐户、然后才能定义要使用的对象存储。在VPC或vNet上的云中设置Connector时、还需要在云存储提供商处创建帐户。</block>
   <block id="8ca6e099f9e16583824ee8e6a5727c40" category="section-title">如果连接器发生故障、会产生什么影响？</block>
@@ -847,7 +846,6 @@
   <block id="6dfc91892c8d766a3db42ec08d3c133e" category="paragraph"><block ref="6dfc91892c8d766a3db42ec08d3c133e" category="inline-link-rx"></block></block>
   <block id="7c14243eb88d8593d5e3377a174647d2" category="paragraph"><block ref="7c14243eb88d8593d5e3377a174647d2" category="inline-link-rx"></block></block>
   <block id="da67ca84863fc0110febe22c08877274" category="inline-link">在GCP中部署连接器</block>
-  <block id="3b8a5aa33e51c71b8f37ac5972ac20d7" category="list-text"><block ref="3b8a5aa33e51c71b8f37ac5972ac20d7" category="inline-link-rx"></block></block>
   <block id="a42fb1ba03bcfed59842ef0ade58297a" category="list-text">*选择提供商*：选择* Google Cloud*并单击*继续*。</block>
   <block id="207355fa06161fe61fe18f75db4c59d5" category="paragraph"><block ref="207355fa06161fe61fe18f75db4c59d5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="af35d8c52cd337b400dfea1bfe174a1d" category="list-text">*选择提供程序*：选择* StorageGRID *并单击*继续*。</block>
@@ -1203,7 +1201,6 @@
   <block id="e1095ff19466581c5274f67123c95036" category="cell">https://api.bluexp.netapp.com</block>
   <block id="9e434ddc2ad4b9de005368b77254223d" category="cell">https://*.cloudmanager.cloud.netapp.com</block>
   <block id="37ba276f010f4ea07f1196b487811443" category="cell">https://*.api.bluexp.netapp.com</block>
-  <block id="0e40b9cba041560c9517bc49757da3c7" category="paragraph">请查看的完整端点列表<block ref="4c9e3e17ba20f553394e5bc78e402946" category="inline-link-rx"></block>，<block ref="cd3c6f623ccf3e34f9d46b28c47f2a3d" category="inline-link-rx"></block>或<block ref="80755100f97c37f8aa8e3d999b0a43d9" category="inline-link-rx"></block> 云环境。</block>
   <block id="c1b8b8c1767ffef37beebd6dca294a19" category="paragraph">使用内部连接器时、您必须输入可访问资源组的Azure订阅。</block>
   <block id="838b026c40657f60dbef105628a74c67" category="paragraph">对于任何第三方对象存储服务引起的任何问题、NetApp不提供支持、也不承担任何责任、特别是在与产品所属的第三方没有达成支持协议的情况下。我们承认并同意， NetApp 对任何相关损坏不承担任何责任，也不会被要求为该第三方产品提供支持。</block>
   <block id="cde18ab8c63e317f54bbc67366c538fb" category="list-text">运行ONTAP 9.8或更高版本的源内部ONTAP 集群、并通过用户指定的端口连接到目标S3兼容对象存储。<block ref="afd80128eeaacb8238d3ffdcf8ecd8a8" category="inline-link-rx"></block>。</block>
@@ -1369,4 +1366,7 @@
   <block id="5bfe7676a3f4e4197bf9f895c6b2fcb4" category="list-text">通过端口443与StorageGRID 系统建立HTTPS连接</block>
   <block id="0d2084a4e3ff91eb61a6e20f85d92399" category="list-text">通过端口443与Cloud Tiering服务和S3对象存储建立HTTPS连接 <block ref="e55fc914b3d027a7a2463283008a8fbf" category="inline-link-rx"></block>）</block>
   <block id="bd0e0977c46457979423f05da93b43de" category="list-text">通过端口443与Cloud Tiering服务和Azure Blob对象存储建立HTTPS连接 <block ref="5bf1914e1013b2901a1aed42fbd7a1ac" category="inline-link-rx"></block>）</block>
+  <block id="f8fffd3ee443f29d36b65a0e66a5f03a" category="paragraph">是的。您可以下载Connector软件并将其手动安装在网络中的Linux主机上。<block ref="1b7ddd38e792a03a4b15132910b94d8c" category="inline-link-rx"></block>。</block>
+  <block id="99d3ed1cc58df8ac52e23dd69320374b" category="list-text"><block ref="99d3ed1cc58df8ac52e23dd69320374b" category="inline-link-rx"></block></block>
+  <block id="c395006d6063b66336be768382280c9e" category="paragraph">请查看的完整端点列表<block ref="684a3f4234dd7d8f8b7d90e00da95138" category="inline-link-rx"></block>，<block ref="fd66fc554da543d0f7f94dcde36b2a2f" category="inline-link-rx"></block>或<block ref="2484264a704a749bc992bec76f43f13d" category="inline-link-rx"></block> 云环境。</block>
 </blocks>
