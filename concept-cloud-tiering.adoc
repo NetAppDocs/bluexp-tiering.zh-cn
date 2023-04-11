@@ -22,6 +22,8 @@ BlueXP (以前称为FabricPool Manager)中的云分层服务可利用_Cloud Mana
 
 可以使用FabricPool 镜像为单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置配置配置云分层。Cloud Tiering许可证在所有集群之间共享。
 
+https://bluexp.netapp.com/cloud-tiering-service-tco["使用Cloud Tiering TCO计算器了解您可以节省多少资金"^]。
+
 
 
 == 功能
@@ -38,10 +40,10 @@ Cloud Tiering 提供自动化，监控，报告和通用管理界面：
 * 如果您使用的是Cloud Volumes ONTAP 系统、则可以在集群页面中找到这些系统、以便您全面了解混合云基础架构中的数据分层
 
 
-有关 Cloud Tiering 所提供价值的更多详细信息， https://cloud.netapp.com/cloud-tiering["查看BlueXP网站上的Cloud Tiering页面"^]。
+有关 Cloud Tiering 所提供价值的更多详细信息， https://bluexp.netapp.com/cloud-tiering["查看BlueXP网站上的Cloud Tiering页面"^]。
 
 
-TIP: Cloud Volumes ONTAP 系统是从云分层进行的只读系统。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在BlueXP的工作环境中为Cloud Volumes ONTAP 设置分层"^]。
+TIP: Cloud Volumes ONTAP 系统是从云分层进行的只读系统。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在BlueXP的工作环境中为Cloud Volumes ONTAP 系统设置分层"^]。
 
 
 
