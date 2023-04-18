@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, tiering' 
-summary: 了解 Cloud Tiering 的新增功能。 
+summary: 了解BlueXP分层的新增功能。 
 ---
-= Cloud Tiering 的新增功能
+= BlueXP分层的新增功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 
 [role="lead"]
-了解 Cloud Tiering 的新增功能。
+了解BlueXP分层的新增功能。
 
 
 
@@ -24,7 +24,7 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 === 已删除许可选项卡
 
-已从Cloud Tiering界面中删除"Licensing"选项卡。现在、您可以从Cloud Tiering内部信息板访问所有按需购买(PAYGO)订阅的许可。此外、该页面还提供了一个指向数字电子钱包的链接、您可以查看和管理任何Cloud Tiering自带许可证(BYOL)。
+已从BlueXP分层界面中删除许可选项卡。所有按需购买(PAYGO)订阅的许可现在均可从BlueXP分层内部信息板访问。此外、该页面还提供了一个指向数字电子钱包的链接、您可以查看和管理任何BlueXP分层自带许可证(BYOL)。
 
 
 
@@ -40,7 +40,7 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 === 现在、您可以为卷生成分层报告
 
-您可以从"层卷"页面下载报告、以便查看所管理集群上所有卷的分层状态。Cloud Tiering会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给公司中的其他人员。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["请参见如何下载分层报告"]。
+您可以从"层卷"页面下载报告、以便查看所管理集群上所有卷的分层状态。BlueXP分层会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给公司中的其他人员。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["请参见如何下载分层报告"]。
 
 
 
@@ -50,7 +50,7 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 === 连接器出站Internet访问端点更改
 
-由于Cloud Tiering发生了变化、您需要更改以下连接器端点才能成功执行Cloud Tiering操作：
+由于BlueXP分层发生了变化、您需要更改以下连接器端点才能成功执行BlueXP分层操作：
 
 [cols="50,50"]
 |===
@@ -70,7 +70,7 @@ summary: 了解 Cloud Tiering 的新增功能。
 
 
 
-=== 拖放以启用对Azure Blob、Google Cloud Storage和StorageGRID 的云分层
+=== 拖放以启用BlueXP分层到Azure Blob、Google Cloud Storage和StorageGRID
 
 如果Azure Blob、Google Cloud Storage或StorageGRID 分层目标作为工作环境存在于Canvas上、则可以将本地ONTAP 工作环境拖动到目标上以启动分层设置向导。
 
@@ -88,7 +88,7 @@ https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html
 
 
 
-=== 拖放以启用Amazon S3的Cloud Tiering
+=== 拖放以启用BlueXP分层到Amazon S3
 
 如果Amazon S3分层目标作为工作环境存在于Canvas上、您可以将内部ONTAP 工作环境拖动到目标上以启动分层设置向导。
 
@@ -112,7 +112,7 @@ Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加�
 
 === 为MetroCluster 配置提供云分层许可证支持
 
-现在、可以与MetroCluster 配置中的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
+现在、可以与MetroCluster 配置中的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
 
 
 
@@ -122,7 +122,7 @@ Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加�
 
 === 为其他集群配置提供Cloud Tiering许可证支持
 
-现在、可以与分层镜像配置(不包括MetroCluster 配置)中的集群以及分层到IBM云对象存储的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
+现在、可以与分层镜像配置(不包括MetroCluster 配置)中的集群以及分层到IBM云对象存储的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
 
 
 

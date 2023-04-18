@@ -80,7 +80,7 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 == 下载卷的分层报告
 
-您可以下载"层卷"页面的报告、以便查看所管理集群上所有卷的分层状态。只需单击 image:button_download.png["下载"] 按钮。Cloud Tiering会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给其他组。CSV文件最多包含10、000行数据。
+您可以下载"层卷"页面的报告、以便查看所管理集群上所有卷的分层状态。只需单击 image:button_download.png["下载"] 按钮。BlueXP分层会生成一个.CSV文件、您可以根据需要查看该文件并将其发送给其他组。CSV文件最多包含10、000行数据。
 
 image:screenshot_tiering_report_download.png["显示如何生成CSV文件的屏幕截图、其中列出了所有卷的分层状态。"]
 
@@ -162,7 +162,7 @@ image:screenshot_tiering_modify_aggregate.png["屏幕截图显示了一个用于
 
 == 查看集群的分层信息
 
-您可能希望查看云层中的数据量以及磁盘上的数据量。或者，您可能希望查看集群磁盘上的热数据量和冷数据量。Cloud Tiering 可为每个集群提供此信息。
+您可能希望查看云层中的数据量以及磁盘上的数据量。或者，您可能希望查看集群磁盘上的热数据量和冷数据量。XP Bluetiering可为每个集群提供此信息。
 
 .步骤
 . 从左侧导航菜单中、选择*移动性>分层*。
@@ -184,7 +184,7 @@ image:screenshot_tiering_aiq_fabricpool_info.png["一个屏幕截图、用于显
 
 == 修复运行状况
 
-可能会发生故障。否则， Cloud Tiering 会在集群信息板上显示 " 失败 " 运行状况。运行状况反映了ONTAP 系统和BlueXP的状态。
+可能会发生故障。这样、BlueXP分层操作会在集群信息板上显示"失败"的运行状况状态。运行状况反映了ONTAP 系统和BlueXP的状态。
 
 .步骤
 . 确定运行状况为 "Failed" 的任何集群。
@@ -192,21 +192,21 @@ image:screenshot_tiering_aiq_fabricpool_info.png["一个屏幕截图、用于显
 . 更正问题描述：
 +
 .. 验证 ONTAP 集群是否正常运行，以及它是否与对象存储提供程序建立了入站和出站连接。
-.. 验证BlueXP是否已与云分层服务、对象存储以及它发现的ONTAP 集群建立出站连接。
+.. 验证BlueXP是否已与BlueXP分层服务、对象存储以及它发现的ONTAP 集群建立出站连接。
 
 
 
 
 
 
-== 从 Cloud Tiering 发现其他集群
+== 从BlueXP分层发现其他集群
 
 您可以从Tiering _Cluster_页面将未发现的内部ONTAP 集群添加到BlueXP、以便为集群启用分层。
 
 请注意、Tiering _on-Prem dashboard_页面上也会显示一些按钮、用于发现其他集群。
 
 .步骤
-. 在Cloud Tiering中、单击*集群*选项卡。
+. 在BlueXP分层中、单击*集群*选项卡。
 . 要查看任何未发现的集群、请单击*显示未发现的集群*。
 +
 image:screenshot_tiering_show_undiscovered_cluster.png["显示分层信息板上显示未发现的集群按钮的屏幕截图。"]

@@ -30,7 +30,7 @@ summary: 通过将非活动数据分层到 Google 云存储，在内部 ONTAP �
 * 运行 ONTAP 9.6 或更高版本且与 Google 云存储具有 HTTPS 连接的内部 ONTAP 集群。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 具有预定义的存储管理员角色和存储访问密钥的服务帐户。
 * 安装在 Google Cloud Platform VPC 中的连接器。
-* Connector 的网络连接，可通过 HTTPS 出站连接到数据中心中的 ONTAP 集群， Google 云存储和云分层服务。
+* Connector的网络连接、可通过HTTPS出站连接到数据中心的ONTAP 集群、Google云存储和XP BlueTiering服务。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
@@ -39,11 +39,11 @@ summary: 通过将非活动数据分层到 Google 云存储，在内部 ONTAP �
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 设置许可
 [role="quick-margin-para"]
-免费试用结束后，通过按需购买订阅， ONTAP 云分层 BYOL 许可证或两者的组合为云分层付费：
+免费试用结束后、通过按需购买订阅、ONTAP BlueXP分层BYOL许可证或两者的组合为BlueXP分层付费：
 
 [role="quick-margin-list"]
 * 要从 GCP Marketplace 订阅， https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["转到BlueXP Marketplace产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
-* 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
+* 要使用BlueXP分层BYOL许可证付费、请发送邮件至：ng-cloud-tiering@netapp.com？Subject=Licensing[如果需要购买许可证、请联系我们]、然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
 
 
 
@@ -54,7 +54,7 @@ summary: 通过将非活动数据分层到 Google 云存储，在内部 ONTAP �
 
 下图显示了每个组件以及需要在它们之间准备的连接：
 
-image:diagram_cloud_tiering_google.png["一个架构图，其中显示了云分层服务，该服务连接到云提供商中的连接器，连接到 ONTAP 集群的连接器以及云提供商中的 ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。"]
+image:diagram_cloud_tiering_google.png["一个架构图、其中显示了BlueXP分层服务、该服务连接到云提供商中的连接器、连接到ONTAP 集群的连接器以及云提供商中的ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。"]
 
 
 NOTE: Connector 与 Google Cloud Storage 之间的通信仅用于对象存储设置。
@@ -87,20 +87,20 @@ ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会�
 
 * 需要从位于 Google Cloud Platform VPC 中的 Connector 建立入站连接。
 +
-集群与 Cloud Tiering 服务之间不需要建立连接。
+集群与BlueXP分层服务之间不需要建立连接。
 
 * 托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。
 +
-设置数据分层时， Cloud Tiering 会提示您输入要使用的 IP 空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
+设置数据分层时、BlueXP分层会提示您输入要使用的IP空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
 
 
 
 --
-支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
+支持的卷和聚合:: BlueXP分层可分层的卷总数可能小于ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
 
 
 
-NOTE: 云分层支持 FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
+NOTE: XP Bluetiering支持FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
 
 
 
@@ -129,7 +129,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 .步骤
 . 确保安装了连接器的 VPC 启用以下连接：
 +
-** 通过端口443与Cloud Tiering服务和Google Cloud Storage建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
+** 通过端口443与BlueXP分层服务和Google Cloud Storage建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
 
@@ -143,12 +143,12 @@ https://cloud.google.com/vpc/docs/configure-private-google-access["私有 Google
 
 === 正在准备 Google Cloud Storage
 
-设置分层时，您需要为具有存储管理员权限的服务帐户提供存储访问密钥。通过服务帐户， Cloud Tiering 可以对用于数据分层的云存储分段进行身份验证和访问。需要提供密钥，以便 Google Cloud Storage 知道谁在发出请求。
+设置分层时，您需要为具有存储管理员权限的服务帐户提供存储访问密钥。通过服务帐户、BlueXP分层功能可以对用于数据分层的云存储分段进行身份验证和访问。需要提供密钥，以便 Google Cloud Storage 知道谁在发出请求。
 
-云存储分段必须位于中 link:reference-google-support.html#supported-google-cloud-regions["支持 Cloud Tiering 的区域"]。
+云存储分段必须位于中 link:reference-google-support.html#supported-google-cloud-regions["支持BlueXP分层的区域"]。
 
 
-NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类，以便分层数据在一定天数后过渡到，则在 GCP 帐户中设置存储分段时，不能选择任何生命周期规则。Cloud Tiering 可管理生命周期过渡。
+NOTE: 如果您计划将BlueXP分层配置为使用成本较低的存储类、而分层数据将在一定天数后过渡到这些存储类、则在GCP帐户中设置存储分段时、不能选择任何生命周期规则。BlueXP分层可管理生命周期过渡。
 
 .步骤
 . https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["创建具有预定义的存储管理员角色的服务帐户"^]。
@@ -157,7 +157,7 @@ NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类�
 .. 选择一个项目，然后单击 * 互操作性 * 。如果尚未启用互操作性访问，请单击 * 启用互操作性访问 * 。
 .. 在 * 服务帐户的访问密钥 * 下，单击 * 为服务帐户创建密钥 * ，选择刚刚创建的服务帐户，然后单击 * 创建密钥 * 。
 +
-稍后在设置 Cloud Tiering 时，您需要输入密钥。
+稍后在设置BlueXP分层时、您需要输入密钥。
 
 
 
@@ -188,7 +188,7 @@ image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，
 . 完成*创建对象存储*页面上的步骤：
 +
 .. * 分段 * ：添加新的 Google Cloud Storage 分段或选择现有分段。
-.. * 存储类生命周期 * ： Cloud Tiering 可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建规则，以便在一定天数后将数据移动到其他类。
+.. *存储类生命周期*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建规则，以便在一定天数后将数据移动到其他类。
 +
 选择要将分层数据过渡到的 Google Cloud 存储类以及要移动数据的天数，然后单击 * 继续 * 。例如，下面的屏幕截图显示，在对象存储中，分层数据会在 30 天后从 _Standard_ 类移动到 _Nearline_ 类，然后在对象存储中移动到 _Coldline_ 类。
 
@@ -204,7 +204,7 @@ image:screenshot_tiering_lifecycle_selection_gcp.png["一个屏幕截图，显�
 .. * 凭据 * ：输入具有存储管理员角色的服务帐户的存储访问密钥和机密密钥。
 .. * 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间。
 +
-选择正确的 IP 空间可确保云分层可以设置从 ONTAP 到云提供商对象存储的连接。
+选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到云提供商对象存储的连接。
 
 
 
@@ -232,7 +232,7 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 您已成功设置从集群上的卷到 Google Cloud 对象存储的数据分层。
 
 .下一步是什么？
-link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]。
+link:task-licensing-cloud-tiering.html["请务必订阅BlueXP分层服务"]。
 
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。
 

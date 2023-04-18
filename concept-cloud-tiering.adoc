@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-cloud-tiering.html 
 keywords: cloud tiering, overview, conceptual, value, features, cost, charging, tiering policies, cooling period, fabricpool 
-summary: NetApp 的云分层服务可将内部 ONTAP 集群中的非活动数据自动分层到对象存储，从而将您的数据中心扩展到云。这样可以在集群上腾出宝贵的空间来处理更多工作负载，而无需更改应用程序层。云分层可以降低数据中心的成本，并使您能够从资本支出模式切换到运营支出模式。 
+summary: NetApp的BlueXP分层服务可将内部ONTAP 集群中的非活动数据自动分层到对象存储、从而将您的数据中心扩展到云。这样可以在集群上腾出宝贵的空间来处理更多工作负载，而无需更改应用程序层。BlueXP分层可以降低数据中心的成本、并使您能够从资本支出模式切换到运营支出模式。 
 ---
-= 了解 Cloud Tiering
+= 了解有关BlueXP分层的信息
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,21 @@ summary: NetApp 的云分层服务可将内部 ONTAP 集群中的非活动数据
 
 
 [role="lead"]
-NetApp 的云分层服务可将内部 ONTAP 集群中的非活动数据自动分层到对象存储，从而将您的数据中心扩展到云。这样可以在集群上腾出宝贵的空间来处理更多工作负载，而无需更改应用程序层。云分层可以降低数据中心的成本，并使您能够从资本支出模式切换到运营支出模式。
+NetApp的BlueXP分层服务可将内部ONTAP 集群中的非活动数据自动分层到对象存储、从而将您的数据中心扩展到云。这样可以在集群上腾出宝贵的空间来处理更多工作负载，而无需更改应用程序层。BlueXP分层可以降低数据中心的成本、并使您能够从资本支出模式切换到运营支出模式。
 
-BlueXP (以前称为FabricPool Manager)中的云分层服务可利用_Cloud Manager的功能。FabricPool 是一种 NetApp Data Fabric 技术，可将数据自动分层到低成本的对象存储。活动数据（热数据）保留在本地层（内部 ONTAP 聚合）上，而非活动数据（冷数据）则移至云层，同时保持 ONTAP 数据效率。
+FabricPool 分层服务利用了_BlueXP的功能。FabricPool 是一种 NetApp Data Fabric 技术，可将数据自动分层到低成本的对象存储。活动数据（热数据）保留在本地层（内部 ONTAP 聚合）上，而非活动数据（冷数据）则移至云层，同时保持 ONTAP 数据效率。
 
 最初在采用纯SSD聚合的AFF 、FAS 和ONTAP Select 系统上受支持、从ONTAP 9.8开始、除了高性能SSD之外、您还可以对包含HDD的聚合中的数据进行分层。请参见 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["使用 FabricPool 的注意事项和要求"^] 了解详细信息。
 
-可以使用FabricPool 镜像为单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置配置配置云分层。Cloud Tiering许可证在所有集群之间共享。
+可以使用FabricPool 镜像为单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置配置配置BlueXP分层。所有集群之间共享XP BlueTiering许可证。
 
-https://bluexp.netapp.com/cloud-tiering-service-tco["使用Cloud Tiering TCO计算器了解您可以节省多少资金"^]。
+https://bluexp.netapp.com/cloud-tiering-service-tco["使用BlueXP分层TCO计算器了解您可以节省多少资金"^]。
 
 
 
 == 功能
 
-Cloud Tiering 提供自动化，监控，报告和通用管理界面：
+BlueXP分层提供自动化、监控、报告和通用管理界面：
 
 * 借助自动化，可以更轻松地设置和管理从内部 ONTAP 集群到云的数据分层
 * 您可以选择默认的云提供商存储类 / 访问层，也可以使用生命周期管理将旧的分层数据移至更经济高效的层
@@ -40,10 +40,10 @@ Cloud Tiering 提供自动化，监控，报告和通用管理界面：
 * 如果您使用的是Cloud Volumes ONTAP 系统、则可以在集群页面中找到这些系统、以便您全面了解混合云基础架构中的数据分层
 
 
-有关 Cloud Tiering 所提供价值的更多详细信息， https://bluexp.netapp.com/cloud-tiering["查看BlueXP网站上的Cloud Tiering页面"^]。
+有关BlueXP分层所提供价值的更多详细信息、 https://bluexp.netapp.com/cloud-tiering["查看BlueXP网站上的BlueXP分层页面"^]。
 
 
-TIP: Cloud Volumes ONTAP 系统是从云分层进行的只读系统。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在BlueXP的工作环境中为Cloud Volumes ONTAP 系统设置分层"^]。
+TIP: Cloud Volumes ONTAP 系统是BlueXP分层中的只读系统。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在BlueXP的工作环境中为Cloud Volumes ONTAP 系统设置分层"^]。
 
 
 
@@ -58,7 +58,7 @@ TIP: Cloud Volumes ONTAP 系统是从云分层进行的只读系统。 https://d
 * 与S3兼容的对象存储(例如MinIO)
 
 
-也可以与要将数据分层到IBM Cloud Object Storage的集群共享Cloud Tiering许可证。必须使用System Manager或ONTAP 命令行界面设置FabricPool 配置、但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["此类配置的许可可使用Cloud Tiering完成。"]
+此外、还可以与要将数据分层到IBM Cloud Object Storage的集群共享BlueXP分层许可证。必须使用System Manager或ONTAP 命令行界面设置FabricPool 配置、但是 link:task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["此类配置的许可可通过BlueXP分层完成。"]
 
 
 NOTE: 您可以将数据从 NAS 卷分层到公有云或私有云，例如 StorageGRID 。在对 SAN 协议访问的数据进行分层时，由于连接方面的考虑， NetApp 建议使用私有云。
@@ -74,7 +74,7 @@ ONTAP 集群可以将非活动数据分层到一个对象存储或多个对象�
 * link:reference-google-support.html["了解支持的 Google Cloud 存储类"]
 
 
-Cloud Tiering 会对非活动数据使用云提供商的默认存储类 / 访问层。但是，您可以应用生命周期规则，以便数据在一定天数后自动从默认存储类过渡到另一个存储类。这样可以将非常冷的数据迁移到成本较低的存储中，从而有助于降低成本。
+BlueXP分层会对非活动数据使用云提供商的默认存储类/访问层。但是，您可以应用生命周期规则，以便数据在一定天数后自动从默认存储类过渡到另一个存储类。这样可以将非常冷的数据迁移到成本较低的存储中，从而有助于降低成本。
 
 
 NOTE: 您无法为分层到 StorageGRID 或 S3 兼容存储的数据选择生命周期规则。
@@ -83,19 +83,19 @@ NOTE: 您无法为分层到 StorageGRID 或 S3 兼容存储的数据选择生命
 
 == 定价和许可证
 
-通过按需购买订阅、年度订阅、自带云分层许可证或两者的组合为Cloud Tiering付费。如果您没有许可证、可以为第一个集群免费试用30天。
+通过按需购买订阅、年度订阅、自带的BlueXP分层许可证或两者的组合为BlueXP分层付费。如果您没有许可证、可以为第一个集群免费试用30天。
 
 将数据分层到 StorageGRID 时不收取任何费用。无需 BYOL 许可证或 PAYGO 注册。
 
 https://bluexp.netapp.com/pricing#tiering["查看定价详细信息"^]。
 
-由于云分层可保留源卷的存储效率、因此您需要为ONTAP 效率之后的分层数据(即应用重复数据删除和数据压缩之后的少量数据)支付云提供商对象存储成本。
+由于BlueXP分层功能可保留源卷的存储效率、因此您需要为ONTAP 效率之后的分层数据(即应用重复数据删除和数据压缩之后的少量数据)支付云提供商对象存储成本。
 
 
 
 === 30 天免费试用
 
-如果您没有 Cloud Tiering 许可证，则在为第一个集群设置分层时，将开始免费试用 Cloud Tiering 30 天。30天免费试用结束后、您需要通过按需购买订阅、年度订阅、BYOL许可证或两者的组合为Cloud Tiering付费。
+如果您没有BlueXP分层许可证、则在为第一个集群设置分层时、将开始免费试用30天的BlueXP分层。30天免费试用结束后、您需要通过按需购买订阅、年度订阅、BYOL许可证或两者的组合为BlueXP分层付费。
 
 如果免费试用结束、并且您尚未订阅或添加许可证、则ONTAP 将不再将冷数据分层到对象存储。以前分层的所有数据仍可访问；这意味着您可以检索和使用此数据。检索后、此数据将从云移回性能层。
 
@@ -103,7 +103,7 @@ https://bluexp.netapp.com/pricing#tiering["查看定价详细信息"^]。
 
 === 按需购买订阅
 
-Cloud Tiering 以按需购买模式提供基于消费的许可。通过云提供商的市场订阅后、您可以按GB为分层数据付费、无需预先支付费用。您的云提供商会通过每月账单向您开具账单。
+BlueXP分层以按需购买模式提供基于消费的许可。通过云提供商的市场订阅后、您可以按GB为分层数据付费、无需预先支付费用。您的云提供商会通过每月账单向您开具账单。
 
 即使您拥有免费试用版或自带许可证（ BYOL ），也应订阅：
 
@@ -117,15 +117,15 @@ Cloud Tiering 以按需购买模式提供基于消费的许可。通过云提供
 
 
 
-在免费试用期间，或者如果您未超过 Cloud Tiering BYOL 许可证，则不会从按需购买订阅中收取任何费用。
+在免费试用期间、或者如果您未超过BlueXP分层BYOL许可证、则不会从按需购买订阅中收取任何费用。
 
-link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-paygo-subscription["了解如何设置按需购买订阅"]。
+link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-paygo-subscription["了解如何设置按需购买订阅"]。
 
 
 
 === 年度合同
 
-在将非活动数据分层到Amazon S3时、Cloud Tiering会提供一份年度合同。此计划的有效期为1年、2年或3年。
+在将非活动数据分层到Amazon S3时、BlueXP分层提供年度合同。此计划的有效期为1年、2年或3年。
 
 目前、分层到Azure或GCP时不支持年度合同。
 
@@ -133,26 +133,26 @@ link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-paygo-subscription["�
 
 === 自带许可证
 
-通过从 NetApp 购买 * Cloud Tiere* 许可证来获取您自己的许可证。您可以购买1年、2年或3年期限许可证、并指定任意分层容量。BYOL 云分层许可证是一个 _float_ 许可证，您可以跨多个内部 ONTAP 集群使用。您在 Cloud Tiering 许可证中定义的总分层容量可供所有内部集群使用。
+通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期限许可证、并指定任意分层容量。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。
 
-购买Cloud Tiering许可证后、您需要使用BlueXP中的数字电子钱包添加许可证。 link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["了解如何使用 Cloud Tiering BYOL 许可证"]。
+购买BlueXP分层许可证后、您需要使用BlueXP中的数字电子钱包添加许可证。 link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["请参见如何使用BlueXP分层BYOL许可证"]。
 
 如上所述，我们建议您设置按需购买的订阅，即使您购买了 BYOL 许可证也是如此。
 
 
-NOTE: 自 2021 年 8 月起，旧的 * FabricPool * 许可证已替换为 * 云分层 * 许可证。 link:task-licensing-cloud-tiering.html#new-cloud-tiering-byol-licensing-starting-august-21-2021["详细了解 Cloud Tiering 许可证与 FabricPool 许可证有何不同"]。
+NOTE: 自 2021 年 8 月起，旧的 * FabricPool * 许可证已替换为 * 云分层 * 许可证。 link:task-licensing-cloud-tiering.html#bluexp-tiering-byol-licensing-starting-in-2021["阅读有关BlueXP分层许可证与FabricPool 许可证之间的区别的更多信息"]。
 
 
 
-== Cloud Tiering 的工作原理
+== BlueXP分层的工作原理
 
-Cloud Tiering 是一项由 NetApp 管理的服务，它使用 FabricPool 技术自动将内部 ONTAP 集群中的非活动（冷）数据分层到公有云或私有云中的对象存储。可从连接器连接到 ONTAP 。
+BlueXP分层是一项由NetApp管理的服务、可使用FabricPool 技术自动将内部ONTAP 集群中的非活动(冷)数据分层到公共云或私有云中的对象存储。可从连接器连接到 ONTAP 。
 
 下图显示了每个组件之间的关系：
 
-image:diagram_cloud_tiering.png["一个架构图，其中显示了云分层服务，该服务连接到云提供商中的连接器，连接到 ONTAP 集群的连接器以及云提供商中的 ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群中，而非活动数据驻留在对象存储中。"]
+image:diagram_cloud_tiering.png["一个架构图、其中显示了BlueXP分层服务、该服务连接到云提供商中的连接器、连接到ONTAP 集群的连接器以及云提供商中的ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群中，而非活动数据驻留在对象存储中。"]
 
-从较高的层面来看， Cloud Tiering 的工作原理如下：
+从较高的层面来看、BlueXP分层的工作原理如下：
 
 . 您可以从BlueXP发现内部集群。
 . 您可以通过提供有关对象存储的详细信息来设置分层，包括分段 / 容器，存储类或访问层以及分层数据的生命周期规则。
@@ -205,7 +205,7 @@ NOTE: 重新加热的数据只有在有空间时才会回写到性能层。如�
 +
 由于数据会立即分层，因此 SnapMirror 将从云层而非性能层读取数据。这样会导致 SnapMirror 操作速度变慢—可能会使队列中的其他 SnapMirror 操作变慢，即使这些操作使用不同的分层策略也是如此。
 
-* Cloud Backup 同样会受到使用分层策略设置的卷的影响。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["请参见使用 Cloud Backup 分层策略注意事项"^]。
+* Cloud Backup 同样会受到使用分层策略设置的卷的影响。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["请参见BlueXP备份和恢复的分层策略注意事项"^]。
 
 
 --

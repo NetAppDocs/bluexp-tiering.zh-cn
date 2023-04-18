@@ -29,7 +29,7 @@ summary: 通过将非活动数据分层到 Azure Blob 存储，在内部 ONTAP �
 [role="quick-margin-list"]
 * 运行 ONTAP 9.4 或更高版本且与 Azure Blob 存储具有 HTTPS 连接的内部 ONTAP 集群。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 安装在 Azure vNet 或内部环境中的 Connector 。
-* 用于 Connector 的网络连接，支持通过出站 HTTPS 连接到数据中心中的 ONTAP 集群， Azure 存储和 Cloud Tiering 服务。
+* 一种连接器网络、可通过此连接器与数据中心中的ONTAP 集群、Azure存储和BlueXP分层服务建立出站HTTPS连接。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
@@ -38,11 +38,11 @@ summary: 通过将非活动数据分层到 Azure Blob 存储，在内部 ONTAP �
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 设置许可
 [role="quick-margin-para"]
-免费试用结束后，通过按需购买订阅， ONTAP 云分层 BYOL 许可证或两者的组合为云分层付费：
+免费试用结束后、通过按需购买订阅、ONTAP BlueXP分层BYOL许可证或两者的组合为BlueXP分层付费：
 
 [role="quick-margin-list"]
 * 要从 Azure Marketplace 订阅， https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["转到BlueXP Marketplace产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
-* 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
+* 要使用BlueXP分层BYOL许可证付费、请发送邮件至：ng-cloud-tiering@netapp.com？Subject=Licensing[如果需要购买许可证、请联系我们]、然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
 
 
 
@@ -53,7 +53,7 @@ summary: 通过将非活动数据分层到 Azure Blob 存储，在内部 ONTAP �
 
 下图显示了每个组件以及需要在它们之间准备的连接：
 
-image:diagram_cloud_tiering_azure.png["一个架构图，其中显示了云分层服务，该服务连接到云提供商中的连接器，连接到 ONTAP 集群的连接器以及云提供商中的 ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。"]
+image:diagram_cloud_tiering_azure.png["一个架构图、其中显示了BlueXP分层服务、该服务连接到云提供商中的连接器、连接到ONTAP 集群的连接器以及云提供商中的ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。"]
 
 
 NOTE: Connector 和 Blob 存储之间的通信仅用于对象存储设置。连接器可以位于您的内部，而不是云中。
@@ -86,20 +86,20 @@ ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会�
 
 * 需要从 Connector 建立入站连接，该连接器可以位于 Azure vNet 中或您的内部环境中。
 +
-集群与 Cloud Tiering 服务之间不需要建立连接。
+集群与BlueXP分层服务之间不需要建立连接。
 
 * 托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。
 +
-设置数据分层时， Cloud Tiering 会提示您输入要使用的 IP 空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
+设置数据分层时、BlueXP分层会提示您输入要使用的IP空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
 
 
 
 --
-支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
+支持的卷和聚合:: BlueXP分层可分层的卷总数可能小于ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
 
 
 
-NOTE: 从 ONTAP 9.5 开始，云分层支持 FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
+NOTE: 从ONTAP 9.5开始、BlueXP分层支持FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
 
 
 
@@ -124,7 +124,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 === 验证您是否具有所需的 Connector 权限
 
-如果您使用BlueXP 3.9.25或更高版本创建了Connector、则表示您已设置完毕。默认情况下、将设置自定义角色、以提供Connector管理Azure网络中的资源和进程所需的权限。请参见 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#custom-role-permissions["所需的自定义角色权限"^] 和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#cloud-tiering["Cloud Tiering所需的特定权限"^]。
+如果您使用BlueXP 3.9.25或更高版本创建了Connector、则表示您已设置完毕。默认情况下、将设置自定义角色、以提供Connector管理Azure网络中的资源和进程所需的权限。请参见 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#custom-role-permissions["所需的自定义角色权限"^] 和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#cloud-tiering["BlueXP分层所需的特定权限"^]。
 
 如果您使用早期版本的BlueXP创建了Connector、则需要编辑Azure帐户的权限列表才能添加任何缺少的权限。
 
@@ -137,7 +137,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 .步骤
 . 确保安装 Connector 的网络启用以下连接：
 +
-** 通过端口443与Cloud Tiering服务和Azure Blob对象存储建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
+** 通过端口443与BlueXP分层服务和Azure Blob对象存储建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
 
@@ -151,14 +151,14 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 === 正在准备 Azure Blob 存储
 
-设置分层时，您需要确定要使用的资源组以及属于该资源组的存储帐户和 Azure 容器。通过存储帐户， Cloud Tiering 可以对用于数据分层的 Blob 容器进行身份验证和访问。
+设置分层时，您需要确定要使用的资源组以及属于该资源组的存储帐户和 Azure 容器。通过存储帐户、BlueXP分层功能可以对用于数据分层的Blob容器进行身份验证和访问。
 
-Cloud Tiering支持分层到任何区域中可通过Connector访问的任何存储帐户。
+BlueXP分层支持分层到任何区域中可通过Connector访问的任何存储帐户。
 
-Cloud Tiering 仅支持通用 v2 和高级块 Blob 类型的存储帐户。
+BlueXP分层仅支持通用v2和高级块Blob类型的存储帐户。
 
 
-NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的访问层，以便分层数据在一定天数后过渡到，则在 Azure 帐户中设置容器时，不能选择任何生命周期规则。Cloud Tiering 可管理生命周期过渡。
+NOTE: 如果您计划将BlueXP分层配置为使用成本较低的访问层、以便分层数据在一定天数后过渡到、则在Azure帐户中设置容器时、不能选择任何生命周期规则。BlueXP分层可管理生命周期过渡。
 
 
 
@@ -190,7 +190,7 @@ image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，
 +
 此步骤中显示的存储帐户和容器属于您在上一步中选择的资源组。
 
-.. * 访问层生命周期 * ： Cloud Tiering 可管理分层数据的生命周期过渡。数据以 _hot_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到 _cool_ 类。
+.. *访问层生命周期*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _hot_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到 _cool_ 类。
 +
 选择要将分层数据过渡到的访问层以及数据移动前的天数，然后单击 * 继续 * 。例如，下面的屏幕截图显示，在对象存储中使用 45 天后，分层数据将从 _hot_ 类移动到 _cool_ 类。
 
@@ -205,7 +205,7 @@ image:screenshot_tiering_lifecycle_selection_azure.png["一个屏幕截图，显
 
 .. * 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间，然后单击 * 继续 * 。
 +
-选择正确的 IP 空间可确保云分层可以设置从 ONTAP 到云提供商对象存储的连接。
+选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到云提供商对象存储的连接。
 
 
 
@@ -232,7 +232,7 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 您已成功设置从集群上的卷到 Azure Blob 对象存储的数据分层。
 
 .下一步是什么？
-link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]。
+link:task-licensing-cloud-tiering.html["请务必订阅BlueXP分层服务"]。
 
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。
 

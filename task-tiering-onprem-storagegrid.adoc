@@ -30,7 +30,7 @@ summary: 通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集
 * 运行 ONTAP 9.4 或更高版本的内部 ONTAP 集群，并通过用户指定的端口连接到 StorageGRID 。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 具有 S3 权限的 AWS 访问密钥的 StorageGRID 10.3 或更高版本。
 * 内部安装的连接器。
-* 用于连接器的网络连接，可通过 HTTPS 出站连接到 ONTAP 集群， StorageGRID 和云分层服务。
+* 用于连接器的网络连接、用于启用与ONTAP 集群、StorageGRID 和BlueXP分层服务的出站HTTPS连接。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
@@ -45,7 +45,7 @@ summary: 通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集
 
 下图显示了每个组件以及需要在它们之间准备的连接：
 
-image:diagram_cloud_tiering_storagegrid.png["一个架构映像，其中显示了云分层服务，该服务连接到内部部署的连接器，连接到 ONTAP 集群的连接器以及 ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。"]
+image:diagram_cloud_tiering_storagegrid.png["一个架构图、显示了BlueXP分层服务、该服务连接到内部部署的连接器、连接到ONTAP 集群的连接器以及ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。"]
 
 
 NOTE: Connector 和 StorageGRID 之间的通信仅用于对象存储设置。
@@ -66,7 +66,7 @@ NOTE: Connector 和 StorageGRID 之间的通信仅用于对象存储设置。
 --
 支持的 ONTAP 版本:: ONTAP 9.4 或更高版本
 所需的应用程序访问参数:: 集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["有关详细信息、请参见"security login"命令"]。
-许可:: 在将数据分层到StorageGRID 时、您的BlueXP帐户不需要Cloud Tiering许可证、ONTAP 集群也不需要FabricPool 许可证。
+许可:: 在将数据分层到StorageGRID 时、您的BlueXP帐户不需要BlueXP分层许可证、ONTAP 集群也不需要FabricPool 许可证。
 集群网络连接要求::
 +
 --
@@ -76,20 +76,20 @@ ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会�
 
 * 需要从连接器建立入站连接，该连接器必须位于您的内部。
 +
-集群与 Cloud Tiering 服务之间不需要建立连接。
+集群与BlueXP分层服务之间不需要建立连接。
 
 * 托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。
 +
-设置数据分层时， Cloud Tiering 会提示您输入要使用的 IP 空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
+设置数据分层时、BlueXP分层会提示您输入要使用的IP空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
 
 
 
 --
-支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
+支持的卷和聚合:: BlueXP分层可分层的卷总数可能小于ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
 
 
 
-NOTE: 从 ONTAP 9.5 开始，云分层支持 FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
+NOTE: 从ONTAP 9.5开始、BlueXP分层支持FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
 
 
 
@@ -106,7 +106,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 StorageGRID 必须满足以下要求。
 
 支持的 StorageGRID 版本:: 支持 StorageGRID 10.3 及更高版本。
-S3 凭据:: 在设置 StorageGRID 分层时，您需要为云分层提供 S3 访问密钥和机密密钥。Cloud Tiering 使用密钥访问您的存储分段。
+S3 凭据:: 在设置StorageGRID 分层时、您需要为BlueXP分层提供S3访问密钥和机密密钥。BlueXP分层使用密钥访问您的存储分段。
 +
 --
 这些访问密钥必须与具有以下权限的用户相关联：
@@ -144,7 +144,7 @@ S3 凭据:: 在设置 StorageGRID 分层时，您需要为云分层提供 S3 访
 .步骤
 . 确保安装 Connector 的网络启用以下连接：
 +
-** 通过端口443与Cloud Tiering服务建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
+** 通过端口443与BlueXP分层服务建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口443与StorageGRID 系统建立HTTPS连接
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
@@ -183,7 +183,7 @@ image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，
 
 .. * 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间，然后单击 * 继续 * 。
 +
-选择正确的 IP 空间可确保云分层可以设置从 ONTAP 到 StorageGRID 对象存储的连接。
+选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到StorageGRID 对象存储的连接。
 
 
 

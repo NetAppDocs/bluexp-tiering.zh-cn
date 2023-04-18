@@ -50,7 +50,7 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
 [role="quick-margin-para"]
 <<设置 S3 权限,请参见如何为Connector和内部集群设置权限。>>
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"] 在系统上启用Cloud Tiering
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"] 在系统上启用BlueXP分层
 [role="quick-margin-para"]
 选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到Amazon S3。
 
@@ -59,11 +59,11 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"] 设置许可
 [role="quick-margin-para"]
-免费试用结束后，通过按需购买订阅， ONTAP 云分层 BYOL 许可证或两者的组合为云分层付费：
+免费试用结束后、通过按需购买订阅、ONTAP BlueXP分层BYOL许可证或两者的组合为BlueXP分层付费：
 
 [role="quick-margin-list"]
 * 要从 AWS Marketplace 订阅， https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["转到BlueXP Marketplace产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
-* 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
+* 要使用BlueXP分层BYOL许可证付费、请发送邮件至：ng-cloud-tiering@netapp.com？Subject=Licensing[如果需要购买许可证、请联系我们]、然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
 
 
 
@@ -78,11 +78,11 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
 
 下图显示了*公有 connection*方法以及组件之间需要准备的连接。您可以使用内部安装的Connector或AWS VPC中部署的Connector。
 
-image:diagram_cloud_tiering_aws_public.png["显示Cloud Tiering如何通过公有 连接与集群上的卷以及非活动数据所在的AWS S3存储进行通信的图表。"]
+image:diagram_cloud_tiering_aws_public.png["一个示意图、显示了BlueXP分层如何通过公共连接与集群上的卷以及非活动数据所在的AWS S3存储进行通信。"]
 
 下图显示了*专用连接*方法以及组件之间需要准备的连接。您可以使用内部安装的Connector或AWS VPC中部署的Connector。
 
-image:diagram_cloud_tiering_aws_private.png["显示Cloud Tiering如何通过专用连接与集群上的卷以及非活动数据所在的AWS S3存储进行通信的图表。"]
+image:diagram_cloud_tiering_aws_private.png["一个示意图、显示了BlueXP分层如何通过专用连接与集群上的卷以及非活动数据所在的AWS S3存储进行通信。"]
 
 
 NOTE: Connector 和 S3 之间的通信仅用于对象存储设置。
@@ -110,7 +110,7 @@ BlueXP Connector是BlueXP功能的主要软件。需要使用连接器对非活�
 
 * 确保安装 Connector 的网络启用以下连接：
 +
-** 通过端口443与Cloud Tiering服务和S3对象存储建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
+** 通过端口443与BlueXP分层服务和S3对象存储建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
 
@@ -144,11 +144,11 @@ BlueXP Connector是BlueXP功能的主要软件。需要使用连接器对非活�
 
 
 --
-支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
+支持的卷和聚合:: BlueXP分层可分层的卷总数可能小于ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
 
 
 
-NOTE: 从 ONTAP 9.5 开始，云分层支持 FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
+NOTE: 从ONTAP 9.5开始、BlueXP分层支持FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
 
 所需的应用程序访问参数:: 集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["有关详细信息、请参见"security login"命令"]。
 
@@ -159,7 +159,7 @@ NOTE: 从 ONTAP 9.5 开始，云分层支持 FlexGroup 卷。安装程序的工�
 
 * 集群需要从 Connector 到集群管理 LIF 的入站 HTTPS 连接。
 +
-集群与 Cloud Tiering 服务之间不需要建立连接。
+集群与BlueXP分层服务之间不需要建立连接。
 
 * 托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。这些集群间 LIF 必须能够访问对象存储。
 +
@@ -167,7 +167,7 @@ NOTE: 从 ONTAP 9.5 开始，云分层支持 FlexGroup 卷。安装程序的工�
 
 * 集群间 LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有关 IP 空间的更多信息"^]。
 +
-设置Cloud Tiering时、系统会提示您使用IP空间。您应选择与这些 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。
+设置BlueXP分层时、系统会提示您使用IP空间。您应选择与这些 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。
 
 +
 如果您使用的 IP 空间与 " 默认 " 不同，则可能需要创建静态路由才能访问对象存储。
@@ -191,12 +191,12 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 == 准备 AWS 环境
 
-在为新集群设置数据分层时，系统会提示您在设置了 Connector 的 AWS 帐户中创建 S3 存储分段或选择现有 S3 存储分段。AWS 帐户必须具有可在 Cloud Tiering 中输入的权限和访问密钥。ONTAP 集群使用访问密钥对 S3 中的数据进行分层。
+在为新集群设置数据分层时，系统会提示您在设置了 Connector 的 AWS 帐户中创建 S3 存储分段或选择现有 S3 存储分段。AWS帐户必须具有可在BlueXP分层中输入的权限和访问密钥。ONTAP 集群使用访问密钥对 S3 中的数据进行分层。
 
-S3 存储分段必须位于中 link:reference-aws-support.html#supported-aws-regions["支持 Cloud Tiering 的区域"]。
+S3 存储分段必须位于中 link:reference-aws-support.html#supported-aws-regions["支持BlueXP分层的区域"]。
 
 
-NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类，以便分层数据在一定天数后过渡到，则在 AWS 帐户中设置存储分段时，不能选择任何生命周期规则。Cloud Tiering 可管理生命周期过渡。
+NOTE: 如果您计划将BlueXP分层配置为使用成本较低的存储类、在该类中、分层数据将在一定天数后过渡到、则在AWS帐户中设置存储分段时、不能选择任何生命周期规则。BlueXP分层可管理生命周期过渡。
 
 
 
@@ -226,7 +226,7 @@ NOTE: 如果您计划将 Cloud Tiering 配置为使用成本较低的存储类�
 
 . 创建或找到访问密钥。
 +
-云分层会将访问密钥传递到 ONTAP 集群。凭据不会存储在 Cloud Tiering 服务中。
+BlueXP分层会将访问密钥传递到ONTAP 集群。这些凭据不会存储在BlueXP分层服务中。
 
 +
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html["AWS 文档：管理 IAM 用户的访问密钥"^]
@@ -247,7 +247,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 image:screenshot_tiering_aws_sec_group.png["与 Connector 关联的 AWS 安全组的屏幕截图。"]
 
 +
-如果您使用端口80 (HTTP)与专用端点进行通信、则已设置完毕。您现在可以在集群上启用Cloud Tiering。
+如果您使用端口80 (HTTP)与专用端点进行通信、则已设置完毕。您现在可以在集群上启用BlueXP分层。
 
 +
 如果您使用端口443 (HTTPS)与专用端点进行通信、则必须从VPC S3端点复制证书并将其添加到ONTAP 集群中、如接下来的4个步骤所示。
@@ -319,7 +319,7 @@ image:screenshot_tiering_aws_s3_bucket.png["屏幕截图显示了设置S3存储�
 +
 需要使用 _fabric-pool_ 前缀，因为 Connector 的 IAM 策略允许实例对使用该前缀命名的分段执行 S3 操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。
 
-.. *存储类*：Cloud Tiering可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。
+.. *存储类*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。
 +
 选择要将分层数据过渡到的 S3 存储类以及要移动数据的天数，然后单击 * 继续 * 。例如，下面的屏幕截图显示，在对象存储中使用 45 天后，分层数据将从 _Standard_ 类移动到 _Standard-IA_ 类。
 
@@ -371,7 +371,7 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 您已成功设置从集群上的卷到 S3 对象存储的数据分层。
 
 .下一步是什么？
-link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]。
+link:task-licensing-cloud-tiering.html["请务必订阅BlueXP分层服务"]。
 
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。
 

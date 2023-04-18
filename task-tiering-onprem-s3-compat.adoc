@@ -39,7 +39,7 @@ summary: 通过将非活动数据分层到使用简单存储服务（ Simple Sto
 * 运行ONTAP 9.8或更高版本的源内部ONTAP 集群、并通过用户指定的端口连接到目标S3兼容对象存储。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 对象存储服务器的 FQDN ，访问密钥和机密密钥，以便 ONTAP 集群可以访问存储分段。
 * 内部安装的连接器。
-* Connector的网络连接、用于启用与源ONTAP 集群、与S3兼容的对象存储和云分层服务的出站HTTPS连接。
+* Connector的网络连接、用于启用与源ONTAP 集群、与S3兼容的对象存储以及XP Blueering服务的出站HTTPS连接。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
@@ -48,11 +48,11 @@ summary: 通过将非活动数据分层到使用简单存储服务（ Simple Sto
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 设置许可
 [role="quick-margin-para"]
-通过云提供商的按需购买订阅， NetApp Cloud Tiering 自带许可证或两者的组合为 Cloud Tiering 付费：
+通过云提供商的按需购买订阅、NetApp BlueXP分层自带许可证或两者的组合、为BlueXP分层付费：
 
 [role="quick-margin-list"]
 * 从订阅BlueXP PAYGO产品 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]， https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]或 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市场"^]下，单击 * 订阅 * 并按照提示进行操作。
-* 要使用 Cloud Tiering BYOL 许可证付费，请发送电子邮件至： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 如果需要购买许可证，请联系我们 ] ，然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
+* 要使用BlueXP分层BYOL许可证付费、请发送邮件至：ng-cloud-tiering@netapp.com？Subject=Licensing[如果需要购买许可证、请联系我们]、然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
 
 
 
@@ -63,7 +63,7 @@ summary: 通过将非活动数据分层到使用简单存储服务（ Simple Sto
 
 下图显示了每个组件以及需要在它们之间准备的连接：
 
-image:diagram_cloud_tiering_s3_compat.png["一个架构映像，其中显示了云分层服务，该服务连接到内部部署的连接器，连接到 ONTAP 集群的连接器以及 ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。"]
+image:diagram_cloud_tiering_s3_compat.png["一个架构图、显示了BlueXP分层服务、该服务连接到内部部署的连接器、连接到ONTAP 集群的连接器以及ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。"]
 
 
 NOTE: Connector 与 S3 兼容对象存储服务器之间的通信仅用于对象存储设置。
@@ -86,20 +86,20 @@ NOTE: Connector 与 S3 兼容对象存储服务器之间的通信仅用于对象
 
 * 需要从连接器建立入站连接，该连接器必须位于您的内部。
 +
-集群与 Cloud Tiering 服务之间不需要建立连接。
+集群与BlueXP分层服务之间不需要建立连接。
 
 * 托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。
 +
-设置数据分层时， Cloud Tiering 会提示您输入要使用的 IP 空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
+设置数据分层时、BlueXP分层会提示您输入要使用的IP空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
 
 
 
 --
-支持的卷和聚合:: 云分层可分层的卷总数可能小于 ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
+支持的卷和聚合:: BlueXP分层可分层的卷总数可能小于ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["FabricPool 不支持的功能"^]。
 
 
 
-TIP: 云分层既支持 FlexVol 卷，也支持 FlexGroup 卷。
+TIP: BlueXP分层既支持FlexVol 卷、也支持FlexGroup 卷。
 
 
 
@@ -115,7 +115,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 与 S3 兼容的对象存储必须满足以下要求。
 
-S3 凭据:: 在设置与S3兼容的对象存储分层时、系统会提示您创建S3存储分段或选择现有的S3存储分段。您需要为 Cloud Tiering 提供 S3 访问密钥和机密密钥。Cloud Tiering 使用密钥访问您的存储分段。
+S3 凭据:: 在设置与S3兼容的对象存储分层时、系统会提示您创建S3存储分段或选择现有的S3存储分段。您需要为BlueXP分层提供S3访问密钥和机密密钥。BlueXP分层使用这些密钥访问您的存储分段。
 +
 --
 这些访问密钥必须与具有以下权限的用户相关联：
@@ -152,7 +152,7 @@ S3 凭据:: 在设置与S3兼容的对象存储分层时、系统会提示您创
 .步骤
 . 确保安装 Connector 的网络启用以下连接：
 +
-** 通过端口443与Cloud Tiering服务建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
+** 通过端口443与BlueXP分层服务建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口 443 与 S3 兼容对象存储建立 HTTPS 连接
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
@@ -185,7 +185,7 @@ image:screenshot_setup_tiering_onprem.png["屏幕截图显示了在选择内部 
 .. * 分段 * ：添加新分段或选择现有分段，然后单击 * 继续 * 。
 .. * 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间，然后单击 * 继续 * 。
 +
-选择正确的 IP 空间可确保云分层可以设置从 ONTAP 到与 S3 兼容的对象存储的连接。
+选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到S3兼容对象存储的连接。
 
 
 
@@ -213,7 +213,7 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 您已成功设置从集群上的卷到与 S3 兼容的对象存储的数据分层。
 
 .下一步是什么？
-link:task-licensing-cloud-tiering.html["请务必订阅 Cloud Tiering 服务"]。
+link:task-licensing-cloud-tiering.html["请务必订阅BlueXP分层服务"]。
 
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。
 
