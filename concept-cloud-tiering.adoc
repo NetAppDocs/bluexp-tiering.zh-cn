@@ -135,7 +135,7 @@ link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-paygo-subscription["
 
 通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期限许可证、并指定任意分层容量。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。
 
-购买BlueXP分层许可证后、您需要使用BlueXP中的数字电子钱包添加许可证。 link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["请参见如何使用BlueXP分层BYOL许可证"]。
+购买BlueXP分层许可证后、您需要使用BlueXP中的BlueXP数字钱包来添加许可证。 link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["请参见如何使用BlueXP分层BYOL许可证"]。
 
 如上所述，我们建议您设置按需购买的订阅，即使您购买了 BYOL 许可证也是如此。
 
@@ -205,7 +205,7 @@ NOTE: 重新加热的数据只有在有空间时才会回写到性能层。如�
 +
 由于数据会立即分层，因此 SnapMirror 将从云层而非性能层读取数据。这样会导致 SnapMirror 操作速度变慢—可能会使队列中的其他 SnapMirror 操作变慢，即使这些操作使用不同的分层策略也是如此。
 
-* Cloud Backup 同样会受到使用分层策略设置的卷的影响。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["请参见BlueXP备份和恢复的分层策略注意事项"^]。
+* BlueXP备份和恢复同样受使用层策略设置的卷的影响。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["请参见BlueXP备份和恢复的分层策略注意事项"^]。
 
 
 --

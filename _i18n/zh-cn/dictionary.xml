@@ -375,12 +375,8 @@
   <block id="c1b2dc0798d3960e25b8a12c751f53ec" category="list-text">在 _Add License_ 对话框中，输入许可证信息并单击 * 添加许可证 * ：</block>
   <block id="80b8da08efcb9500667b0fc290bbe1f6" category="list-text">如果您拥有分层许可证序列号并知道您的 NSS 帐户，请选择 * 输入序列号 * 选项并输入该信息。</block>
   <block id="4488cc251929ad2c43c07191375ca26e" category="list-text">如果您有分层许可证文件，请选择 * 上传许可证文件 * 选项，然后按照提示附加该文件。</block>
-  <block id="8bd7b9c63d108bd78a0f8686edde58cb" category="paragraph">此状态也会显示在 " 数字电子钱包 " 页面中。</block>
-  <block id="89ec6475bcd2a52ce9ca1c8fa843339e" category="inline-image-macro">在 " 数字电子钱包 " 页面中显示即将到期许可证的屏幕截图。</block>
-  <block id="b3bd2cf375c900d20cf42dde79db63e2" category="paragraph"><block ref="b3bd2cf375c900d20cf42dde79db63e2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b2b168bd64a341a85c749cb61bba40cb" category="inline-xref">从 NetApp 支持站点获取许可证文件</block>
   <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">更多图标</block>
-  <block id="c735ca792ee4c4aeafc57eff074484db" category="list-text">在数字电子邮件页面的 _Data Services Licenses_ 选项卡中，单击 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 对于要更新的服务序列号，请单击 * 更新许可证 * 。</block>
   <block id="3ce750f001c2369e23b68f3210d9f100" category="inline-image-macro">选择特定服务的更新许可证按钮的屏幕截图。</block>
   <block id="2bdb7af2b6613fafdba930fb09034d3f" category="paragraph"><block ref="2bdb7af2b6613fafdba930fb09034d3f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="41e921305ae1b027e5d364af4a2a9df2" category="list-text">在 _Update License_ 页面中，上传许可证文件并单击 * 更新许可证 * 。</block>
@@ -508,7 +504,6 @@
   <block id="eb5050df74a7237bec4864cad6113b55" category="section-title">新创建集群的进程</block>
   <block id="f457a5079118a07f91a021318abf923e" category="list-text">使用System Manager或ONTAP 命令行界面安装和配置ONTAP 集群。</block>
   <block id="a91bdb81c68f1a37a469fa1d5933a14b" category="paragraph">此时请勿配置分层。</block>
-  <block id="cd545dee97443a0461021080f3101dc7" category="inline-link-macro">将许可证添加到Digital Wallet中</block>
   <block id="2ef78cf4a1d7bf5f762483337e16bb3b" category="inline-link-macro">发现新集群</block>
   <block id="b84ead730259e42d0aaa3247f1351b36" category="inline-image-macro">显示如何将分层许可证部署到ONTAP 集群的屏幕截图。</block>
   <block id="54cfdff2d2e56824adbc46c622ea54b0" category="paragraph"><block ref="54cfdff2d2e56824adbc46c622ea54b0" category="inline-image-macro-rx" type="image"></block></block>
@@ -615,7 +610,6 @@
   <block id="aaa3c198f069c55aebfe4cb17882c73c" category="list-text"><block ref="aaa3c198f069c55aebfe4cb17882c73c" category="inline-link-macro-rx"></block></block>
   <block id="d338c5fdb9585e3e04e3d27f58422278" category="section-title">为了管理存储在云中的冷数据、我可以使用哪些工具进行监控和报告？</block>
   <block id="5ecb6b24c169667ff1a176768115659e" category="inline-link">Active IQ Unified Manager</block>
-  <block id="dab2edf9eaac3950e92c281ce358af01" category="inline-link">Active IQ 数字顾问</block>
   <block id="b8a7918ef33be8759255aec95c404a42" category="section-title">如果云提供商的网络链路出现故障、会产生什么影响？</block>
   <block id="4ba6eaf1775e43d67b327809a4b849b2" category="paragraph">如果发生网络故障、本地性能层将保持联机状态、热数据仍可访问。但是、已移至云层的块将无法访问、应用程序在尝试访问该数据时将收到错误消息。恢复连接后、所有数据都可以无缝访问。</block>
   <block id="eedcfa982383398670f78619f12b3aa3" category="section-title">是否有网络带宽建议？</block>
@@ -937,7 +931,6 @@
   <block id="257ff1df6b80ed0bf9b3463d53be79f9" category="paragraph">您可以通过从BlueXP顶部选择*帐户*下拉列表、然后单击您的帐户旁边的*管理帐户*来查找您的BlueXP帐户ID。您的帐户 ID 位于概述选项卡中。</block>
   <block id="bae190eec3db4a0dd635ae72756acde8" category="inline-link">将NSS帐户添加到BlueXP</block>
   <block id="fc76651edf85f11e6b8f2a81226ab59d" category="paragraph">如果下拉列表中没有您的 NetApp 支持站点帐户，<block ref="6d9745cd4f1d60b55f06aef4c5cb6ec4" category="inline-link-rx"></block>。</block>
-  <block id="8061535eb5e8bab52c4a8a0fdc119d14" category="paragraph">在您为许可证付费并将其注册到NetApp 支持站点 后、BlueXP会自动在数字电子钱包中更新许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。</block>
   <block id="8816958eed360786a943983e0bd031fd" category="paragraph">在BlueXP中、选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到Google Cloud Storage。</block>
   <block id="955a264d46a1f0536f93bcb5a3e454f1" category="list-text">您可以从BlueXP发现内部集群。</block>
   <block id="92d46e494e7ad2aeddc2f61967fd1763" category="list-text">BlueXP会将ONTAP 配置为使用对象存储提供程序、并发现集群上的活动和非活动数据量。</block>
@@ -1171,7 +1164,6 @@
   <block id="a05ea6f9f4f0a8968aa8c0288bad4b53" category="paragraph">在将非活动数据分层到Amazon S3时、BlueXP分层提供年度合同。此计划的有效期为1年、2年或3年。</block>
   <block id="26913edc94f523c2a2b1416655f6ceb5" category="paragraph">通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期限许可证、并指定任意分层容量。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。</block>
   <block id="49de8995cf3b9508af67fbbd5e085640" category="inline-link-macro">请参见如何使用BlueXP分层BYOL许可证</block>
-  <block id="1eafa57f93aa977308c6e7fb4fa11305" category="paragraph">购买BlueXP分层许可证后、您需要使用BlueXP中的数字电子钱包添加许可证。 <block ref="18ff855f2755df77b673603c1159f8d7" category="inline-link-macro-rx"></block>。</block>
   <block id="a42e9abff9358e2d7f140d2a5cca181b" category="inline-link-macro">阅读有关BlueXP分层许可证与FabricPool 许可证之间的区别的更多信息</block>
   <block id="73bd12c72df2f49e3c020653025ff48b" category="admonition">自 2021 年 8 月起，旧的 * FabricPool * 许可证已替换为 * 云分层 * 许可证。 <block ref="e6f9c79a0a8d34aafe89d9b302bb60e6" category="inline-link-macro-rx"></block>。</block>
   <block id="cf7d94394de047b740fa81f94ae8f105" category="section-title">BlueXP分层的工作原理</block>
@@ -1180,7 +1172,6 @@
   <block id="bf4c230d3288241d6fe6af9788342fad" category="paragraph"><block ref="bf4c230d3288241d6fe6af9788342fad" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9f8c581a3e79e5eec6093e6268b28bc1" category="paragraph">从较高的层面来看、BlueXP分层的工作原理如下：</block>
   <block id="5a7419c9aa51e2139e939dedaa6171a0" category="inline-link">请参见BlueXP备份和恢复的分层策略注意事项</block>
-  <block id="8fc6e8ea9d2f88c3de5ad8e8291110e2" category="list-text">Cloud Backup 同样会受到使用分层策略设置的卷的影响。<block ref="c38d488619b3038630335754946446ec" category="inline-link-rx"></block>。</block>
   <block id="7cbf862de1ab23f12df78abcf9a0087e" category="list-text">BlueXP分层可分层的卷总数可能小于ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档<block ref="bc16a784cd65f4901578ebb3b70f2118" category="inline-link-rx"></block>。</block>
   <block id="9f59a0e0e7951a95c986f51f69c22219" category="summary">BlueXP分层(Cloud Tiering)通过自动将内部ONTAP 集群中的非活动数据分层到对象存储、将数据中心扩展到云。</block>
   <block id="94cbb43a5cde5c6df8693b056bc08139" category="doc">XP Bluetiering文档</block>
@@ -1226,7 +1217,6 @@
   <block id="f106af130ecd68cee50ea019090595af" category="paragraph">Connector是在您的云帐户或内部环境中的计算实例上运行的软件、可使BlueXP安全地管理云资源。要使用BlueXP分层服务、您必须部署Connector。</block>
   <block id="371daca43d3f216ec028adfb6f08791a" category="section-title">在使用BlueXP分层之前、是否需要云服务提供商的帐户？</block>
   <block id="6c2459f9732015ce352b4650b26238ee" category="list-text">Connector需要通过端口443与ONTAP 集群、对象存储和BlueXP分层服务建立出站HTTPS连接。</block>
-  <block id="1e667a31cdcaa9d9fbd90579cf356b65" category="paragraph">除BlueXP分层之外、<block ref="5ed6ecd932db92d4be0f0df08b269167" category="inline-link-rx"></block> 和<block ref="f7c27c91081209d9919b1be7040611f3" category="inline-link-rx"></block> 可用于监控和报告。</block>
   <block id="78e084a8e123f468bdc8292351608ac4" category="paragraph">是的。云层不能提供与本地层相同的延迟、因为延迟取决于连接情况。为了估算对象存储的延迟和吞吐量、BlueXP分层提供了一个云性能测试(基于ONTAP 对象存储配置程序)、可在附加对象存储后以及设置分层之前使用该测试。</block>
   <block id="588536d1b6de932fbea2c2b22f963d72" category="summary">从第一个集群设置分层时、即可免费试用30天的BlueXP分层。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为BlueXP分层付费。</block>
   <block id="8202299929ccdfe388049a03c2c36d60" category="doc">为BlueXP分层设置许可</block>
@@ -1244,13 +1234,10 @@
   <block id="30a3bb6537e5a17883dc40863aa0ea3e" category="paragraph">NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层*许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。</block>
   <block id="c2319a35daf2868e6d5793e8fa613108" category="paragraph">如果您没有BlueXP分层许可证、请联系我们购买一个：</block>
   <block id="d24c279c3d050f8132eeb782120e60fe" category="paragraph">或者、如果您有一个不会使用的未分配的基于节点的Cloud Volumes ONTAP 许可证、则可以将其转换为具有相同美元等价性和相同到期日期的BlueXP分层许可证。<block ref="c110e5a4a66d7429a8ced7dc2264a8f5" category="inline-link-rx"></block>。</block>
-  <block id="b8581eaad8e7b7a4a1beac6b45831d23" category="paragraph">您可以使用BlueXP中的"数字电子钱包"页面管理BlueXP分层BYOL许可证。您可以添加新许可证并更新现有许可证。</block>
   <block id="feace567e2626d7786ec5e18354a5177" category="section-title">从2021年开始实施BlueXP分层BYOL许可</block>
   <block id="519bd74c1aa3e9805e24269a27ef9b6e" category="paragraph">全新的* BlueXP分层*许可证于2021年8月推出、用于分层使用BlueXP分层服务的BlueXP中支持的配置。BlueXP目前支持分层到以下云存储：Amazon S3、Azure Blob存储、Google云存储、NetApp StorageGRID 和S3兼容对象存储。</block>
   <block id="219f576e0419ffa72026ee6b3730b581" category="admonition">请注意、分层到StorageGRID 不需要FabricPool 或BlueXP分层许可证。</block>
-  <block id="3be8ee7a7b2f8246a1e4dc464e4ef456" category="list-text">如果您使用的配置在BlueXP中受支持、则FabricPool 许可证将转换为BlueXP分层许可证、并显示在数字电子钱包中。当这些初始许可证到期时、您需要更新BlueXP分层许可证。</block>
   <block id="7a75abe8763b34e741fcabf5e89398eb" category="cell">XP Bluetiering许可证</block>
-  <block id="ba94d525afe06126a273ca0e478b0033" category="cell">它已在BlueXP的数字市场中注册。</block>
   <block id="534497403860589544cd9e470d2d110b" category="cell">分层配置和管理通过BlueXP中的BlueXP分层服务完成。</block>
   <block id="316a7aed758eb7b043492e848b931117" category="section-title">获取BlueXP分层许可证文件</block>
   <block id="410b8be575ba665b4d7188d2d9a7d9f7" category="paragraph">购买BlueXP分层许可证后、您可以通过输入BlueXP分层序列号和NSS帐户或上传NLF许可证文件在BlueXP中激活此许可证。以下步骤显示了如果您计划使用此方法，如何获取 NLF 许可证文件。</block>
@@ -1273,14 +1260,10 @@
   <block id="ba4742e3fc97f92aee8dd17337d92765" category="paragraph">以下配置中的ONTAP 集群可以使用BlueXP分层许可证、但应用此许可证的方式必须与使用FabricPool 镜像的单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置不同：</block>
   <block id="788e22af5bb5495bee686a619fa97145" category="list-text">安装在"非公开站点"中的集群</block>
   <block id="8ab685181bd5ad9c1898cb0fe6c3212d" category="inline-link-macro">在BlueXP分层中发现任何这些特殊集群类型</block>
-  <block id="e406316a951be7ef2d7620834e306709" category="paragraph">当您 <block ref="2383fd55f46b5a2b7b7779e64af3b388" category="inline-link-macro-rx"></block>、BlueXP分层可识别FabricPool 许可证并将该许可证添加到数字市场。这些集群将继续照常对数据进行分层。FabricPool 许可证过期后、您需要购买BlueXP分层许可证。</block>
   <block id="9972c47ee1ba72baf900b3971905721d" category="paragraph">在BlueXP分层中发现典型集群时、您将使用BlueXP分层界面配置分层。在这些情况下、将执行以下操作：</block>
-  <block id="6c146659202ac52995f6f007794c8871" category="list-text">"父级"BlueXP分层许可证可跟踪所有集群用于分层的容量、以确保许可证中有足够的容量。总许可容量和到期日期显示在数字电子钱包中。</block>
-  <block id="174518b6fbe02c3eb44c1ecc876e9e3b" category="admonition">System Manager或ONTAP 命令行界面中显示的"子"许可证的许可容量和到期日期不是真实信息、因此、如果信息不相同、请勿担心。这些值由BlueXP分层软件在内部进行管理。真实信息会在"数字电子钱包"中进行跟踪。</block>
   <block id="880039d59f01ad89d7c11a3c7888a834" category="paragraph">对于上述两种配置、您需要使用System Manager或ONTAP 命令行界面(而不是使用XP Blueering界面)配置分层。因此、在这些情况下、您需要从BlueXP分层界面手动将"子"许可证推送到这些集群。</block>
   <block id="ed0863ab532ee38ce963496de5e46884" category="inline-link-macro">购买BlueXP分层许可证</block>
   <block id="5b68fac5f1ce77d65201586ce9a60468" category="list-text"><block ref="1f8cdb76c7bd9ccb2f67a5fe3a108324" category="inline-link-macro-rx"></block> 新集群所需的容量。</block>
-  <block id="9a717e74f3ad8b42becbe48c1eebbfb3" category="list-text">在BlueXP中、 <block ref="126e6b50997e0f1c13137798544366a7" category="inline-link-macro-rx"></block>。</block>
   <block id="35871aa5a51169ec1ce0c1aa1e2550f0" category="list-text">在BlueXP分层中、 <block ref="210b64e2207c15c9773eb7d42739f7fc" category="inline-link-macro-rx"></block>。</block>
   <block id="5853c8a054007c0c99bbc9662a53c4fb" category="summary">BlueXP分层支持两个访问层以及大多数地区。</block>
   <block id="e8823c938290b3df1d69b5821a4bbbb8" category="paragraph">在将数据分层设置为Azure时、BlueXP分层会自动对非活动数据使用_hot_访问层。BlueXP分层可以应用生命周期规则、以便在一定天数后将数据从_hot_访问层过渡到_cool_访问层。</block>
@@ -1320,7 +1303,6 @@
   <block id="6679647b3dd9ac6d22d449c9098cc77d" category="paragraph">选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到StorageGRID 对象存储的连接。</block>
   <block id="56273c1cb08574200c49973b9bc5c615" category="summary">了解BlueXP分层的新增功能。</block>
   <block id="d423420066ca2ec630afe096f14eae4b" category="doc">BlueXP分层的新增功能</block>
-  <block id="833caf67645e1789cd80ac6548cb7d30" category="paragraph">已从BlueXP分层界面中删除许可选项卡。所有按需购买(PAYGO)订阅的许可现在均可从BlueXP分层内部信息板访问。此外、该页面还提供了一个指向数字电子钱包的链接、您可以查看和管理任何BlueXP分层自带许可证(BYOL)。</block>
   <block id="35083b11acbb58293019b38b8f232a5a" category="paragraph">您可以从"层卷"页面下载报告、以便查看所管理集群上所有卷的分层状态。BlueXP分层会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给公司中的其他人员。<block ref="b6be70acd3f28aaa18a7e212c9bc7736" category="inline-link-rx"></block>。</block>
   <block id="8c14896b1d1fc37f02aa2e6dfc06354a" category="paragraph">由于BlueXP分层发生了变化、您需要更改以下连接器端点才能成功执行BlueXP分层操作：</block>
   <block id="3afb7cae2b7c3e96c6a4e1df765d3dce" category="section-title">拖放以启用BlueXP分层到Azure Blob、Google Cloud Storage和StorageGRID</block>
@@ -1372,4 +1354,22 @@
   <block id="54715a5b3c5fb74681657643084de7cc" category="sidebar">BlueXP分层文档</block>
   <block id="578b58628b699675aa94a9cb030f4eec" category="sidebar">使用BlueXP分层</block>
   <block id="10fd54f4214c20c0fb0c8174413e67e6" category="sidebar">BlueXP分层博客</block>
+  <block id="368170efaa08caf814d05ad25b8849fe" category="paragraph">购买BlueXP分层许可证后、您需要使用BlueXP中的BlueXP数字钱包来添加许可证。 <block ref="18ff855f2755df77b673603c1159f8d7" category="inline-link-macro-rx"></block>。</block>
+  <block id="17d8fa7a4b309312cebf9b59da9a2365" category="list-text">BlueXP备份和恢复同样受使用层策略设置的卷的影响。<block ref="c38d488619b3038630335754946446ec" category="inline-link-rx"></block>。</block>
+  <block id="046d76eda0c1ca3ef0dc85e15394ce90" category="inline-link">BlueXP数字顾问</block>
+  <block id="3ee9290056c3e6ae9cd8482931c1f104" category="paragraph">除BlueXP分层之外、<block ref="5ed6ecd932db92d4be0f0df08b269167" category="inline-link-rx"></block> 和<block ref="bced2809c175fbbacaa63c811a554606" category="inline-link-rx"></block> 可用于监控和报告。</block>
+  <block id="bb987c734075abca5676f20a90739886" category="paragraph">您可以使用BlueXP数字钱包页面管理BlueXP Tiering BYOL许可证。您可以添加新许可证并更新现有许可证。</block>
+  <block id="3fafe7ba610db00ca5147d2e5246692c" category="list-text">如果您使用的是BlueXP支持的配置、您的FabricPool 许可证将转换为BlueXP分层许可证、它们将显示在BlueXP电子钱包中。当这些初始许可证到期时、您需要更新BlueXP分层许可证。</block>
+  <block id="c02dda54728a1d7496d2f0b0f6025e92" category="cell">它已注册到BlueXP电子钱包中。</block>
+  <block id="01b47f7bb171f9330df8674ddf7b5762" category="paragraph">此状态也会显示在BlueXP数字钱包页面中。</block>
+  <block id="0553876f11122be0920f9fa9c803d152" category="inline-image-macro">在BlueXP数字钱包页面中显示即将到期的许可证的屏幕截图。</block>
+  <block id="be95aaa9ff9dad75f49bfadf917b8f70" category="paragraph"><block ref="be95aaa9ff9dad75f49bfadf917b8f70" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b23b97d3c26b0f7e2265329756cea9ca" category="paragraph">在您为许可证付费并将其注册到NetApp 支持站点 之后、BlueXP会自动更新BlueXP电子钱包中的许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。</block>
+  <block id="70196feeb01dc8dfdb5276a2398e60f9" category="list-text">在BlueXP数字钱包页面的_Data Services Licenss_选项卡中、单击 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 对于要更新的服务序列号，请单击 * 更新许可证 * 。</block>
+  <block id="f06c1d2da57ae64b66baec3eaec4f2fb" category="paragraph">当您 <block ref="2383fd55f46b5a2b7b7779e64af3b388" category="inline-link-macro-rx"></block>BlueXP分层可识别FabricPool 许可证并将许可证添加到BlueXP电子钱包中。这些集群将继续照常对数据进行分层。FabricPool 许可证过期后、您需要购买BlueXP分层许可证。</block>
+  <block id="5ac06364a2cad0af68f73e54f03c4205" category="list-text">"父级"BlueXP分层许可证可跟踪所有集群用于分层的容量、以确保许可证中有足够的容量。BlueXP电子钱包中显示了总许可容量和到期日期。</block>
+  <block id="4acb8884a848c4db6d41852f96aa4ef6" category="admonition">System Manager或ONTAP 命令行界面中显示的"子"许可证的许可容量和到期日期不是真实信息、因此、如果信息不相同、请勿担心。这些值由BlueXP分层软件在内部进行管理。BlueXP电子钱包可跟踪真实信息。</block>
+  <block id="f4c3107fb758c7edea8576312dff63ac" category="inline-link-macro">将许可证添加到BlueXP电子钱包</block>
+  <block id="1953cb0b13a811a9fb3db1b69c5f0a2d" category="list-text">在BlueXP中、 <block ref="fb3a1da5f1072aaa3d6f4c9eaa7cccb2" category="inline-link-macro-rx"></block>。</block>
+  <block id="a109e3cb0dd9ad8fb1c83a4902e1c322" category="paragraph">已从BlueXP分层界面中删除许可选项卡。所有按需购买(PAYGO)订阅的许可现在均可从BlueXP分层内部信息板访问。此外、还提供了一个从该页面到BlueXP数字钱包的链接、可用于查看和管理任何BlueXP分层自带许可证(BYOL)。</block>
 </blocks>

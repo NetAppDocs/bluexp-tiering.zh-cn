@@ -111,7 +111,7 @@ NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层
 
 或者、如果您有一个不会使用的未分配的基于节点的Cloud Volumes ONTAP 许可证、则可以将其转换为具有相同美元等价性和相同到期日期的BlueXP分层许可证。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["有关详细信息，请访问此处"^]。
 
-您可以使用BlueXP中的"数字电子钱包"页面管理BlueXP分层BYOL许可证。您可以添加新许可证并更新现有许可证。
+您可以使用BlueXP数字钱包页面管理BlueXP Tiering BYOL许可证。您可以添加新许可证并更新现有许可证。
 
 
 
@@ -126,7 +126,7 @@ TIP: 请注意、分层到StorageGRID 不需要FabricPool 或BlueXP分层许可�
 
 如果您当前正在使用 FabricPool 许可，则在 FabricPool 许可证达到到期日期或最大容量之前，您不会受到影响。如果您需要更新许可证，请联系 NetApp ，或者在更早版本时联系 NetApp ，以确保将数据分层到云的能力不会中断。
 
-* 如果您使用的配置在BlueXP中受支持、则FabricPool 许可证将转换为BlueXP分层许可证、并显示在数字电子钱包中。当这些初始许可证到期时、您需要更新BlueXP分层许可证。
+* 如果您使用的是BlueXP支持的配置、您的FabricPool 许可证将转换为BlueXP分层许可证、它们将显示在BlueXP电子钱包中。当这些初始许可证到期时、您需要更新BlueXP分层许可证。
 * 如果您使用的配置在BlueXP中不受支持、则可以继续使用FabricPool 许可证。 https://docs.netapp.com/us-en/ontap/cloud-install-fabricpool-task.html["请参见如何使用 System Manager 进行许可证分层"^]。
 
 
@@ -140,7 +140,7 @@ TIP: 请注意、分层到StorageGRID 不需要FabricPool 或BlueXP分层许可�
 | 这是一个 _float_ 许可证，您可以跨多个内部 ONTAP 集群使用。 | 这是您为每个集群购买的一个许可证，并为 _every 集群购买许可证。 
 
 
-| 它已在BlueXP的数字市场中注册。 | 它可使用 System Manager 或 ONTAP 命令行界面应用于各个集群。 
+| 它已注册到BlueXP电子钱包中。 | 它可使用 System Manager 或 ONTAP 命令行界面应用于各个集群。 
 
 
 | 分层配置和管理通过BlueXP中的BlueXP分层服务完成。 | 分层配置和管理可通过 System Manager 或 ONTAP 命令行界面完成。 
@@ -204,21 +204,21 @@ BlueXP会添加许可证、以便您的BlueXP分层服务处于活动状态。
 
 image:screenshot_services_license_expire2.png["在BlueXP分层页面中显示即将过期许可证的屏幕截图。"]
 
-此状态也会显示在 " 数字电子钱包 " 页面中。
+此状态也会显示在BlueXP数字钱包页面中。
 
-image:screenshot_services_license_expire1.png["在 \" 数字电子钱包 \" 页面中显示即将到期许可证的屏幕截图。"]
+image:screenshot_services_license_expire1.png["在BlueXP数字钱包页面中显示即将到期的许可证的屏幕截图。"]
 
 您可以在BlueXP分层许可证到期之前对其进行更新、以便将数据分层到云的能力不会中断。
 
 .步骤
 . 单击BlueXP右下角的聊天图标、请求延长您的期限、或者为特定序列号申请更多容量、以获得您的BlueXP分层许可证。
 +
-在您为许可证付费并将其注册到NetApp 支持站点 后、BlueXP会自动在数字电子钱包中更新许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。
+在您为许可证付费并将其注册到NetApp 支持站点 之后、BlueXP会自动更新BlueXP电子钱包中的许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。
 
 . 如果BlueXP无法自动更新许可证、则需要手动上传许可证文件。
 +
 .. 您可以 <<获取BlueXP分层许可证文件,从 NetApp 支持站点获取许可证文件>>。
-.. 在数字电子邮件页面的 _Data Services Licenses_ 选项卡中，单击 image:screenshot_horizontal_more_button.gif["更多图标"] 对于要更新的服务序列号，请单击 * 更新许可证 * 。
+.. 在BlueXP数字钱包页面的_Data Services Licenss_选项卡中、单击 image:screenshot_horizontal_more_button.gif["更多图标"] 对于要更新的服务序列号，请单击 * 更新许可证 * 。
 +
 image:screenshot_services_license_update.png["选择特定服务的更新许可证按钮的屏幕截图。"]
 
@@ -244,7 +244,7 @@ BlueXP会更新许可证、以便您的BlueXP分层服务继续处于活动状�
 
 === 具有FabricPool 许可证的现有集群的进程
 
-当您 link:task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering["在BlueXP分层中发现任何这些特殊集群类型"]、BlueXP分层可识别FabricPool 许可证并将该许可证添加到数字市场。这些集群将继续照常对数据进行分层。FabricPool 许可证过期后、您需要购买BlueXP分层许可证。
+当您 link:task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering["在BlueXP分层中发现任何这些特殊集群类型"]BlueXP分层可识别FabricPool 许可证并将许可证添加到BlueXP电子钱包中。这些集群将继续照常对数据进行分层。FabricPool 许可证过期后、您需要购买BlueXP分层许可证。
 
 
 
@@ -252,12 +252,12 @@ BlueXP会更新许可证、以便您的BlueXP分层服务继续处于活动状�
 
 在BlueXP分层中发现典型集群时、您将使用BlueXP分层界面配置分层。在这些情况下、将执行以下操作：
 
-. "父级"BlueXP分层许可证可跟踪所有集群用于分层的容量、以确保许可证中有足够的容量。总许可容量和到期日期显示在数字电子钱包中。
+. "父级"BlueXP分层许可证可跟踪所有集群用于分层的容量、以确保许可证中有足够的容量。BlueXP电子钱包中显示了总许可容量和到期日期。
 . 每个集群都会自动安装"子"分层许可证、以便与"父"许可证进行通信。
 
 
 
-NOTE: System Manager或ONTAP 命令行界面中显示的"子"许可证的许可容量和到期日期不是真实信息、因此、如果信息不相同、请勿担心。这些值由BlueXP分层软件在内部进行管理。真实信息会在"数字电子钱包"中进行跟踪。
+NOTE: System Manager或ONTAP 命令行界面中显示的"子"许可证的许可容量和到期日期不是真实信息、因此、如果信息不相同、请勿担心。这些值由BlueXP分层软件在内部进行管理。BlueXP电子钱包可跟踪真实信息。
 
 对于上述两种配置、您需要使用System Manager或ONTAP 命令行界面(而不是使用XP Blueering界面)配置分层。因此、在这些情况下、您需要从BlueXP分层界面手动将"子"许可证推送到这些集群。
 
@@ -269,7 +269,7 @@ NOTE: System Manager或ONTAP 命令行界面中显示的"子"许可证的许可�
 此时请勿配置分层。
 
 . link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["购买BlueXP分层许可证"] 新集群所需的容量。
-. 在BlueXP中、 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["将许可证添加到Digital Wallet中"]。
+. 在BlueXP中、 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["将许可证添加到BlueXP电子钱包"]。
 . 在BlueXP分层中、 link:task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering["发现新集群"]。
 . 在集群页面中、单击 image:screenshot_horizontal_more_button.gif["更多图标"] 并选择*部署许可证*。
 +
