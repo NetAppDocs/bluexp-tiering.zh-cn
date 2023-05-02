@@ -133,7 +133,7 @@ link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-paygo-subscription["
 
 === 自带许可证
 
-通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期限许可证、并指定任意分层容量。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。
+通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期许可证、并指定任何分层容量(最低10 TiB起)。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。
 
 购买BlueXP分层许可证后、您需要使用BlueXP中的BlueXP数字钱包来添加许可证。 link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["请参见如何使用BlueXP分层BYOL许可证"]。
 

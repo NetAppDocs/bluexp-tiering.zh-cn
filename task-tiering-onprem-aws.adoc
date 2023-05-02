@@ -150,9 +150,6 @@ BlueXP Connector是BlueXP功能的主要软件。需要使用连接器对非活�
 
 NOTE: 从ONTAP 9.5开始、BlueXP分层支持FlexGroup 卷。安装程序的工作方式与任何其他卷相同。
 
-所需的应用程序访问参数:: 集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["有关详细信息、请参见"security login"命令"]。
-
-
 
 
 === 集群网络连接要求

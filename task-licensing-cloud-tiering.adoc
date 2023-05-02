@@ -101,7 +101,7 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 == 使用BlueXP分层BYOL许可证
 
-NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层*许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。
+NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层*许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。分层BYOL许可证的最小容量从10 TiB开始。
 
 如果您没有BlueXP分层许可证、请联系我们购买一个：
 

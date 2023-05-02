@@ -677,9 +677,6 @@
   <block id="271790724aaa38f93a773b0039eb982e" category="list-text">将此新对象存储作为镜像附加到现有聚合。</block>
   <block id="482e7ac23805e20ce06fe8da5f067a40" category="list-text">交换主对象存储和镜像对象存储。</block>
   <block id="35f98bf089ff4cd3deaed43fb8a4c900" category="list-text">取消镜像Amazon S3对象存储。</block>
-  <block id="096dcd3788cecb603666aeab1323e016" category="list-text">所需的应用程序访问参数</block>
-  <block id="5a5be55d6d19108a5a53e94d4b8bca13" category="inline-link">有关详细信息、请参见"security login"命令</block>
-  <block id="fcccb04322797151b1c63a24fdbe8596" category="list-text">集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。<block ref="c49e76a401ad77700c5ead0ea46ac66a" category="inline-link-rx"></block>。</block>
   <block id="303b6b375dcceef17b9d24c15d95c29b" category="list-text">*选择提供商*：选择* Amazon Web Services*并单击*继续*。</block>
   <block id="c22f32bc9795fa45c61320309de1c56e" category="list-text">* S3 Bucket*：添加新的S3存储分段或选择以前缀_fabric-pool_开头的现有S3存储分段、选择存储分段区域、然后单击*继续*。</block>
   <block id="7de06bb2b943b6fd5754912e3f1d4ceb" category="paragraph"><block ref="7de06bb2b943b6fd5754912e3f1d4ceb" category="inline-image-macro-rx" type="image"></block></block>
@@ -1162,7 +1159,6 @@
   <block id="793e8e21e4c6d6e9102d21e5ceeb9ef6" category="paragraph">在免费试用期间、或者如果您未超过BlueXP分层BYOL许可证、则不会从按需购买订阅中收取任何费用。</block>
   <block id="a48331bea4b593b755f99fa927d65638" category="paragraph"><block ref="4a6532d8b81197880664db7ef07b3202" category="inline-link-macro-rx"></block>。</block>
   <block id="a05ea6f9f4f0a8968aa8c0288bad4b53" category="paragraph">在将非活动数据分层到Amazon S3时、BlueXP分层提供年度合同。此计划的有效期为1年、2年或3年。</block>
-  <block id="26913edc94f523c2a2b1416655f6ceb5" category="paragraph">通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期限许可证、并指定任意分层容量。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。</block>
   <block id="49de8995cf3b9508af67fbbd5e085640" category="inline-link-macro">请参见如何使用BlueXP分层BYOL许可证</block>
   <block id="a42e9abff9358e2d7f140d2a5cca181b" category="inline-link-macro">阅读有关BlueXP分层许可证与FabricPool 许可证之间的区别的更多信息</block>
   <block id="73bd12c72df2f49e3c020653025ff48b" category="admonition">自 2021 年 8 月起，旧的 * FabricPool * 许可证已替换为 * 云分层 * 许可证。 <block ref="e6f9c79a0a8d34aafe89d9b302bb60e6" category="inline-link-macro-rx"></block>。</block>
@@ -1231,7 +1227,6 @@
   <block id="de1cdae44076062eb7f546c81cfb6990" category="paragraph">从GCP Marketplace订阅BlueXP分层、设置按需购买的订阅、以便将数据从ONTAP 集群分层到Google Cloud存储。</block>
   <block id="67731652b48fdb7846ca466471556450" category="paragraph">每年购买一份年度合同、为BlueXP分层支付费用。</block>
   <block id="93f26f7b1e47a3f6bebd49a7fa7dd4b6" category="section-title">使用BlueXP分层BYOL许可证</block>
-  <block id="30a3bb6537e5a17883dc40863aa0ea3e" category="paragraph">NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层*许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。</block>
   <block id="c2319a35daf2868e6d5793e8fa613108" category="paragraph">如果您没有BlueXP分层许可证、请联系我们购买一个：</block>
   <block id="d24c279c3d050f8132eeb782120e60fe" category="paragraph">或者、如果您有一个不会使用的未分配的基于节点的Cloud Volumes ONTAP 许可证、则可以将其转换为具有相同美元等价性和相同到期日期的BlueXP分层许可证。<block ref="c110e5a4a66d7429a8ced7dc2264a8f5" category="inline-link-rx"></block>。</block>
   <block id="feace567e2626d7786ec5e18354a5177" category="section-title">从2021年开始实施BlueXP分层BYOL许可</block>
@@ -1372,4 +1367,6 @@
   <block id="f4c3107fb758c7edea8576312dff63ac" category="inline-link-macro">将许可证添加到BlueXP电子钱包</block>
   <block id="1953cb0b13a811a9fb3db1b69c5f0a2d" category="list-text">在BlueXP中、 <block ref="fb3a1da5f1072aaa3d6f4c9eaa7cccb2" category="inline-link-macro-rx"></block>。</block>
   <block id="a109e3cb0dd9ad8fb1c83a4902e1c322" category="paragraph">已从BlueXP分层界面中删除许可选项卡。所有按需购买(PAYGO)订阅的许可现在均可从BlueXP分层内部信息板访问。此外、还提供了一个从该页面到BlueXP数字钱包的链接、可用于查看和管理任何BlueXP分层自带许可证(BYOL)。</block>
+  <block id="891ca3a65a7ff1025eab9d895f17f04a" category="paragraph">通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期许可证、并指定任何分层容量(最低10 TiB起)。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。</block>
+  <block id="2105bccac1837aa99c46baf38ee1c998" category="paragraph">NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层*许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。分层BYOL许可证的最小容量从10 TiB开始。</block>
 </blocks>

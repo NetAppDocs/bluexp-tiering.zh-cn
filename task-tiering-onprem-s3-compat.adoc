@@ -76,7 +76,6 @@ NOTE: Connector 与 S3 兼容对象存储服务器之间的通信仅用于对象
 
 支持的 ONTAP 平台:: 您可以对 AFF 系统或具有纯 SSD 聚合或纯 HDD 聚合的 FAS 系统中的数据进行分层。
 支持的 ONTAP 版本:: ONTAP 9.8 或更高版本
-所需的应用程序访问参数:: 集群管理员用户必须具有"控制台"应用程序访问权限。您可以使用ONTAP 命令`ssecurity login show`进行验证。对于"admin"用户、"console "应显示在_Application_column中。如有必要、使用`ssecurity login create`命令添加控制台应用程序访问权限。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["有关详细信息、请参见"security login"命令"]。
 集群网络连接要求::
 +
 --
