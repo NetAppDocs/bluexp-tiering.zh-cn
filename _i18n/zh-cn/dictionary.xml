@@ -381,8 +381,6 @@
   <block id="2bdb7af2b6613fafdba930fb09034d3f" category="paragraph"><block ref="2bdb7af2b6613fafdba930fb09034d3f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="41e921305ae1b027e5d364af4a2a9df2" category="list-text">在 _Update License_ 页面中，上传许可证文件并单击 * 更新许可证 * 。</block>
   <block id="8fa2690e71ce0c54acb839630146cadd" category="doc">简要了解集群中的数据分层</block>
-  <block id="ca7efa87a2dfa1e448ef01cfdaa54489" category="list-text">当前将数据分层到云的集群数量，未将数据分层到云的集群数量以及不支持数据分层的集群数量。</block>
-  <block id="5198ebed4bb19dd4a54ec09aefa9b18a" category="list-text">分层到云的数据量，以及集群上的冷热数据量。</block>
   <block id="9e476387322a5c250893cf9c5c4ce78c" category="list-text">策略</block>
   <block id="4be1b347cffb3177e749a7dea6f54978" category="list-text">每个分层策略应用于卷的次数。</block>
   <block id="28c123c8cd56ba4e4b9a732aa779fbc1" category="list-text">与每种类型的 Marketplace 订阅关联的集群数量以及有关您的订阅状态的指示。</block>
@@ -1085,12 +1083,9 @@
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">使用此选项将提示您重新登录。请注意、这些帐户的令牌将在90天后过期。系统将发布通知、提醒您注意这一点。</block>
   <block id="ad8e06edf5256a509aa4b626821aded3" category="list-text">与S3兼容的对象存储(例如MinIO)</block>
   <block id="ad54fbabce5f384433a02d947362a539" category="paragraph">此时、已对MinIO对象存储进行了资格认定。</block>
-  <block id="75ae3190ee97d211e630e0c0f1b5ddeb" category="inline-image-macro">"内部信息板"页面的屏幕截图。</block>
-  <block id="59b117edc0d3d63aaf2729e082c38261" category="paragraph"><block ref="59b117edc0d3d63aaf2729e082c38261" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7a7553c4b7ed244f088a49d323385c57" category="list-text">发现的集群</block>
   <block id="82de8cfbf4bbb2c6acea13e93599b85d" category="list-text">数据概述</block>
   <block id="8ee0131ead01994f7bd95933f4e9a923" category="list-text">分层概述</block>
-  <block id="4e03a2d38322e40af6a6e79c953fef0e" category="list-text">当前正在分层的数据量以及可能分层的数据量。</block>
   <block id="f9600e20b044515122327f9895faca66" category="list-text">市场订阅</block>
   <block id="14cbdefab43f51a65021d80ce80980c0" category="list-text">从*集群*页面中、单击集群的菜单图标并选择*集群信息*。</block>
   <block id="bff5f986b8f0d22acffc0010e8d56dde" category="paragraph">您可以从Tiering _Cluster_页面将未发现的内部ONTAP 集群添加到BlueXP、以便为集群启用分层。</block>
@@ -1101,7 +1096,6 @@
   <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">2023年4月3日</block>
   <block id="2e79231a13ecf62585403e20da2dea4a" category="section-title">已删除许可选项卡</block>
   <block id="66a0b4752150538292b81c073ca0b83b" category="section-title">分层选项卡已重命名并更新了内容</block>
-  <block id="10d9a166ad36cdda1e0585914ac18d5f" category="paragraph">"集群信息板"选项卡已重命名为"集群"、"内部概述"选项卡已重命名为"内部信息板"。这些页面添加了一些信息、可帮助您评估是否可以通过其他分层配置优化存储空间。</block>
   <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*附件(可选)*：一次最多上传五个附件。</block>
   <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">每个文件的附件数限制为25 MB。支持以下文件扩展名：txt、log、pdf、jp6/jpeu、rtf、 doc/docx、xls/xlsx和csv。</block>
   <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*更新案例注释*：提供有关您的问题的更多详细信息、或者选择*上传文件*最多附加五个文件。</block>
@@ -1126,7 +1120,6 @@
   <block id="23382689bb5023b2975968f57d098105" category="list-text">从高级设置页面中、将要使用的对象存储拖动到镜像对象存储的位置。</block>
   <block id="ebfa7c7e62c629e534a590d9c5bd48ac" category="list-text">在高级设置页面中、单击聚合的菜单图标、然后选择*交换目标*。</block>
   <block id="85c797dc141e0eb32826e3caf502008c" category="list-text">在高级设置页面中、单击聚合的菜单图标、然后选择*取消镜像对象存储*。</block>
-  <block id="48266b46c49dd5c5afbe71046b3b1261" category="list-text">在BlueXP中、单击*移动性&gt;分层&gt;内部信息板*。</block>
   <block id="e44d709d5fa4c3c47b7380bfc09d83fa" category="inline-link">查看定价详细信息</block>
   <block id="874323801a4fa98c0f05aaa80c3c1d82" category="paragraph"><block ref="f7ce611d89d41a39c0cd111c48bbba76" category="inline-link-rx"></block>。</block>
   <block id="2b36f8b3b2cccdc6807233a79e1b8d1d" category="paragraph">如果达到BYOL容量限制、则会停止对新冷数据进行分层。以前分层的所有数据仍可访问；这意味着您可以检索和使用此数据。检索后、此数据将从云移回性能层。</block>
@@ -1138,7 +1131,6 @@
   <block id="c395006d6063b66336be768382280c9e" category="paragraph">请查看的完整端点列表<block ref="684a3f4234dd7d8f8b7d90e00da95138" category="inline-link-rx"></block>，<block ref="fd66fc554da543d0f7f94dcde36b2a2f" category="inline-link-rx"></block>或<block ref="2484264a704a749bc992bec76f43f13d" category="inline-link-rx"></block> 云环境。</block>
   <block id="90d333fba347612ff8ecc43a29a3eed9" category="inline-link">您可以在BlueXP的工作环境中为Cloud Volumes ONTAP 系统设置分层</block>
   <block id="a36dfacc56a130ed7ae9dd3590426d64" category="summary">BlueXP分层可提供每个内部集群的数据分层的聚合视图。此概述可清晰地描述您的环境并使您能够采取适当的措施。</block>
-  <block id="89de184d96dfdc1dd515cfe64321c1c5" category="paragraph">只需单击*分层&gt;内部信息板*即可。XP Bluetiering提供了有关您的环境的以下详细信息。</block>
   <block id="55f9ae56b6fac196eddd4055167857aa" category="summary">NetApp的BlueXP分层服务可将内部ONTAP 集群中的非活动数据自动分层到对象存储、从而将您的数据中心扩展到云。这样可以在集群上腾出宝贵的空间来处理更多工作负载，而无需更改应用程序层。BlueXP分层可以降低数据中心的成本、并使您能够从资本支出模式切换到运营支出模式。</block>
   <block id="e920ef862d77b3f54bb7bf3e535062a3" category="doc">了解有关BlueXP分层的信息</block>
   <block id="1f5bb8e27fe9e5bc5db4e7d70b757a81" category="paragraph">FabricPool 分层服务利用了_BlueXP的功能。FabricPool 是一种 NetApp Data Fabric 技术，可将数据自动分层到低成本的对象存储。活动数据（热数据）保留在本地层（内部 ONTAP 聚合）上，而非活动数据（冷数据）则移至云层，同时保持 ONTAP 数据效率。</block>
@@ -1216,7 +1208,6 @@
   <block id="78e084a8e123f468bdc8292351608ac4" category="paragraph">是的。云层不能提供与本地层相同的延迟、因为延迟取决于连接情况。为了估算对象存储的延迟和吞吐量、BlueXP分层提供了一个云性能测试(基于ONTAP 对象存储配置程序)、可在附加对象存储后以及设置分层之前使用该测试。</block>
   <block id="588536d1b6de932fbea2c2b22f963d72" category="summary">从第一个集群设置分层时、即可免费试用30天的BlueXP分层。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为BlueXP分层付费。</block>
   <block id="8202299929ccdfe388049a03c2c36d60" category="doc">为BlueXP分层设置许可</block>
-  <block id="89bbec154619ad89d4ce9c542dabf604" category="list-text">如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的BlueXP分层。您将在BlueXP分层*内部信息板*选项卡中看到活动订阅。您无需再次订阅。您将在数字电子钱包中看到有效订阅。</block>
   <block id="f6013530929ce5c8125f05448da6c33e" category="list-text">BYOL BlueXP分层许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。</block>
   <block id="4f38e9048319fde605a07b6a4c99d8f5" category="inline-link-macro">详细了解许可如何用于BlueXP分层</block>
   <block id="917e8711906a1b676db9798fcc2be9a1" category="paragraph"><block ref="4edd15551f6199902649e3b2955f6f1d" category="inline-link-macro-rx"></block>。</block>
@@ -1366,7 +1357,24 @@
   <block id="4acb8884a848c4db6d41852f96aa4ef6" category="admonition">System Manager或ONTAP 命令行界面中显示的"子"许可证的许可容量和到期日期不是真实信息、因此、如果信息不相同、请勿担心。这些值由BlueXP分层软件在内部进行管理。BlueXP电子钱包可跟踪真实信息。</block>
   <block id="f4c3107fb758c7edea8576312dff63ac" category="inline-link-macro">将许可证添加到BlueXP电子钱包</block>
   <block id="1953cb0b13a811a9fb3db1b69c5f0a2d" category="list-text">在BlueXP中、 <block ref="fb3a1da5f1072aaa3d6f4c9eaa7cccb2" category="inline-link-macro-rx"></block>。</block>
-  <block id="a109e3cb0dd9ad8fb1c83a4902e1c322" category="paragraph">已从BlueXP分层界面中删除许可选项卡。所有按需购买(PAYGO)订阅的许可现在均可从BlueXP分层内部信息板访问。此外、还提供了一个从该页面到BlueXP数字钱包的链接、可用于查看和管理任何BlueXP分层自带许可证(BYOL)。</block>
   <block id="891ca3a65a7ff1025eab9d895f17f04a" category="paragraph">通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期许可证、并指定任何分层容量(最低10 TiB起)。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。</block>
   <block id="2105bccac1837aa99c46baf38ee1c998" category="paragraph">NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层*许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。分层BYOL许可证的最小容量从10 TiB开始。</block>
+  <block id="76e73aa82e342d9c46acf62eef4dcfc4" category="paragraph">只需单击*分层&gt;内部部署信息板*。XP Bluetiering提供了有关您的环境的以下详细信息。</block>
+  <block id="73363ef02ce267ee93816a7a9661efbb" category="inline-image-macro">"内部部署信息板"页面的屏幕截图。</block>
+  <block id="d8dd920a9088057867f1c70674cd6044" category="paragraph"><block ref="d8dd920a9088057867f1c70674cd6044" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="74a744bb842841bca60d2354efc47e63" category="list-text">BlueXP层发现的内部集群数量。此图表概括说明了这些集群的层状态。</block>
+  <block id="961fae3a3bd92168bb4311abe3732555" category="list-text">高分层—对超过20%的冷数据进行分层的集群</block>
+  <block id="2f099d69366214f0a621dbd6f670d432" category="list-text">低分层—对冷数据进行分层的集群不到20%</block>
+  <block id="94a0f35b6512d82decab6d0169b0d82a" category="list-text">无层—不对任何数据进行层化的集群</block>
+  <block id="74d8fc4a0af61d770b56d0d4511ca8d8" category="list-text">不符合条件—不支持数据层的集群</block>
+  <block id="c5754d852beb82302ca98976ea71cbbc" category="list-text">所有已发现集群正在使用的数据量。此图表可指示这些集群正在分层的数据量以及更多数据。</block>
+  <block id="591210acc9067056ff44d0a3207f9f77" category="list-text">分层数据—分层到云的总冷数据</block>
+  <block id="6cff198ca76939ad9cc090e625ff3510" category="list-text">冷数据—未分层的冷数据总量</block>
+  <block id="35fc384bebd7724a70565ab7ef5ba5f2" category="list-text">热数据—当前正在使用的总热数据</block>
+  <block id="c98782bb630b00f1e0db7b7c6d173e63" category="list-text">Not Eli条件—由于集群或卷不支持数据分层而未分层的总数据</block>
+  <block id="8e7506d0839acfb6f7efb77f1903df0d" category="list-text">当前正在分层的数据量以及可能分层的冷数据量。</block>
+  <block id="6e3d9df489c437a2601f627a5b8935c9" category="paragraph">已从BlueXP分层界面中删除许可选项卡。现在、您可以从BlueXP分层内部部署信息板访问按需购买(PAYGO)订阅的所有许可。此外、还提供了一个从该页面到BlueXP数字钱包的链接、可用于查看和管理任何BlueXP分层自带许可证(BYOL)。</block>
+  <block id="f6e3b39522072e9cb3b0ffb8cecf9b0b" category="paragraph">"集群信息板"选项卡已重命名为"集群"、"内部概述"选项卡已重命名为"内部部署信息板"。这些页面添加了一些信息、可帮助您评估是否可以通过其他分层配置优化存储空间。</block>
+  <block id="cb75eb32a44d8c6565fd938d48a9e7af" category="list-text">如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的BlueXP分层。您将在BlueXP分层*内部信息板*选项卡中看到有效订阅。您无需再次订阅。您将在数字电子钱包中看到有效订阅。</block>
+  <block id="7703863e061bca8dc56bfd0084619b09" category="list-text">在BlueXP中、单击*移动性&gt;分层&gt;内部部署信息板*。</block>
 </blocks>
