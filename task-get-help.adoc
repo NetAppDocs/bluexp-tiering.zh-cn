@@ -76,7 +76,7 @@ NetApp通过多种方式为BlueXP及其云服务提供支持。全天候提供�
 
 
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-create-case.png["创建案例表的屏幕截图、可用于向NetApp支持部门创建案例。"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-create-case.png["创建案例表的屏幕截图、可用于向NetApp支持部门创建案例。"]
 
 
 
@@ -132,19 +132,19 @@ image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/med
 ** 在*组织的案例*下、单击*查看*以查看与您的公司关联的所有案例。
 ** 通过选择确切的日期范围或选择其他时间范围来修改日期范围。
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-case-management-date-range.png["案例管理页面上表上方选项的屏幕截图、可用于选择确切的日期范围或过去7天、30天或3个月。"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-case-management-date-range.png["案例管理页面上表上方选项的屏幕截图、可用于选择确切的日期范围或过去7天、30天或3个月。"]
 
 ** 筛选列的内容。
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-case-management-filter.png["\"状态\"列中筛选选项的屏幕截图、可用于筛选与特定状态(如\"活动\"或\"已关闭\")匹配的案例。"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-case-management-filter.png["\"状态\"列中筛选选项的屏幕截图、可用于筛选与特定状态(如\"活动\"或\"已关闭\")匹配的案例。"]
 
-** 通过单击更改表中显示的列 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-table-columns.png["表中显示的加号图标"] 然后选择要显示的列。
+** 通过单击更改表中显示的列 image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-table-columns.png["表中显示的加号图标"] 然后选择要显示的列。
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-case-management-columns.png["显示可在表中显示的列的屏幕截图。"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-case-management-columns.png["显示可在表中显示的列的屏幕截图。"]
 
 
 
-. 单击以管理现有案例 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-table-action.png["包含三个点的图标、显示在表的最后一列中"] 并选择一个可用选项：
+. 单击以管理现有案例 image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-table-action.png["包含三个点的图标、显示在表的最后一列中"] 并选择一个可用选项：
 +
 ** *查看案例*：查看有关特定案例的完整详细信息。
 ** *更新案例注释*：提供有关您的问题的更多详细信息、或者选择*上传文件*最多附加五个文件。
@@ -155,6 +155,6 @@ image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/med
 
 
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-case-management-actions.png["屏幕截图、显示在表的最后一列中选择菜单后可以执行的操作。"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-case-management-actions.png["屏幕截图、显示在表的最后一列中选择菜单后可以执行的操作。"]
 
 

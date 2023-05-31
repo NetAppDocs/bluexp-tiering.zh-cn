@@ -63,7 +63,7 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
 
 [role="quick-margin-list"]
 * 要从 AWS Marketplace 订阅， https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["转到BlueXP Marketplace产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
-* 要使用BlueXP分层BYOL许可证付费、请发送邮件至：ng-cloud-tiering@netapp.com？Subject=Licensing[如果需要购买许可证、请联系我们]、然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
+* 要使用BlueXP分层BYOL许可证付费、请发送邮件至：ng-cloud-tiering@netapp.com？Subject=Licensing[如果需要购买许可证、请联系我们]、然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["从BlueXP电子钱包中将其添加到您的帐户"]。
 
 
 
@@ -99,9 +99,9 @@ BlueXP Connector是BlueXP功能的主要软件。需要使用连接器对非活�
 
 如果您已在AWS VPC或内部部署了Connector、则可以随时完成所有操作。如果没有、则需要在其中任一位置创建一个连接器、以便将ONTAP 数据分层到AWS S3存储。您不能使用部署在其他云提供商中的Connector。
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["了解连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["在AWS中部署连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在Linux主机上安装Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["了解连接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["在AWS中部署连接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在Linux主机上安装Connector"^]
 
 
 
@@ -110,11 +110,11 @@ BlueXP Connector是BlueXP功能的主要软件。需要使用连接器对非活�
 
 * 确保安装 Connector 的网络启用以下连接：
 +
-** 通过端口443与BlueXP分层服务和S3对象存储建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
+** 通过端口443与BlueXP分层服务和S3对象存储建立HTTPS连接 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html#cloud-tiering["确保Connector具有管理S3存储分段的权限"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#cloud-tiering["确保Connector具有管理S3存储分段的权限"^]
 * 如果从ONTAP 集群到VPC具有直接连接或VPN连接、并且您希望连接器和S3之间的通信保持在AWS内部网络中(*专用*连接)、则需要启用连接到S3的VPC端点接口。 <<使用VPC端点接口为系统配置专用连接,请参见如何设置 VPC 端点接口。>>
 
 
@@ -182,7 +182,7 @@ IP空间中的所有集群间LIF都必须能够访问对象存储。如果无法
 
 您需要先在BlueXP中发现内部ONTAP 集群、然后才能开始将冷数据分层到对象存储。要添加集群，您需要知道集群管理 IP 地址和管理员用户帐户的密码。
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 
 
 
@@ -206,7 +206,7 @@ NOTE: 如果您计划将BlueXP分层配置为使用成本较低的存储类、�
 
 
 .步骤
-. 确认 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html#cloud-tiering["这些S3权限"^] 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果不是、则需要添加缺少的权限。请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 文档：编辑 IAM 策略"^]。
+. 确认 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#cloud-tiering["这些S3权限"^] 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果不是、则需要添加缺少的权限。请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 文档：编辑 IAM 策略"^]。
 . 激活此服务时、分层向导将提示您输入访问密钥和机密密钥。这些凭据将传递到ONTAP 集群、以便ONTAP 可以将数据分层到S3存储分段。为此，您需要创建具有以下权限的 IAM 用户：
 +
 [source, json]
@@ -253,7 +253,7 @@ image:screenshot_tiering_aws_sec_group.png["与 Connector 关联的 AWS 安全�
 +
 image:screenshot_endpoint_dns_aws_console.png["AWS 控制台中 VPC 端点的 DNS 名称的屏幕截图。"]
 
-. 从 VPC S3 端点获取证书。您可以通过执行此操作 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登录到托管BlueXP Connector的虚拟机"^] 并运行以下命令。输入端点的 DNS 名称时，在开头添加 " 分段 " ，替换 "* " ：
+. 从 VPC S3 端点获取证书。您可以通过执行此操作 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登录到托管BlueXP Connector的虚拟机"^] 并运行以下命令。输入端点的 DNS 名称时，在开头添加 " 分段 " ，替换 "* " ：
 +
 [source, text]
 ----
@@ -289,7 +289,7 @@ Please enter Certificate: Press <Enter> when done
 准备好 AWS 环境后，开始对第一个集群中的非活动数据进行分层。
 
 .您需要的内容
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
 * IAM 用户的 AWS 访问密钥，该用户具有所需的 S3 权限。
 
 

@@ -36,7 +36,7 @@ summary: 通过将非活动数据分层到使用简单存储服务（ Simple Sto
 您需要满足以下要求：
 
 [role="quick-margin-list"]
-* 运行ONTAP 9.8或更高版本的源内部ONTAP 集群、并通过用户指定的端口连接到目标S3兼容对象存储。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
+* 运行ONTAP 9.8或更高版本的源内部ONTAP 集群、并通过用户指定的端口连接到目标S3兼容对象存储。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 对象存储服务器的 FQDN ，访问密钥和机密密钥，以便 ONTAP 集群可以访问存储分段。
 * 内部安装的连接器。
 * Connector的网络连接、用于启用与源ONTAP 集群、与S3兼容的对象存储以及XP Blueering服务的出站HTTPS连接。
@@ -52,7 +52,7 @@ summary: 通过将非活动数据分层到使用简单存储服务（ Simple Sto
 
 [role="quick-margin-list"]
 * 从订阅BlueXP PAYGO产品 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]， https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]或 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市场"^]下，单击 * 订阅 * 并按照提示进行操作。
-* 要使用BlueXP分层BYOL许可证付费、请发送邮件至：ng-cloud-tiering@netapp.com？Subject=Licensing[如果需要购买许可证、请联系我们]、然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["从BlueXP数字电子钱包中将其添加到您的帐户中"]。
+* 要使用BlueXP分层BYOL许可证付费、请发送邮件至：ng-cloud-tiering@netapp.com？Subject=Licensing[如果需要购买许可证、请联系我们]、然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["从BlueXP电子钱包中将其添加到您的帐户"]。
 
 
 
@@ -106,7 +106,7 @@ TIP: BlueXP分层既支持FlexVol 卷、也支持FlexGroup 卷。
 
 您需要先在BlueXP画布中创建内部ONTAP 工作环境、然后才能开始分层冷数据。
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 
 
 
@@ -137,9 +137,9 @@ S3 凭据:: 在设置与S3兼容的对象存储分层时、系统会提示您创
 
 要将数据分层到云，需要使用 Connector 。将数据分层到与 S3 兼容的对象存储时，您的内部必须具有 Connector 。您需要安装新的 Connector 或确保当前选定的 Connector 位于内部。
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["了解连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在Linux主机上安装Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在连接器之间切换"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["了解连接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在Linux主机上安装Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["在连接器之间切换"^]
 
 
 
@@ -151,7 +151,7 @@ S3 凭据:: 在设置与S3兼容的对象存储分层时、系统会提示您创
 .步骤
 . 确保安装 Connector 的网络启用以下连接：
 +
-** 通过端口443与BlueXP分层服务建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
+** 通过端口443与BlueXP分层服务建立HTTPS连接 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口 443 与 S3 兼容对象存储建立 HTTPS 连接
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
@@ -165,7 +165,7 @@ S3 凭据:: 在设置与S3兼容的对象存储分层时、系统会提示您创
 准备好环境后，开始对第一个集群中的非活动数据进行分层。
 
 .您需要的内容
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
 * 与 S3 兼容的对象存储服务器的 FQDN 以及用于 HTTPS 通信的端口。
 * 具有所需 S3 权限的访问密钥和机密密钥。
 

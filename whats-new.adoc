@@ -40,7 +40,7 @@ summary: 了解BlueXP分层的新增功能。
 
 === 现在、您可以为卷生成分层报告
 
-您可以从"层卷"页面下载报告、以便查看所管理集群上所有卷的分层状态。BlueXP分层会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给公司中的其他人员。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["请参见如何下载分层报告"]。
+您可以从"层卷"页面下载报告、以便查看所管理集群上所有卷的分层状态。BlueXP分层会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给公司中的其他人员。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["请参见如何下载分层报告"]。
 
 
 
@@ -62,7 +62,7 @@ summary: 了解BlueXP分层的新增功能。
 
 | https://*.cloudmanager.cloud.netapp.com | https://*.api.bluexp.netapp.com 
 |===
-请查看的完整端点列表 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#outbound-internet-access["AWS"^]， https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#outbound-internet-access["Google Cloud"^]或 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#outbound-internet-access["Azure 酒店"^] 云环境。
+请查看的完整端点列表 https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-aws.html#outbound-internet-access["AWS"^]， https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-google.html#outbound-internet-access["Google Cloud"^]或 https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-azure.html#outbound-internet-access["Azure 酒店"^] 云环境。
 
 
 
@@ -82,9 +82,9 @@ summary: 了解BlueXP分层的新增功能。
 
 === 通过分层向导、您可以在分层到S3存储时配置AWS PrivateLink
 
-在先前版本中、通过VPC端点将集群连接到S3存储分段的安全方式非常耗时。现在、您可以按照前提步骤进行操作 https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface["使用VPC端点接口为系统配置专用连接"]、然后、您可以在"网络连接"页面的分层设置向导期间选择PrivateLink。
+在先前版本中、通过VPC端点将集群连接到S3存储分段的安全方式非常耗时。现在、您可以按照前提步骤进行操作 https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface["使用VPC端点接口为系统配置专用连接"]、然后、您可以在"网络连接"页面的分层设置向导期间选择PrivateLink。
 
-https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html["查看将非活动数据分层到Amazon S3的要求和步骤"]。
+https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html["查看将非活动数据分层到Amazon S3的要求和步骤"]。
 
 
 
@@ -106,13 +106,13 @@ https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html
 
 === 可以为集群中的其他聚合配置其他对象存储
 
-Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加新的对象存储、将多个对象存储连接到聚合以进行FabricPool 镜像、交换主对象存储和镜像对象存储、删除与聚合的对象存储连接等。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-object-storage.html["详细了解新的对象存储功能。"]
+Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加新的对象存储、将多个对象存储连接到聚合以进行FabricPool 镜像、交换主对象存储和镜像对象存储、删除与聚合的对象存储连接等。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-object-storage.html["详细了解新的对象存储功能。"]
 
 
 
 === 为MetroCluster 配置提供云分层许可证支持
 
-现在、可以与MetroCluster 配置中的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
+现在、可以与MetroCluster 配置中的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
 
 
 
@@ -122,7 +122,7 @@ Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加�
 
 === 为其他集群配置提供Cloud Tiering许可证支持
 
-现在、可以与分层镜像配置(不包括MetroCluster 配置)中的集群以及分层到IBM云对象存储的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
+现在、可以与分层镜像配置(不包括MetroCluster 配置)中的集群以及分层到IBM云对象存储的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
 
 
 
@@ -132,7 +132,7 @@ Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加�
 
 === Amazon S3 Glacier 即时检索存储类现已推出
 
-设置 Cloud Tiering 时，现在您可以配置生命周期规则，以便在一定天数后将非活动数据从 _Standard_ 存储类过渡到 _Glacier 即时检索 _ 。这将有助于降低 AWS 基础架构成本。 https://docs.netapp.com/us-en/cloud-manager-tiering/reference-aws-support.html["请参见支持的S3存储类。"]
+设置 Cloud Tiering 时，现在您可以配置生命周期规则，以便在一定天数后将非活动数据从 _Standard_ 存储类过渡到 _Glacier 即时检索 _ 。这将有助于降低 AWS 基础架构成本。 https://docs.netapp.com/us-en/bluexp-tiering/reference-aws-support.html["请参见支持的S3存储类。"]
 
 
 

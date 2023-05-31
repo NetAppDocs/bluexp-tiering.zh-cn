@@ -18,7 +18,7 @@ summary: 从第一个集群设置分层时、即可免费试用30天的BlueXP分
 
 在阅读其他内容之前，请先阅读一些注释：
 
-* 如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的BlueXP分层。您将在BlueXP分层*内部信息板*选项卡中看到有效订阅。您无需再次订阅。您将在数字电子钱包中看到有效订阅。
+* 如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的BlueXP分层。您将在BlueXP分层*内部信息板*选项卡中看到有效订阅。您无需再次订阅。您将在BlueXP电子钱包中看到有效订阅。
 * BYOL BlueXP分层许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。
 * 将数据分层到 StorageGRID 不收取任何费用，因此无需 BYOL 许可证或 PAYGO 注册。此分层数据不计入许可证中购买的容量。
 
@@ -93,7 +93,7 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 将非活动数据分层到AWS时、您可以订阅可从获取的年度合同 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS Marketplace 页面"^]。此计划的有效期为1年、2年或3年。
 
-如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["将订阅与您的 AWS 凭据关联"^]。
+如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["将订阅与您的 AWS 凭据关联"^]。
 
 目前、分层到Azure或GCP时不支持年度合同。
 
@@ -109,7 +109,7 @@ NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层
 * 单击BlueXP右下角的聊天图标以申请许可证。
 
 
-或者、如果您有一个不会使用的未分配的基于节点的Cloud Volumes ONTAP 许可证、则可以将其转换为具有相同美元等价性和相同到期日期的BlueXP分层许可证。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["有关详细信息，请访问此处"^]。
+或者、如果您有一个不会使用的未分配的基于节点的Cloud Volumes ONTAP 许可证、则可以将其转换为具有相同美元等价性和相同到期日期的BlueXP分层许可证。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["有关详细信息，请访问此处"^]。
 
 您可以使用BlueXP数字钱包页面管理BlueXP Tiering BYOL许可证。您可以添加新许可证并更新现有许可证。
 
@@ -183,7 +183,7 @@ image:screenshot_cloud_tiering_license_step2.gif["屏幕截图显示了获取许
 +
 ** 如果您拥有分层许可证序列号并知道您的 NSS 帐户，请选择 * 输入序列号 * 选项并输入该信息。
 +
-如果下拉列表中没有您的 NetApp 支持站点帐户， https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html["将NSS帐户添加到BlueXP"^]。
+如果下拉列表中没有您的 NetApp 支持站点帐户， https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["将NSS帐户添加到BlueXP"^]。
 
 ** 如果您有分层许可证文件，请选择 * 上传许可证文件 * 选项，然后按照提示附加该文件。
 +

@@ -27,7 +27,7 @@ summary: 通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集
 您需要满足以下要求：
 
 [role="quick-margin-list"]
-* 运行 ONTAP 9.4 或更高版本的内部 ONTAP 集群，并通过用户指定的端口连接到 StorageGRID 。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
+* 运行 ONTAP 9.4 或更高版本的内部 ONTAP 集群，并通过用户指定的端口连接到 StorageGRID 。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 * 具有 S3 权限的 AWS 访问密钥的 StorageGRID 10.3 或更高版本。
 * 内部安装的连接器。
 * 用于连接器的网络连接、用于启用与ONTAP 集群、StorageGRID 和BlueXP分层服务的出站HTTPS连接。
@@ -96,7 +96,7 @@ NOTE: 从ONTAP 9.5开始、BlueXP分层支持FlexGroup 卷。安装程序的工�
 
 您需要先在BlueXP画布中创建内部ONTAP 工作环境、然后才能开始分层冷数据。
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 
 
 
@@ -129,9 +129,9 @@ S3 凭据:: 在设置StorageGRID 分层时、您需要为BlueXP分层提供S3访
 
 要将数据分层到云，需要使用 Connector 。将数据分层到 StorageGRID 时，您的内部必须具有一个 Connector 。您需要安装新的 Connector 或确保当前选定的 Connector 位于内部。
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["了解连接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在Linux主机上安装Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在连接器之间切换"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["了解连接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在Linux主机上安装Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["在连接器之间切换"^]
 
 
 
@@ -143,7 +143,7 @@ S3 凭据:: 在设置StorageGRID 分层时、您需要为BlueXP分层提供S3访
 .步骤
 . 确保安装 Connector 的网络启用以下连接：
 +
-** 通过端口443与BlueXP分层服务建立HTTPS连接 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
+** 通过端口443与BlueXP分层服务建立HTTPS连接 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["请参见端点列表"^]）
 ** 通过端口443与StorageGRID 系统建立HTTPS连接
 ** 通过端口 443 与 ONTAP 集群管理 LIF 建立 HTTPS 连接
 
@@ -157,7 +157,7 @@ S3 凭据:: 在设置StorageGRID 分层时、您需要为BlueXP分层提供S3访
 准备好环境后，开始对第一个集群中的非活动数据进行分层。
 
 .您需要的内容
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
 * StorageGRID 网关节点的FQDN以及用于HTTPS通信的端口。
 * 具有所需 S3 权限的 AWS 访问密钥。
 

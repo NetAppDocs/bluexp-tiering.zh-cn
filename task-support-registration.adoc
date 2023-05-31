@@ -18,9 +18,9 @@ summary: 在向NetApp技术支持部门创建支持案例之前、您需要向Bl
 
 有关已集成到BlueXP中的以下云提供商解决方案的技术支持、请参阅该产品的BlueXP文档中的"获得帮助"。
 
-* link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/concept-fsx-aws.html#getting-help["适用于 ONTAP 的 Amazon FSX"^]
-* link:https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/concept-azure-netapp-files.html#getting-help["Azure NetApp Files"^]
-* link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-service-gcp/concept-cvs-gcp.html#getting-help["适用于 Google Cloud 的 Cloud Volumes Service"^]
+* link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html#getting-help["适用于 ONTAP 的 Amazon FSX"^]
+* link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/concept-azure-netapp-files.html#getting-help["Azure NetApp Files"^]
+* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-service-gcp/concept-cvs-gcp.html#getting-help["适用于 Google Cloud 的 Cloud Volumes Service"^]
 
 
 
@@ -72,7 +72,7 @@ summary: 在向NetApp技术支持部门创建支持案例之前、您需要向Bl
 .步骤
 . 在BlueXP控制台的右上角、单击帮助图标、然后选择*支持*。
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-help-support.png["帮助菜单的屏幕截图，其中列出的第一个选项为支持"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-help-support.png["帮助菜单的屏幕截图，其中列出的第一个选项为支持"]
 
 . 单击 * NSS 管理 > 添加 NSS 帐户 * 。
 . 出现提示时，单击 * 继续 * 以重定向到 Microsoft 登录页面。
@@ -97,9 +97,9 @@ NetApp 使用 Microsoft Azure Active Directory 作为身份提供程序来提供
 
 ** 成功登录后、NetApp将存储NSS用户名。
 +
-这是系统生成的ID、映射到您的电子邮件。在* NSS Management*页面上、您可以从显示电子邮件 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-nss-menu.png["由三个水平点组成的图标"] 菜单。
+这是系统生成的ID、映射到您的电子邮件。在* NSS Management*页面上、您可以从显示电子邮件 image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["由三个水平点组成的图标"] 菜单。
 
-** 如果您需要刷新登录凭据令牌、则中还会提供一个*更新凭据*选项 image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/icon-nss-menu.png["由三个水平点组成的图标"] 菜单。
+** 如果您需要刷新登录凭据令牌、则中还会提供一个*更新凭据*选项 image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["由三个水平点组成的图标"] 菜单。
 +
 使用此选项将提示您重新登录。请注意、这些帐户的令牌将在90天后过期。系统将发布通知、提醒您注意这一点。
 
@@ -122,12 +122,12 @@ NetApp 使用 Microsoft Azure Active Directory 作为身份提供程序来提供
 .步骤
 . 在BlueXP控制台的右上角、单击帮助图标、然后选择*支持*。
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-help-support.png["帮助菜单的屏幕截图，其中列出的第一个选项为支持"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-help-support.png["帮助菜单的屏幕截图，其中列出的第一个选项为支持"]
 
 . 如果您尚未将NSS帐户添加到BlueXP、请执行此操作。
 . 在*资源*页面上、单击*注册支持*。
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-register-support.png["显示帐户序列号和注册支持选项的屏幕截图"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-register-support.png["显示帐户序列号和注册支持选项的屏幕截图"]
 
 
 
@@ -155,11 +155,11 @@ image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/med
 .步骤
 . 在BlueXP控制台的右上角、单击帮助图标、然后选择*支持*。
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-help-support.png["帮助菜单的屏幕截图，其中列出的第一个选项为支持"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-help-support.png["帮助菜单的屏幕截图，其中列出的第一个选项为支持"]
 
 . 从支持注册页面找到您的帐户ID序列号。
 +
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/media/screenshot-serial-number.png["帮助菜单的屏幕截图，其中列出的第一个选项为支持"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/screenshot-serial-number.png["帮助菜单的屏幕截图，其中列出的第一个选项为支持"]
 
 . 导航到 https://register.netapp.com["NetApp的支持注册站点"^] 并选择*我不是NetApp注册客户*。
 . 填写必填字段(带有红色星号的字段)。

@@ -43,7 +43,7 @@ BlueXP分层提供自动化、监控、报告和通用管理界面：
 有关BlueXP分层所提供价值的更多详细信息、 https://bluexp.netapp.com/cloud-tiering["查看BlueXP网站上的BlueXP分层页面"^]。
 
 
-TIP: Cloud Volumes ONTAP 系统是BlueXP分层中的只读系统。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在BlueXP的工作环境中为Cloud Volumes ONTAP 系统设置分层"^]。
+TIP: Cloud Volumes ONTAP 系统是BlueXP分层中的只读系统。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["您可以在BlueXP的工作环境中为Cloud Volumes ONTAP 系统设置分层"^]。
 
 
 
@@ -205,7 +205,7 @@ NOTE: 重新加热的数据只有在有空间时才会回写到性能层。如�
 +
 由于数据会立即分层，因此 SnapMirror 将从云层而非性能层读取数据。这样会导致 SnapMirror 操作速度变慢—可能会使队列中的其他 SnapMirror 操作变慢，即使这些操作使用不同的分层策略也是如此。
 
-* BlueXP备份和恢复同样受使用层策略设置的卷的影响。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["请参见BlueXP备份和恢复的分层策略注意事项"^]。
+* BlueXP备份和恢复同样受使用层策略设置的卷的影响。 https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["请参见BlueXP备份和恢复的分层策略注意事项"^]。
 
 
 --
