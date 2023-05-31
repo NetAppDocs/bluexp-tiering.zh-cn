@@ -18,6 +18,10 @@ NetApp通过多种方式为BlueXP及其云服务提供支持。全天候提供�
 
 这些选项每周 7 天，每天 24 小时免费提供：
 
+* 文档。
++
+您当前正在查看的BlueXP文档。
+
 * https://kb.netapp.com/Cloud/BlueXP["知识库"^]
 +
 搜索BlueXP知识库、查找有助于解决问题的文章。
@@ -25,10 +29,6 @@ NetApp通过多种方式为BlueXP及其云服务提供支持。全天候提供�
 * http://community.netapp.com/["社区"^]
 +
 加入BlueXP社区、关注正在进行的讨论或创建新的讨论。
-
-* 文档。
-+
-您当前正在查看的BlueXP文档。
 
 * mailto ： ng-cloudmanager-feedback@netapp.com （反馈电子邮件）
 +
@@ -43,7 +43,9 @@ NetApp通过多种方式为BlueXP及其云服务提供支持。全天候提供�
 除了上述自助支持选项之外、您还可以在激活支持后与NetApp支持专家合作解决任何问题。
 
 .开始之前
-要使用*创建案例*功能、您必须先一次性注册您的BlueXP帐户ID序列号(即960xxxx)。 link:task-support-registration.html["了解如何注册获取支持"]。
+* 要使用*创建案例*功能、您必须先将NetApp 支持站点 凭据与BlueXP登录名关联起来。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-user-credentials.html["了解如何管理与BlueXP登录关联的凭据"^]。
+* 如果您为具有序列号的ONTAP系统创建案例、则您的NSS帐户必须与该系统的序列号相关联。
+
 
 .步骤
 . 在BlueXP中、单击*帮助>支持*。
@@ -52,10 +54,6 @@ NetApp通过多种方式为BlueXP及其云服务提供支持。全天候提供�
 .. 如果您要通过电话与某人通话、请单击*致电我们*。系统会将您定向到netapp.com上的一个页面、其中列出了您可以拨打的电话号码。
 .. 单击*创建案例*、向NetApp支持专家开一个服务单：
 +
-*** * NetApp 支持站点 Account*：选择与创建支持案例的人员关联的适用帐户。除下面提供的其他电子邮件外、此人还将是NetApp的主要联系人。
-+
-如果您未看到NSS帐户、则可以导航到BlueXP支持部分中的* NSS管理*选项卡以将其添加到该选项卡中。
-
 *** *服务*：选择与问题描述 关联的服务。例如、当特定于技术支持问题描述 时、如果服务中包含工作流或功能、则为BlueXP。
 *** *工作环境*：如果适用于存储、请选择* Cloud Volumes ONTAP *或* on-Prem*、然后选择关联的工作环境。
 +
@@ -89,7 +87,7 @@ image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/scre
 
 "您无权针对选定服务创建案例"
 
-此错误可能意味着NSS帐户及其关联的记录公司与BlueXP帐户序列号(即960xxxx)或工作环境序列号。您可以查看*创建案例*表顶部的NSS帐户列表以找到正确的匹配项、也可以使用以下选项之一寻求帮助：
+此错误可能意味着NSS帐户及其关联的记录公司与BlueXP帐户序列号(即960xxxx)或工作环境序列号。您可以使用以下选项之一寻求帮助：
 
 * 使用产品内聊天功能
 * 通过提交非技术案例 https://mysupport.netapp.com/site/help[]
