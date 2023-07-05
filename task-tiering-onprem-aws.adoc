@@ -206,7 +206,7 @@ NOTE: 如果您计划将BlueXP分层配置为使用成本较低的存储类、�
 
 
 .步骤
-. 确认 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#cloud-tiering["这些S3权限"^] 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果不是、则需要添加缺少的权限。请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 文档：编辑 IAM 策略"^]。
+. 确认 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#iam-policies["这些S3权限"^] 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果不是、则需要添加缺少的权限。请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 文档：编辑 IAM 策略"^]。
 . 激活此服务时、分层向导将提示您输入访问密钥和机密密钥。这些凭据将传递到ONTAP 集群、以便ONTAP 可以将数据分层到S3存储分段。为此，您需要创建具有以下权限的 IAM 用户：
 +
 [source, json]
@@ -307,14 +307,14 @@ image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，
 +
 image:screenshot_tiering_aws_s3_bucket.png["屏幕截图显示了设置S3存储分层时必须提供的数据。"]
 
-. 完成*创建对象存储*页面上的部分：
+. 完成*分层设置*页面中的部分：
 +
-.. * S3 Bucket*：添加新的S3存储分段或选择以前缀_fabric-pool_开头的现有S3存储分段、选择存储分段区域、然后单击*继续*。
+.. *S3存储分段*：添加新的S3存储分段或选择以定义的前缀"FRAME-Pool"开头的现有S3存储分段、选择存储分段区域并单击*继续*。
 +
 使用内部连接器时，您必须输入 AWS 帐户 ID ，以访问要创建的现有 S3 存储分段或新 S3 存储分段。
 
 +
-需要使用 _fabric-pool_ 前缀，因为 Connector 的 IAM 策略允许实例对使用该前缀命名的分段执行 S3 操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。
+默认情况下会使用_光纤 池_前缀、因为连接器的IAM策略允许实例对使用该前缀命名的分段执行S3操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。
 
 .. *存储类*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。
 +
@@ -338,10 +338,10 @@ IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段�
 在ONTAP 集群中选择要分层的卷所在的IP空间。此IP空间的集群间LIF必须具有出站Internet访问权限、才能连接到云提供商的对象存储。
 
 +
-或者，选择是否使用先前配置的 AWS PrivateLink 。 <<使用VPC端点接口为系统配置专用连接,请参见上述设置信息。>>
+或者，选择是否使用先前配置的 AWS PrivateLink 。 <<使用VPC端点接口为系统配置专用连接,请参见上述设置信息。>> 此时将显示一个对话框、帮助您完成端点配置。
 
 +
-此时将显示一个对话框、帮助您完成端点配置。
+您还可以通过定义"最大传输速率"来设置可用于将非活动数据上传到对象存储的网络带宽。选择*受限*单选按钮并输入可使用的最大带宽、或者选择*无限制*以指示没有限制。
 
 
 

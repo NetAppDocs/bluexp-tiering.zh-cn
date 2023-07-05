@@ -45,6 +45,8 @@ sidebar:
       url: "/task-tiering-test.html"
     - title: 查看所有集群的分层概述
       url: "/task-tiering-onprem-overview.html"
+    - title: 监控层警报的状态
+      url: "/task-monitor-tiering-alerts.html"
   - title: 参考
     entries:
     - title: 支持的 Amazon S3 存储类和区域
@@ -91,6 +93,8 @@ homepage:
       url: task-managing-tiering.html#reviewing-tiering-info-for-a-cluster
     - title: 对其他卷中的数据进行分层
       url: task-managing-tiering.html#tiering-data-from-additional-volumes
+    - title: 更改将非活动数据上传到对象存储的带宽
+      url: task-managing-tiering.html#changing-the-network-bandwidth-available-to-upload-inactive-data-to-object-storage
     - title: 将数据从云移回性能层
       url: task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier
     - title: 管理聚合上的分层设置
