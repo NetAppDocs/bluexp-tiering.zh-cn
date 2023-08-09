@@ -217,7 +217,7 @@ image:screenshot_tiering_lifecycle_selection_azure.png["一个屏幕截图，显
 ** 要选择多个卷，请选中每个卷对应的框（image:button_backup_1_volume.png[""]），然后单击 * 配置卷 * 。
 ** 要选择单个卷，请单击行（或 image:screenshot_edit_icon.gif["编辑铅笔图标"] 图标）。
 +
-image:screenshot_tiering_tier_volumes.png["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
+image:screenshot_tiering_initial_volumes.png["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
 
 
 
@@ -226,7 +226,7 @@ image:screenshot_tiering_tier_volumes.png["显示如何选择单个卷，多个�
 link:concept-cloud-tiering.html#volume-tiering-policies["了解有关卷分层策略和散热天数的更多信息"]。
 
 +
-image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置的屏幕截图。"]
+image:screenshot_tiering_initial_policy_settings.png["显示可配置分层策略设置的屏幕截图。"]
 
 
 

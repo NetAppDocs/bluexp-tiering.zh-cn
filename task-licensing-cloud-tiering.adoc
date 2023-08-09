@@ -152,7 +152,20 @@ TIP: 请注意、分层到StorageGRID 不需要FabricPool 或BlueXP分层许可�
 
 === 获取BlueXP分层许可证文件
 
-购买BlueXP分层许可证后、您可以通过输入BlueXP分层序列号和NSS帐户或上传NLF许可证文件在BlueXP中激活此许可证。以下步骤显示了如果您计划使用此方法，如何获取 NLF 许可证文件。
+购买BlueXP分层许可证后、您可以通过输入BlueXP分层序列号和NSS帐户或上传NLF许可证文件来激活BlueXP中的许可证。以下步骤显示了如果您计划使用此方法，如何获取 NLF 许可证文件。
+
+.开始之前
+开始之前、您需要了解以下信息：
+
+* BlueXP层的序列号
++
+从您的销售订单中找到此号码、或者联系客户团队了解此信息。
+
+* BlueXP帐户ID
++
+您可以通过从BlueXP顶部选择*帐户*下拉列表、然后单击您的帐户旁边的*管理帐户*来查找您的BlueXP帐户ID。您的帐户 ID 位于概述选项卡中。
+
+
 
 .步骤
 . 登录到 https://mysupport.netapp.com["NetApp 支持站点"^] 然后单击 * 系统 > 软件许可证 * 。
@@ -160,13 +173,10 @@ TIP: 请注意、分层到StorageGRID 不需要FabricPool 或BlueXP分层许可�
 +
 image:screenshot_cloud_tiering_license_step1.gif["按序列号搜索后显示许可证表的屏幕截图。"]
 
-. 在 * 许可证密钥 * 下，单击 * 获取 NetApp 许可证文件 * 。
+. 在 * 许可证密钥 * 列中，单击 * 获取 NetApp 许可证文件 * 。
 . 输入您的BlueXP帐户ID (在支持站点上称为租户ID)、然后单击*提交*下载许可证文件。
 +
 image:screenshot_cloud_tiering_license_step2.gif["屏幕截图显示了获取许可证对话框，您可以在其中输入租户 ID ，然后单击提交下载许可证文件。"]
-
-+
-您可以通过从BlueXP顶部选择*帐户*下拉列表、然后单击您的帐户旁边的*管理帐户*来查找您的BlueXP帐户ID。您的帐户 ID 位于概述选项卡中。
 
 
 

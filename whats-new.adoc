@@ -18,6 +18,22 @@ summary: 了解BlueXP分层的新增功能。
 
 
 
+== 2023年8月9日
+
+
+
+=== 使用自定义前缀作为存储分层数据的分段名称
+
+过去、在定义存储分段名称时、您需要使用默认的"光纤 池"前缀、例如_Fabric池bucket1_。现在、您可以在为存储分段命名时使用自定义前缀。只有在将数据层到Amazon S3时、此功能才可用。 https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#prepare-your-aws-environment["了解更多信息。"]。
+
+
+
+=== 在所有BlueXP连接器中搜索集群
+
+如果使用多个连接器管理环境中的所有存储系统、则要实施分层的某些集群可能位于不同的连接器中。如果您不确定是哪个Connector管理某个集群、可以使用BlueXP分层跨所有连接器进行搜索。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-tiering.html#search-for-a-cluster-across-all-bluexp-connectors["了解更多信息。"]。
+
+
+
 == 2023年7月4日
 
 
@@ -131,13 +147,3 @@ Cloud Tiering UI为对象存储配置添加了一组新页面。您可以添加�
 === 为MetroCluster 配置提供云分层许可证支持
 
 现在、可以与MetroCluster 配置中的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]
-
-
-
-== 2022年5月3日
-
-
-
-=== 为其他集群配置提供Cloud Tiering许可证支持
-
-现在、可以与分层镜像配置(不包括MetroCluster 配置)中的集群以及分层到IBM云对象存储的集群共享云分层许可证。在这些情况下、您不再需要使用已弃用的FabricPool 许可证。这样可以更轻松地在更多集群上使用"浮动"云分层许可证。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["请参见如何许可和配置这些类型的集群。"]

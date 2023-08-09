@@ -188,9 +188,9 @@ https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["�
 
 == 准备 AWS 环境
 
-在为新集群设置数据分层时，系统会提示您在设置了 Connector 的 AWS 帐户中创建 S3 存储分段或选择现有 S3 存储分段。AWS帐户必须具有可在BlueXP分层中输入的权限和访问密钥。ONTAP 集群使用访问密钥对 S3 中的数据进行分层。
+在为新集群设置数据分层时、系统会提示您是希望服务创建S3存储分段、还是希望在设置了Connector的AWS帐户中选择现有S3存储分段。AWS帐户必须具有可在BlueXP分层中输入的权限和访问密钥。ONTAP 集群使用访问密钥对 S3 中的数据进行分层。
 
-S3 存储分段必须位于中 link:reference-aws-support.html#supported-aws-regions["支持BlueXP分层的区域"]。
+默认情况下、分层服务会为您创建存储分段。如果要使用自己的存储分段、可以在启动分层激活向导之前创建一个存储分段、然后在向导中选择该存储分段。 https://docs.netapp.com/us-en/bluexp-s3-storage/task-add-s3-bucket.html["了解如何从BlueXP创建S3存储分段"^]。存储分段必须专用于存储卷中的非活动数据、不能用于任何其他用途。S3 存储分段必须位于中 link:reference-aws-support.html#supported-aws-regions["支持BlueXP分层的区域"]。
 
 
 NOTE: 如果您计划将BlueXP分层配置为使用成本较低的存储类、在该类中、分层数据将在一定天数后过渡到、则在AWS帐户中设置存储分段时、不能选择任何生命周期规则。BlueXP分层可管理生命周期过渡。
@@ -201,13 +201,30 @@ NOTE: 如果您计划将BlueXP分层配置为使用成本较低的存储类、�
 
 您需要配置两组权限：
 
-* Connector创建和管理S3存储分段的权限。
+* 连接器的权限、以便它可以创建和管理S3存储分段。
 * 内部 ONTAP 集群的权限，以便可以将数据读写到 S3 存储分段。
 
 
 .步骤
-. 确认 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#iam-policies["这些S3权限"^] 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果不是、则需要添加缺少的权限。请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 文档：编辑 IAM 策略"^]。
-. 激活此服务时、分层向导将提示您输入访问密钥和机密密钥。这些凭据将传递到ONTAP 集群、以便ONTAP 可以将数据分层到S3存储分段。为此，您需要创建具有以下权限的 IAM 用户：
+. *连接器权限*：
++
+** 确认 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#iam-policies["这些S3权限"^] 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果没有、您需要添加任何缺少的权限。请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 文档：编辑 IAM 策略"^] 有关说明，请参见。
+** BlueXP分层创建的默认分段的前缀为"光纤 池"。如果要为存储分段使用其他前缀、则需要使用要使用的名称自定义权限。在S3权限中、您将看到一行 `"Resource": ["arn:aws:s3:::fabric-pool*"]`。您需要将"Fabric Pool"更改为要使用的前缀。例如、如果要使用"tiering 1 "作为分段的前缀、则应将此行更改为 `"Resource": ["arn:aws:s3:::tiering-1*"]`。
++
+如果要对要用于此同一BlueXP帐户中其他集群的分段使用不同的前缀、则可以为其他分段添加另一行前缀。例如：
+
++
+`"Resource": ["arn:aws:s3:::tiering-1*"]`
+`"Resource": ["arn:aws:s3:::tiering-2*"]`
+
++
+如果您正在创建自己的存储分段、并且不使用标准前缀、则应将此行更改为 `"Resource": ["arn:aws:s3:::*"]` 以便识别任何存储分段。但是、这可能会公开您的所有分段、而不是您为存放卷中的非活动数据而设计的分段。
+
+
+
+. *集群权限*：
++
+** 激活此服务时、分层向导将提示您输入访问密钥和机密密钥。这些凭据将传递到ONTAP 集群、以便ONTAP 可以将数据分层到S3存储分段。为此，您需要创建具有以下权限的 IAM 用户：
 +
 [source, json]
 ----
@@ -220,6 +237,8 @@ NOTE: 如果您计划将BlueXP分层配置为使用成本较低的存储类、�
 ----
 +
 请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS 文档：创建角色以向 IAM 用户委派权限"^] 了解详细信息。
+
+
 
 . 创建或找到访问密钥。
 +
@@ -309,12 +328,12 @@ image:screenshot_tiering_aws_s3_bucket.png["屏幕截图显示了设置S3存储�
 
 . 完成*分层设置*页面中的部分：
 +
-.. *S3存储分段*：添加新的S3存储分段或选择以定义的前缀"FRAME-Pool"开头的现有S3存储分段、选择存储分段区域并单击*继续*。
+.. *S3存储分段*：添加新的S3存储分段或选择现有S3存储分段，选择存储分段区域，然后单击*Continue*。
 +
 使用内部连接器时，您必须输入 AWS 帐户 ID ，以访问要创建的现有 S3 存储分段或新 S3 存储分段。
 
 +
-默认情况下会使用_光纤 池_前缀、因为连接器的IAM策略允许实例对使用该前缀命名的分段执行S3操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。
+默认情况下会使用_光纤 池_前缀、因为连接器的IAM策略允许实例对使用该前缀命名的分段执行S3操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。您也可以为用于分层的分段定义前缀。请参见 <<设置 S3 权限,设置S3权限>> 以确保您拥有识别您计划使用的任何自定义前缀的AWS权限。
 
 .. *存储类*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。
 +
@@ -351,7 +370,7 @@ IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段�
 ** 要选择多个卷，请选中每个卷对应的框（image:button_backup_1_volume.png[""]），然后单击 * 配置卷 * 。
 ** 要选择单个卷，请单击行（或 image:screenshot_edit_icon.gif["编辑铅笔图标"] 图标）。
 +
-image:screenshot_tiering_tier_volumes.png["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
+image:screenshot_tiering_initial_volumes.png["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
 
 
 
@@ -360,7 +379,7 @@ image:screenshot_tiering_tier_volumes.png["显示如何选择单个卷，多个�
 link:concept-cloud-tiering.html#volume-tiering-policies["了解有关卷分层策略和散热天数的更多信息"]。
 
 +
-image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置的屏幕截图。"]
+image:screenshot_tiering_initial_policy_settings.png["显示可配置分层策略设置的屏幕截图。"]
 
 
 

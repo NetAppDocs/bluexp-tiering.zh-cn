@@ -256,3 +256,21 @@ image:screenshot_tiering_discover_cluster.png["显示如何发现要添加到Blu
 BlueXP会发现集群、并使用集群名称作为工作环境名称将其添加到Canvas中的工作环境中。
 
 您可以在右侧面板中为此集群启用分层服务或其他服务。
+
+
+
+== 在所有BlueXP连接器中搜索集群
+
+如果使用多个连接器管理环境中的所有存储、则要实施分层的某些集群可能位于另一个连接器中。如果您不确定是哪个Connector管理某个集群、可以使用BlueXP分层跨所有连接器进行搜索。
+
+.步骤
+. 在BlueXP分层菜单栏中、单击操作菜单并选择*在所有连接器中搜索集群*。
++
+image:screenshot_tiering_search for_cluster.png["显示如何搜索任何BlueXP连接器中可能存在的集群的屏幕截图。"]
+
+. 在显示的搜索对话框中，输入群集的名称，然后单击*Search*。
++
+如果BlueXP层能够找到集群、则会显示连接器的名称。
+
+. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#switch-between-connectors["切换到连接器并为集群配置层"^]。
+
