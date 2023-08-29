@@ -41,12 +41,8 @@
   <block id="b7507ffc73507c1071aa3369e64f9b02" category="paragraph"><block ref="b7507ffc73507c1071aa3369e64f9b02" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9dcb4338cde0614db53499ea9fe7fe74" category="paragraph">使用内部连接器时，您必须输入 AWS 帐户 ID ，以访问要创建的现有 S3 存储分段或新 S3 存储分段。</block>
   <block id="c58cf9282f95328fc92b4502fbef9f23" category="paragraph">需要使用 _fabric-pool_ 前缀，因为 Connector 的 IAM 策略允许实例对使用该前缀命名的分段执行 S3 操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。</block>
-  <block id="3ef4bb9a8277742de6597e9937678503" category="paragraph">选择要将分层数据过渡到的 S3 存储类以及要移动数据的天数，然后单击 * 继续 * 。例如，下面的屏幕截图显示，在对象存储中使用 45 天后，分层数据将从 _Standard_ 类移动到 _Standard-IA_ 类。</block>
   <block id="c171e8fa2a3cb53de525ce805c3883dc" category="inline-link-macro">请参见支持的存储类</block>
   <block id="6fb9dd2d432abbfd2e290dea633d688c" category="paragraph">如果选择 * 将数据保留在此存储类中 * ，则数据将保留在 _Standard_ 存储类中，不会应用任何规则。 <block ref="aa3328f427a38479d06747ebf1a05fc3" category="inline-link-macro-rx"></block>。</block>
-  <block id="8ae6032dc43b667771c8605a20954b09" category="inline-image-macro">一个屏幕截图，显示如何选择在特定天数后移动数据的其他存储类。</block>
-  <block id="fadcc9c239b21cc5038ad590074bcf33" category="paragraph"><block ref="fadcc9c239b21cc5038ad590074bcf33" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ea09ff0f2c6993eddf0252bc7fcbd724" category="paragraph">请注意，生命周期规则将应用于选定存储分段中的所有对象。</block>
   <block id="c6d7cecaf22190d03dd1883702c04c49" category="list-text">* 凭据 * ：输入具有所需 S3 权限的 IAM 用户的访问密钥 ID 和机密密钥，然后单击 * 继续 * 。</block>
   <block id="3be503b52a53c50161649d2d51182eba" category="paragraph">IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段位于同一 AWS 帐户中。</block>
   <block id="edb5302d21562d6e6d64d3bbe03d94b4" category="list-text">* 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间，然后单击 * 继续 * 。</block>
@@ -130,12 +126,8 @@
   <block id="256fb1d2776e7f3b364ce4414a65b2cd" category="section-title">正在准备 Azure Blob 存储</block>
   <block id="0cff75f8a1ea859d852b43f30a5a65c5" category="section-title">将第一个集群中的非活动数据分层到 Azure Blob 存储</block>
   <block id="eeee7c2206f30d34992557feb0d7900f" category="paragraph">准备好 Azure 环境后，开始对第一个集群中的非活动数据进行分层。</block>
-  <block id="f9ec0a0e3f7751a980419c9235987d65" category="paragraph">选择要将分层数据过渡到的访问层以及数据移动前的天数，然后单击 * 继续 * 。例如，下面的屏幕截图显示，在对象存储中使用 45 天后，分层数据将从 _hot_ 类移动到 _cool_ 类。</block>
   <block id="a6de011c08144280abbea085810f3465" category="inline-link-macro">请参见支持的访问层</block>
   <block id="4f79964148c7f12ce0e111c7b8d932a5" category="paragraph">如果选择 * 在此访问层中保留数据 * ，则数据将保留在 _hot_ 访问层中，不会应用任何规则。 <block ref="462d8509e8137fe02ca002d803caf321" category="inline-link-macro-rx"></block>。</block>
-  <block id="68a83a6344da48ff48b7dfe970c4f766" category="inline-image-macro">一个屏幕截图，显示如何选择在特定天数后移动数据的其他访问层。</block>
-  <block id="76ebfce4c2c67a5c80f5e3389cadd984" category="paragraph"><block ref="76ebfce4c2c67a5c80f5e3389cadd984" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d2f15cc1f6b52e91b3fa0f67c5683cc7" category="paragraph">请注意，生命周期规则将应用于选定存储帐户中的所有 Blob 容器。</block>
   <block id="ade7907875a5b3e50997036947f13251" category="paragraph">您已成功设置从集群上的卷到 Azure Blob 对象存储的数据分层。</block>
   <block id="339e18b687c59777d2931b47d72cb440" category="summary">现在，您已从内部 ONTAP 集群设置了数据分层，您可以对其他卷中的数据进行分层，更改卷的分层策略，发现其他集群等。</block>
   <block id="93772529b8117fc8010ab6872129a19c" category="section-title">对其他卷中的数据进行分层</block>
@@ -163,7 +155,6 @@
   <block id="bec6ef790b888208733b1195a4c79a9d" category="cell">仅检索云中分层的活动文件系统数据并将其提升到性能层（ Snapshot 副本仍保留在云中）。</block>
   <block id="b45317b449074be01eb535dc51134b25" category="cell">分层策略更改为 " 冷快照 " 。</block>
   <block id="4462bf0f5ca8a6a2218e38c86b45446e" category="admonition">云提供商可能会根据从云端传输的数据量向您收取费用。</block>
-  <block id="518c45bb71686bd34cfd0dd7adfb3ce0" category="paragraph">确保性能层中有足够的空间用于从云中移动的所有数据。</block>
   <block id="39ccd40812695aaa7bc077a0fc353a0e" category="paragraph"><block ref="39ccd40812695aaa7bc077a0fc353a0e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="56687950ee1692c1c4b88c4fd8cd206f" category="paragraph">分层策略将更改，分层数据将开始迁移回性能层。根据云中的数据量，传输过程可能需要一些时间。</block>
   <block id="176eb530d68328d73cd752bcf53ad2be" category="section-title">管理聚合上的分层设置</block>
@@ -189,7 +180,6 @@
   <block id="65f5911f922c92104ab33c2cd05d4a45" category="paragraph">您可以在右侧面板中为此集群启用分层服务或其他服务。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="e06e7e77771ffb8d53ca2e5570304aa3" category="list-text">借助自动化，可以更轻松地设置和管理从内部 ONTAP 集群到云的数据分层</block>
-  <block id="6541954d76e96f1b8ac31c72f38d4cf5" category="list-text">您可以选择默认的云提供商存储类 / 访问层，也可以使用生命周期管理将旧的分层数据移至更经济高效的层</block>
   <block id="63df1b7fcfa29df67a9798d7767e4c54" category="list-text">通过一个管理平台，无需在多个集群之间独立管理 FabricPool</block>
   <block id="c1ad703a668852b216aa10032b7c0cda" category="list-text">报告显示每个集群上的活动和非活动数据量</block>
   <block id="50ce53d55b005f76b356132a3901cfcf" category="list-text">分层运行状况可帮助您发现并更正出现的问题</block>
@@ -222,7 +212,6 @@
   <block id="ee32623ddfba76c17a3869197764085b" category="list-text">您可以通过提供有关对象存储的详细信息来设置分层，包括分段 / 容器，存储类或访问层以及分层数据的生命周期规则。</block>
   <block id="f0fbe063f098b4fb5463ff8919a9c737" category="list-text">您可以选择要分层的卷以及要应用于这些卷的分层策略。</block>
   <block id="7cff4595565023a72889d0ae1bf58e66" category="list-text">一旦数据达到可视为非活动的阈值（请参见）， ONTAP 就会开始将非活动数据分层到对象存储 <block ref="3ab88d3ba20857380b0d484a33d90bf5" category="inline-xref-macro-rx"></block>）。</block>
-  <block id="0976a1e155055359baa0c396e75dc0c4" category="list-text">如果已对分层数据应用了生命周期规则（仅适用于某些提供商），则较早的分层数据将在一定天数后移至更经济高效的层。</block>
   <block id="837170b3ba6314929f53008e61dfc57b" category="section-title">卷分层策略</block>
   <block id="de16c6002cab30d2b476bb8b41b8a8bc" category="paragraph">选择要分层的卷时，您可以选择一个 _volume 分层策略 _ 以应用于每个卷。分层策略可确定卷的用户数据块何时或是否移动到云。</block>
   <block id="8b637101caf758f4d80e51a84eb98902" category="paragraph">您还可以调整 * 冷却期 * 。这是卷中的用户数据在被视为 " 冷 " 并移至对象存储之前必须保持非活动状态的天数。对于允许您调整冷却期的分层策略，使用 ONTAP 9.8 及更高版本时，有效值为 2 到 183 天，对于早期 ONTAP 版本，有效值为 2 到 63 天；建议使用 2 到 63 天。</block>
@@ -320,10 +309,7 @@
   <block id="2577ad1c0f2232095ff146a7a2495193" category="paragraph">准备好 Google Cloud 环境后，开始对第一个集群中的非活动数据进行分层。</block>
   <block id="79acb6eba535e7721e5fb3655d5ceb55" category="list-text">具有存储管理员角色的服务帐户的存储访问密钥。</block>
   <block id="fc8c5ebf28401d27b54c3e6e00e7652b" category="list-text">* 分段 * ：添加新的 Google Cloud Storage 分段或选择现有分段。</block>
-  <block id="4d37a0bea5cd5e6af86422bf6e5f582c" category="paragraph">选择要将分层数据过渡到的 Google Cloud 存储类以及要移动数据的天数，然后单击 * 继续 * 。例如，下面的屏幕截图显示，在对象存储中，分层数据会在 30 天后从 _Standard_ 类移动到 _Nearline_ 类，然后在对象存储中移动到 _Coldline_ 类。</block>
   <block id="7332d2c8833268f79cdb767402899334" category="paragraph">如果选择 * 将数据保留在此存储类中 * ，则数据将保留在该存储类中。 <block ref="e76bf2468a23f23815e0d228a823b0f2" category="inline-link-macro-rx"></block>。</block>
-  <block id="02f2e04342c521beba4c0e40c63a54c6" category="inline-image-macro">一个屏幕截图，显示如何选择在特定天数后移动数据的其他存储类。</block>
-  <block id="82944aceb2b2f9b8317c2c75d8459d31" category="paragraph"><block ref="82944aceb2b2f9b8317c2c75d8459d31" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a29ca8aa6cf5a1c81887b82cc0bd9606" category="list-text">* 凭据 * ：输入具有存储管理员角色的服务帐户的存储访问密钥和机密密钥。</block>
   <block id="494e659680f3920311106585f89fc251" category="list-text">* 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间。</block>
   <block id="6d954756dedc1d7d245aee367353a05f" category="list-text">单击 * 继续 * 以选择要分层的卷。</block>
@@ -789,7 +775,6 @@
   <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">在ONTAP 文档中了解有关MetroCluster 要求的更多信息</block>
   <block id="c3d7ada1f42d9b916dd8624c5b5661c1" category="section-title">通过分层向导、您可以在分层到S3存储时配置AWS PrivateLink</block>
   <block id="bf482155aab691ba59a0313f5628cbba" category="section-title">选择删除MetroCluster 配置中的镜像对象存储时的分层行为</block>
-  <block id="cd71992689f7bdbde4a7c9f0653f44f3" category="paragraph">从MetroCluster 配置中删除镜像对象存储时、系统会提示您是否也要删除主对象存储。您可以选择保持主对象存储附加到聚合、也可以选择将其删除。</block>
   <block id="c80805cd1b291fd4590a3c0b82caa095" category="inline-link">了解有关FabricPool 镜像的更多信息</block>
   <block id="4a6b2da2ae625dffc7d1a103b7579d57" category="paragraph">您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。<block ref="8af213a751b87119e23e85f52fbc72d6" category="inline-link-rx"></block>。</block>
   <block id="2dc183e0073f3c1e0402cafe50273750" category="paragraph">使用MetroCluster 配置时、最佳做法是在公有 云中使用位于不同可用性区域的对象存储。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
@@ -1095,8 +1080,6 @@
   <block id="2635a2c2a5875da466928f37a3656f92" category="section-title">是否可以在BlueXP分层中使用其他与S3兼容的对象存储服务、例如MinIO？</block>
   <block id="5ca7b325f239c40dfe97803e13e73bda" category="paragraph">BlueXP分层支持将非活动数据分层到_hot_或_cool_访问层。请参见 <block ref="db7ac7f0446977850e1dd33ce55fa427" category="inline-link-macro-rx"></block> 有关详细信息：</block>
   <block id="cc0e38735d6a6d5c6f8a983629bc6d70" category="paragraph">BlueXP分层支持将数据分层到_Standard_、_Nearline_、_Coldline_和_Archive_存储类。请参见 <block ref="7bf35a231ca3eab0ba1eb206f6515726" category="inline-link-macro-rx"></block> 有关详细信息：</block>
-  <block id="d32cf30eb64db80be23b1b7adb2c4750" category="section-title">BlueXP分层是否支持使用生命周期管理策略？</block>
-  <block id="747606dd3b03b035bd7ea8403e06f4c9" category="paragraph">是的。您可以启用生命周期管理、以便BlueXP分层在一定天数后将数据从默认存储类/访问层过渡到更经济高效的层。此生命周期规则将应用于 Amazon S3 和 Google Cloud 存储的选定存储分段中的所有对象，以及 Azure Blob 的选定存储帐户中的所有容器。</block>
   <block id="ef3c70877c9673810777cd54ae91e823" category="section-title">BlueXP分层是在整个集群中使用一个对象存储还是在每个聚合中使用一个对象存储？</block>
   <block id="f106af130ecd68cee50ea019090595af" category="paragraph">Connector是在您的云帐户或内部环境中的计算实例上运行的软件、可使BlueXP安全地管理云资源。要使用BlueXP分层服务、您必须部署Connector。</block>
   <block id="371daca43d3f216ec028adfb6f08791a" category="section-title">在使用BlueXP分层之前、是否需要云服务提供商的帐户？</block>
@@ -1159,9 +1142,7 @@
   <block id="248ebf3fea7fa59de6d7580ff3a058b7" category="paragraph">设置分层时，您需要为具有存储管理员权限的服务帐户提供存储访问密钥。通过服务帐户、BlueXP分层功能可以对用于数据分层的云存储分段进行身份验证和访问。需要提供密钥，以便 Google Cloud Storage 知道谁在发出请求。</block>
   <block id="ad1fd6589603bba39741a6cc32304074" category="inline-link-macro">支持BlueXP分层的区域</block>
   <block id="0b2b1a0ccf60fa341c50d50e1f497ce4" category="paragraph">云存储分段必须位于中 <block ref="4755ef6fff73d10da41c28fa47a87906" category="inline-link-macro-rx"></block>。</block>
-  <block id="68389982c548f7484e3faf74d303b156" category="admonition">如果您计划将BlueXP分层配置为使用成本较低的存储类、而分层数据将在一定天数后过渡到这些存储类、则在GCP帐户中设置存储分段时、不能选择任何生命周期规则。BlueXP分层可管理生命周期过渡。</block>
   <block id="9055cc03b08218d8d0a85e5c61679917" category="paragraph">稍后在设置BlueXP分层时、您需要输入密钥。</block>
-  <block id="22dddafd825c6ae8af45fc69b0ce9131" category="list-text">*存储类生命周期*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建规则，以便在一定天数后将数据移动到其他类。</block>
   <block id="935caa2f5bbffc2ed896d78ac41238ca" category="paragraph">选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到云提供商对象存储的连接。</block>
   <block id="11111dd67c502101799d49112cfd9b02" category="inline-link-macro">请务必订阅BlueXP分层服务</block>
   <block id="6247f58abd669c41c23382cbaf049807" category="paragraph"><block ref="7cf71f55c0a5cf9e0968e64e4bace22e" category="inline-link-macro-rx"></block>。</block>
@@ -1194,19 +1175,14 @@
   <block id="416d6b305415c1b651308d03bee7d8bf" category="paragraph"><block ref="416d6b305415c1b651308d03bee7d8bf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0db73897f94acf452b2b14679c1dbda3" category="admonition">从ONTAP 9.5开始、BlueXP分层支持FlexGroup 卷。安装程序的工作方式与任何其他卷相同。</block>
   <block id="0ad14aaf7eff30985750c0d80c7e4786" category="paragraph">设置BlueXP分层时、系统会提示您使用IP空间。您应选择与这些 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。</block>
-  <block id="e12d69112c676a34f24fe32d8c78054b" category="admonition">如果您计划将BlueXP分层配置为使用成本较低的存储类、在该类中、分层数据将在一定天数后过渡到、则在AWS帐户中设置存储分段时、不能选择任何生命周期规则。BlueXP分层可管理生命周期过渡。</block>
   <block id="6f7815856002a1331164afcaf80de883" category="paragraph">BlueXP分层会将访问密钥传递到ONTAP 集群。这些凭据不会存储在BlueXP分层服务中。</block>
   <block id="0faf47b6f5732c018e12a7f9c05b2120" category="paragraph">如果您使用端口80 (HTTP)与专用端点进行通信、则已设置完毕。您现在可以在集群上启用BlueXP分层。</block>
-  <block id="b3365c3e2694749c32c06ef38b69f279" category="list-text">*存储类*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。</block>
   <block id="8c191e41bb84293885ce2b93e583e6d9" category="list-text">一种连接器网络、可通过此连接器与数据中心中的ONTAP 集群、Azure存储和BlueXP分层服务建立出站HTTPS连接。</block>
   <block id="77c987b6edf7f890ea169d4d845303d7" category="paragraph"><block ref="77c987b6edf7f890ea169d4d845303d7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7e90ca09e19c98a8ada0376d5e199bcf" category="inline-link">BlueXP分层所需的特定权限</block>
   <block id="177e3ee34a2fa4785a88af8672139305" category="paragraph">设置分层时，您需要确定要使用的资源组以及属于该资源组的存储帐户和 Azure 容器。通过存储帐户、BlueXP分层功能可以对用于数据分层的Blob容器进行身份验证和访问。</block>
   <block id="3e9a3a79f6ff4a231c1c1039e1b70f99" category="paragraph">BlueXP分层仅支持通用v2和高级块Blob类型的存储帐户。</block>
-  <block id="2d02ad0532e0a744a757daa60c3afcf3" category="admonition">如果您计划将BlueXP分层配置为使用成本较低的访问层、以便分层数据在一定天数后过渡到、则在Azure帐户中设置容器时、不能选择任何生命周期规则。BlueXP分层可管理生命周期过渡。</block>
-  <block id="9d69a47ee84474f4e4a5eddf2f92fce9" category="list-text">*访问层生命周期*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _hot_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到 _cool_ 类。</block>
   <block id="8395a887269d6d32807663d5b146b004" category="paragraph">您可能希望查看为集群配置的所有对象存储以及它们所连接的聚合。XP Bluetiering可为每个集群提供此信息。</block>
-  <block id="af29bc41d01e6d915afeefec98082d55" category="list-text">*存储类生命周期*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。</block>
   <block id="a7534748b05a4e2cd2cc98557d80265f" category="paragraph">借助BlueXP分层功能、您可以轻松地将分层数据迁移到其他云提供商。例如、如果要从Amazon S3迁移到Azure Blob、可以按以下顺序执行上述步骤：</block>
   <block id="3ba3b9c66dc287b5cb13e6a63f117260" category="inline-link-macro">有关BlueXP分层的通知</block>
   <block id="072ac4eafcf075811201623eddbc2488" category="list-text"><block ref="072ac4eafcf075811201623eddbc2488" category="inline-link-macro-rx"></block></block>
@@ -1435,4 +1411,28 @@
   <block id="b839d32c555694a5245fa2fa33d17d88" category="section-title">使用自定义前缀作为存储分层数据的分段名称</block>
   <block id="6eb4429639db75cb3b56cc38a3fb8785" category="paragraph">过去、在定义存储分段名称时、您需要使用默认的"光纤 池"前缀、例如_Fabric池bucket1_。现在、您可以在为存储分段命名时使用自定义前缀。只有在将数据层到Amazon S3时、此功能才可用。<block ref="3e8270d3bc816ce30c7c11fe6d073535" category="inline-link-rx"></block>。</block>
   <block id="6a3a27c0cd9c23985f6e8260846d58bc" category="paragraph">如果使用多个连接器管理环境中的所有存储系统、则要实施分层的某些集群可能位于不同的连接器中。如果您不确定是哪个Connector管理某个集群、可以使用BlueXP分层跨所有连接器进行搜索。<block ref="017b0207cc8469b6ea246adade89f8e1" category="inline-link-rx"></block>。</block>
+  <block id="d441270e2d66b6759e1bbe07190e3d30" category="admonition">如果您计划将BlueXP分层配置为使用成本较低的访问层、在该访问层中、分层数据将在特定天数后过渡到、则在Azure帐户中设置容器时、不得选择任何生命周期规则。BlueXP层管理生命周期过渡。</block>
+  <block id="03d332289b553799480f6108ffeafb87" category="list-text">*访问层生命周期*：BlueXP分层管理分层数据的生命周期过渡。数据从_hot_类开始、但您可以创建一个规则、以便在一定天数后将_cool类应用于数据。</block>
+  <block id="8e3bd47632d430bddfe95f785eeac535" category="paragraph">选择要将分层数据过渡到的访问层以及将数据分配到该层之前的天数，然后单击*Continue*。例如、下面的屏幕截图显示、在对象存储中运行45天后、分层数据会从_hot_类分配给_cool类。</block>
+  <block id="edb46c71cd537834a31acba5c8bb3324" category="inline-image-macro">屏幕截图、显示如何在特定天数后选择另一个访问层以将其分配给您的数据。</block>
+  <block id="971e98c37b530be649080f29af3f0b98" category="paragraph"><block ref="971e98c37b530be649080f29af3f0b98" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7f6ab23305817b45bc45d181186c25e8" category="paragraph">请注意、此生命周期规则将应用于选定存储帐户中的所有Blob容器。</block>
+  <block id="a8118667904ce7570dde8558058e5227" category="list-text">您可以选择默认云提供商存储类/访问层、也可以使用生命周期管理为较早的分层数据分配更经济高效的层</block>
+  <block id="1951a5c5d1665bf8eab527dfe7f2ae39" category="list-text">如果您已对分层数据应用生命周期规则(仅适用于某些提供商)、则会在一定天数后将较早的分层数据分配到一个更经济高效的层。</block>
+  <block id="ca664e90b4edf01d3d768fd83c5887e5" category="section-title">BlueXP分层是否支持使用生命周期管理策略？</block>
+  <block id="5b957b9367139438dee313dd29a9705d" category="paragraph">是的。您可以启用生命周期管理、以便BlueXP分层在一定天数后将数据从默认存储类/访问层过渡到更经济高效的层。此生命周期规则将应用于Amazon S3和Google Cloud存储的选定存储分段中的所有对象、以及Azure Blb的选定存储帐户中的所有容器。</block>
+  <block id="4ddb3e74d9bc198503357d68911e693a" category="admonition">如果您计划将BlueXP分层配置为使用成本较低的存储类、在这些存储类中、分层数据将在特定天数后过渡到、则在GCP帐户中设置存储分段时、不能选择任何生命周期规则。BlueXP层管理生命周期过渡。</block>
+  <block id="62395102d7e1f3d3f1a74e04e3954c6b" category="list-text">*存储类生命周期*：BlueXP分层管理分层数据的生命周期过渡。数据从_Standard"类开始、但您可以创建规则、以便在特定天数后应用不同的存储类。</block>
+  <block id="33b44815b500b88c5109f80b9d682999" category="paragraph">选择要将分层数据过渡到的Google Cloud存储类以及将数据分配给该类之前的天数、然后单击*继续*。例如、下面的屏幕截图显示、分层数据在对象存储中的30天后从_Standard"类分配给_Nearline类、然后在对象存储中的60天后分配给_Cldline类。</block>
+  <block id="9ca91908fe96ca20c6a4b4e97d2f509d" category="inline-image-macro">屏幕截图显示如何在特定天数后选择分配给数据的其他存储类。</block>
+  <block id="2fed6515a6445979e275cfaa6232f5b6" category="paragraph"><block ref="2fed6515a6445979e275cfaa6232f5b6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7b099b08bcdba808b8417a43925b14ad" category="paragraph">请注意、此生命周期规则将应用于选定存储分段中的所有对象。</block>
+  <block id="d95059d33fe41ec441d7f8845f71b3db" category="admonition">如果您计划将BlueXP分层配置为使用成本较低的存储类、在该存储类中、分层数据将在特定天数后过渡到、则在AWS帐户中设置存储分段时、不能选择任何生命周期规则。BlueXP层管理生命周期过渡。</block>
+  <block id="76fef9bde23c0cdb9c92abd0340843f1" category="list-text">*存储类*：BlueXP分层管理分层数据的生命周期过渡。数据从_Standard"类开始、但您可以创建一个规则、以便在特定天数后将其他存储类应用于数据。</block>
+  <block id="55ce04104758d742493f1c9d59b8c760" category="paragraph">选择要将分层数据过渡到的S3存储类以及将数据分配给该类之前的天数，然后单击*继续*。例如、下面的屏幕截图显示、在对象存储中运行45天后、分层数据会从_Standard"类分配给_Standard" iA_类。</block>
+  <block id="99ee3b4b2d66299d325269e75fc1ecf2" category="inline-image-macro">显示如何在特定天数后选择分配给数据的另一个存储类的屏幕截图。</block>
+  <block id="825036f84bd328348dcc5f9cc4dcfac8" category="paragraph"><block ref="825036f84bd328348dcc5f9cc4dcfac8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="15b2d2644c0eb82c219365b9d3ed6f75" category="paragraph">确保性能层中有足够的空间容纳要从云移回的所有数据。</block>
+  <block id="18711602a05157009e1d81446d484cb4" category="list-text">*存储类生命周期*：BlueXP分层管理分层数据的生命周期过渡。数据从_Standard"类开始、但您可以创建一个规则、以便在特定天数后将其他存储类应用于数据。</block>
+  <block id="8ca0007104a6880fedaff25fc59dc8ad" category="paragraph">从MetroCluster配置中删除镜像对象存储时、系统将提示您是否也要删除主对象存储。您可以选择保持主对象存储附加到聚合、也可以选择将其删除。</block>
 </blocks>

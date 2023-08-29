@@ -56,18 +56,18 @@ image:screenshot_tiering_object_store_create_button.png["显示用于创建新�
 +
 需要使用 _fabric-pool_ 前缀，因为 Connector 的 IAM 策略允许实例对使用该前缀命名的分段执行 S3 操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。
 
-.. *存储类生命周期*：BlueXP分层可管理分层数据的生命周期过渡。数据以 _Standard_ 类开头，但您可以创建一个规则，以便在一定天数后将数据移动到另一个类。
+.. *存储类生命周期*：BlueXP分层管理分层数据的生命周期过渡。数据从_Standard"类开始、但您可以创建一个规则、以便在特定天数后将其他存储类应用于数据。
 +
-选择要将分层数据过渡到的 S3 存储类以及要移动数据的天数，然后单击 * 继续 * 。例如，下面的屏幕截图显示，在对象存储中使用 45 天后，分层数据将从 _Standard_ 类移动到 _Standard-IA_ 类。
+选择要将分层数据过渡到的S3存储类以及将数据分配给该类之前的天数，然后单击*继续*。例如、下面的屏幕截图显示、在对象存储中运行45天后、分层数据会从_Standard"类分配给_Standard" iA_类。
 
 +
 如果选择 * 将数据保留在此存储类中 * ，则数据将保留在 _Standard_ 存储类中，不会应用任何规则。 link:reference-aws-support.html["请参见支持的存储类"^]。
 
 +
-image:screenshot_tiering_lifecycle_selection_aws.png["一个屏幕截图，显示如何选择在特定天数后移动数据的其他存储类。"]
+image:screenshot_tiering_lifecycle_selection_aws.png["显示如何在特定天数后选择分配给数据的另一个存储类的屏幕截图。"]
 
 +
-请注意，生命周期规则将应用于选定存储分段中的所有对象。
+请注意、此生命周期规则将应用于选定存储分段中的所有对象。
 
 .. * 凭据 * ：输入具有所需 S3 权限的 IAM 用户的访问密钥 ID 和机密密钥，然后单击 * 继续 * 。
 +
