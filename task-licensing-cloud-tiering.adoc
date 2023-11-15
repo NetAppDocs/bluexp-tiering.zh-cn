@@ -27,6 +27,14 @@ link:concept-cloud-tiering.html#pricing-and-licenses["详细了解许可如何�
 
 
 
+== 30 天免费试用
+
+如果您没有BlueXP分层许可证、则在为第一个集群设置分层时、将开始免费试用30天的BlueXP分层。30天免费试用结束后、您需要通过按需购买订阅、年度订阅、BYOL许可证或两者的组合为BlueXP分层付费。
+
+如果免费试用结束、并且您尚未订阅或添加许可证、则ONTAP 将不再将冷数据分层到对象存储。以前分层的所有数据仍可访问；这意味着您可以检索和使用此数据。检索后、此数据将从云移回性能层。
+
+
+
 == 使用BlueXP分层PAYGO订阅
 
 您可以从云提供商的市场订阅按需购买、从而获得使用Cloud Volumes ONTAP 系统和许多云数据服务(例如BlueXP分层)的许可。
@@ -41,7 +49,7 @@ link:concept-cloud-tiering.html#pricing-and-licenses["详细了解许可如何�
 .步骤
 . 在BlueXP中、单击*移动性>分层>内部部署信息板*。
 . 在_Marketplace subscripts_部分中、单击Amazon Web Services下的*订阅*、然后单击*继续*。
-. 从订阅 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]、然后重新登录到BlueXP网站以完成注册。
+. 从订阅 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["AWS Marketplace"^]、然后重新登录到BlueXP网站以完成注册。
 +
 以下视频显示了该过程：
 
@@ -69,15 +77,15 @@ video::video_subscribing_azure_tiering.mp4[width=848,height=480]
 
 
 
-=== 从 GCP Marketplace 订阅
+=== 从Google Cloud Marketplace订阅
 
-从GCP Marketplace订阅BlueXP分层、设置按需购买的订阅、以便将数据从ONTAP 集群分层到Google Cloud存储。
+从Google云市场订阅BlueXP分层、设置按需购买订阅、以便将数据从ONTAP集群分层到Google云存储。
 
 [[subscribe-gcp]]
 .步骤
 . 在BlueXP中、单击*移动性>分层>内部部署信息板*。
 . 在_Marketplace subscripts_部分中、单击Google Cloud下的*订阅*、然后单击*继续*。
-. 从订阅 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市场"^]、然后重新登录到BlueXP网站以完成注册。
+. 从订阅 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["Google Cloud Marketplace"^]、然后重新登录到BlueXP网站以完成注册。
 +
 以下视频显示了该过程：
 
@@ -89,13 +97,13 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 == 使用年度合同
 
-每年购买一份年度合同、为BlueXP分层支付费用。
+每年购买一份年度合同、为BlueXP分层支付费用。年度合同有1年、2年或3年期限。
 
-将非活动数据分层到AWS时、您可以订阅可从获取的年度合同 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS Marketplace 页面"^]。此计划的有效期为1年、2年或3年。
+将非活动数据分层到AWS时、您可以从订阅一份年度合同 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace 页面"^]。如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["将订阅与您的 AWS 凭据关联"^]。
 
-如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["将订阅与您的 AWS 凭据关联"^]。
+将非活动数据分层到Azure时、您可以从订阅一份年度合同 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp["Azure Marketplace页面"^]。如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html#subscribe["将订阅与您的Azure凭据关联起来"^]。
 
-目前、分层到Azure或GCP时不支持年度合同。
+目前、在向Google Cloud进行层存储时、不支持年度合同。
 
 
 

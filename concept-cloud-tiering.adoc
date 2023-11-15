@@ -125,9 +125,9 @@ link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-paygo-subscription["
 
 === 年度合同
 
-在将非活动数据分层到Amazon S3时、BlueXP分层提供年度合同。此计划的有效期为1年、2年或3年。
+在将非活动数据分层到Amazon S3或Azure时、BlueXP分层提供一份年度合同。此计划的有效期为1年、2年或3年。
 
-目前、分层到Azure或GCP时不支持年度合同。
+目前、在将数据层到Google Cloud时、不支持年度合同。
 
 
 

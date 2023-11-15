@@ -327,7 +327,6 @@
   <block id="a70c9916d691b1eb3e72bf59caa27ce2" category="section-title">从 AWS Marketplace 订阅</block>
   <block id="03909f0465e674709c33e446a2657166" category="paragraph">以下视频显示了该过程：</block>
   <block id="8feab303f9a851219461fc3a5bccb103" category="section-title">从 Azure Marketplace 订阅</block>
-  <block id="d96cb6abed792dbbfc1aebbc934cb55d" category="section-title">从 GCP Marketplace 订阅</block>
   <block id="7bd914491d17c534e3612cd97579060e" category="list-text">mailto ： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 发送电子邮件以购买许可证 ] 。</block>
   <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link">有关详细信息，请访问此处</block>
   <block id="63b75697f87dc9e5a0f1c93ebf6056b5" category="paragraph">如果您当前正在使用 FabricPool 许可，则在 FabricPool 许可证达到到期日期或最大容量之前，您不会受到影响。如果您需要更新许可证，请联系 NetApp ，或者在更早版本时联系 NetApp ，以确保将数据分层到云的能力不会中断。</block>
@@ -744,9 +743,7 @@
   <block id="4d4499464e1749775c821bea4d3050f7" category="paragraph">如果您可能希望将集群上的某些聚合中的数据分层到不同的对象存储、也可以创建额外的对象存储。或者、如果您计划使用FabricPool 镜像将分层数据复制到其他对象存储。 <block ref="f977424bbc57cc401e0fdede18cc12da" category="inline-link-macro-rx"></block>。</block>
   <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">使用年度合同</block>
   <block id="2351127acb653fd60dafc73c8efcb79d" category="inline-link">AWS Marketplace 页面</block>
-  <block id="66930a908819d6fce6483de6c770d313" category="paragraph">将非活动数据分层到AWS时、您可以订阅可从获取的年度合同<block ref="7e9391e5068ba3345180f0de3723960c" category="inline-link-rx"></block>。此计划的有效期为1年、2年或3年。</block>
   <block id="54b98a81c2ba2da3e9c721b03a4585b5" category="inline-link">将订阅与您的 AWS 凭据关联</block>
-  <block id="29f6791775c21cd38fbdcb5b18589d37" category="paragraph">目前、分层到Azure或GCP时不支持年度合同。</block>
   <block id="beecf2fd8c511928c5d65a11860f7c21" category="paragraph">您过去可能用于将内部ONTAP 数据分层到云的* FabricPool *许可证仅保留用于无法访问Internet的站点(也称为"非公开站点")中的ONTAP 部署以及将配置分层到对象存储。如果您使用的是此类配置、则可以使用System Manager或ONTAP 命令行界面在每个集群上安装FabricPool 许可证。</block>
   <block id="1f0f4e4d1bc0286ff3e0b848a00fe06b" category="paragraph">在典型配置中、整个集群有一个对象存储。从2022年8月开始、您可以使用*高级设置*页面为集群添加其他对象存储、然后将不同的对象存储附加到不同的聚合、或者将2个对象存储附加到聚合以进行镜像。</block>
   <block id="c51354053e48bdd26e7dd1bcbe8db297" category="list-text">无：将所有数据分类为始终处于热状态；防止将卷中的任何数据移动到对象存储。</block>
@@ -828,9 +825,7 @@
   <block id="6f7498318061ab9585a9a930576417e9" category="paragraph">您需要先在BlueXP中创建内部ONTAP 工作环境、然后才能开始对冷数据进行分层。</block>
   <block id="f92115ef83b34980e3bba84c1a861bac" category="paragraph">以下问题与BlueXP Connector相关。</block>
   <block id="b3ac7359e28ad36cfcfef7d4cff76670" category="list-text">对于Azure、除了您需要为BlueXP提供的权限之外、不需要任何额外的权限。</block>
-  <block id="f1b10f6f612755bd0b4bd43376cb6834" category="list-text">从订阅<block ref="d668c832ccb70eb717d6736e1082df78" category="inline-link-rx"></block>、然后重新登录到BlueXP网站以完成注册。</block>
   <block id="0c664d98088fac0e3d869a21cac0c6c4" category="list-text">从订阅<block ref="41a6e7dc73b2f1e43bd8c26c6ce83782" category="inline-link-rx"></block>、然后重新登录到BlueXP网站以完成注册。</block>
-  <block id="e4db414e6112e54da73cbeaaacf47826" category="list-text">从订阅<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block>、然后重新登录到BlueXP网站以完成注册。</block>
   <block id="6193e62acb4a86204633b2d093e49546" category="list-text">单击BlueXP右下角的聊天图标以申请许可证。</block>
   <block id="e031d1891af14066db39ea9bc5a67edb" category="list-text">如果您使用的配置在BlueXP中不受支持、则可以继续使用FabricPool 许可证。<block ref="f4b8492105dcaca906c2ce90b9ccab9e" category="inline-link-rx"></block>。</block>
   <block id="f68bf28051d836364652b5a91d1bcd3a" category="list-text">输入您的BlueXP帐户ID (在支持站点上称为租户ID)、然后单击*提交*下载许可证文件。</block>
@@ -1030,7 +1025,6 @@
   <block id="9335e172ddfade48320b47cd34c682a8" category="paragraph">BlueXP分层以按需购买模式提供基于消费的许可。通过云提供商的市场订阅后、您可以按GB为分层数据付费、无需预先支付费用。您的云提供商会通过每月账单向您开具账单。</block>
   <block id="793e8e21e4c6d6e9102d21e5ceeb9ef6" category="paragraph">在免费试用期间、或者如果您未超过BlueXP分层BYOL许可证、则不会从按需购买订阅中收取任何费用。</block>
   <block id="a48331bea4b593b755f99fa927d65638" category="paragraph"><block ref="4a6532d8b81197880664db7ef07b3202" category="inline-link-macro-rx"></block>。</block>
-  <block id="a05ea6f9f4f0a8968aa8c0288bad4b53" category="paragraph">在将非活动数据分层到Amazon S3时、BlueXP分层提供年度合同。此计划的有效期为1年、2年或3年。</block>
   <block id="49de8995cf3b9508af67fbbd5e085640" category="inline-link-macro">请参见如何使用BlueXP分层BYOL许可证</block>
   <block id="a42e9abff9358e2d7f140d2a5cca181b" category="inline-link-macro">阅读有关BlueXP分层许可证与FabricPool 许可证之间的区别的更多信息</block>
   <block id="73bd12c72df2f49e3c020653025ff48b" category="admonition">自 2021 年 8 月起，旧的 * FabricPool * 许可证已替换为 * 云分层 * 许可证。 <block ref="e6f9c79a0a8d34aafe89d9b302bb60e6" category="inline-link-macro-rx"></block>。</block>
@@ -1092,8 +1086,6 @@
   <block id="c174dc6f5adc76b760a64752a5683812" category="paragraph">您可以从云提供商的市场订阅按需购买、从而获得使用Cloud Volumes ONTAP 系统和许多云数据服务(例如BlueXP分层)的许可。</block>
   <block id="1febaf5111f6d0a8a13d54e09b64c6b8" category="paragraph">从AWS Marketplace订阅BlueXP分层、以设置按需购买的订阅、以便将数据从ONTAP 集群分层到AWS S3。</block>
   <block id="1ca8ff1356ad77544b7267aaa0b19042" category="paragraph">从Azure Marketplace订阅BlueXP分层、设置按需购买的订阅、以便将数据从ONTAP 集群分层到Azure Blob存储。</block>
-  <block id="de1cdae44076062eb7f546c81cfb6990" category="paragraph">从GCP Marketplace订阅BlueXP分层、设置按需购买的订阅、以便将数据从ONTAP 集群分层到Google Cloud存储。</block>
-  <block id="67731652b48fdb7846ca466471556450" category="paragraph">每年购买一份年度合同、为BlueXP分层支付费用。</block>
   <block id="93f26f7b1e47a3f6bebd49a7fa7dd4b6" category="section-title">使用BlueXP分层BYOL许可证</block>
   <block id="c2319a35daf2868e6d5793e8fa613108" category="paragraph">如果您没有BlueXP分层许可证、请联系我们购买一个：</block>
   <block id="feace567e2626d7786ec5e18354a5177" category="section-title">从2021年开始实施BlueXP分层BYOL许可</block>
@@ -1265,7 +1257,6 @@
   <block id="0e3e175aa7efdfc360dab27c51b6fc80" category="admonition">Cloud Volumes ONTAP 系统是BlueXP分层中的只读系统。<block ref="f5b25cbfd89581108090437b49ead269" category="inline-link-rx"></block>。</block>
   <block id="994f1fa9f6b6f6276b10a9c8a8f18a8c" category="list-text">BlueXP备份和恢复同样受使用层策略设置的卷的影响。<block ref="2db919f88216e9376af16eec91019e18" category="inline-link-rx"></block>。</block>
   <block id="5f6fdb8f4b29baeb552fcdad9078be66" category="list-text">如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的BlueXP分层。您将在BlueXP分层*内部信息板*选项卡中看到有效订阅。您无需再次订阅。您将在BlueXP电子钱包中看到有效订阅。</block>
-  <block id="7e1d9a12a6617957d93e562480c58a19" category="paragraph">如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行<block ref="3e7d826ab39799649c48f6e2f8f11222" category="inline-link-rx"></block>。</block>
   <block id="1ba2cc4758ef6d9270d73cfc36a18caa" category="paragraph">或者、如果您有一个不会使用的未分配的基于节点的Cloud Volumes ONTAP 许可证、则可以将其转换为具有相同美元等价性和相同到期日期的BlueXP分层许可证。<block ref="f4c32a82791cf9fc58c736c0aed05092" category="inline-link-rx"></block>。</block>
   <block id="30fc689a9c3cd4222329fe3a4c818a33" category="paragraph">如果下拉列表中没有您的 NetApp 支持站点帐户，<block ref="06a3bc9d474b5d4e44d1a2733cac785a" category="inline-link-rx"></block>。</block>
   <block id="509259be6d5e15d8959f705cbe0cbcc1" category="paragraph"><block ref="509259be6d5e15d8959f705cbe0cbcc1" category="inline-image-macro-rx" type="image"></block></block>
@@ -1436,4 +1427,17 @@
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">获得云提供商文件服务支持</block>
   <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">有关与云提供商文件服务、其基础架构或使用该服务的任何解决方案相关的技术支持、请参阅该产品的BlueXP文档中的"获得帮助"。</block>
   <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">要获得针对BlueXP及其存储解决方案和服务的技术支持、请使用下面所述的支持选项。</block>
+  <block id="120c551b91db0cd715347530ec78eefa" category="list-text">从订阅<block ref="60fa25c896f0169de9e5a75989c9f27f" category="inline-link-rx"></block>、然后重新登录到BlueXP网站以完成注册。</block>
+  <block id="4df3a4b719debe027add38476f2fd8fd" category="section-title">从Google Cloud Marketplace订阅</block>
+  <block id="725a72912ce0fc328960741c96d6166c" category="paragraph">从Google云市场订阅BlueXP分层、设置按需购买订阅、以便将数据从ONTAP集群分层到Google云存储。</block>
+  <block id="98ad2c075d2fb10da4cf15c985c3f43f" category="inline-link">Google Cloud Marketplace</block>
+  <block id="6b141e3757b598fe4797872cf41433a3" category="list-text">从订阅<block ref="82ddec44156571798c68c5bde2400da5" category="inline-link-rx"></block>、然后重新登录到BlueXP网站以完成注册。</block>
+  <block id="5bb5fe9a2717870250d6e9535cfc3ddf" category="paragraph">每年购买一份年度合同、为BlueXP分层支付费用。年度合同有1年、2年或3年期限。</block>
+  <block id="b32259fac98434133e04f9d5edeccc2f" category="paragraph">将非活动数据分层到AWS时、您可以从订阅一份年度合同<block ref="85c21eb306ec4bcbda7252ca6117fc5c" category="inline-link-rx"></block>。如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行<block ref="3e7d826ab39799649c48f6e2f8f11222" category="inline-link-rx"></block>。</block>
+  <block id="bd0202b4a5e368ede75c41822527f8dd" category="inline-link">Azure Marketplace页面</block>
+  <block id="f201c550f444b5128aeb063bf930d1e2" category="inline-link">将订阅与您的Azure凭据关联起来</block>
+  <block id="56623ade00abb157c138588791032ca9" category="paragraph">将非活动数据分层到Azure时、您可以从订阅一份年度合同<block ref="d5a65c1c4876b0fa6968c9e08ffea7e8" category="inline-link-rx"></block>。如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行<block ref="81924c3896adc46721210987cc1f149c" category="inline-link-rx"></block>。</block>
+  <block id="77d720d97cc99bdd67ce50e58655dc3f" category="paragraph">目前、在向Google Cloud进行层存储时、不支持年度合同。</block>
+  <block id="74369b8ae005333b4dd61fb93f495946" category="paragraph">在将非活动数据分层到Amazon S3或Azure时、BlueXP分层提供一份年度合同。此计划的有效期为1年、2年或3年。</block>
+  <block id="8a2304319d2e68c914c95280f8d1b529" category="paragraph">目前、在将数据层到Google Cloud时、不支持年度合同。</block>
 </blocks>
