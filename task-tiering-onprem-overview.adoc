@@ -5,15 +5,12 @@ keywords: overview, tiering overview, tiered clusters, clusters enabled for tier
 summary: BlueXP分层可提供每个内部集群的数据分层的聚合视图。此概述可清晰地描述您的环境并使您能够采取适当的措施。 
 ---
 = 简要了解集群中的数据分层
-:toc: macro
 :hardbreaks:
 :allow-uri-read: 
-:toc: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
