@@ -1119,7 +1119,6 @@
   <block id="5b68fac5f1ce77d65201586ce9a60468" category="list-text"><block ref="1f8cdb76c7bd9ccb2f67a5fe3a108324" category="inline-link-macro-rx"></block> 新集群所需的容量。</block>
   <block id="35871aa5a51169ec1ce0c1aa1e2550f0" category="list-text">在BlueXP分层中、 <block ref="210b64e2207c15c9773eb7d42739f7fc" category="inline-link-macro-rx"></block>。</block>
   <block id="5853c8a054007c0c99bbc9662a53c4fb" category="summary">BlueXP分层支持两个访问层以及大多数地区。</block>
-  <block id="e8823c938290b3df1d69b5821a4bbbb8" category="paragraph">在将数据分层设置为Azure时、BlueXP分层会自动对非活动数据使用_hot_访问层。BlueXP分层可以应用生命周期规则、以便在一定天数后将数据从_hot_访问层过渡到_cool_访问层。</block>
   <block id="95d5445b66336b61fe8c176426e3cb6b" category="paragraph">配置BlueXP分层生命周期规则时、在Azure帐户中设置容器时、不得配置任何生命周期规则。</block>
   <block id="4a744a6786776cc5df25ca40dc57cb36" category="paragraph">BlueXP分层支持分层到任何区域中可通过Connector访问的任何存储帐户。</block>
   <block id="07702d7eda621b95dd9a2353b7d4e568" category="list-text">Connector的网络连接、可通过HTTPS出站连接到数据中心的ONTAP 集群、Google云存储和XP BlueTiering服务。</block>
@@ -1155,7 +1154,6 @@
   <block id="3afb7cae2b7c3e96c6a4e1df765d3dce" category="section-title">拖放以启用BlueXP分层到Azure Blob、Google Cloud Storage和StorageGRID</block>
   <block id="18cd1c130656412d8089667948bc48a2" category="section-title">拖放以启用BlueXP分层到Amazon S3</block>
   <block id="a0396859c016deff163331729e87c6cf" category="summary">BlueXP分层支持多个Google Cloud存储类和大多数地区。</block>
-  <block id="e9885ff472161e4c48f508f106c6ad36" category="paragraph">在将数据分层设置为GCP时、BlueXP分层功能会自动对非活动数据使用_Standard_存储类。BlueXP分层可以应用生命周期规则、以便在一定天数后将数据从_Standard_存储类过渡到其他存储类。您可以从以下存储类中进行选择：</block>
   <block id="58edb41c3cfab45408029ad69032402a" category="paragraph">配置BlueXP分层生命周期规则时、在Google帐户中设置存储分段时、不得配置任何生命周期规则。</block>
   <block id="2d5551329360393b3ea83aeec84cf519" category="paragraph">XP Bluetiering支持以下区域。</block>
   <block id="85fc382665546ae4cc771b24663b67ce" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 在系统上启用BlueXP分层</block>
@@ -1177,7 +1175,6 @@
   <block id="3ba3b9c66dc287b5cb13e6a63f117260" category="inline-link-macro">有关BlueXP分层的通知</block>
   <block id="072ac4eafcf075811201623eddbc2488" category="list-text"><block ref="072ac4eafcf075811201623eddbc2488" category="inline-link-macro-rx"></block></block>
   <block id="be097470e9ac90369332a05c045a9742" category="summary">BlueXP分层支持多个S3存储类和大多数地区。</block>
-  <block id="9febe911a8cef93d7919b4e705d2af96" category="paragraph">在将数据分层设置为AWS时、BlueXP分层会自动对非活动数据使用_Standard_存储类。BlueXP分层可以应用生命周期规则、以便数据在一定天数后从_Standard_存储类过渡到另一个存储类。您可以从以下存储类中进行选择：</block>
   <block id="b48e3a08ac6bdb2960ebbf7583060d5c" category="paragraph">配置BlueXP分层生命周期规则时、在AWS帐户中设置存储分段时、不得配置任何生命周期规则。</block>
   <block id="35e385e351037991047fc3503ac66ea0" category="paragraph">BlueXP分层支持以下AWS区域。</block>
   <block id="2af8ca26b1bcf00d88a15b8f1992fa35" category="list-text">Connector的网络连接、用于启用与源ONTAP 集群、与S3兼容的对象存储以及XP Blueering服务的出站HTTPS连接。</block>
@@ -1440,4 +1437,7 @@
   <block id="77d720d97cc99bdd67ce50e58655dc3f" category="paragraph">目前、在向Google Cloud进行层存储时、不支持年度合同。</block>
   <block id="74369b8ae005333b4dd61fb93f495946" category="paragraph">在将非活动数据分层到Amazon S3或Azure时、BlueXP分层提供一份年度合同。此计划的有效期为1年、2年或3年。</block>
   <block id="8a2304319d2e68c914c95280f8d1b529" category="paragraph">目前、在将数据层到Google Cloud时、不支持年度合同。</block>
+  <block id="a6946f1b4a14c4860d7cb9b918379334" category="paragraph">当您从内部ONTAP系统设置到GCP的数据分层时、BlueXP分层会自动对非活动数据使用_Standard"存储类。BlueXP分层可以应用生命周期规则、以便在一定天数后将数据从_Standard_存储类过渡到其他存储类。您可以从以下存储类中进行选择：</block>
+  <block id="90fd6199eed378ef0bf6c4f8d3ed5ebc" category="paragraph">当您从内部ONTAP系统设置到Azure的数据分层时、BlueXP分层会自动对非活动数据使用_hot_访问层。BlueXP分层可以应用生命周期规则、以便在一定天数后将数据从_hot_访问层过渡到_cool_访问层。</block>
+  <block id="17c353c0dd208c819d731350ef2b1300" category="paragraph">在从内部ONTAP系统设置到AWS的数据分层时、BlueXP分层会自动对非活动数据使用_Standard"存储类。BlueXP分层可以应用生命周期规则、以便数据在一定天数后从_Standard_存储类过渡到另一个存储类。您可以从以下存储类中进行选择：</block>
 </blocks>
