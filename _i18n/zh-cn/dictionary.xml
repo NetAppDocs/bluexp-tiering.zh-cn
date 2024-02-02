@@ -417,25 +417,11 @@
   <block id="51ae64fb3620d7b88a6fc20148f0e2d7" category="sidebar">支持的 Amazon S3 存储类和区域</block>
   <block id="483b947377ff3a8f0bfe2df65d4f5292" category="sidebar">支持的 Azure 访问层和区域</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
-  <block id="2081f1ce1d1b21d487730d917f2fc133" category="sidebar">将内部 ONTAP 数据分层到云</block>
-  <block id="9c24075097cef2efbfa6d34acbbb775d" category="sidebar">分层到 Azure Blob</block>
-  <block id="a62425c23786654b084b1fbadf9c41f1" category="sidebar">分层到 Google Cloud</block>
-  <block id="932b49a2d53968bfae607cb915ef9ec2" category="sidebar">分层到通用 S3</block>
-  <block id="6efa402b5baeb2ad1984997697bc2d7b" category="sidebar">管理分层设置</block>
-  <block id="00e64b31a7ad3617adbda7547414223a" category="sidebar">查看集群的分层信息</block>
-  <block id="34698ad735e6046f93fbdd61cb2d3804" category="sidebar">对其他卷中的数据进行分层</block>
-  <block id="004509d192f15716a8c5185cda0cc0da" category="sidebar">将数据从云移回性能层</block>
-  <block id="b19237098460d786516168b98687becc" category="sidebar">管理聚合上的分层设置</block>
-  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">博客社区</block>
-  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
-  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
-  <block id="4c7d5d7dfde4a7bd82b54348182043d3" category="sidebar">其他资源</block>
   <block id="cb6793246bf8a1d9872b2f128304ed8c" category="list-text">Glacier 即时检索</block>
   <block id="7beb276ec918c2d8eb132df5ed6fe576" category="section-title">支持哪些类型的 ONTAP 系统？</block>
   <block id="ec0515a8a06c1c0cf10efc6cbb1bfab9" category="inline-link">使用 FabricPool 的注意事项和要求</block>
   <block id="403df42df80267a7b2bc0be8c3e6685d" category="paragraph">您可以将内部 ONTAP 系统中的非活动数据分层到以下对象存储提供程序：</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">帮助菜单的屏幕截图，其中列出的第一个选项为支持</block>
-  <block id="19d089db572ee6a1e154a0c9c9e57bfd" category="paragraph">NetApp 使用 Microsoft Azure Active Directory 作为身份提供程序来提供特定于支持和许可的身份验证服务。</block>
   <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">在登录页面上，提供 NetApp 支持站点注册的电子邮件地址和密码以执行身份验证过程。</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
@@ -451,7 +437,6 @@
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社区</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文档。</block>
-  <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto ： ng-cloudmanager-feedback@netapp.com （反馈电子邮件）</block>
   <block id="fd01295dbf857b2bc6bcef4166b23207" category="paragraph">最初在采用纯SSD聚合的AFF 、FAS 和ONTAP Select 系统上受支持、从ONTAP 9.8开始、除了高性能SSD之外、您还可以对包含HDD的聚合中的数据进行分层。请参见<block ref="6b92341e29e5578d52c0690ebbf4bdb7" category="inline-link-rx"></block> 了解详细信息。</block>
   <block id="afacb33ad65bcd63eb15aeba04b4aed0" category="inline-link">请参见如何许可和配置这些类型的集群。</block>
   <block id="c8fe0ffee9071759c56b9a7d98bae676" category="section-title">具有FabricPool 许可证的现有集群的进程</block>
@@ -661,10 +646,6 @@
   <block id="aa18b7b04ae6143c1d2f56b72718403e" category="inline-link">详细了解新的对象存储功能。</block>
   <block id="5c10257d843c1a8aa9e46f55d2064835" category="section-title">为MetroCluster 配置提供云分层许可证支持</block>
   <block id="4f05e87f380a81f7a23601ecba757570" category="sidebar">管理对象存储</block>
-  <block id="44e298753e2ff93996d0e8ffa928a922" category="sidebar">为集群添加新对象存储</block>
-  <block id="f479e40bc5b0a3dc9ce1b1c43ebdec89" category="sidebar">向聚合添加另一个对象存储以进行镜像</block>
-  <block id="07ed437d90cdfd3243fc6c8fa8ddacff" category="sidebar">交换主对象存储和镜像对象存储</block>
-  <block id="500c3424a2151541a2d7783c7e308bb5" category="sidebar">删除镜像对象存储</block>
   <block id="5c37edf1ec718afd1ab9a5a51043e0ce" category="paragraph">按照以下步骤快速入门。本主题的以下各节提供了每个步骤的详细信息。</block>
   <block id="e41af01898aa01f20e528d19fdda2ec8" category="paragraph">选择是通过公有 Internet将内部ONTAP 集群直接连接到AWS S3、还是使用VPN或AWS Direct Connect并通过专用VPC端点接口将流量路由到AWS S3。</block>
   <block id="2095d7a797c25bb28e0630e6f0234176" category="inline-xref">请参见可用的连接方法。</block>
@@ -810,7 +791,6 @@
   <block id="9a3db1abe5491d0eb9bb5d125981356c" category="paragraph">搜索BlueXP知识库、查找有助于解决问题的文章。</block>
   <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">加入BlueXP社区、关注正在进行的讨论或创建新的讨论。</block>
   <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">您当前正在查看的BlueXP文档。</block>
-  <block id="6702efec14563f45f1ee2f8c613b8ad8" category="paragraph">我们非常重视您的反馈意见。提交反馈以帮助我们改进BlueXP。</block>
   <block id="d63bf50426f4c712554faec55b30c548" category="list-text">*服务*：选择与问题描述 关联的服务。例如、当特定于技术支持问题描述 时、如果服务中包含工作流或功能、则为BlueXP。</block>
   <block id="aa996e20900197b0ea41485ada083d8c" category="paragraph">工作环境列表属于您在服务顶部横幅中选择的BlueXP帐户、工作空间和Connector的范围。</block>
   <block id="d7945c5e359d6ac7ea9f91926a2538da" category="list-text">从左侧导航菜单中、选择*移动性&gt;分层*。</block>
@@ -842,7 +822,6 @@
   <block id="761bfdc0fcb01bfd39ee5fe957d6cc2e" category="list-text">修改与BlueXP Connector关联的安全组配置。您必须将此策略更改为 "Custom" （自定义）（从 "Full Access" ），并且必须将其更改为 "Custom" （自定义） <block ref="2e3aa01a102d96f1118abd47a89529bc" category="inline-xref-macro-rx"></block> 如前面所示。</block>
   <block id="667b744af05e085368d150edc4b8a344" category="inline-link">登录到托管BlueXP Connector的虚拟机</block>
   <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">BlueXP通知</block>
-  <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP用例</block>
   <block id="39cff02cd4c2bfac12f446d78e59e3ca" category="paragraph">如果Azure Blob分层目标作为工作环境存在于Canvas上、则可以将集群拖动到Azure Blob工作环境中以启动设置向导。</block>
   <block id="0e8a08e502abe437efca593eced30efb" category="paragraph">如果Google Cloud Storage分层目标作为工作环境存在于Canvas上、则可以将集群拖动到Google Cloud Storage工作环境中以启动设置向导。</block>
   <block id="bb9a67152dc7c7f6ad99d55da23a9b5c" category="paragraph">如果StorageGRID 分层目标作为工作环境存在于Canvas上、则可以将集群拖动到StorageGRID 工作环境中以启动设置向导。</block>
@@ -925,8 +904,6 @@
   <block id="d8de974cae25c190e1656a12aae05ac0" category="paragraph">由于数据分层是在块级别完成的、因此在某个数据块在一段时间内未被访问后、该数据块将被视为冷数据、该时间段由分层策略的minimum-cooling-days属性定义。对于ONTAP 9.7及更早版本、适用范围为2-63天、或者从ONTAP 9.8开始、适用范围为2-183天。</block>
   <block id="538632f98286e11da7898a8dd8c5940a" category="list-text">将数据分层到 StorageGRID 不收取任何费用，因此无需 BYOL 许可证或 PAYGO 注册。此分层数据不计入许可证中购买的容量。</block>
   <block id="822f69d2e49d7da6f8c764e0680f2f75" category="list-text">如果BlueXP无法自动更新许可证、则需要手动上传许可证文件。</block>
-  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新增功能</block>
-  <block id="4f5b5f1d13dfc896b9f5faa0807d8a6c" category="sidebar">更改卷的分层策略</block>
   <block id="1c573cd95f6407add05436f6ac05d6ec" category="section-title">下载卷的分层报告</block>
   <block id="801ab24683a4a8c433c6eb40c48bcd9d" category="inline-image-macro">下载</block>
   <block id="fe8e7e0f08b18c3c012d94d74e8386ce" category="inline-image-macro">显示如何生成CSV文件的屏幕截图、其中列出了所有卷的分层状态。</block>
@@ -1035,7 +1012,6 @@
   <block id="9f8c581a3e79e5eec6093e6268b28bc1" category="paragraph">从较高的层面来看、BlueXP分层的工作原理如下：</block>
   <block id="5a7419c9aa51e2139e939dedaa6171a0" category="inline-link">请参见BlueXP备份和恢复的分层策略注意事项</block>
   <block id="7cbf862de1ab23f12df78abcf9a0087e" category="list-text">BlueXP分层可分层的卷总数可能小于ONTAP 系统上的卷数。这是因为无法从某些聚合对卷进行分层。请参见ONTAP 文档<block ref="bc16a784cd65f4901578ebb3b70f2118" category="inline-link-rx"></block>。</block>
-  <block id="9f59a0e0e7951a95c986f51f69c22219" category="summary">BlueXP分层(Cloud Tiering)通过自动将内部ONTAP 集群中的非活动数据分层到对象存储、将数据中心扩展到云。</block>
   <block id="94cbb43a5cde5c6df8693b056bc08139" category="doc">XP Bluetiering文档</block>
   <block id="385f5a69872344869e286bbc3eedd68b" category="doc">XP Bluetiering技术常见问题解答</block>
   <block id="85ce209d7aca067422f010e5d0f9ae5e" category="section-title">XP Bluetiering服务</block>
@@ -1185,7 +1161,6 @@
   <block id="b17634fcfc0a3e48f196f1ec2f579385" category="paragraph">选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到S3兼容对象存储的连接。</block>
   <block id="54715a5b3c5fb74681657643084de7cc" category="sidebar">BlueXP分层文档</block>
   <block id="578b58628b699675aa94a9cb030f4eec" category="sidebar">使用BlueXP分层</block>
-  <block id="10fd54f4214c20c0fb0c8174413e67e6" category="sidebar">BlueXP分层博客</block>
   <block id="368170efaa08caf814d05ad25b8849fe" category="paragraph">购买BlueXP分层许可证后、您需要使用BlueXP中的BlueXP数字钱包来添加许可证。 <block ref="18ff855f2755df77b673603c1159f8d7" category="inline-link-macro-rx"></block>。</block>
   <block id="046d76eda0c1ca3ef0dc85e15394ce90" category="inline-link">BlueXP数字顾问</block>
   <block id="3ee9290056c3e6ae9cd8482931c1f104" category="paragraph">除BlueXP分层之外、<block ref="5ed6ecd932db92d4be0f0df08b269167" category="inline-link-rx"></block> 和<block ref="bced2809c175fbbacaa63c811a554606" category="inline-link-rx"></block> 可用于监控和报告。</block>
@@ -1331,7 +1306,6 @@
   <block id="b6d7a1ad9440cb7fff09db239b1313d7" category="paragraph">此设置不会影响分配给正在进行数据层的任何其他集群的带宽。</block>
   <block id="7911cbd17bf94032db18ecf08e4fe5c8" category="list-text">完成*分层设置*页面中的部分：</block>
   <block id="fe35e262c448d76aba8db40105f10ae6" category="paragraph">或者，选择是否使用先前配置的 AWS PrivateLink 。 <block ref="e6b15c4e63006b05802c430924113019" category="inline-xref-macro-rx"></block> 此时将显示一个对话框、帮助您完成端点配置。</block>
-  <block id="e1c9950bf8922ee7b7ee2dc803696a6a" category="sidebar">更改将非活动数据上传到对象存储的带宽</block>
   <block id="c52a9d7f6355ad24bacb2c5f23c0e863" category="paragraph">购买BlueXP分层许可证后、您可以通过输入BlueXP分层序列号和NSS帐户或上传NLF许可证文件来激活BlueXP中的许可证。以下步骤显示了如果您计划使用此方法，如何获取 NLF 许可证文件。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">开始之前</block>
   <block id="e3286b69a705d4ed944e904722ab7c8f" category="paragraph">开始之前、您需要了解以下信息：</block>
@@ -1440,4 +1414,6 @@
   <block id="a6946f1b4a14c4860d7cb9b918379334" category="paragraph">当您从内部ONTAP系统设置到GCP的数据分层时、BlueXP分层会自动对非活动数据使用_Standard"存储类。BlueXP分层可以应用生命周期规则、以便在一定天数后将数据从_Standard_存储类过渡到其他存储类。您可以从以下存储类中进行选择：</block>
   <block id="90fd6199eed378ef0bf6c4f8d3ed5ebc" category="paragraph">当您从内部ONTAP系统设置到Azure的数据分层时、BlueXP分层会自动对非活动数据使用_hot_访问层。BlueXP分层可以应用生命周期规则、以便在一定天数后将数据从_hot_访问层过渡到_cool_访问层。</block>
   <block id="17c353c0dd208c819d731350ef2b1300" category="paragraph">在从内部ONTAP系统设置到AWS的数据分层时、BlueXP分层会自动对非活动数据使用_Standard"存储类。BlueXP分层可以应用生命周期规则、以便数据在一定天数后从_Standard_存储类过渡到另一个存储类。您可以从以下存储类中进行选择：</block>
+  <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp使用Microsoft Entra ID作为特定于支持和许可的身份验证服务的身份提供程序。</block>
+  <block id="36a7f0d732c9746e546a6bf227b6a550" category="summary">BlueXP层通过自动将内部ONTAP集群中的非活动数据层到对象存储、将数据中心扩展到云。</block>
 </blocks>
