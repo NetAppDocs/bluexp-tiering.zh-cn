@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head class="at-element-marker">
+  <title>为BlueXP分层设置许可 | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="为BlueXP分层设置许可 | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/bluexp-tiering/task-licensing-cloud-tiering.html" />
+	<meta property="og:description" content="从第一个集群设置分层时、即可免费试用30天的BlueXP分层。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为BlueXP分层付费。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-cn/bluexp-tiering/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="从第一个集群设置分层时、即可免费试用30天的BlueXP分层。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为BlueXP分层付费。">
+  <meta name="keywords" content=" subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, annual, tiering, cloud tiering"><!-- Icons -->
+  <link rel="icon" href="/zh-cn/bluexp-tiering/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/zh-cn/bluexp-tiering/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/bluexp-tiering/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/zh-cn/bluexp-tiering/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-cn/bluexp-tiering/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/zh-cn/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/bluexp-tiering/task-licensing-cloud-tiering.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/bluexp-tiering/js/na-search.js'></script><script src='/zh-cn/bluexp-tiering/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/zh-cn/bluexp-tiering/js/custom-dropdown.js'></script>
+  <script src='/zh-cn/bluexp-tiering/js/FileSaver.min.js'></script>
+  <script src='/zh-cn/bluexp-tiering/js/jszip-utils.min.js'></script>
+  <script src='/zh-cn/bluexp-tiering/js/jszip.min.js'></script><script src='/zh-cn/bluexp-tiering/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/zh-cn/bluexp-tiering/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/cn">
+                <image id="ie-header-logo" src="/zh-cn/bluexp-tiering/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">文档</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/zh-cn/bluexp-tiering/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">简体中文</span>
+                    <img src="/zh-cn/bluexp-tiering/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-cn/bluexp-tiering/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/zh-cn/bluexp-tiering/task-licensing-cloud-tiering.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/bluexp-tiering/task-licensing-cloud-tiering.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/bluexp-tiering/task-licensing-cloud-tiering.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/bluexp-tiering/task-licensing-cloud-tiering.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/bluexp-tiering/task-licensing-cloud-tiering.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/bluexp-tiering/task-licensing-cloud-tiering.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/bluexp-tiering/task-licensing-cloud-tiering.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/bluexp-tiering/task-licensing-cloud-tiering.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/zh-cn/bluexp-tiering/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">全部来自 NetApp</span>
+                    <img src="/zh-cn/bluexp-tiering/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-cn/bluexp-tiering/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">支持</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">知识库</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/zh-hans/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">训练</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/zh-cn/bluexp-tiering/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/zh-cn/bluexp-tiering/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">所有文档</a>
+    </li>
+    
+    
+    <li class="">
+      <a href="https://docs.netapp.com/us-en/cloud/">云文档</a>
+    </li>
+    
+
+    
+    <li class="">
+      <a href="https://docs.netapp.com/zh-cn/bluexp-family/">
+        BlueXP
+      </a>
+    </li>
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/zh-cn/bluexp-tiering/">-->
+      BlueXP tiering
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/zh-cn/bluexp-tiering/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/zh-cn/bluexp-tiering/search.html" 
+        data-type="widget"
+        data-placeholder="搜索文档"
+        data-no-results-found="未找到 {query} 的相关结果"
+        data-did-you-mean="搜索 {suggestion}。"
+        data-no-results-found-did-you-mean="未找到 {query} 的相关结果。您是指 {suggestion}？"
+        data-results-found="找到 {hitCount} 个结果"
+        data-error-message="发生错误。请重试。"
+        data-error-reset="重置搜索"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="BlueXP分层文档"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/bluexp-tiering/index.html">
+        BlueXP分层文档
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="发行说明"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/whats-new.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/bluexp-tiering/whats-new.html">
+        发行说明
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="入门"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/bluexp-tiering/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/bluexp-tiering/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 入门</div>-->
+         入门
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="了解有关BlueXP分层的信息"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/concept-cloud-tiering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/concept-cloud-tiering.html">
+        了解有关BlueXP分层的信息
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="将内部数据分层到云"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/bluexp-tiering/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/bluexp-tiering/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 将内部数据分层到云</div>-->
+         将内部数据分层到云
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="分层到 Amazon S3"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-tiering-onprem-aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/bluexp-tiering/task-tiering-onprem-aws.html">
+        分层到 Amazon S3
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="分层到 Azure Blob 存储"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-tiering-onprem-azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/bluexp-tiering/task-tiering-onprem-azure.html">
+        分层到 Azure Blob 存储
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="分层到 Google Cloud Storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-tiering-onprem-gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/bluexp-tiering/task-tiering-onprem-gcp.html">
+        分层到 Google Cloud Storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="分层到 StorageGRID"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-tiering-onprem-storagegrid.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/bluexp-tiering/task-tiering-onprem-storagegrid.html">
+        分层到 StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="分层到 S3 对象存储"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-tiering-onprem-s3-compat.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/bluexp-tiering/task-tiering-onprem-s3-compat.html">
+        分层到 S3 对象存储
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="设置许可"
+      data-li-level="2#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-licensing-cloud-tiering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/task-licensing-cloud-tiering.html">
+        设置许可
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="常见问题解答"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/faq-cloud-tiering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/faq-cloud-tiering.html">
+        常见问题解答
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用BlueXP分层"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/bluexp-tiering/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/bluexp-tiering/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 使用BlueXP分层</div>-->
+         使用BlueXP分层
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理数据分层"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-managing-tiering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/task-managing-tiering.html">
+        管理数据分层
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理对象存储"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-managing-object-storage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/task-managing-object-storage.html">
+        管理对象存储
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="测试云性能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-tiering-test.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/task-tiering-test.html">
+        测试云性能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="查看所有集群的分层概述"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-tiering-onprem-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/task-tiering-onprem-overview.html">
+        查看所有集群的分层概述
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控层警报的状态"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-monitor-tiering-alerts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/task-monitor-tiering-alerts.html">
+        监控层警报的状态
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="参考"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/bluexp-tiering/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/bluexp-tiering/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 参考</div>-->
+         参考
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="支持的 Amazon S3 存储类和区域"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/reference-aws-support.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/reference-aws-support.html">
+        支持的 Amazon S3 存储类和区域
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="支持的 Azure 访问层和区域"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/reference-azure-support.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/reference-azure-support.html">
+        支持的 Azure 访问层和区域
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="支持的 Google Cloud 存储类和区域"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/reference-google-support.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/reference-google-support.html">
+        支持的 Google Cloud 存储类和区域
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="知识和支持"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/bluexp-tiering/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/bluexp-tiering/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 知识和支持</div>-->
+         知识和支持
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="注册以获得支持"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-support-registration.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/task-support-registration.html">
+        注册以获得支持
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="获取帮助"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/task-get-help.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/bluexp-tiering/task-get-help.html">
+        获取帮助
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法律声明"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task-licensing-cloud-tiering.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/bluexp-tiering/legal-notices.html">
+        法律声明
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/zh-cn/bluexp-tiering"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/zh-cn/bluexp-tiering"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/zh-cn/bluexp-tiering/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 简体中文版经机器翻译而成，仅供参考。如与英语版出现任何冲突，应以英语版为准。 </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">为BlueXP分层设置许可</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-11-15 21:10:38 +0000">11/15/2023</time>
+        
+    
+    
+        <span>贡献者
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/zh-cn/bluexp-tiering/images/discuss-sm.svg" alt="" class="github-icon" />建议更改</span>
+        <img src="/zh-cn/bluexp-tiering/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/zh-cn/bluexp-tiering/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/bluexp-tiering.zh-cn/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/zh-cn/bluexp-tiering/task-licensing-cloud-tiering.html&page-title=为BlueXP分层设置许可" class="page-nav-contribute-link" role="button">请求文档更改</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/bluexp-tiering/blob/main/task-licensing-cloud-tiering.adoc" class="page-nav-contribute-link" role="button">编辑此页面</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >了解如何贡献</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/zh-cn/bluexp-tiering/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/zh-cn/bluexp-tiering/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/zh-cn/bluexp-tiering/pdfs/fullsite-sidebar/XP_Bluetiering文档.pdf" >
+                    <img src="/zh-cn/bluexp-tiering/images/pdf-icon.png" alt="" width="16" height="16"/>本文档站点的 PDF</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/bluexp-tiering/pdfs/sidebar/入门.pdf" 
+            
+          >
+            <img src="/zh-cn/bluexp-tiering/images/pdf-icon.png" alt="" width="16" height="16"/>
+            入门
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/bluexp-tiering/pdfs/sidebar/将内部数据分层到云.pdf" 
+            
+          >
+            <img src="/zh-cn/bluexp-tiering/images/pdf-icon.png" alt="" width="16" height="16"/>
+            将内部数据分层到云
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/bluexp-tiering/pdfs/sidebar/使用BlueXP分层.pdf" 
+            
+          >
+            <img src="/zh-cn/bluexp-tiering/images/pdf-icon.png" alt="" width="16" height="16"/>
+            使用BlueXP分层
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/bluexp-tiering/pdfs/sidebar/参考.pdf" 
+            
+          >
+            <img src="/zh-cn/bluexp-tiering/images/pdf-icon.png" alt="" width="16" height="16"/>
+            参考
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/bluexp-tiering/pdfs/sidebar/知识和支持.pdf" 
+            
+          >
+            <img src="/zh-cn/bluexp-tiering/images/pdf-icon.png" alt="" width="16" height="16"/>
+            知识和支持
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/zh-cn/bluexp-tiering/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>单独 PDF 文档的收集<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>从第一个集群设置分层时、即可免费试用30天的BlueXP分层。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为BlueXP分层付费。</p>
+</div>
+<div class="paragraph">
+<p>在阅读其他内容之前，请先阅读一些注释：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的BlueXP分层。您将在BlueXP分层*内部信息板*选项卡中看到有效订阅。您无需再次订阅。您将在BlueXP电子钱包中看到有效订阅。</p>
+</li>
+<li>
+<p>BYOL BlueXP分层许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。</p>
+</li>
+<li>
+<p>将数据分层到 StorageGRID 不收取任何费用，因此无需 BYOL 许可证或 PAYGO 注册。此分层数据不计入许可证中购买的容量。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="concept-cloud-tiering.html#pricing-and-licenses">"详细了解许可如何用于BlueXP分层"</a>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="30-天免费试用">30 天免费试用</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>如果您没有BlueXP分层许可证、则在为第一个集群设置分层时、将开始免费试用30天的BlueXP分层。30天免费试用结束后、您需要通过按需购买订阅、年度订阅、BYOL许可证或两者的组合为BlueXP分层付费。</p>
+</div>
+<div class="paragraph">
+<p>如果免费试用结束、并且您尚未订阅或添加许可证、则ONTAP 将不再将冷数据分层到对象存储。以前分层的所有数据仍可访问；这意味着您可以检索和使用此数据。检索后、此数据将从云移回性能层。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="使用bluexp分层paygo订阅">使用BlueXP分层PAYGO订阅</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您可以从云提供商的市场订阅按需购买、从而获得使用Cloud Volumes ONTAP 系统和许多云数据服务(例如BlueXP分层)的许可。</p>
+</div>
+<div class="sect2">
+<h3 id="从-aws-marketplace-订阅">从 AWS Marketplace 订阅</h3>
+<div class="paragraph">
+<p>从AWS Marketplace订阅BlueXP分层、以设置按需购买的订阅、以便将数据从ONTAP 集群分层到AWS S3。</p>
+</div>
+<div id="subscribe-aws" class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>在BlueXP中、单击*移动性&gt;分层&gt;内部部署信息板*。</p>
+</li>
+<li>
+<p>在_Marketplace subscripts_部分中、单击Amazon Web Services下的*订阅*、然后单击*继续*。</p>
+</li>
+<li>
+<p>从订阅 <a href="https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4" target="_blank" rel="noopener">"AWS Marketplace"</a>、然后重新登录到BlueXP网站以完成注册。</p>
+<div class="paragraph">
+<p>以下视频显示了该过程：</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="./media/video_subscribing_aws_tiering.mp4" width="848" height="480" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="从-azure-marketplace-订阅">从 Azure Marketplace 订阅</h3>
+<div class="paragraph">
+<p>从Azure Marketplace订阅BlueXP分层、设置按需购买的订阅、以便将数据从ONTAP 集群分层到Azure Blob存储。</p>
+</div>
+<div id="subscribe-azure" class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>在BlueXP中、单击*移动性&gt;分层&gt;内部部署信息板*。</p>
+</li>
+<li>
+<p>在_Marketplace subscripts_部分中、单击Microsoft Azure下的*订阅*、然后单击*继续*。</p>
+</li>
+<li>
+<p>从订阅 <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview" target="_blank" rel="noopener">"Azure Marketplace"</a>、然后重新登录到BlueXP网站以完成注册。</p>
+<div class="paragraph">
+<p>以下视频显示了该过程：</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="./media/video_subscribing_azure_tiering.mp4" width="848" height="480" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="从google-cloud-marketplace订阅">从Google Cloud Marketplace订阅</h3>
+<div class="paragraph">
+<p>从Google云市场订阅BlueXP分层、设置按需购买订阅、以便将数据从ONTAP集群分层到Google云存储。</p>
+</div>
+<div id="subscribe-gcp" class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>在BlueXP中、单击*移动性&gt;分层&gt;内部部署信息板*。</p>
+</li>
+<li>
+<p>在_Marketplace subscripts_部分中、单击Google Cloud下的*订阅*、然后单击*继续*。</p>
+</li>
+<li>
+<p>从订阅 <a href="https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project" target="_blank" rel="noopener">"Google Cloud Marketplace"</a>、然后重新登录到BlueXP网站以完成注册。</p>
+<div class="paragraph">
+<p>以下视频显示了该过程：</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="./media/video_subscribing_gcp_tiering.mp4" width="848" height="480" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="使用年度合同">使用年度合同</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>每年购买一份年度合同、为BlueXP分层支付费用。年度合同有1年、2年或3年期限。</p>
+</div>
+<div class="paragraph">
+<p>将非活动数据分层到AWS时、您可以从订阅一份年度合同 <a href="https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri" target="_blank" rel="noopener">"AWS Marketplace 页面"</a>。如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行 <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription" target="_blank" rel="noopener">"将订阅与您的 AWS 凭据关联"</a>。</p>
+</div>
+<div class="paragraph">
+<p>将非活动数据分层到Azure时、您可以从订阅一份年度合同 <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp" target="_blank" rel="noopener">"Azure Marketplace页面"</a>。如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行 <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html#subscribe" target="_blank" rel="noopener">"将订阅与您的Azure凭据关联起来"</a>。</p>
+</div>
+<div class="paragraph">
+<p>目前、在向Google Cloud进行层存储时、不支持年度合同。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="使用bluexp分层byol许可证">使用BlueXP分层BYOL许可证</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层*许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。分层BYOL许可证的最小容量从10 TiB开始。</p>
+</div>
+<div class="paragraph">
+<p>如果您没有BlueXP分层许可证、请联系我们购买一个：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>mailto ： <a href="mailto:ng-cloud-tiering@netapp.com">ng-cloud-tiering@netapp.com</a> ？ Subject=Licensing[ 发送电子邮件以购买许可证 ] 。</p>
+</li>
+<li>
+<p>单击BlueXP右下角的聊天图标以申请许可证。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>或者、如果您有一个不会使用的未分配的基于节点的Cloud Volumes ONTAP 许可证、则可以将其转换为具有相同美元等价性和相同到期日期的BlueXP分层许可证。 <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses" target="_blank" rel="noopener">"有关详细信息，请访问此处"</a>。</p>
+</div>
+<div class="paragraph">
+<p>您可以使用BlueXP数字钱包页面管理BlueXP Tiering BYOL许可证。您可以添加新许可证并更新现有许可证。</p>
+</div>
+<div class="sect2">
+<h3 id="从2021年开始实施bluexp分层byol许可">从2021年开始实施BlueXP分层BYOL许可</h3>
+<div class="paragraph">
+<p>全新的* BlueXP分层*许可证于2021年8月推出、用于分层使用BlueXP分层服务的BlueXP中支持的配置。BlueXP目前支持分层到以下云存储：Amazon S3、Azure Blob存储、Google云存储、NetApp StorageGRID 和S3兼容对象存储。</p>
+</div>
+<div class="paragraph">
+<p>您过去可能用于将内部ONTAP 数据分层到云的* FabricPool *许可证仅保留用于无法访问Internet的站点(也称为"非公开站点")中的ONTAP 部署以及将配置分层到对象存储。如果您使用的是此类配置、则可以使用System Manager或ONTAP 命令行界面在每个集群上安装FabricPool 许可证。</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/bluexp-tiering/images/tip.svg" alt="提示">
+</td>
+<td class="content">
+请注意、分层到StorageGRID 不需要FabricPool 或BlueXP分层许可证。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>如果您当前正在使用 FabricPool 许可，则在 FabricPool 许可证达到到期日期或最大容量之前，您不会受到影响。如果您需要更新许可证，请联系 NetApp ，或者在更早版本时联系 NetApp ，以确保将数据分层到云的能力不会中断。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果您使用的是BlueXP支持的配置、您的FabricPool 许可证将转换为BlueXP分层许可证、它们将显示在BlueXP电子钱包中。当这些初始许可证到期时、您需要更新BlueXP分层许可证。</p>
+</li>
+<li>
+<p>如果您使用的配置在BlueXP中不受支持、则可以继续使用FabricPool 许可证。 <a href="https://docs.netapp.com/us-en/ontap/cloud-install-fabricpool-task.html" target="_blank" rel="noopener">"请参见如何使用 System Manager 进行许可证分层"</a>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>以下是您需要了解的有关这两个许可证的一些信息：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">XP Bluetiering许可证</th>
+<th class="tableblock halign-left valign-top">FabricPool 许可证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">这是一个 <em>float</em> 许可证，您可以跨多个内部 ONTAP 集群使用。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">这是您为每个集群购买的一个许可证，并为 _every 集群购买许可证。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">它已注册到BlueXP电子钱包中。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">它可使用 System Manager 或 ONTAP 命令行界面应用于各个集群。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">分层配置和管理通过BlueXP中的BlueXP分层服务完成。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">分层配置和管理可通过 System Manager 或 ONTAP 命令行界面完成。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">配置后，您可以使用免费试用版在 30 天内无许可证使用分层服务。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">配置完成后，您可以对前 10 TB 的数据进行分层以免费使用。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="获取bluexp分层许可证文件">获取BlueXP分层许可证文件</h3>
+<div class="paragraph">
+<p>购买BlueXP分层许可证后、您可以通过输入BlueXP分层序列号和NSS帐户或上传NLF许可证文件来激活BlueXP中的许可证。以下步骤显示了如果您计划使用此方法，如何获取 NLF 许可证文件。</p>
+</div>
+<div class="paragraph">
+<div class="title">开始之前</div>
+<p>开始之前、您需要了解以下信息：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>BlueXP层的序列号</p>
+<div class="paragraph">
+<p>从您的销售订单中找到此号码、或者联系客户团队了解此信息。</p>
+</div>
+</li>
+<li>
+<p>BlueXP帐户ID</p>
+<div class="paragraph">
+<p>您可以通过从BlueXP顶部选择*帐户*下拉列表、然后单击您的帐户旁边的*管理帐户*来查找您的BlueXP帐户ID。您的帐户 ID 位于概述选项卡中。</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>登录到 <a href="https://mysupport.netapp.com" target="_blank" rel="noopener">"NetApp 支持站点"</a> 然后单击 * 系统 &gt; 软件许可证 * 。</p>
+</li>
+<li>
+<p>输入您的BlueXP分层许可证序列号。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_tiering_license_step1.gif" alt="按序列号搜索后显示许可证表的屏幕截图。"></span></p>
+</div>
+</li>
+<li>
+<p>在 * 许可证密钥 * 列中，单击 * 获取 NetApp 许可证文件 * 。</p>
+</li>
+<li>
+<p>输入您的BlueXP帐户ID (在支持站点上称为租户ID)、然后单击*提交*下载许可证文件。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_tiering_license_step2.gif" alt="屏幕截图显示了获取许可证对话框，您可以在其中输入租户 ID ，然后单击提交下载许可证文件。"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="将bluexp分层byol许可证添加到您的帐户中">将BlueXP分层BYOL许可证添加到您的帐户中</h3>
+<div class="paragraph">
+<p>在为您的BlueXP帐户购买BlueXP分层许可证后、您需要将此许可证添加到BlueXP才能使用BlueXP分层服务。</p>
+</div>
+<div class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>单击*监管&gt;数字电子钱包&gt;数据服务许可证*。</p>
+</li>
+<li>
+<p>单击 * 添加许可证 * 。</p>
+</li>
+<li>
+<p>在 <em>Add License</em> 对话框中，输入许可证信息并单击 * 添加许可证 * ：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>如果您拥有分层许可证序列号并知道您的 NSS 帐户，请选择 * 输入序列号 * 选项并输入该信息。</p>
+<div class="paragraph">
+<p>如果下拉列表中没有您的 NetApp 支持站点帐户， <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html" target="_blank" rel="noopener">"将NSS帐户添加到BlueXP"</a>。</p>
+</div>
+</li>
+<li>
+<p>如果您有分层许可证文件，请选择 * 上传许可证文件 * 选项，然后按照提示附加该文件。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_services_license_add.png" alt="显示用于添加BlueXP分层BYOL许可证的页面的屏幕截图。"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">结果</div>
+<p>BlueXP会添加许可证、以便您的BlueXP分层服务处于活动状态。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="更新bluexp分层byol许可证">更新BlueXP分层BYOL许可证</h3>
+<div class="paragraph">
+<p>如果您的许可期限即将到期、或者您的许可容量即将达到限制、您将在BlueXP分层中收到通知。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_services_license_expire2.png" alt="在BlueXP分层页面中显示即将过期许可证的屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>此状态也会显示在BlueXP数字钱包页面中。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_services_license_expire1.png" alt="在BlueXP数字钱包页面中显示即将到期的许可证的屏幕截图。"></span></p>
+</div>
+<div class="paragraph">
+<p>您可以在BlueXP分层许可证到期之前对其进行更新、以便将数据分层到云的能力不会中断。</p>
+</div>
+<div class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>单击BlueXP右下角的聊天图标、请求延长您的期限、或者为特定序列号申请更多容量、以获得您的BlueXP分层许可证。</p>
+<div class="paragraph">
+<p>在您为许可证付费并将其注册到NetApp 支持站点 之后、BlueXP会自动更新BlueXP电子钱包中的许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。</p>
+</div>
+</li>
+<li>
+<p>如果BlueXP无法自动更新许可证、则需要手动上传许可证文件。</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>您可以 <a href="#获取bluexp分层许可证文件">从 NetApp 支持站点获取许可证文件</a>。</p>
+</li>
+<li>
+<p>在BlueXP数字钱包页面的_Data Services Licenss_选项卡中、单击 <span class="image"><img src="./media/screenshot_horizontal_more_button.gif" alt="更多图标"></span> 对于要更新的服务序列号，请单击 * 更新许可证 * 。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_services_license_update.png" alt="选择特定服务的更新许可证按钮的屏幕截图。"></span></p>
+</div>
+</li>
+<li>
+<p>在 <em>Update License</em> 页面中，上传许可证文件并单击 * 更新许可证 * 。</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">结果</div>
+<p>BlueXP会更新许可证、以便您的BlueXP分层服务继续处于活动状态。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="将bluexp分层许可证应用于特殊配置中的集群">将BlueXP分层许可证应用于特殊配置中的集群</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>以下配置中的ONTAP 集群可以使用BlueXP分层许可证、但应用此许可证的方式必须与使用FabricPool 镜像的单节点集群、HA配置的集群、分层镜像配置中的集群以及MetroCluster 配置不同：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>分层到IBM Cloud Object Storage的集群</p>
+</li>
+<li>
+<p>安装在"非公开站点"中的集群</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="具有fabricpool-许可证的现有集群的进程">具有FabricPool 许可证的现有集群的进程</h3>
+<div class="paragraph">
+<p>当您 <a href="task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering">"在BlueXP分层中发现任何这些特殊集群类型"</a>BlueXP分层可识别FabricPool 许可证并将许可证添加到BlueXP电子钱包中。这些集群将继续照常对数据进行分层。FabricPool 许可证过期后、您需要购买BlueXP分层许可证。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="新创建集群的进程">新创建集群的进程</h3>
+<div class="paragraph">
+<p>在BlueXP分层中发现典型集群时、您将使用BlueXP分层界面配置分层。在这些情况下、将执行以下操作：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>"父级"BlueXP分层许可证可跟踪所有集群用于分层的容量、以确保许可证中有足够的容量。BlueXP电子钱包中显示了总许可容量和到期日期。</p>
+</li>
+<li>
+<p>每个集群都会自动安装"子"分层许可证、以便与"父"许可证进行通信。</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/bluexp-tiering/images/note.svg" alt="备注">
+</td>
+<td class="content">
+System Manager或ONTAP 命令行界面中显示的"子"许可证的许可容量和到期日期不是真实信息、因此、如果信息不相同、请勿担心。这些值由BlueXP分层软件在内部进行管理。BlueXP电子钱包可跟踪真实信息。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>对于上述两种配置、您需要使用System Manager或ONTAP 命令行界面(而不是使用XP Blueering界面)配置分层。因此、在这些情况下、您需要从BlueXP分层界面手动将"子"许可证推送到这些集群。</p>
+</div>
+<div class="paragraph">
+<p>请注意、由于在分层镜像配置中、数据会分层到两个不同的对象存储位置、因此您需要购买一个具有足够容量的许可证、以便将数据分层到这两个位置。</p>
+</div>
+<div class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>使用System Manager或ONTAP 命令行界面安装和配置ONTAP 集群。</p>
+<div class="paragraph">
+<p>此时请勿配置分层。</p>
+</div>
+</li>
+<li>
+<p><a href="task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license">"购买BlueXP分层许可证"</a> 新集群所需的容量。</p>
+</li>
+<li>
+<p>在BlueXP中、 <a href="task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account">"将许可证添加到BlueXP电子钱包"</a>。</p>
+</li>
+<li>
+<p>在BlueXP分层中、 <a href="task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering">"发现新集群"</a>。</p>
+</li>
+<li>
+<p>在集群页面中、单击 <span class="image"><img src="./media/screenshot_horizontal_more_button.gif" alt="更多图标"></span> 并选择*部署许可证*。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_tiering_deploy_license.png" alt="显示如何将分层许可证部署到ONTAP 集群的屏幕截图。"></span></p>
+</div>
+</li>
+<li>
+<p>在_Deploy License_对话框中、单击*部署*。</p>
+<div class="paragraph">
+<p>子许可证将部署到ONTAP 集群。</p>
+</div>
+</li>
+<li>
+<p>返回到System Manager或ONTAP 命令行界面并设置分层配置。</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/fabricpool/manage-mirrors-task.html">"FabricPool 镜像配置信息"</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html">"FabricPool MetroCluster 配置信息"</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/fabricpool/setup-ibm-object-storage-cloud-tier-task.html">"分层到IBM Cloud Object Storage信息"</a></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/zh-cn/bluexp-tiering/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/zh-cn/bluexp-tiering/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">在本页面中</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">使用条款</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">隐私策略</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie 政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie 设置</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">请发送有关此页面的反馈</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-cn/bluexp-tiering/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-cn/bluexp-tiering/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-cn/bluexp-tiering/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-cn/bluexp-tiering/js/ie-tabbed-blocks.js'></script>
+    <script src='/zh-cn/bluexp-tiering/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
