@@ -1416,4 +1416,26 @@
   <block id="17c353c0dd208c819d731350ef2b1300" category="paragraph">在从内部ONTAP系统设置到AWS的数据分层时、BlueXP分层会自动对非活动数据使用_Standard"存储类。BlueXP分层可以应用生命周期规则、以便数据在一定天数后从_Standard_存储类过渡到另一个存储类。您可以从以下存储类中进行选择：</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp使用Microsoft Entra ID作为特定于支持和许可的身份验证服务的身份提供程序。</block>
   <block id="36a7f0d732c9746e546a6bf227b6a550" category="summary">BlueXP层通过自动将内部ONTAP集群中的非活动数据层到对象存储、将数据中心扩展到云。</block>
+  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新增功能</block>
+  <block id="2081f1ce1d1b21d487730d917f2fc133" category="sidebar">将内部 ONTAP 数据分层到云</block>
+  <block id="9c24075097cef2efbfa6d34acbbb775d" category="sidebar">分层到 Azure Blob</block>
+  <block id="a62425c23786654b084b1fbadf9c41f1" category="sidebar">分层到 Google Cloud</block>
+  <block id="932b49a2d53968bfae607cb915ef9ec2" category="sidebar">分层到通用 S3</block>
+  <block id="6efa402b5baeb2ad1984997697bc2d7b" category="sidebar">管理分层设置</block>
+  <block id="4f5b5f1d13dfc896b9f5faa0807d8a6c" category="sidebar">更改卷的分层策略</block>
+  <block id="00e64b31a7ad3617adbda7547414223a" category="sidebar">查看集群的分层信息</block>
+  <block id="34698ad735e6046f93fbdd61cb2d3804" category="sidebar">对其他卷中的数据进行分层</block>
+  <block id="e1c9950bf8922ee7b7ee2dc803696a6a" category="sidebar">更改将非活动数据上传到对象存储的带宽</block>
+  <block id="004509d192f15716a8c5185cda0cc0da" category="sidebar">将数据从云移回性能层</block>
+  <block id="b19237098460d786516168b98687becc" category="sidebar">管理聚合上的分层设置</block>
+  <block id="44e298753e2ff93996d0e8ffa928a922" category="sidebar">为集群添加新对象存储</block>
+  <block id="f479e40bc5b0a3dc9ce1b1c43ebdec89" category="sidebar">向聚合添加另一个对象存储以进行镜像</block>
+  <block id="07ed437d90cdfd3243fc6c8fa8ddacff" category="sidebar">交换主对象存储和镜像对象存储</block>
+  <block id="500c3424a2151541a2d7783c7e308bb5" category="sidebar">删除镜像对象存储</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">博客和社区</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
+  <block id="10fd54f4214c20c0fb0c8174413e67e6" category="sidebar">BlueXP分层博客</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
+  <block id="4c7d5d7dfde4a7bd82b54348182043d3" category="sidebar">其他资源</block>
+  <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP用例</block>
 </blocks>
