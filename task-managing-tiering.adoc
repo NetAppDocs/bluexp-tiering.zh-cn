@@ -272,5 +272,5 @@ image:screenshot_tiering_search for_cluster.png["显示如何搜索任何BlueXP�
 +
 如果BlueXP层能够找到集群、则会显示连接器的名称。
 
-. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#switch-between-connectors["切换到连接器并为集群配置层"^]。
+. https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["切换到连接器并为集群配置层"^]。
 

@@ -26,7 +26,6 @@
   <block id="8141ab52bd695a7c4b2c43e785d8bf58" category="section-title">发现 ONTAP 集群</block>
   <block id="d32e4305e9f04e1cbc37d3e892619ee7" category="section-title">创建或切换连接器</block>
   <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">了解连接器</block>
-  <block id="c870531773e82c374eb4125c8029e25e" category="inline-link">在连接器之间切换</block>
   <block id="a8e8e48001e032c3b5939047d15db5a2" category="section-title">为连接器准备网络连接</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
   <block id="aadbd6cd1f8b4e9deafea8f1d6c8333c" category="list-text">确保安装 Connector 的网络启用以下连接：</block>
@@ -1210,7 +1209,6 @@
   <block id="c306b081efdd6935cb1a3b72cedef051" category="paragraph"><block ref="ae9eece53d3424b3b3c2b5d7aaae5ba2" category="inline-link-rx"></block>。</block>
   <block id="02156a4727415877195dc5302fa69275" category="list-text"><block ref="02156a4727415877195dc5302fa69275" category="inline-link-rx"></block></block>
   <block id="bb61f2215683dbbd011cae7281f378e7" category="list-text"><block ref="bb61f2215683dbbd011cae7281f378e7" category="inline-link-rx"></block></block>
-  <block id="2aeeba0020a7848f7902186fbd8cb9e8" category="list-text"><block ref="2aeeba0020a7848f7902186fbd8cb9e8" category="inline-link-rx"></block></block>
   <block id="e02dbf2c003ebdce76fe8d8f23c8cd81" category="list-text">通过端口443与BlueXP分层服务建立HTTPS连接 <block ref="391228c0fd8ae5f276f519fba0168635" category="inline-link-rx"></block>）</block>
   <block id="1c98944c12ba85ed964bb170facc908b" category="list-text"><block ref="d2c059274b0f8c8c22488502fa71ff00" category="inline-link-rx"></block>。</block>
   <block id="14995f4b9e52d1c9842620dd299a9491" category="inline-link-macro">从BlueXP电子钱包中将其添加到您的帐户</block>
@@ -1218,7 +1216,6 @@
   <block id="7f197277fe853547357eb08c4f5f1cd0" category="list-text"><block ref="7f197277fe853547357eb08c4f5f1cd0" category="inline-link-rx"></block></block>
   <block id="906825ff52dd59d45d29306547f559a5" category="list-text">通过端口443与BlueXP分层服务和S3对象存储建立HTTPS连接 <block ref="63b337bf4559a585c3373707ecfcc413" category="inline-link-rx"></block>）</block>
   <block id="736e7ce42afd814f93d6a6f0d3b53286" category="list-text"><block ref="736e7ce42afd814f93d6a6f0d3b53286" category="inline-link-rx"></block></block>
-  <block id="a6b673d310713aa4bdd09f8fd19acf66" category="list-text">从 VPC S3 端点获取证书。您可以通过执行此操作<block ref="bee792b855389ef4e6c81f6aa6136d00" category="inline-link-rx"></block> 并运行以下命令。输入端点的 DNS 名称时，在开头添加 " 分段 " ，替换 "* " ：</block>
   <block id="af39bae06861b3074eed6e997f9a3ebf" category="paragraph">您可以从"层卷"页面下载报告、以便查看所管理集群上所有卷的分层状态。BlueXP分层会生成一个.CSV文件、您可以根据需要查看此文件并将其发送给公司中的其他人员。<block ref="aaab920374e84f87020f8ba8578ab877" category="inline-link-rx"></block>。</block>
   <block id="fa2934d386823619966e2cc6e222496c" category="paragraph">请查看的完整端点列表<block ref="42eb7f749d4ba3adb326aa0a5756ba02" category="inline-link-rx"></block>，<block ref="96a9d4916fc49c8f082f1cb217b818c4" category="inline-link-rx"></block>或<block ref="4f16be4d60318c8ffb97ef574631956d" category="inline-link-rx"></block> 云环境。</block>
   <block id="0da74d536582f557c39085b5441ca38a" category="paragraph">在先前版本中、通过VPC端点将集群连接到S3存储分段的安全方式非常耗时。现在、您可以按照前提步骤进行操作<block ref="f21e3ca279bfe71063fdc96c67a3b5b9" category="inline-link-rx"></block>、然后、您可以在"网络连接"页面的分层设置向导期间选择PrivateLink。</block>
@@ -1350,7 +1347,6 @@
   <block id="7d60aaa42b36df3f362b2dc8696e6c52" category="list-text">在显示的搜索对话框中，输入群集的名称，然后单击*Search*。</block>
   <block id="2662a7699ad973c129a2dcc08c6c5a90" category="paragraph">如果BlueXP层能够找到集群、则会显示连接器的名称。</block>
   <block id="1c7f4aea6cf3b42c3b49ff0b42c521e7" category="inline-link">切换到连接器并为集群配置层</block>
-  <block id="5d7b20eede6c6b7e6ea66e130a2db37a" category="list-text"><block ref="bd2c8685cbd143ca58648fd879714140" category="inline-link-rx"></block>。</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -1438,4 +1434,10 @@
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
   <block id="4c7d5d7dfde4a7bd82b54348182043d3" category="sidebar">其他资源</block>
   <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP用例</block>
+  <block id="1fb392a56edc456b1bc3eddb57b0906b" category="inline-link">在内部安装和设置连接器</block>
+  <block id="510a18acc0e91814caa7b29fd0c6cf03" category="list-text"><block ref="510a18acc0e91814caa7b29fd0c6cf03" category="inline-link-rx"></block></block>
+  <block id="f86faf1862caeed3f6dccfce3a669edf" category="inline-link">在连接器之间切换</block>
+  <block id="803e45c7378965c1863722d57b5fdb0a" category="list-text"><block ref="803e45c7378965c1863722d57b5fdb0a" category="inline-link-rx"></block></block>
+  <block id="8adbc3c324aa6698c29b0a7962b11b00" category="list-text">从 VPC S3 端点获取证书。您可以通过执行此操作<block ref="b93c91598d8e86da04085f6831b06e68" category="inline-link-rx"></block> 并运行以下命令。输入端点的 DNS 名称时，在开头添加 " 分段 " ，替换 "* " ：</block>
+  <block id="99bf438e4ecdfb9997a6cefdd9799e09" category="list-text"><block ref="f3a4b869b7377490c5c486397514cea6" category="inline-link-rx"></block>。</block>
 </blocks>
