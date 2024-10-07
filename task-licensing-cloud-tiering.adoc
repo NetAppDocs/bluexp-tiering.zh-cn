@@ -19,7 +19,7 @@ summary: 从第一个集群设置分层时、即可免费试用30天的BlueXP分
 在阅读其他内容之前，请先阅读一些注释：
 
 * 如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的BlueXP分层。您将在BlueXP分层*内部信息板*选项卡中看到有效订阅。您无需再次订阅。您将在BlueXP电子钱包中看到有效订阅。
-* BYOL BlueXP分层许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。
+* BYOL BlueXP  分层许可证(以前称为"云分层"许可证)是一种_Float_许可证、您可以在BlueXP  组织中的多个内部ONTAP集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。
 * 将数据分层到 StorageGRID 不收取任何费用，因此无需 BYOL 许可证或 PAYGO 注册。此分层数据不计入许可证中购买的容量。
 
 
@@ -109,7 +109,7 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 == 使用BlueXP分层BYOL许可证
 
-NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层*许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。分层BYOL许可证的最小容量从10 TiB开始。
+NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP  分层*许可证(以前称为"云分层"许可证)是一种_Float_许可证、您可以在BlueXP  组织中的多个内部ONTAP集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。分层BYOL许可证的最小容量从10 TiB开始。
 
 如果您没有BlueXP分层许可证、请联系我们购买一个：
 
@@ -163,26 +163,37 @@ TIP: 请注意、分层到StorageGRID 不需要FabricPool 或BlueXP分层许可�
 购买BlueXP分层许可证后、您可以通过输入BlueXP分层序列号和NSS帐户或上传NLF许可证文件来激活BlueXP中的许可证。以下步骤显示了如果您计划使用此方法，如何获取 NLF 许可证文件。
 
 .开始之前
-开始之前、您需要了解以下信息：
-
-* BlueXP层的序列号
-+
-从您的销售订单中找到此号码、或者联系客户团队了解此信息。
-
-* BlueXP帐户ID
-+
-您可以通过从BlueXP顶部选择*帐户*下拉列表、然后单击您的帐户旁边的*管理帐户*来查找您的BlueXP帐户ID。您的帐户 ID 位于概述选项卡中。
-
-
+您需要提供BlueXP  层序列号。从您的销售订单中找到此号码、或者联系客户团队了解此信息。
 
 .步骤
+. 查找您的BlueXP  帐户ID：
++
+.. 在BlueXP  控制台的右上角，选择image:icon-settings-option.png["BlueXP  Web控制台右上角显示的设置图标。"]>*身份和访问管理*。
+.. 在"Organization"页面上、查找并复制您的帐户ID。
++
+如果未列出帐户ID、而您只有一个组织ID、则需要复制该组织ID的前八个字符并将其附加到_account-_
+
++
+例如、假设这是您的组织ID：
+
++
+e10e1c6-80cc-4219-8e99-3c3e6b161ba5.
+
++
+您的帐户ID如下所示：
+
++
+account-e10e1c6
+
+
+
 . 登录到 https://mysupport.netapp.com["NetApp 支持站点"^] 然后单击 * 系统 > 软件许可证 * 。
 . 输入您的BlueXP分层许可证序列号。
 +
 image:screenshot_cloud_tiering_license_step1.gif["按序列号搜索后显示许可证表的屏幕截图。"]
 
 . 在 * 许可证密钥 * 列中，单击 * 获取 NetApp 许可证文件 * 。
-. 输入您的BlueXP帐户ID (在支持站点上称为租户ID)、然后单击*提交*下载许可证文件。
+. 输入您的BlueXP  帐户ID (在支持站点上称为租户ID)、然后单击*提交*下载许可证文件。
 +
 image:screenshot_cloud_tiering_license_step2.gif["屏幕截图显示了获取许可证对话框，您可以在其中输入租户 ID ，然后单击提交下载许可证文件。"]
 
@@ -192,7 +203,7 @@ image:screenshot_cloud_tiering_license_step2.gif["屏幕截图显示了获取许
 
 === 将BlueXP分层BYOL许可证添加到您的帐户中
 
-在为您的BlueXP帐户购买BlueXP分层许可证后、您需要将此许可证添加到BlueXP才能使用BlueXP分层服务。
+购买BlueXP  分层许可证后、您需要将此许可证添加到BlueXP  中才能使用BlueXP  分层服务。
 
 .步骤
 . 单击*监管>数字电子钱包>数据服务许可证*。

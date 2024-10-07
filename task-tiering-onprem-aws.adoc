@@ -211,7 +211,7 @@ NOTE: 如果您计划将BlueXP分层配置为使用成本较低的存储类、�
 ** 确认 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#iam-policies["这些S3权限"^] 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果没有、您需要添加任何缺少的权限。请参见 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 文档：编辑 IAM 策略"^] 有关说明，请参见。
 ** BlueXP分层创建的默认分段的前缀为"光纤 池"。如果要为存储分段使用其他前缀、则需要使用要使用的名称自定义权限。在S3权限中、您将看到一行 `"Resource": ["arn:aws:s3:::fabric-pool*"]`。您需要将"Fabric Pool"更改为要使用的前缀。例如、如果要使用"tiering 1 "作为分段的前缀、则应将此行更改为 `"Resource": ["arn:aws:s3:::tiering-1*"]`。
 +
-如果要对要用于此同一BlueXP帐户中其他集群的分段使用不同的前缀、则可以为其他分段添加另一行前缀。例如：
+如果您希望对要用于同一BlueXP  组织中其他集群的分段使用不同的前缀、则可以为其他分段添加另一行前缀。例如：
 
 +
 `"Resource": ["arn:aws:s3:::tiering-1*"]`

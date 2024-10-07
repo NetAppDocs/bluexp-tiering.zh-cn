@@ -760,7 +760,6 @@
   <block id="243263104c829e77835d632f591230d5" category="summary">在向NetApp技术支持部门创建支持案例之前、您需要向BlueXP添加一个NetApp 支持站点 帐户、然后注册获取支持。</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支持注册概述</block>
   <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">激活支持授权有两种形式的注册：</block>
-  <block id="2322ca552c2b0ebe090c8485519246a8" category="list-text">注册您的BlueXP帐户ID支持订阅(您的20位960xxxxxxxxx序列号、位于BlueXP的支持资源页面上)。</block>
   <block id="23fdcbefa6d9cd877be7ceb7a18bb936" category="paragraph">这是您在BlueXP中使用的任何服务的单一支持订阅ID。必须注册每个BlueXP帐户级别的支持订阅。</block>
   <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">在云提供商的市场中注册与订阅关联的Cloud Volumes ONTAP 序列号(即20位909201xxxxxxxx序列号)。</block>
   <block id="67dbdeb11e22ea7def810bade59ce818" category="paragraph">这些序列号通常称为_PAYGO序列号、并由BlueXP在部署Cloud Volumes ONTAP 时生成。</block>
@@ -791,7 +790,6 @@
   <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">加入BlueXP社区、关注正在进行的讨论或创建新的讨论。</block>
   <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">您当前正在查看的BlueXP文档。</block>
   <block id="d63bf50426f4c712554faec55b30c548" category="list-text">*服务*：选择与问题描述 关联的服务。例如、当特定于技术支持问题描述 时、如果服务中包含工作流或功能、则为BlueXP。</block>
-  <block id="aa996e20900197b0ea41485ada083d8c" category="paragraph">工作环境列表属于您在服务顶部横幅中选择的BlueXP帐户、工作空间和Connector的范围。</block>
   <block id="d7945c5e359d6ac7ea9f91926a2538da" category="list-text">从左侧导航菜单中、选择*移动性&gt;分层*。</block>
   <block id="77c2f2a395526537d532a604d4148171" category="paragraph">如果您的NSS凭据保存在BlueXP中、则您帐户中的集群将显示在列表中。</block>
   <block id="05d09a490352dd1a62f556737b4e126c" category="paragraph">如果您的NSS凭据未保存在BlueXP中、则系统会首先提示您添加凭据、然后才能看到未发现的集群。</block>
@@ -807,8 +805,6 @@
   <block id="0c664d98088fac0e3d869a21cac0c6c4" category="list-text">从订阅<block ref="41a6e7dc73b2f1e43bd8c26c6ce83782" category="inline-link-rx"></block>、然后重新登录到BlueXP网站以完成注册。</block>
   <block id="6193e62acb4a86204633b2d093e49546" category="list-text">单击BlueXP右下角的聊天图标以申请许可证。</block>
   <block id="e031d1891af14066db39ea9bc5a67edb" category="list-text">如果您使用的配置在BlueXP中不受支持、则可以继续使用FabricPool 许可证。<block ref="f4b8492105dcaca906c2ce90b9ccab9e" category="inline-link-rx"></block>。</block>
-  <block id="f68bf28051d836364652b5a91d1bcd3a" category="list-text">输入您的BlueXP帐户ID (在支持站点上称为租户ID)、然后单击*提交*下载许可证文件。</block>
-  <block id="257ff1df6b80ed0bf9b3463d53be79f9" category="paragraph">您可以通过从BlueXP顶部选择*帐户*下拉列表、然后单击您的帐户旁边的*管理帐户*来查找您的BlueXP帐户ID。您的帐户 ID 位于概述选项卡中。</block>
   <block id="bae190eec3db4a0dd635ae72756acde8" category="inline-link">将NSS帐户添加到BlueXP</block>
   <block id="8816958eed360786a943983e0bd031fd" category="paragraph">在BlueXP中、选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到Google Cloud Storage。</block>
   <block id="955a264d46a1f0536f93bcb5a3e454f1" category="list-text">您可以从BlueXP发现内部集群。</block>
@@ -863,7 +859,6 @@
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">如果您拥有合作伙伴或经销商帐户、则可以添加一个或多个NSS帐户、但不能将其与客户级别的帐户同时添加。</block>
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">从支持注册页面找到您的帐户ID序列号。</block>
   <block id="50a1dc01b7312307c34a888071586955" category="list-text">复制上述第2步中的帐户序列号、完成安全检查、然后确认您已阅读NetApp的全球数据隐私政策。</block>
-  <block id="cc8b0535948da368f832027c19b7f853" category="list-text">请务必复制上面用于序列号字段的帐户序列号(960xxxx)。这样可以加快帐户处理速度。</block>
   <block id="b5aec059d3f0c191720983ba1eb05690" category="list-text">订阅可确保在免费试用结束后不会中断服务。</block>
   <block id="121bc0fb41d07ce979966173203acae0" category="paragraph">试用结束后、系统会根据您分层的数据量按小时收取费用。</block>
   <block id="5c0fff562b33dc0a5a3acac30ed2d313" category="section-title">2022年12月6日</block>
@@ -1054,7 +1049,6 @@
   <block id="78e084a8e123f468bdc8292351608ac4" category="paragraph">是的。云层不能提供与本地层相同的延迟、因为延迟取决于连接情况。为了估算对象存储的延迟和吞吐量、BlueXP分层提供了一个云性能测试(基于ONTAP 对象存储配置程序)、可在附加对象存储后以及设置分层之前使用该测试。</block>
   <block id="588536d1b6de932fbea2c2b22f963d72" category="summary">从第一个集群设置分层时、即可免费试用30天的BlueXP分层。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为BlueXP分层付费。</block>
   <block id="8202299929ccdfe388049a03c2c36d60" category="doc">为BlueXP分层设置许可</block>
-  <block id="f6013530929ce5c8125f05448da6c33e" category="list-text">BYOL BlueXP分层许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。</block>
   <block id="4f38e9048319fde605a07b6a4c99d8f5" category="inline-link-macro">详细了解许可如何用于BlueXP分层</block>
   <block id="917e8711906a1b676db9798fcc2be9a1" category="paragraph"><block ref="4edd15551f6199902649e3b2955f6f1d" category="inline-link-macro-rx"></block>。</block>
   <block id="c98e930332bafdf23443b7d47efce588" category="section-title">使用BlueXP分层PAYGO订阅</block>
@@ -1071,7 +1065,6 @@
   <block id="316a7aed758eb7b043492e848b931117" category="section-title">获取BlueXP分层许可证文件</block>
   <block id="9b1441120e66cf63798ba27aa3531664" category="list-text">输入您的BlueXP分层许可证序列号。</block>
   <block id="1a8eb6c0b4ba023742d25f05dbe5273d" category="section-title">将BlueXP分层BYOL许可证添加到您的帐户中</block>
-  <block id="87afcfb4fef2a4d3fb672d29a7991ab4" category="paragraph">在为您的BlueXP帐户购买BlueXP分层许可证后、您需要将此许可证添加到BlueXP才能使用BlueXP分层服务。</block>
   <block id="58db88b7cd0054a3b13ce2930a48dad9" category="list-text">单击*监管&gt;数字电子钱包&gt;数据服务许可证*。</block>
   <block id="6b4dd8f152b00922385ef0e152554720" category="inline-image-macro">显示用于添加BlueXP分层BYOL许可证的页面的屏幕截图。</block>
   <block id="0a54431ad29a96ceb71a9ab3f197983c" category="paragraph"><block ref="0a54431ad29a96ceb71a9ab3f197983c" category="inline-image-macro-rx" type="image"></block></block>
@@ -1119,7 +1112,6 @@
   <block id="02a08db5d0a39ed9c8dcd2ad1853be2e" category="list-text">用于连接器的网络连接、用于启用与ONTAP 集群、StorageGRID 和BlueXP分层服务的出站HTTPS连接。</block>
   <block id="5551962687b10a9e81f434a8452784af" category="inline-image-macro">一个架构图、显示了BlueXP分层服务、该服务连接到内部部署的连接器、连接到ONTAP 集群的连接器以及ONTAP 集群和对象存储之间的连接。活动数据驻留在 ONTAP 集群上，而非活动数据驻留在对象存储中。</block>
   <block id="3375a6272f3c0fd37932a7d67a06f3cc" category="paragraph"><block ref="3375a6272f3c0fd37932a7d67a06f3cc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e9539e47f1a0a8a4cdc4f8081cd3f4ba" category="list-text">在将数据分层到StorageGRID 时、您的BlueXP帐户不需要BlueXP分层许可证、ONTAP 集群也不需要FabricPool 许可证。</block>
   <block id="2cd89e6f0fcda5b09186fef88391ef89" category="admonition">从ONTAP 9.5开始、BlueXP分层支持FlexGroup 卷。安装程序的工作方式与任何其他卷相同。</block>
   <block id="83e95400e41cfc623b4a4a1461c18f83" category="list-text">在设置StorageGRID 分层时、您需要为BlueXP分层提供S3访问密钥和机密密钥。BlueXP分层使用密钥访问您的存储分段。</block>
   <block id="6679647b3dd9ac6d22d449c9098cc77d" category="paragraph">选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到StorageGRID 对象存储的连接。</block>
@@ -1177,7 +1169,6 @@
   <block id="f4c3107fb758c7edea8576312dff63ac" category="inline-link-macro">将许可证添加到BlueXP电子钱包</block>
   <block id="1953cb0b13a811a9fb3db1b69c5f0a2d" category="list-text">在BlueXP中、 <block ref="fb3a1da5f1072aaa3d6f4c9eaa7cccb2" category="inline-link-macro-rx"></block>。</block>
   <block id="891ca3a65a7ff1025eab9d895f17f04a" category="paragraph">通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期许可证、并指定任何分层容量(最低10 TiB起)。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。</block>
-  <block id="2105bccac1837aa99c46baf38ee1c998" category="paragraph">NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP分层*许可证(以前称为"云分层"许可证)是一个_float_许可证、您可以在您的BlueXP帐户中的多个内部ONTAP 集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。分层BYOL许可证的最小容量从10 TiB开始。</block>
   <block id="76e73aa82e342d9c46acf62eef4dcfc4" category="paragraph">只需单击*分层&gt;内部部署信息板*。XP Bluetiering提供了有关您的环境的以下详细信息。</block>
   <block id="73363ef02ce267ee93816a7a9661efbb" category="inline-image-macro">"内部部署信息板"页面的屏幕截图。</block>
   <block id="d8dd920a9088057867f1c70674cd6044" category="paragraph"><block ref="d8dd920a9088057867f1c70674cd6044" category="inline-image-macro-rx" type="image"></block></block>
@@ -1245,25 +1236,18 @@
   <block id="e49aa971c20ec071f1b5bbc3c7266769" category="list-text">如果您为具有序列号的ONTAP系统创建案例、则您的NSS帐户必须与该系统的序列号相关联。</block>
   <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">此错误可能意味着NSS帐户及其关联的记录公司与BlueXP帐户序列号(即960xxxx)或工作环境序列号。您可以使用以下选项之一寻求帮助：</block>
   <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">注册这两种类型的序列号可实现打开支持服务单和自动生成案例等功能。要完成注册、请按如下所述将NetApp 支持站点(NSS)帐户添加到BlueXP中。</block>
-  <block id="5a19febf1dcb23c10e8dcfde64ba764c" category="section-title">注册BlueXP帐户以获得NetApp支持</block>
-  <block id="6bbc2ba432f59ab65ee3d8ac5a58336e" category="paragraph">要注册支持并激活支持授权、BlueXP帐户中的一个用户必须将NetApp 支持站点 帐户与其BlueXP登录名关联。如何注册NetApp支持取决于您是否已拥有NetApp 支持站点 (NSS)帐户。</block>
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">选择*添加NSS凭证*，然后按照NetApp 支持站点(NSS)鉴定提示进行操作。</block>
-  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">“资源”页面应显示您的帐户已注册支持。</block>
   <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">屏幕截图、显示帐户序列号、绿色复选框以及注册支持的文本。</block>
   <block id="3d183819a15163ef2e2e7d9d764254a9" category="paragraph"><block ref="3d183819a15163ef2e2e7d9d764254a9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">请注意、其他BlueXP用户如果没有将NetApp 支持站点 帐户与其BlueXP登录关联、则不会看到此相同的支持注册状态。但是、这并不意味着您的BlueXP帐户未注册支持。只要帐户中有一个用户执行了这些步骤、您的帐户即已注册。</block>
   <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">如果您是现有许可证和序列号但拥有_no_ nss帐户的现有NetApp客户、则需要创建一个NSS帐户并将其与BlueXP登录关联。</block>
   <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">完成下的步骤、将新的NSS帐户与BlueXP登录关联起来 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">拥有NetApp 支持站点 帐户后、通过完成下的步骤将帐户与BlueXP登录关联起来 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="3e616bae81890a6c8fae17c9b45af152" category="section-title">关联Cloud Volumes ONTAP支持的NSS凭据</block>
-  <block id="d8f0da67cbab6e43f6d266bdab68cdc8" category="paragraph">要为Cloud Volumes ONTAP启用以下关键工作流、需要将NetApp 支持站点 凭据与BlueXP帐户相关联：</block>
   <block id="a0518a10626dc11fd00e2d20265ad240" category="list-text">注册按需购买Cloud Volumes ONTAP系统以获得支持</block>
   <block id="321aadf78ef73521712291b7aba6411f" category="paragraph">要激活对系统的支持并访问 NetApp 技术支持资源，需要提供 NSS 帐户。</block>
   <block id="d51b2b497db445a16b1c9583c1abbb59" category="list-text">自带许可证时部署Cloud Volumes ONTAP (BYOL)</block>
   <block id="2ebfeabed40c2270d9fa8325080a4b3e" category="paragraph">需要提供您的NSS帐户、以便BlueXP可以上传您的许可证密钥并为您购买的期限启用订阅。这包括自动更新期限续订。</block>
   <block id="f5135b68b75a8404803a1eb438e40c5e" category="list-text">将Cloud Volumes ONTAP 软件升级到最新版本</block>
-  <block id="39f382b97080640c75604b5890f3a5d3" category="paragraph">将NSS凭据与BlueXP帐户关联与与与BlueXP用户登录关联的NSS帐户不同。</block>
-  <block id="e3bc6d35311568d55f1c8ea11984b964" category="paragraph">这些NSS凭据与您的特定BlueXP帐户ID关联。属于BlueXP帐户的用户可以从*支持&gt; NSS管理*访问这些凭据。</block>
   <block id="28acda3f8bdb20220a5658f1cd81f226" category="section-title">2023年7月4日</block>
   <block id="f955a076eeae4df4466469593ff635ca" category="section-title">现在、您可以调整用于将非活动数据上传到对象存储的带宽</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">了解更多信息。</block>
@@ -1305,10 +1289,6 @@
   <block id="fe35e262c448d76aba8db40105f10ae6" category="paragraph">或者，选择是否使用先前配置的 AWS PrivateLink 。 <block ref="e6b15c4e63006b05802c430924113019" category="inline-xref-macro-rx"></block> 此时将显示一个对话框、帮助您完成端点配置。</block>
   <block id="c52a9d7f6355ad24bacb2c5f23c0e863" category="paragraph">购买BlueXP分层许可证后、您可以通过输入BlueXP分层序列号和NSS帐户或上传NLF许可证文件来激活BlueXP中的许可证。以下步骤显示了如果您计划使用此方法，如何获取 NLF 许可证文件。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">开始之前</block>
-  <block id="e3286b69a705d4ed944e904722ab7c8f" category="paragraph">开始之前、您需要了解以下信息：</block>
-  <block id="31c32a382d97a37a96c1074e48f523a5" category="list-text">BlueXP层的序列号</block>
-  <block id="079aeecf06b109e4316b0a68ea943f2b" category="paragraph">从您的销售订单中找到此号码、或者联系客户团队了解此信息。</block>
-  <block id="bcbbd9a155e07caa8b31001adc835c79" category="list-text">BlueXP帐户ID</block>
   <block id="a6cfac773f21906007a8ddf407596067" category="list-text">在 * 许可证密钥 * 列中，单击 * 获取 NetApp 许可证文件 * 。</block>
   <block id="7fe6981833e8fe7fd89e0a99a55573da" category="list-text">在BlueXP中、选择*帮助&gt;支持*。</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">如果您想通过电话与某人通话，请选择*呼叫我们*。系统会将您定向到netapp.com上的一个页面、其中列出了您可以拨打的电话号码。</block>
@@ -1332,7 +1312,6 @@
   <block id="fdc19b19bb08b842183f4536b3eec76b" category="list-text">*连接器权限*：</block>
   <block id="a23c48c7dacd4cbd23073fcbf60fd74b" category="list-text">确认<block ref="540eaaeac9761e2ce00566e2544cdb50" category="inline-link-rx"></block> 属于IAM角色的一部分、此角色为Connector提供了权限。在首次部署Connector时、默认情况下应包括这些接口。如果没有、您需要添加任何缺少的权限。请参见<block ref="6d4dc5f0c95117ac550b72968db62911" category="inline-link-rx"></block> 有关说明，请参见。</block>
   <block id="66a7f2c8895d7b21d1201fccfd4bdba8" category="list-text">BlueXP分层创建的默认分段的前缀为"光纤 池"。如果要为存储分段使用其他前缀、则需要使用要使用的名称自定义权限。在S3权限中、您将看到一行<block ref="c712bdd29459fc8b86dccbf521d236c1" prefix=" " category="inline-code"></block>。您需要将"Fabric Pool"更改为要使用的前缀。例如、如果要使用"tiering 1 "作为分段的前缀、则应将此行更改为<block ref="f36e7f2ef320186e3d37d367e5be31fc" prefix=" " category="inline-code"></block>。</block>
-  <block id="ffab91aa955935f27edca0e2b61e13ec" category="paragraph">如果要对要用于此同一BlueXP帐户中其他集群的分段使用不同的前缀、则可以为其他分段添加另一行前缀。例如：</block>
   <block id="38efd96fb4da1774586c4379285d5732" category="paragraph"><block ref="f36e7f2ef320186e3d37d367e5be31fc" prefix="" category="inline-code"></block><block ref="98422a36dda2cb7df4362652f96b84d8" prefix=" " category="inline-code"></block></block>
   <block id="bfe84f0ff43744ba679acbdbf46ab156" category="paragraph">如果您正在创建自己的存储分段、并且不使用标准前缀、则应将此行更改为<block ref="d97fa8f672dbe6f85ad395e3369cf55a" prefix=" " category="inline-code"></block> 以便识别任何存储分段。但是、这可能会公开您的所有分段、而不是您为存放卷中的非活动数据而设计的分段。</block>
   <block id="93965115cac9e91f74b649a6fba443e5" category="list-text">*集群权限*：</block>
@@ -1434,10 +1413,36 @@
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
   <block id="4c7d5d7dfde4a7bd82b54348182043d3" category="sidebar">其他资源</block>
   <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP用例</block>
-  <block id="1fb392a56edc456b1bc3eddb57b0906b" category="inline-link">在内部安装和设置连接器</block>
-  <block id="510a18acc0e91814caa7b29fd0c6cf03" category="list-text"><block ref="510a18acc0e91814caa7b29fd0c6cf03" category="inline-link-rx"></block></block>
   <block id="f86faf1862caeed3f6dccfce3a669edf" category="inline-link">在连接器之间切换</block>
   <block id="803e45c7378965c1863722d57b5fdb0a" category="list-text"><block ref="803e45c7378965c1863722d57b5fdb0a" category="inline-link-rx"></block></block>
   <block id="8adbc3c324aa6698c29b0a7962b11b00" category="list-text">从 VPC S3 端点获取证书。您可以通过执行此操作<block ref="b93c91598d8e86da04085f6831b06e68" category="inline-link-rx"></block> 并运行以下命令。输入端点的 DNS 名称时，在开头添加 " 分段 " ，替换 "* " ：</block>
   <block id="99bf438e4ecdfb9997a6cefdd9799e09" category="list-text"><block ref="f3a4b869b7377490c5c486397514cea6" category="inline-link-rx"></block>。</block>
+  <block id="98d90e398fc56688ddc647e5f49075ec" category="paragraph">工作环境列表位于您在服务顶部横幅中选择的BlueXP  组织(或帐户)、项目(或工作空间)和连接器的范围内。</block>
+  <block id="0aac35c69d56f468c7891da9594e68be" category="list-text">BYOL BlueXP  分层许可证(以前称为"云分层"许可证)是一种_Float_许可证、您可以在BlueXP  组织中的多个内部ONTAP集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。</block>
+  <block id="7f58c7f218a280f56c54c444e1bb8411" category="paragraph">NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP  分层*许可证(以前称为"云分层"许可证)是一种_Float_许可证、您可以在BlueXP  组织中的多个内部ONTAP集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。分层BYOL许可证的最小容量从10 TiB开始。</block>
+  <block id="0e48ab0bd412e2c6d662a3a4540397a0" category="paragraph">您需要提供BlueXP  层序列号。从您的销售订单中找到此号码、或者联系客户团队了解此信息。</block>
+  <block id="e53331a3231a958d20a4871d8efc35d8" category="list-text">查找您的BlueXP  帐户ID：</block>
+  <block id="e0e8a7d90375792efecad34c0c923e32" category="inline-image-macro">BlueXP  Web控制台右上角显示的设置图标。</block>
+  <block id="cd42e1c1af0a908f68d68ae6103b5c30" category="list-text">在BlueXP  控制台的右上角，选择<block ref="32173ab85f1c68a28384d1a40cf387db" category="inline-image-macro-rx" type="image"></block>&gt;*身份和访问管理*。</block>
+  <block id="3bcef3f6238058ae825d608e1557c538" category="list-text">在"Organization"页面上、查找并复制您的帐户ID。</block>
+  <block id="2bd8c9344d3768dd44b910db169ef1fa" category="paragraph">如果未列出帐户ID、而您只有一个组织ID、则需要复制该组织ID的前八个字符并将其附加到_account-_</block>
+  <block id="14da2ef10b9e4cc4d0981b05fff98072" category="paragraph">例如、假设这是您的组织ID：</block>
+  <block id="2740d3013330ec13ae7693ee76bc6509" category="paragraph">e10e1c6-80cc-4219-8e99-3c3e6b161ba5.</block>
+  <block id="6ffe1a2d88424dc37ba43bdf5999183e" category="paragraph">您的帐户ID如下所示：</block>
+  <block id="c0b58edc6437b03c81d24f7ded6f3648" category="paragraph">account-e10e1c6</block>
+  <block id="d4393f7d35eb6fcb480572ab5d418710" category="list-text">输入您的BlueXP  帐户ID (在支持站点上称为租户ID)、然后单击*提交*下载许可证文件。</block>
+  <block id="921d59a1a10f4e2423dfe3d60997086a" category="paragraph">购买BlueXP  分层许可证后、您需要将此许可证添加到BlueXP  中才能使用BlueXP  分层服务。</block>
+  <block id="29360bfcdbc91d3f1514c372b4585965" category="list-text">注册BlueXP  帐户序列号(20位960xxxxxxxxx序列号位于BlueXP  的支持资源页面)。</block>
+  <block id="444b74bc81e823cc1c4c704219ad8ed3" category="section-title">注册BlueXP  以获得NetApp支持</block>
+  <block id="b3bf31f8a918c712f26cdf493a908825" category="paragraph">要注册支持并激活支持授权、您的BlueXP  组织中的一个用户(或帐户)必须将NetApp支持站点帐户与其BlueXP  登录名关联。如何注册NetApp支持取决于您是否已拥有NetApp 支持站点 (NSS)帐户。</block>
+  <block id="2ba7f9eae7a02f9c3ac0fc07517d1c48" category="paragraph">“资源”页面应显示您的BlueXP  组织已注册支持。</block>
+  <block id="c05e530d1466e986d570cfe3f92656c3" category="paragraph">请注意、其他BlueXP用户如果没有将NetApp 支持站点 帐户与其BlueXP登录关联、则不会看到此相同的支持注册状态。但是、这并不意味着您的BlueXP  组织未注册支持。只要组织中有一个用户执行了这些步骤、您的组织就已注册。</block>
+  <block id="a2454703f88e5bf5b433ae850a87151b" category="list-text">请务必复制上面用于序列号字段的帐户序列号(960xxxx)。这将加快处理速度。</block>
+  <block id="0ca08a23718c0a91743dd6c0146ca353" category="paragraph">要为Cloud Volumes ONTAP启用以下关键工作流、需要将NetApp支持站点凭据与您的BlueXP  组织相关联：</block>
+  <block id="c81c8e01f5d906ae1ab0c5c606f06b05" category="paragraph">将NSS凭据与您的BlueXP  组织相关联与与与BlueXP  用户登录相关联的NSS帐户不同。</block>
+  <block id="8166996cb4a59c147200d89a061bb49c" category="paragraph">这些NSS凭据与您的特定BlueXP  组织ID相关联。属于BlueXP  组织的用户可以从*Support &gt; NSS Management*访问这些凭据。</block>
+  <block id="ab890419f359dee3122c3a46ece4de91" category="paragraph">如果您希望对要用于同一BlueXP  组织中其他集群的分段使用不同的前缀、则可以为其他分段添加另一行前缀。例如：</block>
+  <block id="697e19b973c6dfabc32eda21853b990c" category="inline-link">在内部安装和设置Connector</block>
+  <block id="7134f9d87483badec2f2028b49510a11" category="list-text"><block ref="7134f9d87483badec2f2028b49510a11" category="inline-link-rx"></block></block>
+  <block id="e611f8473aa031238f45b544d113b51c" category="list-text">将数据分层到StorageGRID时、您的BlueXP  组织不需要BlueXP  分层许可证、ONTAP集群也不需要FabricPool许可证。</block>
 </blocks>

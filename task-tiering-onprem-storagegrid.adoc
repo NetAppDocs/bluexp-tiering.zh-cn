@@ -65,7 +65,7 @@ NOTE: Connector 和 StorageGRID 之间的通信仅用于对象存储设置。
 
 --
 支持的 ONTAP 版本:: ONTAP 9.4 或更高版本
-许可:: 在将数据分层到StorageGRID 时、您的BlueXP帐户不需要BlueXP分层许可证、ONTAP 集群也不需要FabricPool 许可证。
+许可:: 将数据分层到StorageGRID时、您的BlueXP  组织不需要BlueXP  分层许可证、ONTAP集群也不需要FabricPool许可证。
 集群网络连接要求::
 +
 --
@@ -130,7 +130,7 @@ S3 凭据:: 在设置StorageGRID 分层时、您需要为BlueXP分层提供S3访
 要将数据分层到云，需要使用 Connector 。将数据分层到 StorageGRID 时，您的内部必须具有一个 Connector 。您需要安装新的 Connector 或确保当前选定的 Connector 位于内部。
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["了解连接器"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["在内部安装和设置连接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["在内部安装和设置Connector"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["在连接器之间切换"^]
 
 
