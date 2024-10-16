@@ -1445,4 +1445,5 @@
   <block id="697e19b973c6dfabc32eda21853b990c" category="inline-link">在内部安装和设置Connector</block>
   <block id="7134f9d87483badec2f2028b49510a11" category="list-text"><block ref="7134f9d87483badec2f2028b49510a11" category="inline-link-rx"></block></block>
   <block id="e611f8473aa031238f45b544d113b51c" category="list-text">将数据分层到StorageGRID时、您的BlueXP  组织不需要BlueXP  分层许可证、ONTAP集群也不需要FabricPool许可证。</block>
+  <block id="aca1d9b834f4ef7d5cdec1dd3d882bd0" category="paragraph">BlueXP  不会为此通知发送电子邮件。</block>
 </blocks>
