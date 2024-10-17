@@ -641,9 +641,7 @@
   <block id="ba34121e3527a1918b936c79899e68fa" category="paragraph">为了进行镜像、每个聚合最多可以附加两个分段、其中冷数据会同步分层到两个分段。这些存储分段可以来自不同的提供程序和不同的位置。从2022年8月开始、您可以使用*高级设置*页面将两个对象存储附加到一个聚合。</block>
   <block id="6c66decef59a00987dd2d537b80e9092" category="paragraph">是的。一般最佳实践是将一个存储分段附加到多个聚合。但是、在使用公有 云时、对象存储服务的IOPS上限为、因此必须考虑多个存储分段。</block>
   <block id="1f6fd3301ab6ce127efad422dec03d61" category="section-title">2022年8月3日</block>
-  <block id="059c9f6829260507f53186d7191b058c" category="section-title">可以为集群中的其他聚合配置其他对象存储</block>
   <block id="aa18b7b04ae6143c1d2f56b72718403e" category="inline-link">详细了解新的对象存储功能。</block>
-  <block id="5c10257d843c1a8aa9e46f55d2064835" category="section-title">为MetroCluster 配置提供云分层许可证支持</block>
   <block id="4f05e87f380a81f7a23601ecba757570" category="sidebar">管理对象存储</block>
   <block id="5c37edf1ec718afd1ab9a5a51043e0ce" category="paragraph">按照以下步骤快速入门。本主题的以下各节提供了每个步骤的详细信息。</block>
   <block id="e41af01898aa01f20e528d19fdda2ec8" category="paragraph">选择是通过公有 Internet将内部ONTAP 集群直接连接到AWS S3、还是使用VPN或AWS Direct Connect并通过专用VPC端点接口将流量路由到AWS S3。</block>
@@ -750,8 +748,6 @@
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">使用产品内聊天功能</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">通过提交非技术案例<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">在ONTAP 文档中了解有关MetroCluster 要求的更多信息</block>
-  <block id="c3d7ada1f42d9b916dd8624c5b5661c1" category="section-title">通过分层向导、您可以在分层到S3存储时配置AWS PrivateLink</block>
-  <block id="bf482155aab691ba59a0313f5628cbba" category="section-title">选择删除MetroCluster 配置中的镜像对象存储时的分层行为</block>
   <block id="c80805cd1b291fd4590a3c0b82caa095" category="inline-link">了解有关FabricPool 镜像的更多信息</block>
   <block id="4a6b2da2ae625dffc7d1a103b7579d57" category="paragraph">您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。<block ref="8af213a751b87119e23e85f52fbc72d6" category="inline-link-rx"></block>。</block>
   <block id="2dc183e0073f3c1e0402cafe50273750" category="paragraph">使用MetroCluster 配置时、最佳做法是在公有 云中使用位于不同可用性区域的对象存储。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
@@ -906,7 +902,6 @@
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">向NetApp支持部门创建案例</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">在*资源*页面上、在技术支持下选择一个可用选项：</block>
   <block id="d0693e7bf28b7bbc94287cee0e4b0768" category="section-title">2023年3月5日</block>
-  <block id="b92f2131d3d225c3c3327daaa8862624" category="section-title">现在、您可以为卷生成分层报告</block>
   <block id="f86857f0a51fde5819da3a17258b5448" category="inline-link">请参见如何下载分层报告</block>
   <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">管理支持案例(预览)</block>
   <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">您可以直接从BlueXP查看和管理活动的和已解决的支持案例。您可以管理与您的NSS帐户和公司关联的案例。</block>
@@ -948,7 +943,6 @@
   <block id="78663d9137e3cc2c3049532938b4c70f" category="list-text">在_Details &amp; Credentials_页面中、集群名称将添加为工作环境名称、因此只需单击*执行*即可。</block>
   <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">2023年4月3日</block>
   <block id="2e79231a13ecf62585403e20da2dea4a" category="section-title">已删除许可选项卡</block>
-  <block id="66a0b4752150538292b81c073ca0b83b" category="section-title">分层选项卡已重命名并更新了内容</block>
   <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*附件(可选)*：一次最多上传五个附件。</block>
   <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">每个文件的附件数限制为25 MB。支持以下文件扩展名：txt、log、pdf、jp6/jpeu、rtf、 doc/docx、xls/xlsx和csv。</block>
   <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*更新案例注释*：提供有关您的问题的更多详细信息、或者选择*上传文件*最多附加五个文件。</block>
@@ -1118,8 +1112,6 @@
   <block id="56273c1cb08574200c49973b9bc5c615" category="summary">了解BlueXP分层的新增功能。</block>
   <block id="d423420066ca2ec630afe096f14eae4b" category="doc">BlueXP分层的新增功能</block>
   <block id="8c14896b1d1fc37f02aa2e6dfc06354a" category="paragraph">由于BlueXP分层发生了变化、您需要更改以下连接器端点才能成功执行BlueXP分层操作：</block>
-  <block id="3afb7cae2b7c3e96c6a4e1df765d3dce" category="section-title">拖放以启用BlueXP分层到Azure Blob、Google Cloud Storage和StorageGRID</block>
-  <block id="18cd1c130656412d8089667948bc48a2" category="section-title">拖放以启用BlueXP分层到Amazon S3</block>
   <block id="a0396859c016deff163331729e87c6cf" category="summary">BlueXP分层支持多个Google Cloud存储类和大多数地区。</block>
   <block id="58edb41c3cfab45408029ad69032402a" category="paragraph">配置BlueXP分层生命周期规则时、在Google帐户中设置存储分段时、不得配置任何生命周期规则。</block>
   <block id="2d5551329360393b3ea83aeec84cf519" category="paragraph">XP Bluetiering支持以下区域。</block>
@@ -1249,10 +1241,8 @@
   <block id="2ebfeabed40c2270d9fa8325080a4b3e" category="paragraph">需要提供您的NSS帐户、以便BlueXP可以上传您的许可证密钥并为您购买的期限启用订阅。这包括自动更新期限续订。</block>
   <block id="f5135b68b75a8404803a1eb438e40c5e" category="list-text">将Cloud Volumes ONTAP 软件升级到最新版本</block>
   <block id="28acda3f8bdb20220a5658f1cd81f226" category="section-title">2023年7月4日</block>
-  <block id="f955a076eeae4df4466469593ff635ca" category="section-title">现在、您可以调整用于将非活动数据上传到对象存储的带宽</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">了解更多信息。</block>
   <block id="1d59c82c13288b53f26d652175016f90" category="paragraph">激活BlueXP分层后、ONTAP可以使用无限的网络带宽将非活动数据从集群中的卷传输到对象存储。如果您发现分层流量正在影响正常用户工作负载、则可以限制传输期间可使用的带宽量。<block ref="bd661c8ba5ce12ee5a1adc1010618597" category="inline-link-rx"></block>。</block>
-  <block id="eb516d1f8f028dbd0333948ae6fc06a5" category="section-title">"低层"的层事件将显示在通知中心中</block>
   <block id="250f0923d20814211c14c5a6cd0e2643" category="paragraph">现在、如果集群对其冷数据(包括未分层任何数据的集群)的分层不足20%、则分层事件"将其他数据从集群&lt;name&gt;分层到对象存储以提高存储效率"将显示为通知。</block>
   <block id="3c23988fbf7c203a2c811a5ce84251c0" category="inline-link">BlueXP分层总拥有成本和节省量计算器</block>
   <block id="57f9b94b395c8e293b7f892fe5995ac7" category="paragraph">此通知是一个"建议"、可帮助您提高系统效率并节省存储成本。它提供了指向的链接<block ref="c9d262883689ef94201e8739cb50c7f6" category="inline-link-rx"></block> 以帮助您计算成本节省。</block>
@@ -1341,7 +1331,6 @@
   <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">选择* NSS管理&gt;添加NSS帐户*。</block>
   <block id="85b9386ed443776127e099931d73448a" category="list-text">出现提示时、选择*继续*以重定向到Microsoft登录页面。</block>
   <block id="4bca0fdcdafed1e5f31435f4b19c8738" category="section-title">2023年8月9日</block>
-  <block id="b839d32c555694a5245fa2fa33d17d88" category="section-title">使用自定义前缀作为存储分层数据的分段名称</block>
   <block id="6eb4429639db75cb3b56cc38a3fb8785" category="paragraph">过去、在定义存储分段名称时、您需要使用默认的"光纤 池"前缀、例如_Fabric池bucket1_。现在、您可以在为存储分段命名时使用自定义前缀。只有在将数据层到Amazon S3时、此功能才可用。<block ref="3e8270d3bc816ce30c7c11fe6d073535" category="inline-link-rx"></block>。</block>
   <block id="6a3a27c0cd9c23985f6e8260846d58bc" category="paragraph">如果使用多个连接器管理环境中的所有存储系统、则要实施分层的某些集群可能位于不同的连接器中。如果您不确定是哪个Connector管理某个集群、可以使用BlueXP分层跨所有连接器进行搜索。<block ref="017b0207cc8469b6ea246adade89f8e1" category="inline-link-rx"></block>。</block>
   <block id="d441270e2d66b6759e1bbe07190e3d30" category="admonition">如果您计划将BlueXP分层配置为使用成本较低的访问层、在该访问层中、分层数据将在特定天数后过渡到、则在Azure帐户中设置容器时、不得选择任何生命周期规则。BlueXP层管理生命周期过渡。</block>
@@ -1446,4 +1435,15 @@
   <block id="7134f9d87483badec2f2028b49510a11" category="list-text"><block ref="7134f9d87483badec2f2028b49510a11" category="inline-link-rx"></block></block>
   <block id="e611f8473aa031238f45b544d113b51c" category="list-text">将数据分层到StorageGRID时、您的BlueXP  组织不需要BlueXP  分层许可证、ONTAP集群也不需要FabricPool许可证。</block>
   <block id="aca1d9b834f4ef7d5cdec1dd3d882bd0" category="paragraph">BlueXP  不会为此通知发送电子邮件。</block>
+  <block id="344a2fbdf46c3a4ef07e7c73566f42f3" category="section-title">分层选项卡已重命名和更新</block>
+  <block id="a4e53922ceec159164a3765ff05e1458" category="doc">调整带宽以传输非活动数据</block>
+  <block id="904ea3c3aba6edae61ba696b01808a11" category="section-title">通知中心中显示的层事件</block>
+  <block id="101e8e97885c05702335faecd0fb3f50" category="doc">使用自定义前缀作为分段名称</block>
+  <block id="5f659aa043041b7c7bd07335ac62ca55" category="section-title">为卷生成一个层报告</block>
+  <block id="02a02728987c939621edc3e2dc71d234" category="section-title">拖放以启用到其他目标的分层</block>
+  <block id="dc7d0bd65a1626d3b5577529e98dab87" category="section-title">在分层到Amazon S3时配置AWS PrivateLink</block>
+  <block id="5b509c72bc50acb8c10c2952b7982420" category="section-title">拖放以启用到Amazon S3的分层</block>
+  <block id="e183a98351b41fa6323d79a2f03c328c" category="section-title">选择删除镜像对象存储时的层行为</block>
+  <block id="847d8c6cf21c261bf367fb1c3c41bf62" category="section-title">为其他聚合配置其他对象存储</block>
+  <block id="ed16268923e9fecfd07bdd809ee9d213" category="section-title">MetroCluster配置的许可证支持</block>
 </blocks>

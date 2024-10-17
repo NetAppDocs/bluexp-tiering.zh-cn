@@ -1,0 +1,17 @@
+= 调整带宽以传输非活动数据
+:allow-uri-read: 
+
+
+
+
+=== 调整带宽以传输非活动数据
+
+激活BlueXP分层后、ONTAP可以使用无限的网络带宽将非活动数据从集群中的卷传输到对象存储。如果您发现分层流量正在影响正常用户工作负载、则可以限制传输期间可使用的带宽量。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-tiering.html#changing-the-network-bandwidth-available-to-upload-inactive-data-to-object-storage["了解更多信息。"]。
+
+
+
+=== 通知中心中显示的层事件
+
+现在、如果集群对其冷数据(包括未分层任何数据的集群)的分层不足20%、则分层事件"将其他数据从集群<name>分层到对象存储以提高存储效率"将显示为通知。
+
+此通知是一个"建议"、可帮助您提高系统效率并节省存储成本。它提供了指向的链接 https://bluexp.netapp.com/cloud-tiering-service-tco["BlueXP分层总拥有成本和节省量计算器"^] 以帮助您计算成本节省。
