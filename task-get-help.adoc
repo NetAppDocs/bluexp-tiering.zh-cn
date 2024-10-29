@@ -7,7 +7,7 @@ summary: NetApp通过多种方式为BlueXP提供支持。全天候提供丰富�
 = 获取帮助
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
