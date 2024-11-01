@@ -39,7 +39,7 @@ image:screenshot_tiering_cluster_info.png["显示集群已用总数据容量、�
 
 请注意、Cloud Volumes ONTAP系统的显示有所不同。虽然Cloud Volumes ONTAP卷可以将数据分层到云、但它们不使用BlueXP分层服务。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["了解如何将非活动数据从Cloud Volumes ONTAP系统分层到低成本对象存储"^]。
 
-您也可以 https://docs.netapp.com/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html#tiering["从Digital Advisor查看集群的分层信息"^] 如果您熟悉此 NetApp 产品，只需从左侧导航窗格中选择*云建议*即可。
+如果您熟悉此NetApp产品、也可以使用 https://docs.netapp.com/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html#tiering["从Active IQ数字顾问(也称为数字顾问)查看集群的分层信息"^]。只需从左侧导航窗格中选择*云建议*即可。
 
 image:screenshot_tiering_aiq_fabricpool_info.png["一个屏幕截图、用于显示使用FabricPool Advisor从Digital Advisor获取的集群的FabricPool 信息。"]
 

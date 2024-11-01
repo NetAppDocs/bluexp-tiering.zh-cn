@@ -818,8 +818,6 @@
   <block id="bb9a67152dc7c7f6ad99d55da23a9b5c" category="paragraph">如果StorageGRID 分层目标作为工作环境存在于Canvas上、则可以将集群拖动到StorageGRID 工作环境中以启动设置向导。</block>
   <block id="5a4346a01828d72104a6540080377b25" category="section-title">2022年11月6日</block>
   <block id="6586247c64ea3f20421ae518b26fc973" category="paragraph">如果Azure Blob、Google Cloud Storage或StorageGRID 分层目标作为工作环境存在于Canvas上、则可以将本地ONTAP 工作环境拖动到目标上以启动分层设置向导。</block>
-  <block id="29fdfd7eb2f0e4bc1264e61841c1e15c" category="inline-link">从Digital Advisor查看集群的分层信息</block>
-  <block id="4beb855fa991422619d33c99b74d1365" category="paragraph">您也可以<block ref="ba21940cc7b1756c6b93b4daf8cfd4fb" category="inline-link-rx"></block> 如果您熟悉此 NetApp 产品，只需从左侧导航窗格中选择*云建议*即可。</block>
   <block id="d80d78ee61a9d0887caddafbd12776c6" category="inline-image-macro">一个屏幕截图、用于显示使用FabricPool Advisor从Digital Advisor获取的集群的FabricPool 信息。</block>
   <block id="dc0605b8b2de4441cff5b013be511267" category="paragraph"><block ref="dc0605b8b2de4441cff5b013be511267" category="inline-image-macro-rx" type="image"></block></block>
   <block id="154756f3451aa7d3c9c0ff18e7159503" category="inline-link">转到BlueXP Marketplace产品</block>
@@ -1446,4 +1444,9 @@
   <block id="e183a98351b41fa6323d79a2f03c328c" category="section-title">选择删除镜像对象存储时的层行为</block>
   <block id="847d8c6cf21c261bf367fb1c3c41bf62" category="section-title">为其他聚合配置其他对象存储</block>
   <block id="ed16268923e9fecfd07bdd809ee9d213" category="section-title">MetroCluster配置的许可证支持</block>
+  <block id="8ddd07f4c199accad92d619cc396eaef" category="video-title">从AWS Marketplace订阅BlueXP</block>
+  <block id="040832c90148c5bba767901a4a55ebe4" category="video-title">从Azure Marketplace订阅BlueXP</block>
+  <block id="c6e17aa071476599f5e5fc5b8bc42431" category="video-title">从Google Cloud Marketplace订阅BlueXP</block>
+  <block id="2e02ef063e4f9a11ed835693daa2e7d1" category="inline-link">从Active IQ数字顾问(也称为数字顾问)查看集群的分层信息</block>
+  <block id="aac4751e2e50c3f9d64afc60244ec854" category="paragraph">如果您熟悉此NetApp产品、也可以使用<block ref="ab766f8aad1f1b4bf567a28cf12cabcb" category="inline-link-rx"></block>。只需从左侧导航窗格中选择*云建议*即可。</block>
 </blocks>
