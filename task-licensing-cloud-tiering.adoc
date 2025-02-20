@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-licensing-cloud-tiering.html 
-keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, annual, tiering, cloud tiering 
+keywords: subscribe, digital wallet, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, annual, tiering, cloud tiering 
 summary: 从第一个集群设置分层时、即可免费试用30天的BlueXP分层。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为BlueXP分层付费。 
 ---
 = 为BlueXP分层设置许可
@@ -161,106 +161,11 @@ TIP: 请注意、分层到StorageGRID 不需要FabricPool 或BlueXP分层许可�
 |===
 
 
-=== 获取BlueXP分层许可证文件
+=== 管理BlueXP  层许可证
 
-购买BlueXP分层许可证后、您可以通过输入BlueXP分层序列号和NSS帐户或上传NLF许可证文件来激活BlueXP中的许可证。以下步骤显示了如果您计划使用此方法，如何获取 NLF 许可证文件。
+如果您的许可期限即将到期、或者您的许可容量即将达到限制、您将在BlueXP  分层和电子钱包中收到通知。
 
-.开始之前
-您需要提供BlueXP  层序列号。从您的销售订单中找到此号码、或者联系客户团队了解此信息。
-
-.步骤
-. 查找您的BlueXP  帐户ID：
-+
-.. 在BlueXP  控制台的右上角，选择image:icon-settings-option.png["BlueXP  Web控制台右上角显示的设置图标。"]>*身份和访问管理*。
-.. 在"Organization"页面上、查找并复制您的帐户ID。
-+
-如果未列出帐户ID、而您只有一个组织ID、则需要复制该组织ID的前八个字符并将其附加到_account-_
-
-+
-例如、假设这是您的组织ID：
-
-+
-e10e1c6-80cc-4219-8e99-3c3e6b161ba5.
-
-+
-您的帐户ID如下所示：
-
-+
-account-e10e1c6
-
-
-
-. 登录到 https://mysupport.netapp.com["NetApp 支持站点"^] 然后单击 * 系统 > 软件许可证 * 。
-. 输入您的BlueXP分层许可证序列号。
-+
-image:screenshot_cloud_tiering_license_step1.gif["按序列号搜索后显示许可证表的屏幕截图。"]
-
-. 在 * 许可证密钥 * 列中，单击 * 获取 NetApp 许可证文件 * 。
-. 输入您的BlueXP  帐户ID (在支持站点上称为租户ID)、然后单击*提交*下载许可证文件。
-+
-image:screenshot_cloud_tiering_license_step2.gif["屏幕截图显示了获取许可证对话框，您可以在其中输入租户 ID ，然后单击提交下载许可证文件。"]
-
-
-
-
-
-=== 将BlueXP分层BYOL许可证添加到您的帐户中
-
-购买BlueXP  分层许可证后、您需要将此许可证添加到BlueXP  中才能使用BlueXP  分层服务。
-
-.步骤
-. 单击*监管>数字电子钱包>数据服务许可证*。
-. 单击 * 添加许可证 * 。
-. 在 _Add License_ 对话框中，输入许可证信息并单击 * 添加许可证 * ：
-+
-** 如果您拥有分层许可证序列号并知道您的 NSS 帐户，请选择 * 输入序列号 * 选项并输入该信息。
-+
-如果下拉列表中没有您的 NetApp 支持站点帐户， https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["将NSS帐户添加到BlueXP"^]。
-
-** 如果您有分层许可证文件，请选择 * 上传许可证文件 * 选项，然后按照提示附加该文件。
-+
-image:screenshot_services_license_add.png["显示用于添加BlueXP分层BYOL许可证的页面的屏幕截图。"]
-
-
-
-
-
-.结果
-BlueXP会添加许可证、以便您的BlueXP分层服务处于活动状态。
-
-
-
-=== 更新BlueXP分层BYOL许可证
-
-如果您的许可期限即将到期、或者您的许可容量即将达到限制、您将在BlueXP分层中收到通知。
-
-image:screenshot_services_license_expire2.png["在BlueXP分层页面中显示即将过期许可证的屏幕截图。"]
-
-此状态也会显示在BlueXP数字钱包页面中。
-
-image:screenshot_services_license_expire1.png["在BlueXP数字钱包页面中显示即将到期的许可证的屏幕截图。"]
-
-您可以在BlueXP分层许可证到期之前对其进行更新、以便将数据分层到云的能力不会中断。
-
-.步骤
-. 单击BlueXP右下角的聊天图标、请求延长您的期限、或者为特定序列号申请更多容量、以获得您的BlueXP分层许可证。
-+
-在您为许可证付费并将其注册到NetApp 支持站点 之后、BlueXP会自动更新BlueXP电子钱包中的许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。
-
-. 如果BlueXP无法自动更新许可证、则需要手动上传许可证文件。
-+
-.. 您可以 <<获取BlueXP分层许可证文件,从 NetApp 支持站点获取许可证文件>>。
-.. 在BlueXP数字钱包页面的_Data Services Licenss_选项卡中、单击 image:screenshot_horizontal_more_button.gif["更多图标"] 对于要更新的服务序列号，请单击 * 更新许可证 * 。
-+
-image:screenshot_services_license_update.png["选择特定服务的更新许可证按钮的屏幕截图。"]
-
-.. 在 _Update License_ 页面中，上传许可证文件并单击 * 更新许可证 * 。
-
-
-
-
-.结果
-BlueXP会更新许可证、以便您的BlueXP分层服务继续处于活动状态。
+您可以通过BlueXP  电子钱包更新现有许可证、查看许可证状态以及添加新许可证。 https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["了解如何在电子钱包中管理许可证"^](英文)。
 
 
 
