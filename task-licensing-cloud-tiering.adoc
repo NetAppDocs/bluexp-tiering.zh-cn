@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-licensing-cloud-tiering.html 
-keywords: subscribe, digital wallet, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, annual, tiering, cloud tiering 
+keywords: subscribe, digital wallet, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, annual, tiering, cloud tiering, license 
 summary: 从第一个集群设置分层时、即可免费试用30天的BlueXP分层。免费试用结束后、您需要通过云提供商市场的按需购买或按年订阅、NetApp的BYOL许可证或两者的组合为BlueXP分层付费。 
 ---
 = 为BlueXP分层设置许可
@@ -38,6 +38,8 @@ link:concept-cloud-tiering.html#pricing-and-licenses["详细了解许可如何�
 == 使用BlueXP分层PAYGO订阅
 
 您可以从云提供商的市场订阅按需购买、从而获得使用Cloud Volumes ONTAP 系统和许多云数据服务(例如BlueXP分层)的许可。
+
+订阅BlueXP  分层后、您可以在数字钱包中管理订阅。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-subscriptions.html#view-your-subscriptions["了解如何使用电子钱包。"^]
 
 
 
@@ -122,7 +124,7 @@ NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP  分
 
 或者、如果您有一个不会使用的未分配的基于节点的Cloud Volumes ONTAP 许可证、则可以将其转换为具有相同美元等价性和相同到期日期的BlueXP分层许可证。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["有关详细信息，请访问此处"^]。
 
-您可以使用BlueXP数字钱包页面管理BlueXP Tiering BYOL许可证。您可以添加新许可证并更新现有许可证。
+您可以使用BlueXP数字钱包页面管理BlueXP Tiering BYOL许可证。您可以添加新许可证并更新现有许可证。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["了解如何使用电子钱包。"^]
 
 
 

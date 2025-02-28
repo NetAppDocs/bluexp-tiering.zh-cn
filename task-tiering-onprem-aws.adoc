@@ -63,7 +63,7 @@ summary: 通过将非活动数据分层到 Amazon S3 ，在内部 ONTAP 集群�
 
 [role="quick-margin-list"]
 * 要从 AWS Marketplace 订阅， https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["转到BlueXP Marketplace产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
-* 要使用BlueXP分层BYOL许可证付费、请发送邮件至：ng-cloud-tiering@netapp.com？Subject=Licensing[如果需要购买许可证、请联系我们]、然后发送电子邮件至 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["从BlueXP电子钱包中将其添加到您的帐户"]。
+* 要使用BlueXP  分层BYOL许可证支付费用，请发送电子邮件至：ng-cloud-tiering@netapp.com？Subject = Licensing[如果您需要购买许可证，请与我们联系]，然后link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["从BlueXP电子钱包中将其添加到您的帐户"]。
 
 
 
