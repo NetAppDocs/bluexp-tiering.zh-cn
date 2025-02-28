@@ -1397,7 +1397,6 @@
   <block id="1430b68e61364b237636f6f0ce8e282a" category="paragraph">如果您的许可期限即将到期、或者您的许可容量即将达到限制、您将在BlueXP  分层和电子钱包中收到通知。</block>
   <block id="f59ab7df4b9fd3526a4fbed390f7fa9a" category="inline-link">了解如何在电子钱包中管理许可证</block>
   <block id="bdfa472a184585b4fa4633165dc44d15" category="paragraph">您可以通过BlueXP  电子钱包更新现有许可证、查看许可证状态以及添加新许可证。<block ref="eb38d0c8186bca45da4435026f76609b" category="inline-link-rx"></block>(英文)。</block>
-  <block id="b9f5b01b4774bcb7362c0c3c8c045c8f" category="section-title">如果我已达到BYOL容量限制、或者我的BYOL许可证过期、会发生什么情况？</block>
   <block id="3bd6904fad56f42c6c8fca6339e68a52" category="paragraph">如果达到BYOL容量限制或您的BYOL许可证过期、则新冷数据的分层将停止、新冷数据的分层将停止。以前分层的所有数据仍可访问；这意味着您可以检索和使用此数据。检索后、此数据将从云移回性能层。</block>
   <block id="b5e80cebccc83c069af38aa776874590" category="inline-link-macro">了解如何使用电子钱包。</block>
   <block id="d89bd65e8fd665e3441fc89af7b8df3e" category="paragraph">订阅BlueXP  分层后、您可以在数字钱包中管理订阅。<block ref="d49cdac2c2a5c8f3e20a0ee99c2a8fbf" category="inline-link-macro-rx"></block></block>
@@ -1405,4 +1404,5 @@
   <block id="b5f6f9235ede8b6d89d84e0a91d1d416" category="list-text">要使用BlueXP  分层BYOL许可证支付费用，请发送电子邮件至：ng-cloud-tiering@netapp.com？Subject = Licensing[如果您需要购买许可证，请与我们联系]，然后<block ref="7514748750b360406b2849d4de48dd88" category="inline-link-macro-rx"></block>。</block>
   <block id="f5b439eae5ededef7363a59554dfd116" category="list-text">要使用BlueXP  分层BYOL许可证支付费用，请发送电子邮件至：ng-cloud-tiering@netapp.com？Subject = Licensing[如果您需要购买许可证，请与我们联系]，然后<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>。</block>
   <block id="1f7ed36d878143cac28b03439d01a547" category="list-text">要使用BlueXP  分层BYOL许可证支付费用，请发送电子邮件至：ng-cloud-tiering@netapp.com？Subject = Licensing[如果您需要购买许可证，请与我们联系]，然后<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>。。</block>
+  <block id="18edf950b6f18ca0e897a7237c2d214e" category="section-title">如果我已达到BYOL容量限制、或者我的BYOL许可证过期、会发生什么情况？</block>
 </blocks>
