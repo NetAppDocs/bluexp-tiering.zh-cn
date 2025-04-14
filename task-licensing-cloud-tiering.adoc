@@ -208,7 +208,7 @@ NOTE: System Manager或ONTAP 命令行界面中显示的"子"许可证的许可�
 此时请勿配置分层。
 
 . link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["购买BlueXP分层许可证"] 新集群所需的容量。
-. 在BlueXP中、 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["将许可证添加到BlueXP电子钱包"]。
+. 在BlueXP  中、<<licenses,将许可证添加到BlueXP电子钱包>>[将许可证添加到BlueXP  数字钱包]。
 . 在BlueXP分层中、 link:task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering["发现新集群"]。
 . 在集群页面中、单击 image:screenshot_horizontal_more_button.gif["更多图标"] 并选择*部署许可证*。
 +

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-managing-object-storage.html 
-keywords: object storage, mirror object storage, create object storage, remove object storage, swap object storage, display object storage 
+keywords: object storage, mirror object storage, create object storage, remove object storage, swap object storage, display object storage, license 
 summary: 将内部ONTAP 集群配置为将数据分层到特定对象存储之后、您可以执行其他对象存储任务。您可以添加新的对象存储、将分层数据镜像到二级对象存储、交换主对象存储和镜像对象存储、从聚合中删除镜像对象存储等。 
 ---
 = 管理用于数据分层的对象存储
@@ -91,9 +91,9 @@ IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段�
 
 您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。 https://docs.netapp.com/us-en/ontap/fabricpool/create-mirror-task.html["了解有关FabricPool 镜像的更多信息"^]。
 
-使用MetroCluster 配置时、最佳做法是在公有 云中使用位于不同可用性区域的对象存储。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["在ONTAP 文档中了解有关MetroCluster 要求的更多信息"^]。
+使用MetroCluster配置时、最佳做法是在公共云中使用位于不同可用性区域的对象存储。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["在ONTAP 文档中了解有关MetroCluster 要求的更多信息"^](英文)。在MetroCluster中、不建议使用未镜像聚合、否则会显示错误消息。
 
-请注意、在MetroCluster 配置中使用StorageGRID 作为对象存储时、两个ONTAP 系统都可以对一个StorageGRID 系统执行FabricPool 分层。每个ONTAP 系统都必须将数据分层到不同的存储分段。
+在MetroCluster配置中使用StorageGRID作为对象存储时、两个ONTAP系统均可对单个StorageGRID系统执行FabricPool分层。每个ONTAP 系统都必须将数据分层到不同的存储分段。
 
 .步骤
 . 在*集群*页面中、单击选定集群的*高级设置*。

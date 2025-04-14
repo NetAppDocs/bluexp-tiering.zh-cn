@@ -735,8 +735,6 @@
   <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">在ONTAP 文档中了解有关MetroCluster 要求的更多信息</block>
   <block id="c80805cd1b291fd4590a3c0b82caa095" category="inline-link">了解有关FabricPool 镜像的更多信息</block>
   <block id="4a6b2da2ae625dffc7d1a103b7579d57" category="paragraph">您可以将另一个对象存储附加到聚合、以创建FabricPool 镜像、从而将数据同步分层到两个对象存储。您必须已将一个对象存储附加到聚合。<block ref="8af213a751b87119e23e85f52fbc72d6" category="inline-link-rx"></block>。</block>
-  <block id="2dc183e0073f3c1e0402cafe50273750" category="paragraph">使用MetroCluster 配置时、最佳做法是在公有 云中使用位于不同可用性区域的对象存储。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
-  <block id="6b483bd3d7c70c49e8ad823d9d4bbf64" category="paragraph">请注意、在MetroCluster 配置中使用StorageGRID 作为对象存储时、两个ONTAP 系统都可以对一个StorageGRID 系统执行FabricPool 分层。每个ONTAP 系统都必须将数据分层到不同的存储分段。</block>
   <block id="64430472f9b760efd0fff8a56c3dfe2d" category="paragraph">当2个对象存储正在同步时、镜像状态将显示为"正在同步"。同步完成后、状态将更改为"已同步"。</block>
   <block id="243263104c829e77835d632f591230d5" category="summary">在向NetApp技术支持部门创建支持案例之前、您需要向BlueXP添加一个NetApp 支持站点 帐户、然后注册获取支持。</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支持注册概述</block>
@@ -1118,7 +1116,6 @@
   <block id="5ac06364a2cad0af68f73e54f03c4205" category="list-text">"父级"BlueXP分层许可证可跟踪所有集群用于分层的容量、以确保许可证中有足够的容量。BlueXP电子钱包中显示了总许可容量和到期日期。</block>
   <block id="4acb8884a848c4db6d41852f96aa4ef6" category="admonition">System Manager或ONTAP 命令行界面中显示的"子"许可证的许可容量和到期日期不是真实信息、因此、如果信息不相同、请勿担心。这些值由BlueXP分层软件在内部进行管理。BlueXP电子钱包可跟踪真实信息。</block>
   <block id="f4c3107fb758c7edea8576312dff63ac" category="inline-link-macro">将许可证添加到BlueXP电子钱包</block>
-  <block id="1953cb0b13a811a9fb3db1b69c5f0a2d" category="list-text">在BlueXP中、 <block ref="fb3a1da5f1072aaa3d6f4c9eaa7cccb2" category="inline-link-macro-rx"></block>。</block>
   <block id="891ca3a65a7ff1025eab9d895f17f04a" category="paragraph">通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期许可证、并指定任何分层容量(最低10 TiB起)。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。</block>
   <block id="76e73aa82e342d9c46acf62eef4dcfc4" category="paragraph">只需单击*分层&gt;内部部署信息板*。XP Bluetiering提供了有关您的环境的以下详细信息。</block>
   <block id="73363ef02ce267ee93816a7a9661efbb" category="inline-image-macro">"内部部署信息板"页面的屏幕截图。</block>
@@ -1405,4 +1402,9 @@
   <block id="f5b439eae5ededef7363a59554dfd116" category="list-text">要使用BlueXP  分层BYOL许可证支付费用，请发送电子邮件至：ng-cloud-tiering@netapp.com？Subject = Licensing[如果您需要购买许可证，请与我们联系]，然后<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>。</block>
   <block id="1f7ed36d878143cac28b03439d01a547" category="list-text">要使用BlueXP  分层BYOL许可证支付费用，请发送电子邮件至：ng-cloud-tiering@netapp.com？Subject = Licensing[如果您需要购买许可证，请与我们联系]，然后<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>。。</block>
   <block id="18edf950b6f18ca0e897a7237c2d214e" category="section-title">如果我已达到BYOL容量限制、或者我的BYOL许可证过期、会发生什么情况？</block>
+  <block id="fa248eca9d251b0d2d1865958f765b99" category="section-title">使用ONTAP MetroCluster时、如何对分层收费？</block>
+  <block id="78157c877460c2ee87bd63f45fc9a5d4" category="paragraph">在MetroCluster环境中使用时、分层许可容量会同样应用于镜像分段。例如、如果您拥有一个100 TiB分层许可证、则这两个分段都可以分层、最高可达100 TiB。镜像存储分段不收取额外费用。在MetroCluster环境中从未镜像聚合分层时、系统会照常应用BlueXP  分层许可证、并使用分层到这两个分段的总容量。例如、如果您拥有100 TiB的分层许可证、则这两个分段最多可以分层50 TB。</block>
+  <block id="d3a48b6792b79f1932baa44071945c80" category="list-text">在BlueXP  中、<block ref="e5625abf9d60b2626bb47dbb5c12864c" category="inline-xref-macro-rx"></block>[将许可证添加到BlueXP  数字钱包]。</block>
+  <block id="af35d47e77f1b287fca9c2a638c644aa" category="paragraph">使用MetroCluster配置时、最佳做法是在公共云中使用位于不同可用性区域的对象存储。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>(英文)。在MetroCluster中、不建议使用未镜像聚合、否则会显示错误消息。</block>
+  <block id="437a34485fe2ce742e7d58f52bb6c1e5" category="paragraph">在MetroCluster配置中使用StorageGRID作为对象存储时、两个ONTAP系统均可对单个StorageGRID系统执行FabricPool分层。每个ONTAP 系统都必须将数据分层到不同的存储分段。</block>
 </blocks>
