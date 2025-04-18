@@ -1407,4 +1407,32 @@
   <block id="d3a48b6792b79f1932baa44071945c80" category="list-text">在BlueXP  中、<block ref="e5625abf9d60b2626bb47dbb5c12864c" category="inline-xref-macro-rx"></block>[将许可证添加到BlueXP  数字钱包]。</block>
   <block id="af35d47e77f1b287fca9c2a638c644aa" category="paragraph">使用MetroCluster配置时、最佳做法是在公共云中使用位于不同可用性区域的对象存储。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>(英文)。在MetroCluster中、不建议使用未镜像聚合、否则会显示错误消息。</block>
   <block id="437a34485fe2ce742e7d58f52bb6c1e5" category="paragraph">在MetroCluster配置中使用StorageGRID作为对象存储时、两个ONTAP系统均可对单个StorageGRID系统执行FabricPool分层。每个ONTAP 系统都必须将数据分层到不同的存储分段。</block>
+  <block id="aa43861a5e0a7fa90f107ba3b50f03cd" category="paragraph">BlueXP  分层支持以下Azure区域。不支持将Azure中国地区作为分层目标。</block>
+  <block id="f5cd262901883dff68d06b215fb0f28e" category="section-title">非洲</block>
+  <block id="d5daca31a462e138266141f6d01ca814" category="list-text">南非北部</block>
+  <block id="cee3f0213dd8b7eb15d7b31824e01754" category="list-text">澳大利亚东部</block>
+  <block id="c2701212de431ec66277aeb9ec636184" category="list-text">澳大利亚东南部</block>
+  <block id="f74e1c0c8ee8410fa5bfe03676347257" category="list-text">东亚</block>
+  <block id="12fd3aa0a9f080663613364badb43e93" category="list-text">日本东部</block>
+  <block id="33e5ad3a780212ee47f127965a2dda72" category="list-text">日本西部</block>
+  <block id="6da3164e9884fb44e54fda035450cfaa" category="list-text">韩国中部</block>
+  <block id="cbbf2ae44538816cc573fa3ad561a434" category="list-text">韩国</block>
+  <block id="ef005ab2b7187e0e4953a0abfdacad42" category="list-text">东南亚</block>
+  <block id="bea1bd3d23555c539dab5f3f5426184c" category="list-text">法国中部</block>
+  <block id="1dab3491cdeeb2a6d567b21ee3063ae4" category="list-text">德国中西部</block>
+  <block id="85c1bd2190b5e1105a9c4e7e6a224a96" category="list-text">德国北部</block>
+  <block id="d0fe0e3b6520479f718b98f0d471b7d0" category="list-text">北欧</block>
+  <block id="390a1a81c9b43f7d364b54144161673d" category="list-text">英国南部</block>
+  <block id="23d58738c27b56ae980ce7b45716f6a5" category="list-text">英国西部</block>
+  <block id="8fb2033d01e3efa2825282a13f86c14e" category="list-text">西欧</block>
+  <block id="ea7c65fe418bef9cfe86be4944b30bcb" category="list-text">加拿大东部</block>
+  <block id="2e168141b8f719cbd37e6beec663b599" category="list-text">位于美国中部</block>
+  <block id="3c110de67497eb3f8d4c100e43101c81" category="list-text">美国东部</block>
+  <block id="7c61981f0be77fb7e4061ba5395ff02b" category="list-text">美国东部 2.</block>
+  <block id="e306e59ae933d5705ad58b576840cfb7" category="list-text">位于美国中部北部</block>
+  <block id="00a0c4ce62672ec36639c314d0d8e114" category="list-text">位于美国中部南部</block>
+  <block id="f3397c566fedcaa2f63145169ba345fc" category="list-text">美国西部</block>
+  <block id="c349d3a26cf4231660785a0c5b4cb007" category="list-text">美国西部2.</block>
+  <block id="e74523dfd57d69116c6dc03759fe0a7b" category="list-text">位于美国西部</block>
+  <block id="47b9af39407829080e9cfeee3607c39c" category="list-text">巴西南部</block>
 </blocks>
