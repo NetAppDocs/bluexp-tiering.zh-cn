@@ -13,7 +13,7 @@ indexpage:
       url: whats-new.html
     - title: 设置许可
       url: task-licensing-cloud-tiering.html
-  - title: 将内部 ONTAP 数据分层到云
+  - title: 将本地ONTAP数据分层到云
     links:
     - title: 分层到 Amazon S3
       url: task-tiering-onprem-aws.html

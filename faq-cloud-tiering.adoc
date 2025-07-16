@@ -144,7 +144,7 @@ https://bluexp.netapp.com/pricing["查看定价详细信息"]。
 
 
 
-=== 内部系统的重新融合是否受云提供商收取的出口成本的影响？
+=== 本地系统的补水是否需要支付云提供商收取的出口费用？
 
 是的。从公有 云进行的所有读取均需支付出站费用。
 
@@ -156,7 +156,7 @@ https://bluexp.netapp.com/pricing["查看定价详细信息"]。
 
 
 
-=== 云提供商在从对象存储读取/检索数据到内部存储时是否需要额外付费？
+=== 云提供商是否会对从对象存储读取/检索数据到本地存储收取额外费用？
 
 是的。检查 https://aws.amazon.com/s3/pricing/["Amazon S3定价"]， https://azure.microsoft.com/en-us/pricing/details/storage/blobs/["块Blob定价"]，和 https://cloud.google.com/storage/pricing["云存储定价"] 数据读取/检索产生的额外定价。
 
@@ -170,7 +170,7 @@ https://bluexp.netapp.com/pricing["查看定价详细信息"]。
 
 === 使用ONTAP MetroCluster时、如何对分层收费？
 
-在MetroCluster环境中使用时、分层许可容量会同样应用于镜像分段。例如、如果您拥有一个100 TiB分层许可证、则这两个分段都可以分层、最高可达100 TiB。镜像存储分段不收取额外费用。在MetroCluster环境中从未镜像聚合分层时、系统会照常应用BlueXP  分层许可证、并使用分层到这两个分段的总容量。例如、如果您拥有100 TiB的分层许可证、则这两个分段最多可以分层50 TB。
+在MetroCluster环境中使用时，总分层许可证将应用于两个集群的使用情况。例如，如果您拥有 100 TiB 的分层许可证，则每个集群使用的分层容量将计入 100 TiB 的总容量。
 
 
 
@@ -326,7 +326,7 @@ BlueXP分层支持将数据分层到_Standard_、_Nearline_、_Coldline_和_Arch
 
 
 
-=== 如何将我的分层数据恢复到性能层内部？
+=== 如何将分层数据带回本地性能层？
 
 回写通常在读取时执行、具体取决于分层策略类型。在ONTAP 9.8之前的版本中、可以使用_volume move"操作来回写整个卷。从ONTAP 9.8开始、分层UI可选择*恢复所有数据*或*恢复活动文件系统*。 link:task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier["了解如何将数据移回性能层"]。
 

@@ -20,7 +20,7 @@ BlueXP分层支持多个Google Cloud存储类和大多数地区。
 
 == 支持的 GCP 存储类
 
-当您从内部ONTAP系统设置到GCP的数据分层时、BlueXP分层会自动对非活动数据使用_Standard"存储类。BlueXP分层可以应用生命周期规则、以便在一定天数后将数据从_Standard_存储类过渡到其他存储类。您可以从以下存储类中进行选择：
+当您设置从本地ONTAP系统到 Google Cloud 存储的数据分层时，分层功能会自动使用“标准”存储类别来存储您的非活动数据。分层功能可以应用生命周期规则，以便数据在一定天数后从“标准”存储类别转换为其他存储类别。您可以从以下存储类中进行选择：
 
 * 近线
 * 冷线
@@ -29,7 +29,7 @@ BlueXP分层支持多个Google Cloud存储类和大多数地区。
 
 如果不选择其他存储类，则数据将保留在 _Standard_ 存储类中，不会应用任何规则。
 
-配置BlueXP分层生命周期规则时、在Google帐户中设置存储分段时、不得配置任何生命周期规则。
+当您配置分层生命周期规则时，您在 Google 帐户中设置存储桶时不得配置任何生命周期规则。
 
 https://cloud.google.com/storage/docs/storage-classes["了解 Google Cloud 存储课程"^]。
 
@@ -37,7 +37,7 @@ https://cloud.google.com/storage/docs/storage-classes["了解 Google Cloud 存�
 
 == 支持的 Google Cloud 地区
 
-XP Bluetiering支持以下区域。
+分层支持以下区域。
 
 
 

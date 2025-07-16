@@ -106,7 +106,7 @@ summary: 了解BlueXP分层的新增功能。
 
 === 拖放以启用到其他目标的分层
 
-如果Azure Blob、Google Cloud Storage或StorageGRID 分层目标作为工作环境存在于Canvas上、则可以将本地ONTAP 工作环境拖动到目标上以启动分层设置向导。
+如果 Azure Blob、Google Cloud Storage 或StorageGRID分层目标作为画布上的工作环境存在，则可以将本地ONTAP工作环境拖到目标上以启动分层设置向导。
 
 
 
@@ -124,7 +124,7 @@ https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html["查�
 
 === 拖放以启用到Amazon S3的分层
 
-如果Amazon S3分层目标作为工作环境存在于Canvas上、您可以将内部ONTAP 工作环境拖动到目标上以启动分层设置向导。
+如果 Amazon S3 分层目标作为 Canvas 上的工作环境存在，您可以将本地ONTAP工作环境拖到目标上以启动分层设置向导。
 
 
 

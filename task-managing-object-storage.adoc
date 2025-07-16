@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-managing-object-storage.html 
 keywords: object storage, mirror object storage, create object storage, remove object storage, swap object storage, display object storage, license 
-summary: 将内部ONTAP 集群配置为将数据分层到特定对象存储之后、您可以执行其他对象存储任务。您可以添加新的对象存储、将分层数据镜像到二级对象存储、交换主对象存储和镜像对象存储、从聚合中删除镜像对象存储等。 
+summary: 在配置本地ONTAP集群以将数据分层到特定对象存储后，您可以执行其他对象存储任务。您可以添加新的对象存储、将分层数据镜像到二级对象存储、交换主对象存储和镜像对象存储、从聚合中删除镜像对象存储等。 
 ---
 = 管理用于数据分层的对象存储
 :hardbreaks:
@@ -14,16 +14,16 @@ summary: 将内部ONTAP 集群配置为将数据分层到特定对象存储之�
 
 
 [role="lead"]
-将内部ONTAP 集群配置为将数据分层到特定对象存储之后、您可以执行其他对象存储任务。您可以添加新的对象存储、将分层数据镜像到二级对象存储、交换主对象存储和镜像对象存储、从聚合中删除镜像对象存储等。
+在配置本地ONTAP集群以将数据分层到特定对象存储后，您可以执行其他对象存储任务。您可以添加新的对象存储、将分层数据镜像到二级对象存储、交换主对象存储和镜像对象存储、从聚合中删除镜像对象存储等。
 
 
 
 == 查看为集群配置的对象存储
 
-您可能希望查看为集群配置的所有对象存储以及它们所连接的聚合。XP Bluetiering可为每个集群提供此信息。
+您可以看到为每个集群配置的所有对象存储以及它们所附加到的聚合。
 
 .步骤
-. 从*集群*页面中、单击集群的菜单图标、然后选择*对象存储信息*。
+. 从*Clusters*页面中，选择集群的菜单图标，然后选择*Object Store Info*。
 . 查看有关对象存储的详细信息。
 +
 此示例显示了连接到集群上不同聚合的Amazon S3和Azure Blob对象存储。
@@ -37,11 +37,11 @@ image:screenshot_tiering_object_store_view.png["显示对象存储信息的屏�
 
 == 添加新对象存储
 
-您可以添加可用于集群中聚合的新对象存储。创建后、您可以将其附加到聚合。
+添加一个可以附加到聚合的新对象存储。
 
 .步骤
-. 从*集群*页面中、单击集群的菜单图标、然后选择*对象存储信息*。
-. 在对象存储信息页面中、单击*创建新对象存储*。
+. 从*Clusters*页面中，选择集群的菜单图标，然后选择*Object Store Info*。
+. 从对象存储信息页面中，选择*创建新对象存储*。
 +
 image:screenshot_tiering_object_store_create_button.png["显示用于创建新对象存储的创建新对象存储按钮的屏幕截图。"]
 
@@ -49,16 +49,16 @@ image:screenshot_tiering_object_store_create_button.png["显示用于创建新�
 此时将启动对象存储向导。以下示例显示了如何在Amazon S3中创建对象存储。
 
 . *定义对象存储名称*：输入此对象存储的名称。它必须与此集群上的聚合可能使用的任何其他对象存储唯一。
-. *选择提供程序*：选择提供程序、例如* Amazon Web Services*、然后单击*继续*。
+. *选择提供商*：选择提供商，例如*Amazon Web Services*，然后选择*继续*。
 . 完成*创建对象存储*页面上的步骤：
 +
-.. * S3 Bucket*：添加新的S3存储分段或选择以_fabric-pool_前缀开头的现有S3存储分段。然后、输入用于访问存储分段的AWS帐户ID、选择存储分段区域、然后单击*继续*。
+.. * S3 Bucket*：添加新的S3存储分段或选择以_fabric-pool_前缀开头的现有S3存储分段。然后输入提供对存储桶访问权限的 AWS 账户 ID，选择存储桶区域，并选择*继续*。
 +
 需要使用 _fabric-pool_ 前缀，因为 Connector 的 IAM 策略允许实例对使用该前缀命名的分段执行 S3 操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。
 
 .. *存储类生命周期*：BlueXP分层管理分层数据的生命周期过渡。数据从_Standard"类开始、但您可以创建一个规则、以便在特定天数后将其他存储类应用于数据。
 +
-选择要将分层数据过渡到的S3存储类以及将数据分配给该类之前的天数，然后单击*继续*。例如、下面的屏幕截图显示、在对象存储中运行45天后、分层数据会从_Standard"类分配给_Standard" iA_类。
+选择要将分层数据转换到的 S3 存储类以及将数据分配到该类之前的天数，然后选择*继续*。例如、下面的屏幕截图显示、在对象存储中运行45天后、分层数据会从_Standard"类分配给_Standard" iA_类。
 
 +
 如果选择 * 将数据保留在此存储类中 * ，则数据将保留在 _Standard_ 存储类中，不会应用任何规则。 link:reference-aws-support.html["请参见支持的存储类"^]。
@@ -69,11 +69,11 @@ image:screenshot_tiering_lifecycle_selection_aws.png["显示如何在特定天�
 +
 请注意、此生命周期规则将应用于选定存储分段中的所有对象。
 
-.. * 凭据 * ：输入具有所需 S3 权限的 IAM 用户的访问密钥 ID 和机密密钥，然后单击 * 继续 * 。
+.. *凭证*：输入具有所需 S3 权限的 IAM 用户的访问密钥 ID 和密钥，然后选择*继续*。
 +
 IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段位于同一 AWS 帐户中。请参见有关激活分层的章节中的所需权限。
 
-.. * 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间，然后单击 * 继续 * 。
+.. *集群网络*：选择ONTAP应用于连接对象存储的 IP 空间，然后选择*继续*。
 +
 选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到云提供商对象存储的连接。
 
@@ -96,7 +96,7 @@ IAM 用户必须与您在 * S3 Bucket* 页面上选择或创建的存储分段�
 在MetroCluster配置中使用StorageGRID作为对象存储时、两个ONTAP系统均可对单个StorageGRID系统执行FabricPool分层。每个ONTAP 系统都必须将数据分层到不同的存储分段。
 
 .步骤
-. 在*集群*页面中、单击选定集群的*高级设置*。
+. 从“*集群*”页面中，为所选集群选择“*高级设置*”。
 +
 image:screenshot_tiering_advanced_setup_button.png["显示集群的\"高级设置\"按钮的屏幕截图。"]
 
@@ -104,7 +104,7 @@ image:screenshot_tiering_advanced_setup_button.png["显示集群的\"高级设�
 +
 image:screenshot_tiering_mirror_config.png["显示如何将第二个对象存储拖动到聚合以创建分层镜像的屏幕截图。"]
 
-. 在附加对象存储对话框中、单击*附加*、第二个对象存储将附加到聚合。
+. 在附加对象存储对话框中，选择*附加*，第二个对象存储将附加到聚合。
 +
 image:screenshot_tiering_mirror_config_complete.png["显示附加到聚合的第二个对象存储的屏幕截图。"]
 
@@ -119,11 +119,11 @@ image:screenshot_tiering_mirror_config_complete.png["显示附加到聚合的第
 您可以交换聚合的主对象存储和镜像对象存储。对象存储镜像将成为主镜像、而原始主镜像将成为镜像。
 
 .步骤
-. 在*集群*页面中、单击选定集群的*高级设置*。
+. 从“*集群*”页面中，为所选集群选择“*高级设置*”。
 +
 image:screenshot_tiering_advanced_setup_button.png["显示集群的\"高级设置\"按钮的屏幕截图。"]
 
-. 在高级设置页面中、单击聚合的菜单图标、然后选择*交换目标*。
+. 在高级设置页面中，选择聚合的菜单图标并选择*交换目的地*。
 +
 image:screenshot_tiering_mirror_swap.png["显示聚合的交换目标选项的屏幕截图。"]
 
@@ -137,11 +137,11 @@ image:screenshot_tiering_mirror_swap.png["显示聚合的交换目标选项的�
 如果您不再需要复制到其他对象存储、则可以删除FabricPool 镜像。
 
 .步骤
-. 在*集群*页面中、单击选定集群的*高级设置*。
+. 从“*集群*”页面中，为所选集群选择“*高级设置*”。
 +
 image:screenshot_tiering_advanced_setup_button.png["显示集群的\"高级设置\"按钮的屏幕截图。"]
 
-. 在高级设置页面中、单击聚合的菜单图标、然后选择*取消镜像对象存储*。
+. 在高级设置页面中，选择聚合的菜单图标并选择*取消镜像对象存储*。
 +
 image:screenshot_tiering_mirror_delete.png["显示聚合的取消镜像对象存储选项的屏幕截图。"]
 

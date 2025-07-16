@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-tiering-onprem-azure.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, azure, blob, azure blob 
-summary: 通过将非活动数据分层到 Azure Blob 存储，在内部 ONTAP 集群上释放空间。 
+summary: 通过将非活动数据分层到 Azure Blob 存储来释放本地ONTAP集群上的空间。 
 ---
 = 将数据从内部 ONTAP 集群分层到 Azure Blob 存储
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 通过将非活动数据分层到 Azure Blob 存储，在内部 ONTAP �
 
 
 [role="lead"]
-通过将非活动数据分层到 Azure Blob 存储，在内部 ONTAP 集群上释放空间。
+通过将非活动数据分层到 Azure Blob 存储来释放本地ONTAP集群上的空间。
 
 
 
@@ -27,21 +27,21 @@ summary: 通过将非活动数据分层到 Azure Blob 存储，在内部 ONTAP �
 您需要满足以下要求：
 
 [role="quick-margin-list"]
-* 运行 ONTAP 9.4 或更高版本且与 Azure Blob 存储具有 HTTPS 连接的内部 ONTAP 集群。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
+* 运行ONTAP 9.4 或更高版本并与 Azure Blob 存储建立 HTTPS 连接的本地ONTAP集群。  https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^] 。
 * 安装在 Azure vNet 或内部环境中的 Connector 。
 * 一种连接器网络、可通过此连接器与数据中心中的ONTAP 集群、Azure存储和BlueXP分层服务建立出站HTTPS连接。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
 [role="quick-margin-para"]
-在BlueXP中、选择一个内部ONTAP 工作环境、单击分层服务的*启用*、然后按照提示将数据分层到Azure Blob存储。
+在BlueXP中，选择本地ONTAP工作环境，为分层服务选择 *启用*，然后按照提示将数据分层到 Azure Blob 存储。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 设置许可
 [role="quick-margin-para"]
 免费试用结束后、通过按需购买订阅、ONTAP BlueXP分层BYOL许可证或两者的组合为BlueXP分层付费：
 
 [role="quick-margin-list"]
-* 要从 Azure Marketplace 订阅， https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["转到BlueXP Marketplace产品"^]，单击 * 订阅 * ，然后按照提示进行操作。
+* 要从 Azure 市场订阅，  https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["转到BlueXP Marketplace产品"^] ，选择*订阅*，然后按照提示进行操作。
 * 要使用BlueXP  分层BYOL许可证支付费用，请发送电子邮件至：ng-cloud-tiering@netapp.com？Subject = Licensing[如果您需要购买许可证，请与我们联系]，然后link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["从BlueXP电子钱包中将其添加到您的帐户"]。
 
 
@@ -104,7 +104,7 @@ NOTE: 从ONTAP 9.5开始、BlueXP分层支持FlexGroup 卷。安装程序的工�
 
 === 发现 ONTAP 集群
 
-您需要先在BlueXP中创建内部ONTAP 工作环境、然后才能开始对冷数据进行分层。
+您需要在BlueXP中创建一个本地ONTAP工作环境，然后才能开始分层冷数据。
 
 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 
@@ -131,7 +131,7 @@ https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["�
 
 === 为连接器准备网络连接
 
-确保此连接器具有所需的网络连接。连接器可以安装在内部或 Azure 中。
+确保此连接器具有所需的网络连接。连接器可以安装在本地或 Azure 中。
 
 .步骤
 . 确保安装 Connector 的网络启用以下连接：
@@ -169,29 +169,29 @@ NOTE: 如果您计划将BlueXP分层配置为使用成本较低的访问层、�
 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["内部工作环境"^]。
 
 .步骤
-. 选择内部ONTAP 工作环境。
+. 选择本地ONTAP工作环境。
 . 从右侧面板中单击分层服务的*启用*。
 +
 如果Azure Blob分层目标作为工作环境存在于Canvas上、则可以将集群拖动到Azure Blob工作环境中以启动设置向导。
 
 +
-image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，屏幕右侧会显示一个屏幕截图，其中显示启用选项。"]
+image:screenshot_setup_tiering_onprem.png["屏幕截图显示了选择本地ONTAP工作环境后屏幕右侧出现的“启用”选项。"]
 
 . *定义对象存储名称*：输入此对象存储的名称。它必须与此集群上的聚合可能使用的任何其他对象存储唯一。
-. *选择提供程序*：选择* Microsoft Azure*并单击*继续*。
+. *选择提供商*：选择*Microsoft Azure*并选择*继续*。
 . 完成*创建对象存储*页面上的步骤：
 +
-.. *资源组*：选择一个资源组、该资源组用于管理现有容器、或者您要为分层数据创建新容器、然后单击*继续*。
+.. *资源组*：选择管理现有容器的资源组，或者选择您想要为分层数据创建新容器的资源组，然后选择*继续*。
 +
-使用内部连接器时、您必须输入可访问资源组的Azure订阅。
+使用本地连接器时，必须输入提供对资源组的访问权限的 Azure 订阅。
 
-.. * Azure Container*：选择单选按钮、将新Blob容器添加到存储帐户或使用现有容器。然后、选择存储帐户并选择现有容器、或者输入新容器的名称。然后单击 * 继续 * 。
+.. * Azure Container*：选择单选按钮、将新Blob容器添加到存储帐户或使用现有容器。然后、选择存储帐户并选择现有容器、或者输入新容器的名称。然后选择*继续*。
 +
 此步骤中显示的存储帐户和容器属于您在上一步中选择的资源组。
 
 .. *访问层生命周期*：BlueXP分层管理分层数据的生命周期过渡。数据从_hot_类开始、但您可以创建一个规则、以便在一定天数后将_cool类应用于数据。
 +
-选择要将分层数据过渡到的访问层以及将数据分配到该层之前的天数，然后单击*Continue*。例如、下面的屏幕截图显示、在对象存储中运行45天后、分层数据会从_hot_类分配给_cool类。
+选择要将分层数据转换到的访问层以及将数据分配到该层之前的天数，然后选择*继续*。例如、下面的屏幕截图显示、在对象存储中运行45天后、分层数据会从_hot_类分配给_cool类。
 
 +
 如果选择 * 在此访问层中保留数据 * ，则数据将保留在 _hot_ 访问层中，不会应用任何规则。 link:reference-azure-support.html["请参见支持的访问层"^]。
@@ -202,7 +202,7 @@ image:screenshot_tiering_lifecycle_selection_azure.png["屏幕截图、显示如
 +
 请注意、此生命周期规则将应用于选定存储帐户中的所有Blob容器。
 
-.. * 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间，然后单击 * 继续 * 。
+.. *集群网络*：选择ONTAP应用于连接对象存储的 IP 空间，然后选择*继续*。
 +
 选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到云提供商对象存储的连接。
 
@@ -213,15 +213,15 @@ image:screenshot_tiering_lifecycle_selection_azure.png["屏幕截图、显示如
 
 . 在 _Tier Volumes_ 页面上，选择要为其配置分层的卷，然后启动分层策略页面：
 +
-** 要选择所有卷，请选中标题行（image:button_backup_all_volumes.png[""]），然后单击 * 配置卷 * 。
-** 要选择多个卷，请选中每个卷对应的框（image:button_backup_1_volume.png[""]），然后单击 * 配置卷 * 。
-** 要选择单个卷，请单击行（或 image:screenshot_edit_icon.gif["编辑铅笔图标"] 图标）。
+** 要选择所有卷，请选中标题行中的框 ( image:button_backup_all_volumes.png[""] ) 并选择 *配置卷*。
+** 要选择多个卷，请选中每个卷对应的复选框 ( image:button_backup_1_volume.png[""] ) 并选择 *配置卷*。
+** 要选择单个卷，请选择行（或image:screenshot_edit_icon.gif["编辑铅笔图标"]图标）来表示音量。
 +
 image:screenshot_tiering_initial_volumes.png["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
 
 
 
-. 在 _Tiering Policy_ 对话框中，选择一个分层策略，也可以调整选定卷的散热天数，然后单击 * 应用 * 。
+. 在“分层策略”对话框中，选择分层策略，可选择调整所选卷的冷却天数，然后选择“应用”。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["了解有关卷分层策略和散热天数的更多信息"]。
 

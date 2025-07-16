@@ -14,9 +14,9 @@ summary: 您可以在BlueXP通知中心中查看层警报的状态。
 
 
 [role="lead"]
-您可以在BlueXP通知中心中查看层警报的状态。
+您可以在通知中心查看分层警报的状态。
 
-"通知中心"会跟踪事件的层处理进度、以便您可以验证这些事件是否已解决。您可以通过单击(image:icon_bell.png["通知铃"])。
+"通知中心"会跟踪事件的层处理进度、以便您可以验证这些事件是否已解决。您可以通过单击（ image:icon_bell.png["通知铃"] ) 在菜单栏中。
 
 此时、有一个分层事件将显示为通知：
 
@@ -24,6 +24,6 @@ summary: 您可以在BlueXP通知中心中查看层警报的状态。
 
 此通知是一个"建议"、可帮助您提高系统效率并节省存储成本。它表示集群对其冷数据进行分层的比例不到20%、包括未分层数据的集群。它提供了指向的链接 https://bluexp.netapp.com/cloud-tiering-service-tco["BlueXP分层总拥有成本和节省量计算器"^] 以帮助您计算成本节省。
 
-BlueXP  不会为此通知发送电子邮件。
+您不会收到此通知的电子邮件。
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html["了解有关通知中心的更多信息"^]。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-managing-tiering.html 
 keywords: discover, volumes, report, hot, cold, inactive, active, capacity, used capacity, savings, health, failed 
-summary: 现在，您已从内部 ONTAP 集群设置了数据分层，您可以对其他卷中的数据进行分层，更改卷的分层策略，发现其他集群等。 
+summary: 现在您已经从本地ONTAP集群设置了数据分层，您可以从其他卷分层数据、更改卷的分层策略、发现其他集群等等。 
 ---
 = 管理集群的数据层
 :hardbreaks:
@@ -14,17 +14,17 @@ summary: 现在，您已从内部 ONTAP 集群设置了数据分层，您可以�
 
 
 [role="lead"]
-现在，您已从内部 ONTAP 集群设置了数据分层，您可以对其他卷中的数据进行分层，更改卷的分层策略，发现其他集群等。
+现在您已经从本地ONTAP集群设置了数据分层，您可以从其他卷分层数据、更改卷的分层策略、发现其他集群等等。
 
 
 
 == 查看集群的分层信息
 
-您可能希望查看云层中的数据量以及磁盘上的数据量。或者，您可能希望查看集群磁盘上的热数据量和冷数据量。XP Bluetiering可为每个集群提供此信息。
+您可以查看云层中的数据量以及磁盘上的数据量。您还可以查看使用BlueXP tiering管理的每个集群的磁盘上热数据量和冷数据量。这些信息可在“集群”页面上查看。
 
 .步骤
 . 从左侧导航菜单中、选择*移动性>分层*。
-. 在“*群集*”页面中，单击菜单图标 image:icon-action.png["操作图标"] 并选择*Cluster info*。
+. 在“集群”页面中，选择菜单图标image:icon-action.png["操作图标"]对于集群并选择*集群信息*。
 +
 image:screenshot_tiering_cluster_info_button.png["从\"Clusters (集群)\"页面中选择\"Cluster Info (集群信息)\"按钮的屏幕截图。"]
 
@@ -54,21 +54,21 @@ TIP: 您无需配置对象存储，因为在最初为集群设置分层时已对
 
 .步骤
 . 从左侧导航菜单中、选择*移动性>分层*。
-. 在*集群*页面中、单击集群的*分层卷*。
+. 从“*集群*”页面中，为集群选择“*层卷*”。
 +
 image:screenshot_tiering_tier_volumes_button.png["显示如何为集群选择 \" 层卷 \" 按钮的屏幕截图。"]
 
 . 在 _Tier Volumes_ 页面上，选择要为其配置分层的卷，然后启动分层策略页面：
 +
-** 要选择所有卷，请选中标题行（image:button_backup_all_volumes.png[""]），然后单击 * 配置卷 * 。
-** 要选择多个卷，请选中每个卷对应的框（image:button_backup_1_volume.png[""]），然后单击 * 配置卷 * 。
-** 要选择单个卷，请单击行（或 image:screenshot_edit_icon.gif["编辑铅笔图标"] 图标）。
+** 要选择所有卷，请选中标题行中的框 ( image:button_backup_all_volumes.png[""] ) 并选择 *配置卷*。
+** 要选择多个卷，请选中每个卷对应的复选框 ( image:button_backup_1_volume.png[""] ) 并选择 *配置卷*。
+** 要选择单个卷，请选择行（或image:screenshot_edit_icon.gif["编辑铅笔图标"]图标）来表示音量。
 +
 image:screenshot_tiering_tier_volumes.png["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
 
 
 
-. 在 _Tiering Policy_ 对话框中，选择一个分层策略，也可以调整选定卷的散热天数，然后单击 * 应用 * 。
+. 在“分层策略”对话框中，选择分层策略，可选择调整所选卷的冷却天数，然后选择“应用”。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["了解有关卷分层策略和散热天数的更多信息"]。
 
@@ -88,8 +88,8 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 .步骤
 . 从左侧导航菜单中、选择*移动性>分层*。
-. 在*集群*页面中、单击集群的*分层卷*。
-. 单击卷对应的行，选择分层策略，也可以调整散热天数，然后单击 * 应用 * 。
+. 从“*集群*”页面中，为集群选择“*层卷*”。
+. 单击卷的行，选择分层策略，选择性地调整冷却天数，然后选择*应用*。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["了解有关卷分层策略和散热天数的更多信息"]。
 
@@ -107,14 +107,14 @@ image:screenshot_tiering_policy_settings.png["显示可配置分层策略设置�
 
 == 更改可用于将非活动数据上传到对象存储的网络带宽
 
-为集群激活BlueXP分层时、默认情况下、ONTAP可以使用无限的带宽量将工作环境中的卷中的非活动数据传输到对象存储。如果您发现分层流量正在影响正常用户工作负载、则可以限制传输期间使用的网络带宽量。您可以选择一个介于1到10、000 Mbps之间的值作为最大传输速率。
+当您激活集群的分层时，默认情况下， ONTAP会使用无限量的带宽将非活动数据从工作环境中的卷传输到对象存储。如果您发现分层流量正在影响正常用户工作负载、则可以限制传输期间使用的网络带宽量。您可以选择一个介于1到10、000 Mbps之间的值作为最大传输速率。
 
 . 从左侧导航菜单中、选择*移动性>分层*。
-. 在“*群集*”页面中，单击菜单图标 image:icon-action.png["操作图标"] 并选择*最大传输速率*。
+. 在“集群”页面中，选择菜单图标image:icon-action.png["操作图标"]对于集群并选择*最大传输速率*。
 +
 image:screenshot_tiering_transfer_rate_button.png["从\"集群\"页面中选择\"最大传输速率\"按钮的屏幕截图。"]
 
-. 在_maximum Transfer rate_页面中，选择*Limited*单选按钮并输入可使用的最大带宽，或者选择*Unlimited *表示没有限制。然后单击*Apply*。
+. 在_maximum Transfer rate_页面中，选择*Limited*单选按钮并输入可使用的最大带宽，或者选择*Unlimited *表示没有限制。然后选择*应用*。
 +
 image:screenshot_tiering_transfer_rate.png["集群的最大传输速率对话框的屏幕截图。"]
 
@@ -126,7 +126,7 @@ image:screenshot_tiering_transfer_rate.png["集群的最大传输速率对话框
 
 == 下载卷的分层报告
 
-您可以下载"层卷"页面的报告、以便查看所管理集群上所有卷的分层状态。只需单击 image:button_download.png["下载"] 按钮。BlueXP分层会生成一个.CSV文件、您可以根据需要查看该文件并将其发送给其他组。CSV文件最多包含10、000行数据。
+您可以下载"层卷"页面的报告、以便查看所管理集群上所有卷的分层状态。只需选择image:button_download.png["下载"]按钮下载 .CSV 文件，您可以根据需要查看并发送给其他组。CSV文件最多包含10、000行数据。
 
 image:screenshot_tiering_report_download.png["显示如何生成CSV文件的屏幕截图、其中列出了所有卷的分层状态。"]
 
@@ -136,7 +136,7 @@ image:screenshot_tiering_report_download.png["显示如何生成CSV文件的屏�
 
 从云访问的分层数据可能会 " 重新加热 " 并移回性能层。但是，如果要主动将数据从云层提升到性能层，可以在 _Tiering Policy_ 对话框中执行此操作。使用 ONTAP 9.8 及更高版本时，可以使用此功能。
 
-如果您要停止对卷使用分层，或者决定将所有用户数据保留在性能层上，而将 Snapshot 副本保留在云层上，则可以执行此操作。
+如果您想停止在卷上使用分层，或者决定将所有用户数据保留在性能层，但将 Snapshot 副本保留在云层，则可以执行此操作。
 
 有两个选项：
 
@@ -157,8 +157,8 @@ NOTE: 云提供商可能会根据从云端传输的数据量向您收取费用�
 确保性能层中有足够的空间容纳要从云移回的所有数据。
 
 . 从左侧导航菜单中、选择*移动性>分层*。
-. 在*集群*页面中、单击集群的*分层卷*。
-. 单击 image:screenshot_edit_icon.gif["编辑图标、显示在表中每行末尾、用于分层卷"] 图标，选择要使用的检索选项，然后单击 * 应用 * 。
+. 从“*集群*”页面中，为集群选择“*层卷*”。
+. 点击image:screenshot_edit_icon.gif["编辑图标、显示在表中每行末尾、用于分层卷"]卷的图标，选择要使用的检索选项，然后选择*应用*。
 +
 image:screenshot_tiering_policy_settings_with_retrieve.png["显示可配置分层策略设置的屏幕截图。"]
 
@@ -171,7 +171,7 @@ image:screenshot_tiering_policy_settings_with_retrieve.png["显示可配置分�
 
 == 管理聚合上的分层设置
 
-内部 ONTAP 系统中的每个聚合都有两个可调整的设置：分层填充度阈值以及是否已启用非活动数据报告。
+您的本地ONTAP系统中的每个聚合都有两个可以调整的设置：分层完整性阈值以及是否启用非活动数据报告。
 
 分层填充度阈值:: 将阈值设置为较低的数字可减少分层之前需要存储在性能层上的数据量。对于活动数据很少的大型聚合，此功能可能很有用。
 +
@@ -189,11 +189,11 @@ TIP: 最好保持 IDR 处于启用状态，因为它有助于识别非活动数�
 
 
 .步骤
-. 在*集群*页面中、单击选定集群的*高级设置*。
+. 从“*集群*”页面中，为所选集群选择“*高级设置*”。
 +
 image:screenshot_tiering_advanced_setup_button.png["显示集群的\"高级设置\"按钮的屏幕截图。"]
 
-. 在高级设置页面中、单击聚合的菜单图标、然后选择*修改聚合*。
+. 在高级设置页面中，选择聚合的菜单图标并选择*修改聚合*。
 +
 image:screenshot_tiering_modify_aggr.png["显示聚合的修改聚合选项的屏幕截图。"]
 
@@ -208,7 +208,7 @@ image:screenshot_tiering_modify_aggregate.png["屏幕截图显示了一个用于
 
 == 修复运行状况
 
-可能会发生故障。这样、BlueXP分层操作会在集群信息板上显示"失败"的运行状况状态。运行状况反映了ONTAP 系统和BlueXP的状态。
+可能会发生故障。当他们这样做时，分层会在集群仪表板上显示“失败”的运行健康状态。运行状况反映了ONTAP 系统和BlueXP的状态。
 
 .步骤
 . 确定运行状况为 "Failed" 的任何集群。
@@ -225,13 +225,13 @@ image:screenshot_tiering_modify_aggregate.png["屏幕截图显示了一个用于
 
 == 从BlueXP分层发现其他集群
 
-您可以从Tiering _Cluster_页面将未发现的内部ONTAP 集群添加到BlueXP、以便为集群启用分层。
+您可以从 Tiering _Cluster_ 页面将未发现的内部部署ONTAP集群添加到BlueXP ，以便为集群启用分层。
 
 请注意、Tiering _on-Prem dashboard_页面上也会显示一些按钮、用于发现其他集群。
 
 .步骤
-. 在BlueXP分层中、单击*集群*选项卡。
-. 要查看任何未发现的集群、请单击*显示未发现的集群*。
+. 选择“*Clusters*”选项卡。
+. 要查看任何未发现的集群，请选择“显示未发现的集群”。
 +
 image:screenshot_tiering_show_undiscovered_cluster.png["显示分层信息板上显示未发现的集群按钮的屏幕截图。"]
 
@@ -244,16 +244,16 @@ image:screenshot_tiering_show_undiscovered_cluster.png["显示分层信息板上
 +
 image:screenshot_tiering_discover_cluster.png["显示如何发现要添加到BlueXP和分层信息板中的现有集群的屏幕截图。"]
 
-. 对于要通过BlueXP管理并实施数据分层的集群、请单击*发现集群*。
-. 在_Cluster Details_页面中、输入管理员用户帐户的密码、然后单击*发现*。
+. 选择您想要管理的集群的*发现集群*并实施数据分层。
+. 在“集群详情”页面中，输入管理员用户帐户的密码并选择“发现”。
 +
 请注意，集群管理 IP 地址会根据您的 NSS 帐户中的信息进行填充。
 
-. 在_Details & Credentials_页面中、集群名称将添加为工作环境名称、因此只需单击*执行*即可。
+. 在“详细信息和凭据”页面中，集群名称被添加为工作环境名称，因此只需选择“*Go*”。
 
 
 .结果
-BlueXP会发现集群、并使用集群名称作为工作环境名称将其添加到Canvas中的工作环境中。
+在 Canvas 中创建一个工作环境，使用集群名称作为工作环境名称。
 
 您可以在右侧面板中为此集群启用分层服务或其他服务。
 
@@ -261,16 +261,13 @@ BlueXP会发现集群、并使用集群名称作为工作环境名称将其添�
 
 == 在所有BlueXP连接器中搜索集群
 
-如果使用多个连接器管理环境中的所有存储、则要实施分层的某些集群可能位于另一个连接器中。如果您不确定是哪个Connector管理某个集群、可以使用BlueXP分层跨所有连接器进行搜索。
+如果您使用多个连接器管理环境中的所有存储，则某些要实施分层的集群可能与其他连接器关联。如果您不确定哪个连接器正在管理某个集群，您可以在所有连接器中进行搜索。
 
 .步骤
-. 在BlueXP分层菜单栏中、单击操作菜单并选择*在所有连接器中搜索集群*。
+. 在BlueXP tiering菜单栏中，选择操作菜单并选择*在所有连接器中搜索集群*。
 +
 image:screenshot_tiering_search for_cluster.png["显示如何搜索任何BlueXP连接器中可能存在的集群的屏幕截图。"]
 
-. 在显示的搜索对话框中，输入群集的名称，然后单击*Search*。
-+
-如果BlueXP层能够找到集群、则会显示连接器的名称。
-
+. 在显示的搜索对话框中，输入集群名称并选择*搜索*。
 . https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["切换到连接器并为集群配置层"^]。
 

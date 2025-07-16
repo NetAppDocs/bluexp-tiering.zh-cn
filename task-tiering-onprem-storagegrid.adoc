@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-tiering-onprem-storagegrid.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, storagegrid, tier to storagegrid, fabricpool storagegrid 
-summary: 通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集群上获得可用空间。 
+summary: 通过将非活动数据分层到StorageGRID来释放本地ONTAP集群上的空间。 
 ---
 = 将数据从内部 ONTAP 集群分层到 StorageGRID
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集
 
 
 [role="lead"]
-通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集群上获得可用空间。
+通过将非活动数据分层到StorageGRID来释放本地ONTAP集群上的空间。
 
 
 
@@ -27,7 +27,7 @@ summary: 通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集
 您需要满足以下要求：
 
 [role="quick-margin-list"]
-* 运行 ONTAP 9.4 或更高版本的内部 ONTAP 集群，并通过用户指定的端口连接到 StorageGRID 。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
+* 运行ONTAP 9.4 或更高版本的本地ONTAP集群，以及通过用户指定端口到StorageGRID 的连接。  https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^] 。
 * 具有 S3 权限的 AWS 访问密钥的 StorageGRID 10.3 或更高版本。
 * 内部安装的连接器。
 * 用于连接器的网络连接、用于启用与ONTAP 集群、StorageGRID 和BlueXP分层服务的出站HTTPS连接。
@@ -35,7 +35,7 @@ summary: 通过将非活动数据分层到 StorageGRID ，可在内部 ONTAP 集
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 设置分层
 [role="quick-margin-para"]
-在BlueXP中、选择一个内部工作环境、单击分层服务的*启用*、然后按照提示将数据分层到StorageGRID。
+选择本地工作环境，为分层服务选择“启用”，然后按照提示将数据分层到StorageGRID。
 
 
 
@@ -65,7 +65,7 @@ NOTE: Connector 和 StorageGRID 之间的通信仅用于对象存储设置。
 
 --
 支持的 ONTAP 版本:: ONTAP 9.4 或更高版本
-许可:: 将数据分层到StorageGRID时、您的BlueXP  组织不需要BlueXP  分层许可证、ONTAP集群也不需要FabricPool许可证。
+许可:: 如果您将数据分层到StorageGRID，则不需要分层许可证或FabricPool许可证。
 集群网络连接要求::
 +
 --
@@ -79,7 +79,7 @@ ONTAP 可在对象存储之间读取和写入数据。对象存储永远不会�
 
 * 托管要分层的卷的每个 ONTAP 节点都需要一个集群间 LIF 。LIF 必须与 _IP 空间 _ 关联， ONTAP 应使用此 _IP 空间 _ 连接到对象存储。
 +
-设置数据分层时、BlueXP分层会提示您输入要使用的IP空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。了解更多信息 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^]。
+设置数据分层时，系统会提示您选择要使用的 IP 空间。您应选择与每个 LIF 关联的 IP 空间。这可能是您创建的 " 默认 "IP 空间或自定义 IP 空间。详细了解 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^]和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IP 空间"^] 。
 
 
 
@@ -94,7 +94,7 @@ NOTE: 从ONTAP 9.5开始、BlueXP分层支持FlexGroup 卷。安装程序的工�
 
 === 发现 ONTAP 集群
 
-您需要先在BlueXP画布中创建内部ONTAP 工作环境、然后才能开始分层冷数据。
+您需要先在 Canvas 中创建一个本地ONTAP工作环境，然后才能开始分层冷数据。
 
 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["了解如何发现集群"^]。
 
@@ -163,24 +163,24 @@ S3 凭据:: 在设置StorageGRID 分层时、您需要为BlueXP分层提供S3访
 
 
 .步骤
-. 选择内部ONTAP 工作环境。
+. 选择本地ONTAP工作环境。
 . 从右侧面板中单击分层服务的*启用*。
 +
 如果StorageGRID 分层目标作为工作环境存在于Canvas上、则可以将集群拖动到StorageGRID 工作环境中以启动设置向导。
 
 +
-image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，屏幕右侧将显示设置分层选项的屏幕截图。"]
+image:screenshot_setup_tiering_onprem.png["屏幕截图显示了选择本地ONTAP工作环境后出现在屏幕右侧的“设置分层”选项。"]
 
 . *定义对象存储名称*：输入此对象存储的名称。它必须与此集群上的聚合可能使用的任何其他对象存储唯一。
-. *选择提供程序*：选择* StorageGRID *并单击*继续*。
+. *选择提供商*：选择* StorageGRID*并选择*继续*。
 . 完成*创建对象存储*页面上的步骤：
 +
 .. *服务器*：输入StorageGRID 网关节点的FQDN、ONTAP 与StorageGRID 进行HTTPS通信时应使用的端口、以及具有所需S3权限的帐户的访问密钥和机密密钥。
-.. * 分段 * ：添加新分段或选择以前缀 _fabric-pool_ 开头的现有分段，然后单击 * 继续 * 。
+.. *Bucket*：添加一个新存储桶或选择一个以前缀 _fabric-pool_ 开头的现有存储桶，然后选择 *Continue*。
 +
 需要使用 _fabric-pool_ 前缀，因为 Connector 的 IAM 策略允许实例对使用该前缀命名的分段执行 S3 操作。例如，您可以将 S3 存储分段命名为 _fabric-pool-AFF1_ ，其中 AFF1 是集群的名称。
 
-.. * 集群网络 * ：选择 ONTAP 应用于连接到对象存储的 IP 空间，然后单击 * 继续 * 。
+.. *集群网络*：选择ONTAP应用于连接对象存储的 IP 空间，然后选择*继续*。
 +
 选择正确的IP空间可确保BlueXP分层可以设置从ONTAP 到StorageGRID 对象存储的连接。
 
@@ -191,15 +191,15 @@ image:screenshot_setup_tiering_onprem.png["选择内部 ONTAP 工作环境后，
 
 . 在 _Tier Volumes_ 页面上，选择要为其配置分层的卷，然后启动分层策略页面：
 +
-** 要选择所有卷，请选中标题行（image:button_backup_all_volumes.png[""]），然后单击 * 配置卷 * 。
-** 要选择多个卷，请选中每个卷对应的框（image:button_backup_1_volume.png[""]），然后单击 * 配置卷 * 。
-** 要选择单个卷，请单击行（或 image:screenshot_edit_icon.gif["编辑铅笔图标"] 图标）。
+** 要选择所有卷，请选中标题行中的框 ( image:button_backup_all_volumes.png[""] ) 并选择 *配置卷*。
+** 要选择多个卷，请选中每个卷对应的复选框 ( image:button_backup_1_volume.png[""] ) 并选择 *配置卷*。
+** 要选择单个卷，请选择行（或image:screenshot_edit_icon.gif["编辑铅笔图标"]图标）来表示音量。
 +
 image:screenshot_tiering_initial_volumes.png["显示如何选择单个卷，多个卷或所有卷以及修改选定卷按钮的屏幕截图。"]
 
 
 
-. 在 _Tiering Policy_ 对话框中，选择一个分层策略，也可以调整选定卷的散热天数，然后单击 * 应用 * 。
+. 在“分层策略”对话框中，选择分层策略，可选择调整所选卷的冷却天数，然后选择“应用”。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["了解有关卷分层策略和散热天数的更多信息"]。
 
@@ -207,9 +207,6 @@ link:concept-cloud-tiering.html#volume-tiering-policies["了解有关卷分层�
 image:screenshot_tiering_initial_policy_settings.png["显示可配置分层策略设置的屏幕截图。"]
 
 
-
-.结果
-您已成功设置从集群上的卷到 StorageGRID 的数据分层。
 
 .下一步是什么？
 您可以查看有关集群上的活动和非活动数据的信息。 link:task-managing-tiering.html["了解有关管理分层设置的更多信息"]。

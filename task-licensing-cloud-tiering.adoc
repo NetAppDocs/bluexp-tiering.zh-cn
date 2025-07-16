@@ -18,26 +18,26 @@ summary: 从第一个集群设置分层时、即可免费试用30天的BlueXP分
 
 在阅读其他内容之前，请先阅读一些注释：
 
-* 如果您已在云提供商的市场上订阅了BlueXP订阅(PAYGO)、则您也会自动订阅内部ONTAP 系统的BlueXP分层。您将在BlueXP分层*内部信息板*选项卡中看到有效订阅。您无需再次订阅。您将在BlueXP电子钱包中看到有效订阅。
+* 如果您已在云提供商的市场中订阅NetApp智能服务 (PAYGO)，那么您也会自动订阅本地ONTAP系统的分层服务。您会在分层服务的“本地”信息中心选项卡中看到有效的订阅。您无需再次订阅。您也会在数字钱包中看到有效的订阅。
 * BYOL BlueXP  分层许可证(以前称为"云分层"许可证)是一种_Float_许可证、您可以在BlueXP  组织中的多个内部ONTAP集群之间使用。这与您过去为FabricPool 每个集群购买_cluster_许可证的情况不同(而且更简单)。
 * 将数据分层到 StorageGRID 不收取任何费用，因此无需 BYOL 许可证或 PAYGO 注册。此分层数据不计入许可证中购买的容量。
 
 
-link:concept-cloud-tiering.html#pricing-and-licenses["详细了解许可如何用于BlueXP分层"]。
+link:concept-cloud-tiering.html#pricing-and-licenses["详细了解分层许可的工作原理"](英文)
 
 
 
 == 30 天免费试用
 
-如果您没有BlueXP分层许可证、则在为第一个集群设置分层时、将开始免费试用30天的BlueXP分层。30天免费试用结束后、您需要通过按需购买订阅、年度订阅、BYOL许可证或两者的组合为BlueXP分层付费。
+如果您没有分层许可证，则在为第一个集群设置分层时，即可享受 30 天的分层免费试用期。30天免费试用期结束后，您需要通过按量付费订阅、年度订阅、BYOL 许可证或以上组合来支付分层费用。
 
 如果免费试用结束、并且您尚未订阅或添加许可证、则ONTAP 将不再将冷数据分层到对象存储。以前分层的所有数据仍可访问；这意味着您可以检索和使用此数据。检索后、此数据将从云移回性能层。
 
 
 
-== 使用BlueXP分层PAYGO订阅
+== 使用NetApp智能服务分层 PAYGO 订阅
 
-您可以从云提供商的市场订阅按需购买、从而获得使用Cloud Volumes ONTAP 系统和许多云数据服务(例如BlueXP分层)的许可。
+通过云提供商市场的按使用量付费订阅，您可以获得Cloud Volumes ONTAP系统和NetApp智能服务（例如分层）的使用许可。
 
 订阅BlueXP  分层后、您可以在数字钱包中管理订阅。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-subscriptions.html#view-your-subscriptions["了解如何使用电子钱包。"^]
 
@@ -49,8 +49,8 @@ link:concept-cloud-tiering.html#pricing-and-licenses["详细了解许可如何�
 
 [[subscribe-aws]]
 .步骤
-. 在BlueXP中、单击*移动性>分层>内部部署信息板*。
-. 在_Marketplace subscripts_部分中、单击Amazon Web Services下的*订阅*、然后单击*继续*。
+. 在BlueXP中，选择 *Mobility > Tiering > On-Premises Dashboard*。
+. 在“市场订阅”部分中，选择“Amazon Web Services”下的“订阅”，然后选择“继续”。
 . 从订阅 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["AWS Marketplace"^]、然后重新登录到BlueXP网站以完成注册。
 +
 以下视频显示了该过程：
@@ -68,8 +68,8 @@ video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 
 [[subscribe-azure]]
 .步骤
-. 在BlueXP中、单击*移动性>分层>内部部署信息板*。
-. 在_Marketplace subscripts_部分中、单击Microsoft Azure下的*订阅*、然后单击*继续*。
+. 在BlueXP中，选择 *Mobility > Tiering > On-Premises Dashboard*。
+. 在“市场订阅”部分中，选择“Microsoft Azure”下的“订阅”，然后选择“继续”。
 . 从订阅 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]、然后重新登录到BlueXP网站以完成注册。
 +
 以下视频显示了该过程：
@@ -87,8 +87,8 @@ video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 [[subscribe-gcp]]
 .步骤
-. 在BlueXP中、单击*移动性>分层>内部部署信息板*。
-. 在_Marketplace subscripts_部分中、单击Google Cloud下的*订阅*、然后单击*继续*。
+. 在BlueXP中，选择 *Mobility > Tiering > On-Premises Dashboard*。
+. 在“市场订阅”部分，选择 Google Cloud 下的“订阅”，然后选择“继续”。
 . 从订阅 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["Google Cloud Marketplace"^]、然后重新登录到BlueXP网站以完成注册。
 +
 以下视频显示了该过程：
@@ -102,7 +102,7 @@ video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 == 使用年度合同
 
-每年购买一份年度合同、为BlueXP分层支付费用。年度合同有1年、2年或3年期限。
+通过购买年度合同来支付年度分层费用。年度合同有1年、2年或3年期限。
 
 将非活动数据分层到AWS时、您可以从订阅一份年度合同 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace 页面"^]。如果要使用此选项，请从 Marketplace 页面设置您的订阅，然后再执行 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["将订阅与您的 AWS 凭据关联"^]。
 
@@ -114,17 +114,17 @@ video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 == 使用BlueXP分层BYOL许可证
 
-NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP  分层*许可证(以前称为"云分层"许可证)是一种_Float_许可证、您可以在BlueXP  组织中的多个内部ONTAP集群之间使用。BlueXP分层许可证中定义的总分层容量将在所有*内部集群之间共享、从而使初始许可和续订变得轻松。分层BYOL许可证的最小容量从10 TiB开始。
+NetApp 自带许可证的期限为 1 年， 2 年或 3 年。BYOL * BlueXP  分层*许可证(以前称为"云分层"许可证)是一种_Float_许可证、您可以在BlueXP  组织中的多个内部ONTAP集群之间使用。BlueXP tiering许可证中定义的总分层容量在*所有*本地集群之间共享，从而简化了初始许可和续订。分层BYOL许可证的最小容量从10 TiB开始。
 
 如果您没有BlueXP分层许可证、请联系我们购买一个：
 
-* mailto ： ng-cloud-tiering@netapp.com ？ Subject=Licensing[ 发送电子邮件以购买许可证 ] 。
-* 单击BlueXP右下角的聊天图标以申请许可证。
+* 联系您的 NetApp 销售代表
+* 请联系NetApp支持部门。
 
 
 或者、如果您有一个不会使用的未分配的基于节点的Cloud Volumes ONTAP 许可证、则可以将其转换为具有相同美元等价性和相同到期日期的BlueXP分层许可证。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["有关详细信息，请访问此处"^]。
 
-您可以使用BlueXP数字钱包页面管理BlueXP Tiering BYOL许可证。您可以添加新许可证并更新现有许可证。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["了解如何使用电子钱包。"^]
+您可以使用数字钱包页面来管理您的许可证。您可以添加新许可证并更新现有许可证。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["了解如何使用电子钱包。"^]
 
 
 
@@ -210,11 +210,11 @@ NOTE: System Manager或ONTAP 命令行界面中显示的"子"许可证的许可�
 . link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["购买BlueXP分层许可证"] 新集群所需的容量。
 . 在BlueXP  中、<<licenses,将许可证添加到BlueXP电子钱包>>[将许可证添加到BlueXP  数字钱包]。
 . 在BlueXP分层中、 link:task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering["发现新集群"]。
-. 在集群页面中、单击 image:screenshot_horizontal_more_button.gif["更多图标"] 并选择*部署许可证*。
+. 在“集群”页面中，选择image:screenshot_horizontal_more_button.gif["更多图标"]对于集群并选择*部署许可证*。
 +
 image:screenshot_tiering_deploy_license.png["显示如何将分层许可证部署到ONTAP 集群的屏幕截图。"]
 
-. 在_Deploy License_对话框中、单击*部署*。
+. 在“部署许可证”对话框中，选择“部署”。
 +
 子许可证将部署到ONTAP 集群。
 

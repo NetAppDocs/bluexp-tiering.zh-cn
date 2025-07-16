@@ -16,7 +16,9 @@ summary: NetApp的BlueXP分层服务可将内部ONTAP 集群中的非活动数�
 [role="lead"]
 NetApp的BlueXP分层服务可将内部ONTAP 集群中的非活动数据自动分层到对象存储、从而将您的数据中心扩展到云。这样可以在集群上腾出宝贵的空间来处理更多工作负载，而无需更改应用程序层。BlueXP分层可以降低数据中心的成本、并使您能够从资本支出模式切换到运营支出模式。
 
-FabricPool 分层服务利用了_BlueXP的功能。FabricPool 是一种 NetApp Data Fabric 技术，可将数据自动分层到低成本的对象存储。活动数据（热数据）保留在本地层（内部 ONTAP 聚合）上，而非活动数据（冷数据）则移至云层，同时保持 ONTAP 数据效率。
+BlueXP tiering服务使用_FabricPool_。FabricPool 是一种 NetApp Data Fabric 技术，可将数据自动分层到低成本的对象存储。活动数据（热数据）保留在本地层（内部 ONTAP 聚合）上，而非活动数据（冷数据）则移至云层，同时保持 ONTAP 数据效率。
+
+建议：活动（热）数据保留在本地层（内部ONTAP聚合），而非活动（冷）数据则移动到云层 - 以保持ONTAP数据的高效。
 
 最初在采用纯SSD聚合的AFF 、FAS 和ONTAP Select 系统上受支持、从ONTAP 9.8开始、除了高性能SSD之外、您还可以对包含HDD的聚合中的数据进行分层。请参见 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["使用 FabricPool 的注意事项和要求"^] 了解详细信息。
 
@@ -30,7 +32,7 @@ https://bluexp.netapp.com/cloud-tiering-service-tco["使用BlueXP分层TCO计算
 
 BlueXP分层提供自动化、监控、报告和通用管理界面：
 
-* 借助自动化，可以更轻松地设置和管理从内部 ONTAP 集群到云的数据分层
+* 自动化使从本地ONTAP集群到云的数据分层设置和管理变得更加容易
 * 您可以选择默认云提供商存储类/访问层、也可以使用生命周期管理为较早的分层数据分配更经济高效的层
 * 您可以创建与其他对象存储的连接、这些对象存储可用于集群中的其他聚合
 * 您可以使用UI将对象存储拖动到聚合中以进行分层和FabricPool 镜像
@@ -133,7 +135,7 @@ link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-paygo-subscription["
 
 === 自带许可证
 
-通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期许可证、并指定任何分层容量(最低10 TiB起)。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP分层许可证中定义的总分层容量可供所有内部集群使用。
+通过从NetApp购买* BlueXP分层*许可证(以前称为"云分层"许可证)来自带许可证。您可以购买1年、2年或3年期许可证、并指定任何分层容量(最低10 TiB起)。BYOL BlueXP分层许可证是一个_float_许可证、您可以跨多个内部ONTAP 集群使用。您在BlueXP tiering许可证中定义的总分层容量可供所有本地集群使用。
 
 购买BlueXP分层许可证后、您需要使用BlueXP中的BlueXP数字钱包来添加许可证。 link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["请参见如何使用BlueXP分层BYOL许可证"]。
 
@@ -154,7 +156,7 @@ image:diagram_cloud_tiering.png["一个架构图、其中显示了BlueXP分层�
 
 从较高的层面来看、BlueXP分层的工作原理如下：
 
-. 您可以从BlueXP发现内部集群。
+. 您从BlueXP发现您的内部部署集群。
 . 您可以通过提供有关对象存储的详细信息来设置分层，包括分段 / 容器，存储类或访问层以及分层数据的生命周期规则。
 . BlueXP会将ONTAP 配置为使用对象存储提供程序、并发现集群上的活动和非活动数据量。
 . 您可以选择要分层的卷以及要应用于这些卷的分层策略。
