@@ -784,7 +784,6 @@
   <block id="57c0e1741966187a33a00eea2622a5ec" category="list-text">从右侧面板中单击分层服务的*启用*。</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">适用于 ONTAP 的 Amazon FSX</block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
-  <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">适用于 Google Cloud 的 Cloud Volumes Service</block>
   <block id="8d69c6a87500bfb8cb04a6182b6d844b" category="paragraph">要将数据分层到云，需要使用 Connector 。将数据分层到Azure Blob存储时、您可以使用Azure vNet或内部部署中的Connector。您需要创建一个新的连接器，或者确保当前选定的连接器位于 Azure 或内部。</block>
   <block id="5354529f47c862f65799910961248e94" category="inline-link">所需的自定义角色权限</block>
   <block id="93319d1fbdd154c5602c392140110702" category="paragraph">如果您使用早期版本的BlueXP创建了Connector、则需要编辑Azure帐户的权限列表才能添加任何缺少的权限。</block>
@@ -1029,7 +1028,6 @@
   <block id="52ba8ac12050d2494572b940a0d65b25" category="list-text"><block ref="52ba8ac12050d2494572b940a0d65b25" category="inline-link-rx"></block></block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="list-text"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="2e0c742f4616eb27b5b7646aa790edfe" category="list-text"><block ref="2e0c742f4616eb27b5b7646aa790edfe" category="inline-link-macro-rx"></block></block>
-  <block id="cf14bff66a8b72d3675db8ffe0f02ee3" category="list-text"><block ref="cf14bff66a8b72d3675db8ffe0f02ee3" category="inline-link-macro-rx"></block></block>
   <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">这是系统生成的ID、映射到您的电子邮件。在* NSS Management*页面上、您可以从显示电子邮件 <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> 菜单。</block>
   <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">如果您需要刷新登录凭据令牌、则中还会提供一个*更新凭据*选项 <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> 菜单。</block>
@@ -1415,4 +1413,6 @@
   <block id="0e271c8fadf9496816e223bef1dddce1" category="paragraph">如果 Amazon S3 分层目标作为 Canvas 上的工作环境存在，您可以将本地ONTAP工作环境拖到目标上以启动分层设置向导。</block>
   <block id="f88599376f5e75e17ca7b493801e3fe0" category="sidebar">将本地ONTAP数据分层到云</block>
   <block id="7d2282c510a7fb8e2271e7bebbf67d76" category="sidebar">将内部数据分层到云</block>
+  <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp卷</block>
+  <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
 </blocks>
